@@ -1,15 +1,11 @@
 import { defineConfig } from "vite";
-// import react from "@vitejs/plugin-react";
 import { resolve } from "pathe";
 import dts from "vite-plugin-dts";
-
-// https://vitejs.dev/config/
-// export default defineConfig({
-//   plugins: [react()],
-// })
+import { vanillaExtractPlugin } from "@vanilla-extract/vite-plugin";
 
 export default defineConfig({
   plugins: [
+    vanillaExtractPlugin(),
     dts({
       insertTypesEntry: true,
     }),
@@ -21,7 +17,12 @@ export default defineConfig({
       name: "ui",
       // the proper extensions will be added
       fileName: "ui",
-      formats: ["es", "cjs", "umd", "iife"],
+      formats: ["es", "cjs", "umd"],
+    },
+    rollupOptions: {
+      // make sure to externalize deps that shouldn't be bundled
+      // into your library
+      external: ["react"],
     },
   },
 });
