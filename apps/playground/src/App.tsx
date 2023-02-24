@@ -1,11 +1,14 @@
 import "@kodiui/ui/style.css";
-import { Test } from "@kodiui/ui";
+import { Box } from "@kodiui/ui";
 
 function App() {
   return (
-    <div className="App">
-      <Test />
-    </div>
+    <Box placeItems={"flex-end"}>
+      <Box color={"body"} background={"gray50"}>
+        <div>test</div>
+        <div>test</div>
+      </Box>
+    </Box>
   );
 }
 
