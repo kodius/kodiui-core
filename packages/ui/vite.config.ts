@@ -19,10 +19,10 @@ export default defineConfig({
       fileName: "ui",
       formats: ["es", "cjs", "umd"],
     },
-    rollupOptions: {
-      // make sure to externalize deps that shouldn't be bundled
-      // into your library
-      external: ["react"],
-    },
+    // rollupOptions: {
+    //   // make sure to externalize deps that shouldn't be bundled
+    //   // into your library
+    //   external: ["react"],
+    // },
   },
 });

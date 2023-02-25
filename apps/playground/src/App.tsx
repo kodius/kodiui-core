@@ -1,14 +1,21 @@
 import "@kodiui/ui/style.css";
 import { Box } from "@kodiui/ui";
+import { theme } from "./contract.css";
 
 function App() {
   return (
-    <Box placeItems={"flex-end"}>
-      <Box color={"body"} background={"gray50"}>
+    <div className={theme}>
+      <Box
+        p={"lg"}
+        background={"blue900"}
+        color={"blue200"}
+        borderRadius={"md"}
+        boxShadow={"lg"}
+      >
         <div>test</div>
         <div>test</div>
       </Box>
-    </Box>
+    </div>
   );
 }
 

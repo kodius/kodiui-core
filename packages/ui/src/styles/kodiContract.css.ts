@@ -1,27 +1,27 @@
 import { createThemeContract } from "@vanilla-extract/css";
-import { colors } from "./colors";
+import { defColors } from "./default/defaults.css";
 
-
-export const vars = createThemeContract({
+export const kodiContract = createThemeContract({
   colors: {
-    primary: ``,
-    body: ``,
-    background: ``,
-    link: ``,
-    linkHover: ``,
-    ...colors,
+    ...defColors
   },
-  font: {
-    body: ``,
-  },
-  fontSize: {
+  space: {
     xs: ``,
     sm: ``,
     md: ``,
     lg: ``,
     xl: ``,
   },
-  space: {
+  breakpoints: {
+    sm: ``,
+    md: ``,
+    lg: ``,
+    xl: ``,
+  },
+  font: {
+    body: ``,
+  },
+  fontSize: {
     xs: ``,
     sm: ``,
     md: ``,
@@ -38,4 +38,4 @@ export const vars = createThemeContract({
     md: ``,
     full: ``,
   },
-})
+});
