@@ -2,6 +2,7 @@ import { createSprinkles, defineProperties } from "@vanilla-extract/sprinkles";
 import { kodiContract } from "./kodiContract.css";
 
 const unresponsiveProperties = defineProperties({
+  // examples
   properties: {
     // fontSize,
     // lineHeight: fontSize,
