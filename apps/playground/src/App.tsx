@@ -1,5 +1,5 @@
 import "@kodiui/ui/style.css";
-import { Box } from "@kodiui/ui";
+import { Box, Stack } from "@kodiui/ui";
 import { theme } from "./contract.css";
 
 function App() {
@@ -9,11 +9,13 @@ function App() {
         p={"lg"}
         background={"blue900"}
         color={"blue200"}
-        borderRadius={"md"}
+        // borderRadius={"md"}
         boxShadow={"lg"}
       >
-        <div>test</div>
-        <div>test</div>
+        <Stack>
+          <div>test</div>
+          <div>test</div>
+        </Stack>
       </Box>
     </div>
   );
