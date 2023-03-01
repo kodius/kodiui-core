@@ -73,4 +73,5 @@ export const sprinkles = createSprinkles(
   colorProperties,
   unresponsiveProperties
 );
+
 export type Sprinkles = Parameters<typeof sprinkles>[0];

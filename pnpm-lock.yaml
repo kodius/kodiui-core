@@ -83,30 +83,24 @@ importers:
 
   packages/ui:
     specifiers:
-      '@dessert-box/react': ^0.5.0
-      '@radix-ui/colors': ^0.1.8
       '@types/react': ^18.0.27
       '@types/react-dom': ^18.0.10
       '@vanilla-extract/css': ^1.9.5
       '@vanilla-extract/sprinkles': ^1.5.1
       '@vanilla-extract/vite-plugin': ^3.8.0
-      '@vitejs/plugin-react': ^3.1.0
       classnames: ^2.3.2
       pathe: ^1.1.0
       react: ^18.2.0
       react-dom: ^18.2.0
       typescript: ^4.9.3
-      vite: ^4.1.0
+      vite: ^4.1.4
       vite-plugin-dts: ^2.0.2
     devDependencies:
-      '@dessert-box/react': 0.5.0_react@18.2.0
-      '@radix-ui/colors': 0.1.8
       '@types/react': 18.0.28
       '@types/react-dom': 18.0.11
       '@vanilla-extract/css': 1.9.5
       '@vanilla-extract/sprinkles': 1.5.1_@vanilla-extract+css@1.9.5
       '@vanilla-extract/vite-plugin': 3.8.0_vite@4.1.4
-      '@vitejs/plugin-react': 3.1.0_vite@4.1.4
       classnames: 2.3.2
       pathe: 1.1.0
       react: 18.2.0
@@ -380,6 +374,7 @@ packages:
 
   /@dessert-box/core/0.2.0:
     resolution: {integrity: sha512-Vqaec6i0cvS1r54kU6CfOQECi6dPWzz6DVVxJABOxqPmVk8fOSy6pIKsK0YyPFGRpZK/FXkJ1YhURUOW1OxOVQ==}
+    dev: false
 
   /@dessert-box/react/0.5.0_react@18.2.0:
     resolution: {integrity: sha512-4aj1eWYMQpzAUTWFbJOwNGJ2eVqReZySlIryYTq0KUOJv1xVSmkkaLt8p7L+ZLlSkPyafdfme30roZjtkmDG4w==}
@@ -388,6 +383,7 @@ packages:
     dependencies:
       '@dessert-box/core': 0.2.0
       react: 18.2.0
+    dev: false
 
   /@emotion/hash/0.9.0:
     resolution: {integrity: sha512-14FtKiHhy2QoPIzdTcvh//8OyBlknNs2nXRwIhG904opCby3l+9Xaf/wuPvICBF0rc1ZCNBd3nKe9cd2mecVkQ==}
@@ -715,10 +711,6 @@ packages:
     dependencies:
       '@nodelib/fs.scandir': 2.1.5
       fastq: 1.15.0
-    dev: true
-
-  /@radix-ui/colors/0.1.8:
-    resolution: {integrity: sha512-jwRMXYwC0hUo0mv6wGpuw254Pd9p/R6Td5xsRpOmaWkUHlooNWqVcadgyzlRumMq3xfOTXwJReU0Jv+EIy4Jbw==}
     dev: true
 
   /@rollup/pluginutils/5.0.2:
