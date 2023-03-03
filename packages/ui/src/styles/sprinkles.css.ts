@@ -1,11 +1,11 @@
 import { createSprinkles, defineProperties } from "@vanilla-extract/sprinkles";
+import { flexProperties } from "../types/flexProperites";
+import { spaceProperties } from "../types/spaceProperties";
+// import { spaceProperties } from "../types/spaceProperties";
 import { kodiContract } from "./kodiContract.css";
 
 const unresponsiveProperties = defineProperties({
-  // examples
   properties: {
-    // fontSize,
-    // lineHeight: fontSize,
     textAlign: [`center`, `left`, `right`],
     textTransform: [`lowercase`, `uppercase`],
     fontWeight: [400, 500, 600, 700, 800],
@@ -42,21 +42,8 @@ const responsiveProperties = defineProperties({
   responsiveArray: [`mobile`, `tablet`, `desktop`],
   properties: {
     position: [`relative`],
-    display: [`none`, `block`, `inline`, `inline-block`, `flex`],
-    alignItems: [`flex-start`, `center`, `flex-end`, `baseline`],
-    justifyContent: [`flex-start`, `center`, `flex-end`, `space-between`],
-    flexDirection: [`row`, `row-reverse`, `column`, `column-reverse`],
-    flexWrap: [`wrap`, `nowrap`],
-    padding: kodiContract.space,
-    paddingTop: kodiContract.space,
-    paddingBottom: kodiContract.space,
-    paddingLeft: kodiContract.space,
-    paddingRight: kodiContract.space,
-    margin: kodiContract.space,
-    marginTop: kodiContract.space,
-    marginBottom: kodiContract.space,
-    marginLeft: kodiContract.space,
-    marginRight: kodiContract.space,
+    ...flexProperties,
+    ...spaceProperties,
   },
   shorthands: {
     p: [`paddingTop`, `paddingBottom`, `paddingLeft`, `paddingRight`],

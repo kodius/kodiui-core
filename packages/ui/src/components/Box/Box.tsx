@@ -1,17 +1,10 @@
 import { forwardRef, PropsWithChildren } from "react";
 import { Sprinkles } from "../../styles/sprinkles.css";
 import { AsComponentProp, NativeProps } from "../../types";
+import { FlexPropertiesKeys } from "../../types/flexProperites";
 import { Builder } from "../Builder/Builder";
 
-type ComponentProps = Omit<
-  Sprinkles,
-  | "display"
-  | "justifyContent"
-  | "flexDirection"
-  | "gap"
-  | "alignItems"
-  | "flexWrap"
->;
+type ComponentProps = Omit<Sprinkles, FlexPropertiesKeys>;
 
 type Props = PropsWithChildren<NativeProps & AsComponentProp & ComponentProps>;
 
