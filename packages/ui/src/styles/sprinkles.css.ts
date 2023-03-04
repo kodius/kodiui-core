@@ -10,7 +10,7 @@ const unresponsiveProperties = defineProperties({
     textTransform: [`lowercase`, `uppercase`],
     fontWeight: [400, 500, 600, 700, 800],
     textDecoration: [`none`, `underline`],
-    borderRadius: kodiContract.radii,
+    borderRadius: kodiContract.borderRadius,
     boxShadow: kodiContract.boxShadow,
   },
 });

@@ -1,4 +1,6 @@
 import { BoxShadows } from "./box-shadows.css";
+import { BorderRadius } from "./border-radius.css";
+import { Space } from "./space.css";
 import { Colors } from "./colors.css";
 
 import {
@@ -12,11 +14,11 @@ import {
 
 export const defContract = {
   font: defFont,
-  space: defSpace,
   fontSize: defFontSize,
-  radii: defRadii,
+  borderRadius: BorderRadius,
   breakpoints: defBreakpoints,
   //  ---
   colors: Colors,
   boxShadow: BoxShadows,
+  space: Space,
 };

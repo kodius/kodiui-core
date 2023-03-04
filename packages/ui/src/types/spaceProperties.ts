@@ -14,7 +14,7 @@ interface SpaceProperties {
   marginRight: Sizes;
 }
 
-export const spaceProperties: SpaceProperties = {
+export const spaceProperties = {
   padding: kodiContract.space,
   paddingTop: kodiContract.space,
   paddingBottom: kodiContract.space,
