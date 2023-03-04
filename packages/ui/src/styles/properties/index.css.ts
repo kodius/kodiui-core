@@ -1,3 +1,5 @@
+import { Colors } from "./colors.css";
+
 import {
   defFont,
   defRadii,
@@ -5,7 +7,6 @@ import {
   defFontSize,
   defSpace,
   defBreakpoints,
-  defColors
 } from "./defaults.css";
 
 export const defContract = {
@@ -15,5 +16,5 @@ export const defContract = {
   boxShadow: defBoxShadow,
   radii: defRadii,
   breakpoints: defBreakpoints,
-  colors: defColors,
+  colors: Colors,
 };

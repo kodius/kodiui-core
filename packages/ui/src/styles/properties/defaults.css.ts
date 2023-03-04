@@ -84,4 +84,3 @@ export const defColors = {
   blue800: `#1e40af`,
   blue900: `#1e3a8a`,
 };
-
