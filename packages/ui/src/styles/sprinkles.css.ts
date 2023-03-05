@@ -3,14 +3,28 @@ import { flexProperties } from "../types/flexProperites";
 import { spaceProperties } from "../types/spaceProperties";
 // import { spaceProperties } from "../types/spaceProperties";
 import { kodiContract } from "./kodiContract.css";
+import { BreakPoints } from "./properties/break-points";
 
 const unresponsiveProperties = defineProperties({
   properties: {
     textAlign: [`center`, `left`, `right`],
     textTransform: [`lowercase`, `uppercase`],
-    fontWeight: [400, 500, 600, 700, 800],
+    fontWeight: [100, 200, 300, 400, 500, 600, 700, 800, 900],
     textDecoration: [`none`, `underline`],
     borderRadius: kodiContract.borderRadius,
+    borderWidth: kodiContract.borderWidth,
+    borderStyle: [
+      "none",
+      "hidden",
+      "dotted",
+      "dashed",
+      "solid",
+      "double",
+      "groove",
+      "ridge",
+      "inset",
+      "outset",
+    ],
     boxShadow: kodiContract.boxShadow,
   },
 });
@@ -33,13 +47,20 @@ const colorProperties = defineProperties({
 });
 
 const responsiveProperties = defineProperties({
+  // TODO
+  // xl: { "@media": `screen and (min-width: ${kodiContract.breakpoints.xl})` },
+  // this dose not work. vars can not be here.
   conditions: {
-    mobile: {},
-    tablet: { "@media": `screen and (min-width: 768px)` },
-    desktop: { "@media": "screen and (min-width: 1024px)" },
+    xxs: {},
+    xs: { "@media": `screen and (min-width: ${BreakPoints.xs})` },
+    sm: { "@media": `screen and (min-width: ${BreakPoints.sm})` },
+    md: { "@media": `screen and (min-width: ${BreakPoints.md})` },
+    lg: { "@media": `screen and (min-width: ${BreakPoints.lg})` },
+    xl: { "@media": `screen and (min-width: ${BreakPoints.xl})` },
+    xxl: { "@media": `screen and (min-width: ${BreakPoints.xxl})` },
   },
-  defaultCondition: "mobile",
-  responsiveArray: [`mobile`, `tablet`, `desktop`],
+  defaultCondition: "xxs",
+  responsiveArray: [`xxs`, `xs`, `sm`, `md`, `lg`, `xl`, `xxl`],
   properties: {
     position: [`relative`],
     ...flexProperties,

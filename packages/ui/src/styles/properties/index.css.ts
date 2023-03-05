@@ -3,21 +3,17 @@ import { BorderRadius } from "./border-radius.css";
 import { Space } from "./space.css";
 import { Colors } from "./colors.css";
 
-import {
-  defFont,
-  defRadii,
-  defBoxShadow,
-  defFontSize,
-  defSpace,
-  defBreakpoints,
-} from "./defaults.css";
+import { defFont, defFontSize, defBreakpoints } from "./defaults.css";
+import { BorderWidth } from "./border-width.css";
+import { BreakPoints } from "./break-points";
 
 export const defContract = {
   font: defFont,
   fontSize: defFontSize,
-  borderRadius: BorderRadius,
-  breakpoints: defBreakpoints,
   //  ---
+  borderWidth: BorderWidth ,
+  breakpoints: BreakPoints,
+  borderRadius: BorderRadius,
   colors: Colors,
   boxShadow: BoxShadows,
   space: Space,
