@@ -16,7 +16,7 @@ export default defineConfig({
       name: "ui",
       fileName: "ui",
       formats: ["es", "cjs", "umd"],
-      // formats: ["cjs"],
+      // formats: ["umd"],
     },
   },
 });
