@@ -1,14 +1,10 @@
 import classNames from "classnames";
-import { createElement, forwardRef, PropsWithChildren } from "react";
+import { createElement, forwardRef } from "react";
 import { Sprinkles, sprinkles } from "../../styles/sprinkles.css";
-import { AsComponentProp, NativeProps } from "../../types";
+import { BuilderProps } from "../../types";
 
-type ComponentProps = Sprinkles;
-
-type Props = PropsWithChildren<NativeProps & AsComponentProp & ComponentProps>;
-
-export const Builder = forwardRef<HTMLElement, Props>(
-  ({ component = "div", className, ...rest }, ref) => {
+export const Builder = forwardRef<HTMLElement, BuilderProps>(
+  ({ as = "div", className, ...rest }, ref) => {
     const sprinklesProps: Record<string, unknown> = {};
     const nativeProps: Record<string, unknown> = {};
 
@@ -20,7 +16,7 @@ export const Builder = forwardRef<HTMLElement, Props>(
       }
     }
 
-    return createElement(component, {
+    return createElement(as, {
       ref,
       className: classNames(sprinkles(sprinklesProps), className),
       ...nativeProps,

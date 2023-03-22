@@ -322,4 +322,4 @@ export const Colors = {
   ...Sand,
   ...Camo,
   ...Jungle,
-}
+} as const
