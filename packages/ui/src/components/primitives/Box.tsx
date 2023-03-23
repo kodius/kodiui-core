@@ -1,9 +1,9 @@
 import { forwardRef, PropsWithChildren } from "react";
-import { Sprinkles } from "../../styles/sprinkles.css";
 import { AnimationPropertiesKeys } from "../../types/AnimationProperties";
 import { Builder } from "../Builder";
+import { BuilderInterface } from "../../types";
 
-type Props = PropsWithChildren<Omit<Sprinkles, AnimationPropertiesKeys>>;
+type Props = PropsWithChildren<Omit<BuilderInterface, AnimationPropertiesKeys>>;
 
 export const Box = forwardRef<HTMLElement, Props>((props, ref) => (
   <Builder
