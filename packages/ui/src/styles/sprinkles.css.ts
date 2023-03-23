@@ -1,5 +1,5 @@
 import { createSprinkles, defineProperties } from "@vanilla-extract/sprinkles";
-import { AnimationIterationCount } from "../types/AnimationIterationCount";
+import { animationProperties } from "../types/AnimationProperties";
 import { flexProperties } from "../types/flexProperites";
 import { spaceProperties } from "../types/spaceProperties";
 import { kodiContract } from "./kodiContract.css";
@@ -26,11 +26,7 @@ const unresponsiveProperties = defineProperties({
       "outset",
     ],
     boxShadow: kodiContract.boxShadow,
-    animation: kodiContract.animations,
-    animationDuration: ["0.1s", "0.2s", "0.3s", "0.4s", "2s", "4s", "10s"] as const,
-    animationDelay: ["0.1s", "0.2s", "0.3s", "0.4s", "2s"],
-    animationIterationCount: AnimationIterationCount,
-    transitionTimingFunction: kodiContract.trnasitionTimingFunction,
+    ...animationProperties
   },
 });
 

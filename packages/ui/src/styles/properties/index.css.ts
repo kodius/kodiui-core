@@ -7,7 +7,7 @@ import { defFont, defFontSize } from "./defaults.css";
 import { BorderWidth } from "./border-width.css";
 import { BreakPoints } from "./break-points";
 import { Animations } from "./animations.css";
-import { TrnasitionTimingFunction } from "./TrnasitionTimingFunction.css";
+import { TransitionTimingFunction } from "./transitionTimingFunction.css";
 
 export const defContract = {
   font: defFont,
@@ -20,5 +20,5 @@ export const defContract = {
   boxShadow: BoxShadows,
   space: Space,
   animations: Animations,
-  trnasitionTimingFunction: TrnasitionTimingFunction,
+  trnasitionTimingFunction: TransitionTimingFunction,
 };

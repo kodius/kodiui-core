@@ -1,7 +1,7 @@
 import classNames from "classnames";
 import { createElement, forwardRef } from "react";
-import { Sprinkles, sprinkles } from "../../styles/sprinkles.css";
-import { BuilderProps } from "../../types";
+import { sprinkles, Sprinkles } from "../styles/sprinkles.css";
+import { BuilderProps } from "../types";
 
 export const Builder = forwardRef<HTMLElement, BuilderProps>(
   ({ as = "div", className, ...rest }, ref) => {

@@ -1,4 +1,11 @@
-import { CSSProperties } from "@vanilla-extract/css";
+export const AnimationIterationCount = [
+  "unset",
+  "revert",
+  "inherit",
+  "infinite",
+  "-moz-initial",
+  "revert-layer",
+] as const;
 
-export const AnimationIterationCount: CSSProperties["animationIterationCount"][] =
-  ["unset", "revert", "inherit", "infinite", "-moz-initial", "revert-layer"];
+export type AnimationIterationCountType =
+  (typeof AnimationIterationCount)[number];
