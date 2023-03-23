@@ -15,11 +15,10 @@ export type AnimationProps = PropsWithChildren<
 
 export const Animation = forwardRef<HTMLElement, AnimationProps>(
   (props, ref) => {
-
     const {
       getDuration,
       getInterationCount,
-      getTransitionTimingFunction,
+      getAnimationTimingFunction,
       defineAnimation,
     } = animationSetter(props);
 
@@ -32,8 +31,8 @@ export const Animation = forwardRef<HTMLElement, AnimationProps>(
         animationIterationCount={
           props.animationIterationCount || getInterationCount()
         }
-        transitionTimingFunction={
-          props.transitionTimingFunction || getTransitionTimingFunction()
+        animationTimingFunction={
+          props.animationTimingFunction || getAnimationTimingFunction()
         }
       >
         {props.children}

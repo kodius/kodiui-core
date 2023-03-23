@@ -1,4 +1,4 @@
-export const TransitionTimingFunction = {
+export const AnimationTimingFunction = {
   "ease-1": "cubic-bezier(.25, 0, .5, 1)",
   "ease-2": "cubic-bezier(.25, 0, .4, 1)",
   "ease-3": "cubic-bezier(.25, 0, .3, 1)",
@@ -40,7 +40,7 @@ export const TransitionTimingFunction = {
   "ease-step-3": "steps(4)",
   "ease-step-4": "steps(7)",
   "ease-step-5": "steps(10)",
+  "linear": "linear"
 } as const;
 
-export type TrnasitionTimingFunctionKeys =
-  keyof typeof TransitionTimingFunction;
+export type AnimationTimingFunctionKeys = keyof typeof AnimationTimingFunction;

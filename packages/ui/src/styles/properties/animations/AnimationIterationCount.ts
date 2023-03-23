@@ -5,6 +5,10 @@ export const AnimationIterationCount = [
   "infinite",
   "-moz-initial",
   "revert-layer",
+  1,
+  2,
+  3,
+  4,
 ] as const;
 
 export type AnimationIterationCountType =
