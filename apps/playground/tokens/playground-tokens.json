@@ -156,7 +156,11 @@
         "type": "color"
       },
       "blue8": {
+<<<<<<< HEAD
         "value": "{colors.amber6}",
+=======
+        "value": "#ffe804",
+>>>>>>> d3fce6915690889b64fd73804ae04d1e4c338328
         "type": "color"
       },
       "blue9": {
