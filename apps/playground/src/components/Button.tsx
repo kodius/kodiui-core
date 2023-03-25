@@ -1,10 +1,9 @@
 import { Box, Animation } from "@kodiui/ui";
-import { FC, PropsWithChildren, useEffect, useState } from "react";
+import { FC, PropsWithChildren, useState } from "react";
 
 export const Button: FC<PropsWithChildren> = (props) => {
   const [shouldAnimate, setShouldAnimate] = useState(false);
   const [shouldAnimate2, setShouldAnimate2] = useState(false);
-
 
   return (
     <Animation
@@ -13,7 +12,6 @@ export const Button: FC<PropsWithChildren> = (props) => {
       shouldAnimate={shouldAnimate}
     >
       <Animation
-        // animation="shakeX"
         animationIterationCount={"unset"}
         shouldAnimate={shouldAnimate2}
         onMouseOver={() => setShouldAnimate2(true)}
