@@ -156,7 +156,7 @@
         "type": "color"
       },
       "blue8": {
-        "value": "#fd27ff",
+        "value": "{colors.amber6}",
         "type": "color"
       },
       "blue9": {
