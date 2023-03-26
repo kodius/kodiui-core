@@ -5,8 +5,15 @@ import { theme } from "./contract.css";
 function App() {
   return (
     <div className={theme}>
-      <Box as="button" background="blue8" color="blue1" p="xs" px="sm">
-        Button lol
+      <Box
+        as="button"
+        background={{hover: "green8", light: "green6", dark: "green6"}}
+        color="green10"
+        p="xs"
+        px="sm"
+        borderRadius="sm"
+      >
+        Button
       </Box>
     </div>
   );
