@@ -2,7 +2,7 @@ import {
   AnimationIterationCountType,
   AnimationTimingFunctionKeys,
   TransitionTime,
-} from "../../../styles/properties/animations";
+} from "../../../styles/tokens/animations";
 import { AnimationProps } from "./Animation";
 
 export const animationSetter = (props: AnimationProps) => {

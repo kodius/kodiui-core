@@ -10,4 +10,4 @@ export const Space = {
   xxl: "2rem",
   xxxl: "3rem",
   xxxxl: "4rem",
-} as const;
+};

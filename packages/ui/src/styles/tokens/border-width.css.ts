@@ -4,4 +4,4 @@ export const BorderWidth = {
   lg: "5px",
   xl: "10px",
   xxl: "25px",
-} as const;
+} 

@@ -5,7 +5,7 @@ import {
   AnimationIterationCount,
   AnimationPlayState,
   transitionTime,
-} from "../styles/properties/animations";
+} from "../styles/tokens/animations";
 
 export const animationProperties = {
   animation: kodiContract.animations,

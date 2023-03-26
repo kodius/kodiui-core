@@ -40,7 +40,7 @@ export const AnimationTimingFunction = {
   "ease-step-3": "steps(4)",
   "ease-step-4": "steps(7)",
   "ease-step-5": "steps(10)",
-  "linear": "linear"
-} as const;
+  linear: "linear",
+};
 
 export type AnimationTimingFunctionKeys = keyof typeof AnimationTimingFunction;

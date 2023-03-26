@@ -1,13 +1,10 @@
-import { properties, kodiContract, translateTokens } from "@kodiui/ui";
-
+import { kodiContract, translateTokens, tokens } from "@kodiui/ui";
 import { createTheme } from "@vanilla-extract/css";
-import tokens from "../tokens/playground-tokens.json";
+import FigmaTokens from "../tokens/playground-tokens.json";
 
-export type PropertyKeys = keyof typeof properties;
-
-
-const figmaTokens = translateTokens(tokens["kodiui-ds"]);
+const figmaTokens = translateTokens(FigmaTokens["kodiui-ds"]);
 
 export const theme = createTheme(kodiContract, {
-  ...figmaTokens
+  ...figmaTokens,
+  // ...tokens
 });

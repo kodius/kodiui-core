@@ -23,6 +23,6 @@ export const Animations = {
   blink: Keyframes.blink,
   float: Keyframes.float,
   pulse: Keyframes.pulse,
-};
-
+} 
+ 
 export type AnimationsKeys = keyof typeof Animations;

@@ -1,5 +1,5 @@
 import "@kodiui/ui/style.css";
-import { Box, properties } from "@kodiui/ui";
+import { Box } from "@kodiui/ui";
 import { theme } from "./contract.css";
 
 function App() {

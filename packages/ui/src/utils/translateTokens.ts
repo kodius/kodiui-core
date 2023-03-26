@@ -1,10 +1,10 @@
-import { PropertyKeys } from "../styles/properties/index.css";
+import { TokenKeys, tokens, Tokens } from "../styles/tokens/index.css";
 
-type Tokens = {
-  [key in PropertyKeys]: {
+type JSONTokens = {
+  [key in TokenKeys]: {
     [variant: string]: {
       value: string;
-      types: string;
+      type: string;
     };
   };
 };
@@ -16,15 +16,11 @@ type TokenVariants = {
   };
 };
 
-interface ReadableToken {
+type ReadableToken = {
   [key: string]: string;
-}
-
-type ReadableTokens = {
-  [key in PropertyKeys]?: ReadableToken;
 };
 
-function extractTokens(tokenVariant: TokenVariants): ReadableToken {
+function extractTokens(tokenVariant: TokenVariants) {
   const result: ReadableToken = {};
   for (const [key, value] of Object.entries(tokenVariant)) {
     result[key] = value.value;
@@ -32,20 +28,12 @@ function extractTokens(tokenVariant: TokenVariants): ReadableToken {
   return result;
 }
 
-export const translateTokens = (tokens: Tokens): ReadableTokens => {
-  const entries = Object.entries(tokens);
-
-  let properties: ReadableTokens = {};
-
-  entries.forEach((entrie) => {
-    const cssPropery = entrie[0] as PropertyKeys;
-    const cssValues = entrie[1];
-    const test = extractTokens(cssValues);
-    const newEntrie = {
-      [cssPropery]: test,
-    };
-
-    properties = { ...properties, ...newEntrie };
-  });
+export const translateTokens = (jsonTokens: JSONTokens): Tokens => {
+  const properties: Tokens = tokens;
+  for (const [cssProperty, cssValues] of Object.entries(jsonTokens)) {
+    const key = cssProperty as TokenKeys;
+    //@ts-ignore
+    properties[key] = extractTokens(cssValues);
+  }
   return properties;
 };

@@ -3,7 +3,7 @@ import { animationProperties } from "../types/AnimationProperties";
 import { flexProperties } from "../types/flexProperites";
 import { spaceProperties } from "../types/spaceProperties";
 import { kodiContract } from "./kodiContract.css";
-import { BreakPoints } from "./properties/break-points";
+import { BreakPoints } from "./tokens/break-points";
 
 const unresponsiveProperties = defineProperties({
   properties: {

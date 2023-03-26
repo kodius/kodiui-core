@@ -1,6 +1,6 @@
 import { createThemeContract } from "@vanilla-extract/css";
-import { properties } from "./properties/index.css";
+import { tokens } from "./tokens/index.css";
 
 export const kodiContract = createThemeContract({
-  ...properties,
+  ...tokens,
 });

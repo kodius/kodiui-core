@@ -29,4 +29,4 @@ export const Colors = {
   ...lightColors.tomato,
   ...lightColors.violet,
   ...lightColors.yellow,
-} as const;
+} 

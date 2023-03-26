@@ -7,7 +7,7 @@ import { BreakPoints } from "./break-points";
 import { Animations, AnimationTimingFunction } from "./animations";
 import { Colors } from "./colors/index.css";
 
-export const properties = {
+export const tokens = {
   borderWidth: BorderWidth,
   breakpoints: BreakPoints,
   borderRadius: BorderRadius,
@@ -18,4 +18,6 @@ export const properties = {
   animationTimingFunction: AnimationTimingFunction,
 };
 
-export type PropertyKeys = keyof typeof properties
+export type TokenKeys = keyof typeof tokens
+
+export type Tokens = typeof tokens;
