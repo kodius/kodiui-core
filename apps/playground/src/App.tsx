@@ -7,11 +7,14 @@ function App() {
     <div className={theme}>
       <Box
         as="button"
-        background={{hover: "green8", light: "green6", dark: "green6"}}
+        background={{ hover: "green8", light: "green6", dark: "green6" }}
         color="green10"
         p="xs"
         px="sm"
         borderRadius="sm"
+        m="xl"
+        __margin={100}
+        __background="red"
       >
         Button
       </Box>

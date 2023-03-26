@@ -1,32 +1,18 @@
 import { createSprinkles, defineProperties } from "@vanilla-extract/sprinkles";
 import { animationProperties } from "../types/AnimationProperties";
+import { borderProperties } from "../types/borderProperties";
 import { flexProperties } from "../types/flexProperites";
 import { spaceProperties } from "../types/spaceProperties";
+import { typographyProperties } from "../types/typographyProperties";
 import { kodiContract } from "./kodiContract.css";
 import { BreakPoints } from "./tokens/break-points";
 
 const unresponsiveProperties = defineProperties({
   properties: {
-    textAlign: [`center`, `left`, `right`],
-    textTransform: [`lowercase`, `uppercase`],
-    fontWeight: [100, 200, 300, 400, 500, 600, 700, 800, 900],
-    textDecoration: [`none`, `underline`],
-    borderRadius: kodiContract.borderRadius,
-    borderWidth: kodiContract.borderWidth,
-    borderStyle: [
-      "none",
-      "hidden",
-      "dotted",
-      "dashed",
-      "solid",
-      "double",
-      "groove",
-      "ridge",
-      "inset",
-      "outset",
-    ],
     boxShadow: kodiContract.boxShadow,
-    ...animationProperties
+    ...borderProperties,
+    ...animationProperties,
+    ...typographyProperties,
   },
 });
 
