@@ -7,7 +7,7 @@ import { BreakPoints } from "./break-points";
 import { Animations, AnimationTimingFunction } from "./animations";
 import { Colors } from "./colors/index.css";
 
-export const defContract = {
+export const properties = {
   borderWidth: BorderWidth,
   breakpoints: BreakPoints,
   borderRadius: BorderRadius,
@@ -17,3 +17,5 @@ export const defContract = {
   animations: Animations,
   animationTimingFunction: AnimationTimingFunction,
 };
+
+export type PropertyKeys = keyof typeof properties

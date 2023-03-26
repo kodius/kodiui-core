@@ -1,3 +1,4 @@
 export { kodiContract } from "./styles/kodiContract.css";
-export { defContract } from "./styles/properties/index.css";
-export * from './components/primitives'
+export { properties } from "./styles/properties/index.css";
+export { translateTokens } from "./utils/translateTokens";
+export * from "./components/primitives";
