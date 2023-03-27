@@ -15,4 +15,4 @@ export const borderProperties = {
     "inset",
     "outset",
   ],
-};
+} as const;

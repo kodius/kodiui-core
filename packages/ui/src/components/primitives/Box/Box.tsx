@@ -10,7 +10,6 @@ export type BoxProps = PropsWithChildren<
 
 export const Box = forwardRef<HTMLElement, BoxProps>((props, ref) => (
   <Builder
-    p={props.padding || "xs"}
     borderWidth={props.borderWidth || props.borderColor ? "sm" : undefined}
     borderStyle={props.borderStyle || props.borderColor ? "solid" : "none"}
     style={hardStyle(props)}

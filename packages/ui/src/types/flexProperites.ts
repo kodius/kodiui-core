@@ -28,6 +28,6 @@ export const flexProperties = {
     "wrap-reverse",
   ],
   gap: kodiContract.space,
-};
+} as const;
 
 export type FlexPropertiesKeys = keyof typeof flexProperties;
