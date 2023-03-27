@@ -45,6 +45,13 @@ function App() {
           <Element />
           <Element />
         </Cluster>
+        Cluster with aspect ratio
+        <Cluster background="orange3" p="xxl">
+          <Element width="1/4"> 1/4</Element>
+          <Element width="fit"> fit</Element>
+          <Element width="fit"> fit </Element>
+          <Element width="3/5">3/5</Element>
+        </Cluster>
         Switcher
         <Switcher background="red5" p="xxl">
           <Element />
@@ -98,7 +105,13 @@ export default App;
 
 const Element: FC<PropsWithChildren & BoxProps> = (props) => {
   return (
-    <Box background={"sky7"} p="xs" boxShadow="shadow-2" borderRadius="sm" {...props}>
+    <Box
+      background={"sky7"}
+      p="xs"
+      boxShadow="shadow-2"
+      borderRadius="sm"
+      {...props}
+    >
       <Box color={"sky11"}>{props.children || "Box"}</Box>
     </Box>
   );
