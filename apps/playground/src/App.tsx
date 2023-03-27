@@ -9,6 +9,8 @@ import {
   Switcher,
 } from "@kodiui/ui";
 import { theme } from "./contract.css";
+import { FC, PropsWithChildren } from "react";
+import { BoxProps } from "@kodiui/ui/dist/components/primitives/Box/Box";
 
 function App() {
   return (
@@ -41,7 +43,24 @@ function App() {
           <Element />
         </Split>
         Cetner
-        <Center width={'1/3'}>kita</Center>
+        <Center background="tomato5" p="xxl">
+          <Element />
+        </Center>
+        Width - aspect ration & sizes 
+        <FlexBox>
+          <Box width="2/6" textAlign="center">
+            <Element background="purple5">width 2/6</Element>
+          </Box>
+          <Box width="1/6" textAlign="center">
+            <Element>width 1/6</Element>
+          </Box>
+        </FlexBox>
+        <Box width="3/6" textAlign="center">
+          <Element background="sand6">width 3/6</Element>
+        </Box>
+        <Box width="full">
+          <Element>full</Element>
+        </Box>
       </Stack>
     </div>
   );
@@ -49,11 +68,10 @@ function App() {
 
 export default App;
 
-const Element = () => {
+const Element: FC<PropsWithChildren & BoxProps> = (props) => {
   return (
-    <Box background={"sky7"} borderColor="yellow8" borderWidth="xl">
-      <div style={{ width: "200px" }}>boc</div>
-      {/* <Box width="" __width>box</Box> */}
+    <Box background={"sky7"} p="xs" boxShadow="shadow-2" {...props}>
+      <Box>{props.children || "Box"}</Box>
     </Box>
   );
 };

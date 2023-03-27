@@ -51,7 +51,7 @@ const responsiveProperties = defineProperties({
   responsiveArray: [`xxs`, `xs`, `sm`, `md`, `lg`, `xl`, `xxl`],
   properties: {
     position: [`relative`],
-    ...widthProperties,
+    width: widthProperties,
     ...flexProperties,
     ...spaceProperties,
   },

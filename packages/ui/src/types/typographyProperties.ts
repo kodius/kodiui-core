@@ -26,4 +26,4 @@ export const typographyProperties = {
     900,
   ],
   textDecoration: [`none`, `underline`],
-};
+} as const;

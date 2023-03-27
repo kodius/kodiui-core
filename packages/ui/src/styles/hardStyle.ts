@@ -2,13 +2,18 @@ import { CSSProperties } from "@vanilla-extract/css";
 import React from "react";
 import { BoxProps } from "../components/primitives/Box/Box";
 
-//test
-
 export interface HardStyles {
   __margin?: CSSProperties["margin"] | number;
   __padding?: CSSProperties["padding"] | number;
   __background?: CSSProperties["background"];
-  __width?: CSSProperties["width"] | number
+  __width?: CSSProperties["width"] | number;
+  __minWidth?: CSSProperties["minWidth"] | number;
+  __height?: CSSProperties["height"] | number;
+  __minHeight?: CSSProperties["minHeight"] | number;
+  __top?: CSSProperties["top"] | number;
+  __left?: CSSProperties["left"] | number;
+  __bottom?: CSSProperties["bottom"] | number;
+  __right?: CSSProperties["right"] | number;
 }
 
 export const hardStyle = (props: BoxProps): React.CSSProperties | undefined => {
@@ -17,6 +22,13 @@ export const hardStyle = (props: BoxProps): React.CSSProperties | undefined => {
     padding: props.__padding,
     background: props.__background,
     width: props.__width,
+    minWidth: props.__minWidth,
+    height: props.__height,
+    minHeight: props.__minHeight,
+    top: props.__top,
+    left: props.__left,
+    bottom: props.__bottom,
+    right: props.__right,
     ...props.style,
   };
 };

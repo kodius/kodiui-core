@@ -15,5 +15,5 @@ export type BuilderProps = PropsWithChildren<
 >;
 
 export interface BuilderInterface extends NativeProps, AsElement, Sprinkles {
-  children: ReactNode;
+  children?: ReactNode;
 }
