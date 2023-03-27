@@ -1,5 +1,13 @@
 import "@kodiui/ui/style.css";
-import { Box, Center, Cluster, FlexBox, Split, Stack, Switcher } from "@kodiui/ui";
+import {
+  Box,
+  Center,
+  Cluster,
+  FlexBox,
+  Split,
+  Stack,
+  Switcher,
+} from "@kodiui/ui";
 import { theme } from "./contract.css";
 
 function App() {
@@ -33,9 +41,7 @@ function App() {
           <Element />
         </Split>
         Cetner
-        <Center>
-          kita
-        </Center>
+        <Center width={'1/3'}>kita</Center>
       </Stack>
     </div>
   );
@@ -45,11 +51,7 @@ export default App;
 
 const Element = () => {
   return (
-    <Box
-      background={"sky7"}
-      borderColor="yellow8"
-      borderWidth="xl"
-    >
+    <Box background={"sky7"} borderColor="yellow8" borderWidth="xl">
       <div style={{ width: "200px" }}>boc</div>
       {/* <Box width="" __width>box</Box> */}
     </Box>

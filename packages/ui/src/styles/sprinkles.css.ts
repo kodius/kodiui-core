@@ -4,6 +4,7 @@ import { borderProperties } from "../types/borderProperties";
 import { flexProperties } from "../types/flexProperites";
 import { spaceProperties } from "../types/spaceProperties";
 import { typographyProperties } from "../types/typographyProperties";
+import { widthProperties } from "../types/widthProperties";
 import { kodiContract } from "./kodiContract.css";
 import { BreakPoints } from "./tokens/break-points";
 
@@ -50,6 +51,7 @@ const responsiveProperties = defineProperties({
   responsiveArray: [`xxs`, `xs`, `sm`, `md`, `lg`, `xl`, `xxl`],
   properties: {
     position: [`relative`],
+    ...widthProperties,
     ...flexProperties,
     ...spaceProperties,
   },
