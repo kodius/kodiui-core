@@ -8,6 +8,7 @@ export interface HardStyles {
   __margin?: CSSProperties["margin"] | number;
   __padding?: CSSProperties["padding"] | number;
   __background?: CSSProperties["background"];
+  __width?: CSSProperties["width"] | number
 }
 
 export const hardStyle = (props: BoxProps): React.CSSProperties | undefined => {
@@ -15,6 +16,7 @@ export const hardStyle = (props: BoxProps): React.CSSProperties | undefined => {
     margin: props.__margin,
     padding: props.__padding,
     background: props.__background,
+    width: props.__width,
     ...props.style,
   };
 };
