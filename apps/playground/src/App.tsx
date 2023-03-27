@@ -1,5 +1,5 @@
 import "@kodiui/ui/style.css";
-import { Box, Cluster, FlexBox, Split, Stack, Switcher } from "@kodiui/ui";
+import { Box, Center, Cluster, FlexBox, Split, Stack, Switcher } from "@kodiui/ui";
 import { theme } from "./contract.css";
 
 function App() {
@@ -32,6 +32,10 @@ function App() {
           <Element />
           <Element />
         </Split>
+        Cetner
+        <Center>
+          kita
+        </Center>
       </Stack>
     </div>
   );
