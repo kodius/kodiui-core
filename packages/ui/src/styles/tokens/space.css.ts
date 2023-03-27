@@ -11,3 +11,5 @@ export const Space = {
   xxxl: "3rem",
   xxxxl: "4rem",
 };
+
+export type SpaceTypes = keyof typeof Space

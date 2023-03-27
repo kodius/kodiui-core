@@ -1,18 +1,4 @@
 import { kodiContract } from "../styles/kodiContract.css";
-import { Sizes } from "./global";
-
-interface SpaceProperties {
-  padding: Sizes;
-  paddingTop: Sizes;
-  paddingBottom: Sizes;
-  paddingRight: Sizes;
-  paddingLeft: Sizes;
-  margin: Sizes;
-  marginTop: Sizes;
-  marginBottom: Sizes;
-  marginLeft: Sizes;
-  marginRight: Sizes;
-}
 
 export const spaceProperties = {
   padding: kodiContract.space,

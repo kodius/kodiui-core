@@ -1,16 +1,6 @@
-import { CSSProperties } from "@vanilla-extract/css";
+import { kodiContract } from "../styles/kodiContract.css";
 
-interface FlexProperties {
-  display: CSSProperties["display"][];
-  alignItems: CSSProperties["alignItems"][];
-  justifyContent: CSSProperties["justifyContent"][];
-  flexDirection: CSSProperties["flexDirection"][];
-  flexWrap: CSSProperties["flexWrap"][];
-}
-
-export type FlexPropertiesKeys = keyof typeof flexProperties;
-
-export const flexProperties: FlexProperties = {
+export const flexProperties = {
   display: [`none`, `block`, `inline`, `inline-block`, `flex`, `grid`],
   alignItems: [`flex-start`, `center`, `flex-end`, `baseline`],
   justifyContent: [
@@ -37,4 +27,7 @@ export const flexProperties: FlexProperties = {
     "revert-layer",
     "wrap-reverse",
   ],
+  gap: kodiContract.space,
 };
+
+export type FlexPropertiesKeys = keyof typeof flexProperties;
