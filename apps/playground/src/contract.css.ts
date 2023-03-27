@@ -1,10 +1,19 @@
-import { kodiContract, tokens, translateTokens } from "@kodiui/ui";
+import { kodiContract, tokens, DarkColors } from "@kodiui/ui";
 import { createTheme } from "@vanilla-extract/css";
-import FigmaTokens from "../tokens/playground-tokens.json";
 
-const figmaTokens = translateTokens(FigmaTokens["kodiui-ds"]);
+// import FigmaTokens from "../tokens/playground-tokens.json";
 
-export const theme = createTheme(kodiContract, {
-  ...tokens,
-  // ...figmaTokens
+// const figmaTokens = translateTokens(FigmaTokens["kodiui-ds"]);
+
+// const { colors, ...restTokens } = figmaTokens;
+const { colors, ...restTokens } = tokens;
+
+export const lightTheme = createTheme(kodiContract, {
+  ...restTokens,
+  colors: colors,
+});
+
+export const darkTheme = createTheme(kodiContract, {
+  ...restTokens,
+  colors: DarkColors,
 });

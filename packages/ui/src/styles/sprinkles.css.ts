@@ -1,6 +1,7 @@
 import { createSprinkles, defineProperties } from "@vanilla-extract/sprinkles";
 import { animationProperties } from "../types/AnimationProperties";
 import { borderProperties } from "../types/borderProperties";
+import { cursorProperties } from "../types/cursorProperites";
 import { flexProperties } from "../types/flexProperites";
 import { spaceProperties } from "../types/spaceProperties";
 import { typographyProperties } from "../types/typographyProperties";
@@ -11,6 +12,7 @@ import { BreakPoints } from "./tokens/break-points";
 const unresponsiveProperties = defineProperties({
   properties: {
     boxShadow: kodiContract.boxShadow,
+    cursor: cursorProperties,
     ...borderProperties,
     ...animationProperties,
     ...typographyProperties,

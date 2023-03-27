@@ -6,15 +6,30 @@ import {
   FlexBox,
   Split,
   Stack,
+  Animation,
   Switcher,
 } from "@kodiui/ui";
-import { theme } from "./contract.css";
-import { FC, PropsWithChildren } from "react";
+import { darkTheme, lightTheme } from "./contract.css";
+import { FC, PropsWithChildren, useState } from "react";
 import { BoxProps } from "@kodiui/ui/dist/components/primitives/Box/Box";
 
 function App() {
+  const [theme, setTheme] = useState<"dark" | "light">("light");
+  const isLight = theme === "light";
   return (
-    <div className={theme}>
+    <div className={isLight ? lightTheme : darkTheme}>
+      <FlexBox justifyContent="flex-end">
+        <Box
+          as="button"
+          p="xs"
+          cursor="pointer"
+          onClick={() => setTheme(isLight ? "dark" : "light")}
+          background="purple5"
+          color="purple12"
+        >
+          switch theme
+        </Box>
+      </FlexBox>
       Stack
       <Stack>
         FlexBox
@@ -46,7 +61,7 @@ function App() {
         <Center background="tomato5" p="xxl">
           <Element />
         </Center>
-        Width - aspect ration & sizes 
+        Width - aspect ration & sizes
         <FlexBox>
           <Box width="2/6" textAlign="center">
             <Element background="purple5">width 2/6</Element>
@@ -61,6 +76,19 @@ function App() {
         <Box width="full">
           <Element>full</Element>
         </Box>
+        Animations
+        <Center>
+          <Animation
+            animation="fadeIn"
+            animationIterationCount="infinite"
+            animationDirection="alternate"
+            animationDuration="1s"
+          >
+            <Animation animation="bounce" width="fit">
+              <Element>Bounce + fade in</Element>
+            </Animation>
+          </Animation>
+        </Center>
       </Stack>
     </div>
   );
@@ -70,8 +98,8 @@ export default App;
 
 const Element: FC<PropsWithChildren & BoxProps> = (props) => {
   return (
-    <Box background={"sky7"} p="xs" boxShadow="shadow-2" {...props}>
-      <Box>{props.children || "Box"}</Box>
+    <Box background={"sky7"} p="xs" boxShadow="shadow-2" borderRadius="sm" {...props}>
+      <Box color={"sky11"}>{props.children || "Box"}</Box>
     </Box>
   );
 };
