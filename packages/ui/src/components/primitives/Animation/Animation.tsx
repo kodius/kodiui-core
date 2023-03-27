@@ -13,7 +13,7 @@ export const Animation = forwardRef<HTMLElement, AnimationProps>(
   (props, ref) => {
     const {
       getDuration,
-      getInterationCount,
+      getIterationCount: getIterationCount,
       getAnimationTimingFunction,
       defineAnimation,
     } = animationSetter(props);
@@ -31,7 +31,7 @@ export const Animation = forwardRef<HTMLElement, AnimationProps>(
         animationPlayState={definePlayState()}
         animationDuration={props.animationDuration || getDuration()}
         animationIterationCount={
-          props.animationIterationCount || getInterationCount()
+          props.animationIterationCount || getIterationCount()
         }
         animationTimingFunction={
           props.animationTimingFunction || getAnimationTimingFunction()

@@ -39,7 +39,7 @@ export const animationSetter = (props: AnimationProps) => {
     }
   };
 
-  const getInterationCount = (): AnimationIterationCountType => {
+  const getIterationCount = (): AnimationIterationCountType => {
     switch (props.animation) {
       case "ping":
       case "blink":
@@ -79,7 +79,7 @@ export const animationSetter = (props: AnimationProps) => {
 
   return {
     getDuration,
-    getInterationCount,
+    getIterationCount: getIterationCount,
     getAnimationTimingFunction,
     defineAnimation,
   };
