@@ -8,6 +8,7 @@ import {
   Stack,
   Animation,
   Switcher,
+  Sidebar,
 } from "@kodiui/ui";
 import { darkTheme, lightTheme } from "./contract.css";
 import { FC, PropsWithChildren, useState } from "react";
@@ -96,6 +97,18 @@ function App() {
             </Animation>
           </Animation>
         </Center>
+        Sidebar
+        <Sidebar>
+          <Element width="60">1 element</Element>
+          <Element>2 element</Element>
+        </Sidebar>
+        Searchbar with Sidebar on right
+        <Sidebar side="right" gap={"0"} >
+          <Box as="input" borderColor="red10" p="sm" />
+          <Box as="button" borderColor="red10" width="60" p="sm">
+            Search
+          </Box>
+        </Sidebar>
       </Stack>
     </div>
   );
