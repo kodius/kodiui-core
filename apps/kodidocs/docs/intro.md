@@ -1,11 +1,10 @@
 ---
+slug: /
 sidebar_position: 1
 ---
 
-# Overview
-
+# Introduction
 
 ```bash
 example
 ```
-

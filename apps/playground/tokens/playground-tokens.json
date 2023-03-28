@@ -27,27 +27,27 @@
         "value": "240px",
         "type": "other"
       },
-      "xs": {
+      "mobileSmall": {
         "value": "360px",
         "type": "other"
       },
-      "sm": {
+      "mobile": {
         "value": "480px",
         "type": "other"
       },
-      "md": {
+      "tabletSmall": {
         "value": "768px",
         "type": "other"
       },
-      "lg": {
+      "tablet": {
         "value": "1024px",
         "type": "other"
       },
-      "xl": {
+      "desktop": {
         "value": "1440px",
         "type": "other"
       },
-      "xxl": {
+      "desktopLarge": {
         "value": "1920px",
         "type": "other"
       }
@@ -1755,8 +1755,6 @@
   },
   "$themes": [],
   "$metadata": {
-    "tokenSetOrder": [
-      "kodiui-ds"
-    ]
+    "tokenSetOrder": ["kodiui-ds"]
   }
 }

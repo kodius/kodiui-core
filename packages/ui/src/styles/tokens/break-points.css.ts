@@ -1,9 +1,9 @@
 export const BreakPoints = {
-  xxs: "240px",
-  xs: "360px",
-  sm: "480px",
-  md: "768px",
-  lg: "1024px",
-  xl: "1440px",
-  xxl: "1920px",
-} 
+  mobileExtraSmall: "240px",
+  mobileSmall: "360px",
+  mobile: "480px",
+  tabletSmall: "768px",
+  tablet: "1024px",
+  desktop: "1440px",
+  desktopLarge: "1920px",
+};
