@@ -16,3 +16,5 @@ export const borderProperties = {
     "outset",
   ],
 } as const;
+
+export type BorderPropertiesKyes = keyof typeof borderProperties

@@ -1,7 +1,7 @@
-import { forwardRef, useState } from "react";
-import { AnimationPlayStateType } from "../../../styles/tokens/animations";
-import { BuilderInterface } from "../../../types";
-import { Builder } from "../../Builder";
+import { forwardRef } from "react";
+import { AnimationPlayStateType } from "../../styles/tokens/animations";
+import { BuilderInterface } from "../../types";
+import { Builder } from "../Builder";
 import { animationSetter } from "./animationSetter";
 
 export interface AnimationProps extends BuilderInterface {

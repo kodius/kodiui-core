@@ -9,6 +9,8 @@ import { widthProperties } from "../types/widthProperties";
 import { kodiContract } from "./kodiContract.css";
 import { BreakPoints } from "./tokens/break-points";
 
+import "./reset.css.ts";
+
 const unresponsiveProperties = defineProperties({
   properties: {
     boxShadow: kodiContract.boxShadow,

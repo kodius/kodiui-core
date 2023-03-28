@@ -1,8 +1,4 @@
-import {
-  AnimationIterationCountType,
-  AnimationTimingFunctionKeys,
-  TransitionTime,
-} from "../../../styles/tokens/animations";
+import { AnimationIterationCountType, AnimationTimingFunctionKeys, TransitionTime } from "../../styles/tokens/animations";
 import { AnimationProps } from "./Animation";
 
 export const animationSetter = (props: AnimationProps) => {

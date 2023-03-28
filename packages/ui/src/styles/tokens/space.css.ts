@@ -8,9 +8,9 @@ export const Space = {
   md: "1.25rem",
   lg: "1.5rem",
   xl: "1.75rem",
-  xxl: "2rem",
-  xxxl: "3rem",
-  xxxxl: "4rem",
+  "2xl": "2rem",
+  "3xl": "3rem",
+  "5xxl": "4rem",
 };
 
 export type SpaceTypes = keyof typeof Space;

@@ -1,4 +1,4 @@
-import { forwardRef, PropsWithChildren } from "react";
+import { forwardRef } from "react";
 import { hardStyle, HardStyles } from "../../../styles/hardStyle";
 import { BuilderInterface } from "../../../types";
 import { AnimationPropertiesKeys } from "../../../types/AnimationProperties";

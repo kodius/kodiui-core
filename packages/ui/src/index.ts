@@ -4,3 +4,5 @@ export { translateTokens } from "./utils/translateTokens";
 //TODO remove *
 export * from "./components/primitives";
 export { DarkColors } from "./styles/tokens/colors/dark-colors.css";
+export { Typography } from "./components/Typography";
+export { Animation } from "./components/Animation";

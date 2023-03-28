@@ -6,6 +6,7 @@ import { BorderWidth } from "./border-width.css";
 import { BreakPoints } from "./break-points";
 import { Animations, AnimationTimingFunction } from "./animations";
 import { LightColors } from "./colors/light-colors.css";
+import { FontSize } from "./font-size.css";
 
 export const tokens = {
   borderWidth: BorderWidth,
@@ -14,6 +15,7 @@ export const tokens = {
   colors: LightColors,
   boxShadow: BoxShadows,
   space: Space,
+  fontSize: FontSize,
   animations: Animations,
   animationTimingFunction: AnimationTimingFunction,
 };
