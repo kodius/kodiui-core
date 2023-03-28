@@ -6,3 +6,4 @@ export * from "./components/primitives";
 export { DarkColors } from "./styles/tokens/colors/dark-colors.css";
 export { Typography } from "./components/Typography";
 export { Animation } from "./components/Animation";
+export { Icon } from "./components/primitives/Icon";

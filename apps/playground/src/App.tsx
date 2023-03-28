@@ -10,10 +10,12 @@ import {
   Sidebar,
   Typography,
   Animation,
+  Icon,
 } from "@kodiui/ui";
 import { darkTheme, lightTheme } from "./contract.css";
 import { FC, PropsWithChildren, useState } from "react";
 import { BoxProps } from "@kodiui/ui/dist/components/primitives/Box/Box";
+import tag from "./assets/tag.svg";
 
 import "./global.css";
 
@@ -174,6 +176,10 @@ function App() {
         <Typography color="gray12" type="p">
           Paragprah
         </Typography>
+        <Icon>
+          <image href={"./assets/tag.svg"} width={"40px"} height={"40px"} />
+          Close
+        </Icon>
       </Stack>
     </Box>
   );
