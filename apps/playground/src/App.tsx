@@ -6,70 +6,80 @@ import {
   FlexBox,
   Split,
   Stack,
-  Animation,
   Switcher,
   Sidebar,
+  Typography,
+  Animation,
 } from "@kodiui/ui";
 import { darkTheme, lightTheme } from "./contract.css";
 import { FC, PropsWithChildren, useState } from "react";
 import { BoxProps } from "@kodiui/ui/dist/components/primitives/Box/Box";
 
+import "./global.css";
+
 function App() {
-  const [theme, setTheme] = useState<"dark" | "light">("light");
+  const [theme, setTheme] = useState<"dark" | "light">("dark");
   const isLight = theme === "light";
   return (
-    <div className={isLight ? lightTheme : darkTheme}>
+    <Box
+      className={isLight ? lightTheme : darkTheme}
+      background={"whiteA12"}
+      p="sm"
+    >
       <FlexBox justifyContent="flex-end">
         <Box
           as="button"
           p="xs"
           cursor="pointer"
           onClick={() => setTheme(isLight ? "dark" : "light")}
-          background="purple5"
-          color="purple12"
+          background="purple4"
+          borderRadius="sm"
+          color="purple11"
+          borderColor="purple11"
+          boxShadow="shadow-3"
+          position="fixed"
         >
           switch theme
         </Box>
       </FlexBox>
-      Stack
       <Stack>
-        FlexBox
-        <FlexBox borderRadius="xs" flexWrap="wrap" background="sage5" p="xxl">
+        <Title>FlexBox</Title>
+        <FlexBox borderRadius="xs" flexWrap="wrap" background="sage5" p="2xl">
           <Element />
           <Element />
           <Element />
         </FlexBox>
-        Cluster
-        <Cluster background="orange3" p="xxl">
+        <Title>Cluster</Title>
+        <Cluster background="orange3" p="2xl">
           <Element />
           <Element />
           <Element />
           <Element />
         </Cluster>
-        Cluster with aspect ratio
-        <Cluster background="orange3" p="xxl">
+        <Title>Cluster with aspect ratio</Title>
+        <Cluster background="orange3" p="2xl">
           <Element width="1/4"> 1/4</Element>
           <Element width="fit"> fit</Element>
           <Element width="fit"> fit </Element>
           <Element width="3/5">3/5</Element>
         </Cluster>
-        Switcher
-        <Switcher background="red5" p="xxl">
+        <Title>Switcher</Title>
+        <Switcher background="red5" p="2xl">
           <Element />
           <Element />
           <Element />
           <Element />
         </Switcher>
-        Split
-        <Split background="green5" p="xxl">
+        <Title>Split</Title>
+        <Split background="green5" p="2xl">
           <Element />
           <Element />
         </Split>
-        Cetner
-        <Center background="tomato5" p="xxl">
+        <Title>Cetner</Title>
+        <Center background="tomato5" p="2xl">
           <Element />
         </Center>
-        Width - aspect ration & sizes
+        <Title>Width - aspect ration & sizes</Title>
         <FlexBox>
           <Box width="2/6" textAlign="center">
             <Element background="purple5">width 2/6</Element>
@@ -84,33 +94,88 @@ function App() {
         <Box width="full">
           <Element>full</Element>
         </Box>
-        Animations
+        <Title>
+          <Cluster alignItems="center">
+            Animations
+            <Typography as="h6">(combine animations)</Typography>
+          </Cluster>
+        </Title>
         <Center>
-          <Animation
-            animation="fadeIn"
-            animationIterationCount="infinite"
-            animationDirection="alternate"
-            animationDuration="1s"
-          >
-            <Animation animation="bounce" width="fit">
-              <Element>Bounce + fade in</Element>
+          <Cluster>
+            <Animation
+              animation="fadeIn"
+              animationIterationCount="infinite"
+              animationDirection="alternate"
+              animationDuration="1s"
+            >
+              <Element>fade in</Element>
             </Animation>
-          </Animation>
+            <Box color="gray12">+</Box>
+            <Animation animation="bounce" width="fit">
+              <Element>Bounce</Element>
+            </Animation>
+            <Box color="gray12"> = </Box>
+            <Animation
+              animation="fadeIn"
+              animationIterationCount="infinite"
+              animationDirection="alternate"
+              animationDuration="1s"
+            >
+              <Animation animation="bounce" width="fit">
+                <Element>Bounce + fade in</Element>
+              </Animation>
+            </Animation>
+          </Cluster>
         </Center>
-        Sidebar
+        <Title>Sidebar</Title>
         <Sidebar>
           <Element width="60">1 element</Element>
           <Element>2 element</Element>
         </Sidebar>
-        Searchbar with Sidebar on right
-        <Sidebar side="right" gap={"0"} >
-          <Box as="input" borderColor="red10" p="sm" />
-          <Box as="button" borderColor="red10" width="60" p="sm">
+        <Title>Searchbar with Sidebar on right</Title>
+        <Sidebar side="right" gap={"0"}>
+          <Box
+            as="input"
+            background="orange5"
+            color="orange10"
+            borderColor="orange10"
+            p="sm"
+          />
+          <Box
+            as="button"
+            background="orange5"
+            color="orange10"
+            borderColor="orange10"
+            width="60"
+            p="sm"
+          >
             Search
           </Box>
         </Sidebar>
+        <Title>Typography</Title>
+        <Typography color="gray12" type="h1">
+          Heading 1
+        </Typography>
+        <Typography color="gray12" type="h2">
+          Heading 2
+        </Typography>
+        <Typography color="gray12" type="h3">
+          Heading 3
+        </Typography>
+        <Typography color="gray12" type="h4">
+          Heading 4
+        </Typography>
+        <Typography color="gray12" type="h5">
+          Heading 5
+        </Typography>
+        <Typography color="gray12" type="h6">
+          Heading 6
+        </Typography>
+        <Typography color="gray12" type="p">
+          Paragprah
+        </Typography>
       </Stack>
-    </div>
+    </Box>
   );
 }
 
@@ -127,5 +192,13 @@ const Element: FC<PropsWithChildren & BoxProps> = (props) => {
     >
       <Box color={"sky11"}>{props.children || "Box"}</Box>
     </Box>
+  );
+};
+
+export const Title: FC<PropsWithChildren> = (props) => {
+  return (
+    <Typography color="gray12" as="h3">
+      {props.children}
+    </Typography>
   );
 };
