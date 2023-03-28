@@ -43,16 +43,30 @@ const responsiveProperties = defineProperties({
   // xl: { "@media": `screen and (min-width: ${kodiContract.breakpoints.xl})` },
   // this dose not work. vars can not be here.
   conditions: {
-    xxs: {},
-    xs: { "@media": `screen and (min-width: ${BreakPoints.xs})` },
-    sm: { "@media": `screen and (min-width: ${BreakPoints.sm})` },
-    md: { "@media": `screen and (min-width: ${BreakPoints.md})` },
-    lg: { "@media": `screen and (min-width: ${BreakPoints.lg})` },
-    xl: { "@media": `screen and (min-width: ${BreakPoints.xl})` },
-    xxl: { "@media": `screen and (min-width: ${BreakPoints.xxl})` },
+    mobileExtraSmall: {},
+    mobileSmall: {
+      "@media": `screen and (min-width: ${BreakPoints.mobileSmall})`,
+    },
+    mobile: { "@media": `screen and (min-width: ${BreakPoints.mobile})` },
+    tabletSmall: {
+      "@media": `screen and (min-width: ${BreakPoints.tabletSmall})`,
+    },
+    tablet: { "@media": `screen and (min-width: ${BreakPoints.tablet})` },
+    desktop: { "@media": `screen and (min-width: ${BreakPoints.desktop})` },
+    desktopLarge: {
+      "@media": `screen and (min-width: ${BreakPoints.desktopLarge})`,
+    },
   },
-  defaultCondition: "xxs",
-  responsiveArray: [`xxs`, `xs`, `sm`, `md`, `lg`, `xl`, `xxl`],
+  defaultCondition: "mobileExtraSmall",
+  responsiveArray: [
+    `mobileExtraSmall`,
+    `mobileSmall`,
+    `mobile`,
+    `tabletSmall`,
+    `tablet`,
+    `desktop`,
+    `desktopLarge`,
+  ],
   properties: {
     position: [
       "static",
