@@ -3,10 +3,10 @@ import { BorderRadius } from "./border-radius.css";
 import { Space } from "./space.css";
 
 import { BorderWidth } from "./border-width.css";
-import { BreakPoints } from "./break-points";
 import { Animations, AnimationTimingFunction } from "./animations";
 import { LightColors } from "./colors/light-colors.css";
 import { FontSize } from "./font-size.css";
+import { BreakPoints } from "./break-points.css";
 
 export const tokens = {
   borderWidth: BorderWidth,

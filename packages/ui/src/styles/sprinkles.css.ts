@@ -7,9 +7,9 @@ import { spaceProperties } from "../types/spaceProperties";
 import { typographyProperties } from "../types/typographyProperties";
 import { widthProperties } from "../types/widthProperties";
 import { kodiContract } from "./kodiContract.css";
-import { BreakPoints } from "./tokens/break-points";
 
 import "./reset.css.ts";
+import { BreakPoints } from "./tokens/break-points.css";
 
 const unresponsiveProperties = defineProperties({
   properties: {
@@ -42,6 +42,7 @@ const responsiveProperties = defineProperties({
   // TODO
   // xl: { "@media": `screen and (min-width: ${kodiContract.breakpoints.xl})` },
   // this dose not work. vars can not be here.
+
   conditions: {
     xxs: {},
     xs: { "@media": `screen and (min-width: ${BreakPoints.xs})` },
