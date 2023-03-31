@@ -15,7 +15,6 @@ import {
 import { darkTheme, lightTheme } from "./contract.css";
 import { FC, PropsWithChildren, useState } from "react";
 import { BoxProps } from "@kodiui/ui/dist/components/primitives/Box/Box";
-import tag from "./assets/tag.svg";
 
 import "./global.css";
 
@@ -25,7 +24,7 @@ function App() {
   return (
     <Box
       className={isLight ? lightTheme : darkTheme}
-      background={"whiteA12"}
+      background={"white12"}
       p="sm"
     >
       <FlexBox justifyContent="flex-end">

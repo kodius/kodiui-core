@@ -1,21 +1,21 @@
-import { darkTheme, lightTheme } from "@/styles/contract.css";
 import type { AppProps } from "next/app";
+import { Box, Center, Sidebar } from "@kodiui/ui";
+import { Navigator } from "@/features/navigator";
+import { useTheme } from "@/features/theme";
+
 import "@kodiui/ui/style.css";
-import { useState } from "react";
-import { Sidebar } from "@kodiui/ui";
-import { Navigator } from "@/features/navigator/Navigator";
 
 export default function App({ Component, pageProps }: AppProps) {
-  const [themeMode, setThemeMode] = useState<"light" | "dark">("light");
-  const isLight = themeMode === "light";
-  const theme = isLight ? lightTheme : darkTheme;
-
+  const theme = useTheme();
   return (
-    <div className={theme}>
-      <Sidebar>
-        <Navigator />
-        <Component {...pageProps} />
-      </Sidebar>
-    </div>
+    <Box className={theme} height="screen" background="gray2">
+      {/* TODO maxWidth={mobile size or so on}  */}
+      <Center __maxWidth={1308}>
+        <Sidebar gap="0">
+          <Navigator />
+          <Component {...pageProps} />
+        </Sidebar>
+      </Center>
+    </Box>
   );
 }

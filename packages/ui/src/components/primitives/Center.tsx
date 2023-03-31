@@ -4,12 +4,7 @@ import { BoxProps, Box } from "./Box/Box";
 
 export const Center: FC<Omit<BoxProps, AnimationsKeys>> = (props) => {
   return (
-    <Box
-      display="flex"
-      justifyContent="center"
-      alignItems="center"
-      {...props}
-    >
+    <Box mx="auto" {...props}>
       {props.children}
     </Box>
   );

@@ -3,6 +3,7 @@ import { animationProperties } from "../types/AnimationProperties";
 import { borderProperties } from "../types/borderProperties";
 import { cursorProperties } from "../types/cursorProperites";
 import { flexProperties } from "../types/flexProperites";
+import { heightProperties } from "../types/heightProperties";
 import { spaceProperties } from "../types/spaceProperties";
 import { typographyProperties } from "../types/typographyProperties";
 import { widthProperties } from "../types/widthProperties";
@@ -79,6 +80,9 @@ const responsiveProperties = defineProperties({
       "inherit",
     ] as const,
     width: widthProperties,
+    maxWidth: widthProperties,
+    minWidth: widthProperties,
+    height: heightProperties,
     ...flexProperties,
     ...spaceProperties,
   },

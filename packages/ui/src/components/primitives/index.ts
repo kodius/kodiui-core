@@ -6,3 +6,4 @@ export { Switcher } from "./Switcher";
 export { Split } from "./Split";
 export { Center } from "./Center";
 export { Sidebar } from "./Sidebar";
+export { Stack2 } from './Stack2'
