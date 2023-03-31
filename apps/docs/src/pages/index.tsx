@@ -1,12 +1,10 @@
+// import { lightTheme } from "@/styles/contract.css";
 import { Box } from "@kodiui/ui";
-import { Inter } from "next/font/google";
-
-const inter = Inter({ subsets: ["latin"] });
 
 export default function Home() {
   return (
-    <Box background={"red7"}>
-      <div>hello</div>
+    <Box p="3xl" background="red10">
+      box
     </Box>
   );
 }
