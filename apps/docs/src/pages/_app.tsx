@@ -1,9 +1,11 @@
-import { type AppType } from "next/dist/shared/lib/utils";
+import { lightTheme } from "@/styles/contract.css";
+import type { AppProps } from "next/app";
+import '../styles/test.css'
 
-import "~/styles/globals.css";
-
-const MyApp: AppType = ({ Component, pageProps }) => {
-  return <Component {...pageProps} />;
-};
-
-export default MyApp;
+export default function App({ Component, pageProps }: AppProps) {
+  return (
+    <div className={lightTheme}>
+      <Component {...pageProps} />
+    </div>
+  );
+}

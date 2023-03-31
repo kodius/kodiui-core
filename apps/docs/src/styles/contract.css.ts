@@ -8,11 +8,13 @@ import { createTheme } from "@vanilla-extract/css";
 const { colors, ...restTokens } = tokens;
 
 export const lightTheme = createTheme(kodiContract, {
-  ...restTokens,
-  colors: colors,
+  // ...restTokens,
+  // colors: colors,
+  ...tokens,
 });
 
 export const darkTheme = createTheme(kodiContract, {
-  ...restTokens,
-  colors: DarkColors,
+  // ...restTokens,
+  // colors: DarkColors,
+  ...tokens
 });

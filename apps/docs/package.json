@@ -3,29 +3,23 @@
   "version": "0.1.0",
   "private": true,
   "scripts": {
-    "dev": "next dev",
+    "dev": "next dev -p 3003",
     "build": "next build",
     "start": "next start",
     "lint": "next lint"
   },
   "dependencies": {
-    "next": "^13.2.4",
-    "react": "18.2.0",
-    "react-dom": "18.2.0",
-    "zod": "^3.21.4"
-  },
-  "devDependencies": {
-    "@types/eslint": "^8.21.3",
-    "@types/node": "^18.15.5",
-    "@types/react": "^18.0.28",
-    "@types/react-dom": "^18.0.11",
-    "@typescript-eslint/eslint-plugin": "^5.56.0",
-    "@typescript-eslint/parser": "^5.56.0",
-    "eslint": "^8.36.0",
-    "eslint-config-next": "^13.2.4",
-    "typescript": "^5.0.2"
-  },
-  "ct3aMetadata": {
-    "initVersion": "7.10.1"
+    "@kodiui/ui": "workspace",
+    "@types/node": "18.15.11",
+    "@types/react": "^18.0.27",
+    "@types/react-dom": "^18.0.10",
+    "@vanilla-extract/css": "^1.9.5",
+    "@vanilla-extract/next-plugin": "^2.1.1",
+    "eslint": "8.37.0",
+    "eslint-config-next": "13.2.4",
+    "next": "13.2.4",
+    "react": "^18.2.0",
+    "react-dom": "^18.2.0",
+    "typescript": "^4.9.3"
   }
 }
