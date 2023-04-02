@@ -5,4 +5,4 @@ export const BorderRadius = {
   lg: "2rem",
   xl: "4rem",
   xxl: "8rem",
-} 
+} as const  

@@ -1,8 +1,8 @@
 export const Space = {
   "--xxs": "-.5rem",
   "-xxs": "-.25rem",
-  "0": "0px",
-  "auto": "auto",
+  0: "0px",
+  auto: "auto",
   xxs: ".25rem",
   xs: ".5rem",
   sm: "1rem",
@@ -12,6 +12,6 @@ export const Space = {
   "2xl": "2rem",
   "3xl": "3rem",
   "5xxl": "4rem",
-};
+} as const;
 
 export type SpaceTypes = keyof typeof Space;

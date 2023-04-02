@@ -40,4 +40,4 @@ export const BoxShadows = {
   "inner-shadow-2": `inset 0 1px 4px 0 hsl(${shadowColor} / calc(${shadowStrength} + 9%))`,
   "inner-shadow-3": `inset 0 2px 8px 0 hsl(${shadowColor} / calc(${shadowStrength} + 9%))`,
   "inner-shadow-4": `inset 0 2px 14px 0 hsl(${shadowColor} / calc(${shadowStrength} + 9%))`,
-};
+} as const;
