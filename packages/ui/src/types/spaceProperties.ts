@@ -11,6 +11,10 @@ export const spaceProperties = {
   marginBottom: kodiContract.space,
   marginLeft: kodiContract.space,
   marginRight: kodiContract.space,
+  top: kodiContract.space,
+  bottom: kodiContract.space,
+  left: kodiContract.space,
+  right: kodiContract.space,
 };
 
 export type SpacePropertiesKeys = keyof typeof spaceProperties;
