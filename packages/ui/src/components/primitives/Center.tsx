@@ -4,8 +4,8 @@ import { BoxProps, Box } from "./Box/Box";
 
 export const Center: FC<Omit<BoxProps, AnimationsKeys>> = (props) => {
   return (
-           <Box mx="auto" {...props}>
+    <Box mx="auto" {...props}>
       {props.children}
     </Box>
-   ;
+  );
 };

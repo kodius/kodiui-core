@@ -40,10 +40,6 @@ const colorProperties = defineProperties({
 });
 
 const responsiveProperties = defineProperties({
-  // TODO
-  // xl: { "@media": `screen and (min-width: ${kodiContract.breakpoints.xl})` },
-  // this dose not work. vars can not be here.
-
   conditions: {
     mobileExtraSmall: {},
     mobileSmall: {
@@ -87,14 +83,14 @@ const responsiveProperties = defineProperties({
     ...flexProperties,
     ...spaceProperties,
   },
-  // shorthands: {
-  //   p: [`paddingTop`, `paddingBottom`, `paddingLeft`, `paddingRight`],
-  //   px: [`paddingLeft`, `paddingRight`],
-  //   py: [`paddingTop`, `paddingBottom`],
-  //   m: [`marginTop`, `marginBottom`, `marginLeft`, `marginRight`],
-  //   mx: [`marginLeft`, `marginRight`],
-  //   my: [`marginTop`, `marginBottom`],
-  // },
+  shorthands: {
+    p: [`paddingTop`, `paddingBottom`, `paddingLeft`, `paddingRight`],
+    px: [`paddingLeft`, `paddingRight`],
+    py: [`paddingTop`, `paddingBottom`],
+    m: [`marginTop`, `marginBottom`, `marginLeft`, `marginRight`],
+    mx: [`marginLeft`, `marginRight`],
+    my: [`marginTop`, `marginBottom`],
+  },
 });
 
 export const sprinkles = createSprinkles(
