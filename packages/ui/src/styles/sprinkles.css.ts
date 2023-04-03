@@ -40,6 +40,9 @@ const colorProperties = defineProperties({
 });
 
 const responsiveProperties = defineProperties({
+  // TODO
+  // xl: { "@media": `screen and (min-width: ${kodiContract.breakpoints.xl})` },
+  // this dose not work. vars can not be here.
   conditions: {
     mobileExtraSmall: {},
     mobileSmall: {
@@ -79,7 +82,6 @@ const responsiveProperties = defineProperties({
     maxWidth: widthProperties,
     minWidth: widthProperties,
     height: heightProperties,
-    deleteMe: kodiContract.space,
     ...flexProperties,
     ...spaceProperties,
   },
