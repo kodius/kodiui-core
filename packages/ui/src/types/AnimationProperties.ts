@@ -17,6 +17,7 @@ export const animationProperties = {
   animationPlayState: AnimationPlayState,
   animationTimingFunction: kodiContract.animationTimingFunction,
   transitionTimingFunction: kodiContract.animationTimingFunction,
+  transitionDuration: transitionTime,
 };
 
 export type AnimationPropertiesKeys = keyof typeof animationProperties;
