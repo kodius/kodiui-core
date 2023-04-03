@@ -83,17 +83,18 @@ const responsiveProperties = defineProperties({
     maxWidth: widthProperties,
     minWidth: widthProperties,
     height: heightProperties,
+    deleteMe: kodiContract.space,
     ...flexProperties,
     ...spaceProperties,
   },
-  shorthands: {
-    p: [`paddingTop`, `paddingBottom`, `paddingLeft`, `paddingRight`],
-    px: [`paddingLeft`, `paddingRight`],
-    py: [`paddingTop`, `paddingBottom`],
-    m: [`marginTop`, `marginBottom`, `marginLeft`, `marginRight`],
-    mx: [`marginLeft`, `marginRight`],
-    my: [`marginTop`, `marginBottom`],
-  },
+  // shorthands: {
+  //   p: [`paddingTop`, `paddingBottom`, `paddingLeft`, `paddingRight`],
+  //   px: [`paddingLeft`, `paddingRight`],
+  //   py: [`paddingTop`, `paddingBottom`],
+  //   m: [`marginTop`, `marginBottom`, `marginLeft`, `marginRight`],
+  //   mx: [`marginLeft`, `marginRight`],
+  //   my: [`marginTop`, `marginBottom`],
+  // },
 });
 
 export const sprinkles = createSprinkles(
