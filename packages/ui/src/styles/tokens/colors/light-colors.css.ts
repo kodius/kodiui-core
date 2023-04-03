@@ -1,10 +1,8 @@
-import { blackDark } from "./black";
 import * as colors from "./light";
-import { whiteLight } from "./white";
 
 export const LightColors = {
-  ...whiteLight,
-  ...blackDark,
+  ...{ white: "#fff" },
+  ...{ black: "#000" },
   ...colors.amber,
   ...colors.blue,
   ...colors.bronze,
