@@ -34,6 +34,7 @@ function App() {
           cursor="pointer"
           onClick={() => setTheme(isLight ? "dark" : "light")}
           background="purple4"
+          width="1"
           borderRadius="sm"
           color="purple11"
           borderColor="purple11"
