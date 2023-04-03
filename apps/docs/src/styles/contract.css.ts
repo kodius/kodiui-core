@@ -8,9 +8,11 @@ import { createTheme } from "@vanilla-extract/css";
 // const { colors, ...restTokens } = figmaTokens;
 const { colors, ...restTokens } = tokens;
 
+export const COLORS = colors
+
 export const lightTheme = createTheme(kodiContract, {
   ...restTokens,
-  colors: colors,
+  colors: COLORS,
 });
 
 export const darkTheme = createTheme(kodiContract, {

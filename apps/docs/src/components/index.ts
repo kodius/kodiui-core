@@ -1,2 +1,3 @@
 export { Ident } from "./layout/Ident";
-export { HeadingH2 } from "./typography/Heading";
+export { Heading } from "./typography/Heading";
+export { Text } from "./typography/Text";

@@ -1,18 +1,36 @@
 import { useThemeStore } from "@/features/theme";
-import { Box } from "@kodiui/ui";
+import { Box, Stack } from "@kodiui/ui";
 import React from "react";
 import { navigatorLinks } from "../assets/navigatorLinks";
+import { Logo } from "./Logo";
 import { NavigatorItem } from "./NavigatorItem";
 
 export const Navigator = () => {
-  const toggleTheme = useThemeStore((s) => s.toggleTheme);
+  const { toggleTheme } = useThemeStore();
+  const links = navigatorLinks.map((nav) => (
+    <>
+      <NavigatorItem key={nav.id} {...nav} />
+      <Box paddingBottom="md" />
+    </>
+  ));
 
   return (
-    <Box height="screen" width="60">
-      <button onClick={toggleTheme}>toggle theme</button>
-      {navigatorLinks.map((nav) => (
-        <NavigatorItem key={nav.id} {...nav} />
-      ))}
+    <Box
+      position={{
+        mobileSmall: "fixed",
+        desktop: "static",
+        // tablet: "static",
+      }}
+
+      background="gray1"
+      height="screen"
+      width={{ mobile: "screen", desktop: "96", tablet: "96" }}
+    >
+      <Stack>
+        <Logo />
+        {links}
+        <button onClick={toggleTheme}>hi</button>
+      </Stack>
     </Box>
   );
 };
