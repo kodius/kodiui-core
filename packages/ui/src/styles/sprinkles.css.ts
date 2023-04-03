@@ -4,6 +4,7 @@ import { borderProperties } from "../types/borderProperties";
 import { cursorProperties } from "../types/cursorProperites";
 import { flexProperties } from "../types/flexProperites";
 import { heightProperties } from "../types/heightProperties";
+import { opacityProperties } from "../types/opacityProperties";
 import { spaceProperties } from "../types/spaceProperties";
 import { typographyProperties } from "../types/typographyProperties";
 import { widthProperties } from "../types/widthProperties.css";
@@ -82,6 +83,7 @@ const responsiveProperties = defineProperties({
     maxWidth: widthProperties,
     minWidth: widthProperties,
     height: heightProperties,
+    opacity: opacityProperties,
     zIndex: {
       "0": 0,
       "10": 10,
