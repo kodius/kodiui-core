@@ -1,3 +1,5 @@
+import { Navigator } from "./components";
+
 export interface Navigator {
   id: number;
   name: string;
@@ -6,3 +8,4 @@ export interface Navigator {
   href?: string;
   icon?: string;
 }
+

@@ -14,10 +14,10 @@ export default function App({ Component, pageProps }: AppProps) {
   const theme = useTheme();
   return (
     <div className={inter.className}>
-      <Box className={theme} height="screen" background="gray2">
+      <Box p="sm" className={theme} height="screen" background="white">
         {/* TODO maxWidth={mobile size or so on}  */}
         <Center __maxWidth={1100}>
-          <Sidebar gap={0}>
+          <Sidebar gap={0} flexDirection={{mobileExtraSmall: "column", tablet: "row"}}>
             <Navigator />
             <Component {...pageProps} />
           </Sidebar>

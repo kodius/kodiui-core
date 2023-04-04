@@ -1,4 +1,4 @@
-import { Heading, Text } from "@/components";
+import { Heading } from "@/components";
 import { Box, Stack } from "@kodiui/ui";
 import React, { FC, PropsWithChildren } from "react";
 
@@ -8,8 +8,8 @@ type PageProps = {
 
 export const PageTemplate: FC<PropsWithChildren & PageProps> = (props) => {
   return (
-    <Box p="3xl">
-      <Box paddingTop="3xl" />
+    <Box p={{ mobileExtraSmall: "sm", tablet: "3xl" }}>
+      <Box paddingTop={{ mobileExtraSmall: 0, tablet: "3xl" }} />
       <Stack gap="lg">
         <Heading.H1>{props.title}</Heading.H1>
         <Stack>{props.children}</Stack>
