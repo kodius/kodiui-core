@@ -9,8 +9,6 @@ export type BoxProps = Omit<BuilderInterface, AnimationPropertiesKeys> &
 
 export const Box = forwardRef<HTMLElement, BoxProps>((props, ref) => (
   <Builder
-    borderWidth={props.borderWidth || props.borderColor ? "sm" : undefined}
-    borderStyle={props.borderStyle || props.borderColor ? "solid" : "none"}
     style={hardStyle(props)}
     ref={ref}
     {...props}

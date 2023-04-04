@@ -1,4 +1,4 @@
-import { kodiContract } from "../styles/kodiContract.css";
+import { vars } from "../styles/vars.css";
 
 export const flexProperties = {
   display: [`none`, `block`, `inline`, `inline-block`, `flex`, `grid`],
@@ -27,7 +27,7 @@ export const flexProperties = {
     "revert-layer",
     "wrap-reverse",
   ],
-  gap: kodiContract.space,
+  gap: vars.space,
 } as const;
 
 export type FlexPropertiesKeys = keyof typeof flexProperties;

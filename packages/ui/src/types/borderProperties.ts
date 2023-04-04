@@ -1,8 +1,8 @@
-import { kodiContract } from "../styles/kodiContract.css";
+import { vars } from "../styles/vars.css";
 
 export const borderProperties = {
-  borderRadius: kodiContract.borderRadius,
-  borderWidth: kodiContract.borderWidth,
+  borderRadius: vars.borderRadius,
+  borderWidth: vars.borderWidth,
   borderStyle: [
     "none",
     "hidden",

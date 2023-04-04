@@ -8,14 +8,14 @@ import { opacityProperties } from "../types/opacityProperties";
 import { spaceProperties } from "../types/spaceProperties";
 import { typographyProperties } from "../types/typographyProperties";
 import { widthProperties } from "../types/widthProperties.css";
-import { kodiContract } from "./kodiContract.css";
+import { vars } from "./vars.css";
 
 import "./reset.css.ts";
 import { BreakPoints } from "./tokens/break-points.css";
 
 const unresponsiveProperties = defineProperties({
   properties: {
-    boxShadow: kodiContract.boxShadow,
+    boxShadow: vars.boxShadow,
     cursor: cursorProperties,
     ...borderProperties,
     ...animationProperties,
@@ -34,9 +34,9 @@ const colorProperties = defineProperties({
   },
   defaultCondition: ["light", "dark"],
   properties: {
-    color: kodiContract.colors,
-    background: kodiContract.colors,
-    borderColor: kodiContract.colors,
+    color: vars.colors,
+    background: vars.colors,
+    borderColor: vars.colors,
   },
 });
 

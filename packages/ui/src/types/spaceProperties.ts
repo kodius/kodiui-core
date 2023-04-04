@@ -1,20 +1,20 @@
-import { kodiContract } from "../styles/kodiContract.css";
+import { vars } from "../styles/vars.css";
 
 export const spaceProperties = {
-  padding: kodiContract.space,
-  paddingTop: kodiContract.space,
-  paddingBottom: kodiContract.space,
-  paddingLeft: kodiContract.space,
-  paddingRight: kodiContract.space,
-  margin: kodiContract.space,
-  marginTop: kodiContract.space,
-  marginBottom: kodiContract.space,
-  marginLeft: kodiContract.space,
-  marginRight: kodiContract.space,
-  top: kodiContract.space,
-  bottom: kodiContract.space,
-  left: kodiContract.space,
-  right: kodiContract.space,
+  padding: vars.space,
+  paddingTop: vars.space,
+  paddingBottom: vars.space,
+  paddingLeft: vars.space,
+  paddingRight: vars.space,
+  margin: vars.space,
+  marginTop: vars.space,
+  marginBottom: vars.space,
+  marginLeft: vars.space,
+  marginRight: vars.space,
+  top: vars.space,
+  bottom: vars.space,
+  left: vars.space,
+  right: vars.space,
 };
 
 export type SpacePropertiesKeys = keyof typeof spaceProperties;

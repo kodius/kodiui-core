@@ -1,6 +1,5 @@
 import { FC } from "react";
-import { Box } from "./Box";
-import { BoxProps } from "./Box/Box";
+import { BoxProps, Box } from "./Box/Box";
 
 export const Split: FC<Omit<BoxProps, "display">> = (props) => {
   return (

@@ -1,8 +1,8 @@
-import { kodiContract } from "../styles/kodiContract.css";
+import { vars } from "../styles/vars.css";
 
 export const typographyProperties = {
   textAlign: ["left", "right", "center", "justify", "initial", "inherit"],
-  fontSize: kodiContract.fontSize,
+  fontSize: vars.fontSize,
   textTransform: [
     "none",
     "capitalize",
