@@ -1,6 +1,5 @@
 import { Typography } from "@kodiui/ui";
 import { FC, PropsWithChildren, ReactNode } from "react";
-import { defaultProps } from "./defaultProps";
 
 type TextType = ({ children }: { children: ReactNode }) => JSX.Element;
 
@@ -14,26 +13,16 @@ export const Text: FC<PropsWithChildren> & Props = () => {
   return null;
 };
 
-Text.Base = ({ children }) => (
-  <Typography {...defaultProps} as="p">
-    {children}
-  </Typography>
-);
+Text.Base = ({ children }) => <Typography fontSize="sm" as="p">{children}</Typography>;
 
 Text.Caption = ({ children }) => (
-  <Typography {...defaultProps} as="p" fontWeight="bolder">
+  <Typography as="span" fontWeight="bolder" fontSize="sm">
     {children}
   </Typography>
 );
 
 Text.Sub = ({ children }) => (
-  <Typography
-    {...defaultProps}
-    as="p"
-    textTransform="uppercase"
-    fontSize="sm"
-    color="gray12"
-  >
+  <Typography as="p" textTransform="uppercase" fontSize="sm" color="gray12">
     {children}
   </Typography>
 );

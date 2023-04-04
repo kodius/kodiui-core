@@ -27,12 +27,24 @@ export const navigatorLinks: Navigator[] = [
       {
         id: 0,
         name: "Box",
-        href: routes["new-project"],
+        href: routes.box,
       },
       {
         id: 1,
         name: "Stack",
         href: routes["new-project"],
+      },
+    ],
+  },
+  {
+    id: 2,
+    name: "components",
+    isParent: true,
+    children: [
+      {
+        id: 0,
+        name: "Button",
+        href: routes.button,
       },
     ],
   },

@@ -1,13 +1,15 @@
 import { PageTemplate } from "@/templates";
+import dynamic from "next/dynamic";
 import React from "react";
+
+const Syntax = dynamic(() => import("@/components/input/SyntaxHighligter"), {
+  ssr: false,
+});
 
 const NewProjectPage = () => {
   return (
     <PageTemplate title="New Project">
-      <div>section 1</div>
-      <div>section 2</div>
-      <div>section 3</div>
-      <div>section 4</div>
+      <Syntax code="lol" />
     </PageTemplate>
   );
 };

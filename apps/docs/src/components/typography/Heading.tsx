@@ -1,6 +1,5 @@
 import { Typography } from "@kodiui/ui";
 import { FC, PropsWithChildren } from "react";
-import { defaultProps } from "./defaultProps";
 
 type HeadingType = FC<PropsWithChildren>;
 
@@ -18,33 +17,21 @@ export const Heading: FC<PropsWithChildren> & Props = () => {
 };
 
 Heading.H1 = ({ children }) => (
-  <Typography {...defaultProps} as="h1">
+  <Typography fontWeight={800} color="gray12" fontSize="4xl" as="h1">
     {children}
   </Typography>
 );
 
-Heading.H2 = ({ children }) => (
-  <Typography {...defaultProps} as="h2">
-    {children}
-  </Typography>
-);
+Heading.H2 = ({ children }) => <Typography as="h2">{children}</Typography>;
 Heading.H3 = ({ children }) => (
-  <Typography {...defaultProps} as="h3">
+  <Typography color="gray12" as="h3">
     {children}
   </Typography>
 );
 Heading.H4 = ({ children }) => (
-  <Typography {...defaultProps} as="h4">
+  <Typography color={"blue11"} as="h4">
     {children}
   </Typography>
 );
-Heading.H5 = ({ children }) => (
-  <Typography {...defaultProps} as="h5">
-    {children}
-  </Typography>
-);
-Heading.H6 = ({ children }) => (
-  <Typography {...defaultProps} as="h6">
-    {children}
-  </Typography>
-);
+Heading.H5 = ({ children }) => <Typography as="h5">{children}</Typography>;
+Heading.H6 = ({ children }) => <Typography as="h6">{children}</Typography>;

@@ -1,14 +1,23 @@
-import React, { ButtonHTMLAttributes, FC, PropsWithChildren } from "react";
-import { buttonStyle, ButtonVariants } from "./button.css";
+import { Text } from "@/components/typography/Text";
+import { Box, BoxProps, SpaceTypes } from "@kodiui/ui";
+import React, { FC } from "react";
+import { buttonRecipe } from "./button.css";
 
-type ButtonType = PropsWithChildren<ButtonHTMLAttributes<HTMLButtonElement>> & {
-  variants: ButtonVariants;
-};
+interface Props {
+  variant?: "solid" | "ghost" | "soft" | "transparent";
+  size?: "standard" | "small";
+}
+
+type ButtonType = BoxProps & Props;
 
 export const Button: FC<ButtonType> = (props) => {
   return (
-    <button className={buttonStyle(props.variants)} {...props}>
-      {props.children}
-    </button>
+    <Box
+      as="button"
+      className={buttonRecipe({ variant: props.variant, size: props.size })}
+      {...props}
+    >
+      <Text.Caption>{props.children}</Text.Caption>
+    </Box>
   );
 };

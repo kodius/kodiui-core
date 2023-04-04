@@ -10,7 +10,7 @@ export const Desktop: FC<PropsWithChildren> = (props) => {
         tablet: "static",
       }}
       height="screen"
-      width={{ mobile: "screen", tablet: "96" }}
+      width={{ mobile: "screen", tablet: "60" }}
       display={{
         mobileExtraSmall: "none",
         mobileSmall: "none",
@@ -20,7 +20,6 @@ export const Desktop: FC<PropsWithChildren> = (props) => {
       <Stack>
         <Logo />
         {props.children}
-        {/* <button onClick={toggleTheme}>hi</button> */}
       </Stack>
     </Box>
   );
