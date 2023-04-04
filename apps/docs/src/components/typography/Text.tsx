@@ -14,7 +14,6 @@ export const Text: FC<PropsWithChildren> & Props = () => {
   return null;
 };
 
-
 Text.Base = ({ children }) => (
   <Typography {...defaultProps} as="p">
     {children}

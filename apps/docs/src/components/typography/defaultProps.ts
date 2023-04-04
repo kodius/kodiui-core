@@ -1,4 +1,4 @@
 
 export const defaultProps = {
-  color: "black",
+  color: "sky11",
 } as const;

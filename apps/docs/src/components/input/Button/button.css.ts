@@ -4,6 +4,7 @@ export const buttonStyle = recipe({
   base: {
     border: "none",
     borderRadius: "8px",
+    cursor: "pointer"
   },
 
   variants: {
@@ -13,6 +14,7 @@ export const buttonStyle = recipe({
       accent: { background: "slateblue" },
     },
     size: {
+      xs: { padding: 0 },
       small: { padding: 8 },
       medium: { padding: 10 },
       large: { padding: 24 },
@@ -20,6 +22,7 @@ export const buttonStyle = recipe({
     type: {
       ghost: {
         background: "none",
+        width: "fit-content"
       },
     },
   },

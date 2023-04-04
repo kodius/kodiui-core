@@ -6,4 +6,5 @@ globalStyle("a", {
 
 globalStyle("a:hover", {
   textDecoration: "underline",
+  color: "inherit"
 });
