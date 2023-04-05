@@ -3,6 +3,7 @@ import { BuildElement } from "../../types";
 import { Button } from "@/components";
 import dynamic from "next/dynamic";
 import { Animation, Cluster } from "@kodiui/ui";
+import { copyText } from "../../helpers/copyText";
 
 const Syntax = dynamic(() => import("@/components/input/SyntaxHighligter"), {
   ssr: false,
@@ -39,9 +40,14 @@ export const CodeSnippet: FC<BuildElement> = (props) => {
         <Button onClick={onClick} {...ButtonProps}>
           code
         </Button>
-        <Button onClick={onClick} {...ButtonProps}>
-          copy
-        </Button>
+        {isSyntaxOpen && (
+          <Button
+            onClick={() => copyText(props.codeSnippet || "")}
+            {...ButtonProps}
+          >
+            copy
+          </Button>
+        )}
       </Cluster>
     </>
   );

@@ -8,7 +8,9 @@ import { Examples } from "./Examples";
 
 export const Builder: FC<BuildElement> = (props) => {
   const withExamples = props.example ? <Examples {...props.example} /> : null;
+
   const withCodeSnippet = props.codeSnippet ? <CodeSnippet {...props} /> : null;
+
   const withDescription = props.description?.codeSnippet ? (
     <Description {...props.description} />
   ) : null;
