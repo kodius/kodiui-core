@@ -1,16 +1,27 @@
-import { PageTemplate } from "@/templates";
-import dynamic from "next/dynamic";
+import { DocBuilder } from "@/features/docBuilder";
 import React from "react";
-
-const Syntax = dynamic(() => import("@/components/input/SyntaxHighligter"), {
-  ssr: false,
-});
 
 const NewProjectPage = () => {
   return (
-    <PageTemplate title="New Project">
-      <Syntax code="lol" />
-    </PageTemplate>
+    <DocBuilder
+      title="New Project"
+      build={() => [
+        {
+          label: "1. Create new Next.js project",
+          description: {
+            description: ["In terminal run:"],
+            codeSnippet: [`pnpm create next-app`],
+          },
+        },
+        {
+          label: "2. Create new Next.js project",
+          description: {
+            description: ["In terminal run:"],
+            codeSnippet: [`pnpm create next-app`],
+          },
+        },
+      ]}
+    />
   );
 };
 
