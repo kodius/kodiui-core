@@ -31,11 +31,16 @@ export const navigatorLinks: Navigator[] = [
       },
       {
         id: 1,
+        name: "Multiple themes",
+        href: routes.multipleThemes,
+      },
+      {
+        id: 2,
         name: "Box",
         href: routes.box,
       },
       {
-        id: 1,
+        id: 3,
         name: "Stack",
         href: routes["new-project"],
       },

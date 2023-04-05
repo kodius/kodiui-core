@@ -1,5 +1,5 @@
 import { DocBuilder } from "@/features/docBuilder";
-import { buttonVariants } from "@/features/docs";
+import { buttonVariants, loadingButton } from "@/features/docs";
 import { buttonCssFile } from "@/features/docs/button/button.css";
 import { buttonFile } from "@/features/docs/button/button.file";
 import { buttonSizes } from "@/features/docs/button/buttonSizes.docs";
@@ -9,7 +9,13 @@ const ButtonPage = () => {
   return (
     <DocBuilder
       title="Button"
-      build={() => [buttonVariants, buttonSizes, buttonFile, buttonCssFile]}
+      build={() => [
+        buttonVariants,
+        buttonSizes,
+        loadingButton,
+        buttonFile,
+        buttonCssFile,
+      ]}
     />
   );
 };

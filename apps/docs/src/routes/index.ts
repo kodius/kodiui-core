@@ -8,6 +8,7 @@ export const routes = {
   // Ui
   box: `${ui}/box`,
   installKodiui: `${ui}/install-kodi-ui`,
+  multipleThemes: `${ui}/multiple-themes`,
   // Component
   button: `${components}/button`,
 };

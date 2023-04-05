@@ -8,12 +8,14 @@ export const buttonRecipe = recipe({
     border: `${vars.borderWidth.md} solid ${vars.colors.indigo9}`,
     transition: `all 0.2s ease`,
     cursor: "pointer",
+    fill: vars.colors.indigo3,
     ":hover": {
       background: vars.colors.indigo3,
     },
     ":active": {
-      transform: "scale(0.95)"
+      transform: "scale(0.95)",
     },
+
   },
 
   variants: {
@@ -51,3 +53,4 @@ export const buttonRecipe = recipe({
 });
 
 export type ButtonVariants = RecipeVariants<typeof buttonRecipe>;
+

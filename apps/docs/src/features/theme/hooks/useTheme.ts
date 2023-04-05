@@ -5,12 +5,12 @@ import { useThemeStore } from "../store/useThemeStore";
 export const useTheme = () => {
   const { theme, setTheme } = useThemeStore();
 
-  const activeTheme = theme === "light" ? lightTheme : darkTheme;
+  const activeTheme = theme === "dark" ? darkTheme : lightTheme;
 
   useEffect(() => {
     if (typeof window === "undefined") return;
     window
-      .matchMedia("(prefers-color-scheme: dark)")
+      .matchMedia("(prefers-color-scheme: light)")
       .addEventListener("change", (event) => {
         const colorScheme = event.matches ? "dark" : "light";
         setTheme(colorScheme);
