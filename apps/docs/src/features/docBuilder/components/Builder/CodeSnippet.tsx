@@ -27,14 +27,12 @@ export const CodeSnippet: FC<BuildElement> = (props) => {
   return (
     <>
       {hasSnippet && (
-        <Animation animation="fadeIn">
-          <Suspense fallback={<>Loading...</>}>
+        <Suspense fallback={<div>Loading...</div>}>
             <Syntax
               showLineNumber={props.showLineNumber}
               code={props.codeSnippet}
             />
-          </Suspense>
-        </Animation>
+        </Suspense>
       )}
       <Cluster justifyContent="flex-end" gap="xs">
         <Button onClick={onClick} {...ButtonProps}>

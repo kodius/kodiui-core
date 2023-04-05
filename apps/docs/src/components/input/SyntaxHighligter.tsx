@@ -1,4 +1,5 @@
 import { useThemeStore } from "@/features/theme";
+import { Animation } from "@kodiui/ui";
 import React, { FC } from "react";
 import SyntaxHighlighter from "react-syntax-highlighter";
 
@@ -15,7 +16,7 @@ const SyntaxHighligter: FC<Props> = (props) => {
 
   if (!props.code) return null;
   return (
-    <>
+    <Animation animation="fadeIn">
       <SyntaxHighlighter
         style={isLight ? docco : dracula}
         language="typescript"
@@ -24,7 +25,7 @@ const SyntaxHighligter: FC<Props> = (props) => {
       >
         {props.code}
       </SyntaxHighlighter>
-    </>
+    </Animation>
   );
 };
 

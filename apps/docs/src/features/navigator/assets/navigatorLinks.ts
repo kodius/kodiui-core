@@ -26,6 +26,11 @@ export const navigatorLinks: Navigator[] = [
     children: [
       {
         id: 0,
+        name: "Install",
+        href: routes.installKodiui,
+      },
+      {
+        id: 1,
         name: "Box",
         href: routes.box,
       },
