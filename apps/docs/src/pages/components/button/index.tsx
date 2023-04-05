@@ -1,6 +1,6 @@
-import { Button, Text } from "@/components";
+import { Button } from "@/components";
 import { DocBuilder } from "@/features/docBuilder";
-import { Box, Cluster, Stack } from "@kodiui/ui";
+import { Cluster } from "@kodiui/ui";
 import React from "react";
 
 const ButtonPage = () => {
@@ -9,14 +9,10 @@ const ButtonPage = () => {
       title="Button"
       build={() => [
         {
-          label: "Folder structure",
-          example: {
-            component: [
-              <Text.Base>
-                src/components/inputs/Button <br />
-                - Button.tsx <br />- button.css.ts
-              </Text.Base>,
-            ],
+          label: "1. Folder structure",
+          description: {
+            description: ["install kodi", "remove nesto"],
+            codeSnippet: [`kita`, `asdfsadf`],
           },
         },
         {

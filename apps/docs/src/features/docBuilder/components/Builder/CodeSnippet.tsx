@@ -28,7 +28,10 @@ export const CodeSnippet: FC<BuildElement> = (props) => {
       {hasSnippet && (
         <Animation animation="fadeIn">
           <Suspense fallback={<>Loading...</>}>
-            <Syntax code={props.codeSnippet} />
+            <Syntax
+              showLineNumber={props.showLineNumber}
+              code={props.codeSnippet}
+            />
           </Suspense>
         </Animation>
       )}

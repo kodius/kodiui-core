@@ -6,6 +6,7 @@ import { docco, dracula } from "react-syntax-highlighter/dist/esm/styles/hljs";
 
 interface Props {
   code: string;
+  showLineNumber?: boolean;
 }
 
 const SyntaxHighligter: FC<Props> = (props) => {
@@ -18,7 +19,7 @@ const SyntaxHighligter: FC<Props> = (props) => {
       <SyntaxHighlighter
         style={isLight ? docco : dracula}
         language="typescript"
-        showLineNumbers
+        showLineNumbers={props.showLineNumber}
         customStyle={{ borderRadius: "5px", padding: "20px" }}
       >
         {props.code}
@@ -28,3 +29,7 @@ const SyntaxHighligter: FC<Props> = (props) => {
 };
 
 export default SyntaxHighligter;
+
+SyntaxHighligter.defaultProps = {
+  showLineNumber: true,
+};

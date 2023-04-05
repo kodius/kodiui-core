@@ -1,8 +1,10 @@
 export type BuildElement = {
   label: string;
   example?: BuildExemple;
+  description?: Description;
   codeSnippet?: string;
   isCodeOpen?: boolean;
+  showLineNumber?: boolean;
 };
 
 export type BuildExemple = {
@@ -13,5 +15,11 @@ export type BuildExemple = {
 export type BuillderProps = {
   title: string;
   isCodeOpen?: boolean;
+  showLineNumber?: boolean;
   build: () => BuildElement[];
+};
+
+export type Description = {
+  description: string[];
+  codeSnippet: string[];
 };
