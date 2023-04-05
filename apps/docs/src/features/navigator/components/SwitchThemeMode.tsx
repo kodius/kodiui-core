@@ -32,7 +32,7 @@ export const SwitchThemeMode = () => {
 };
 
 const Action: FC<PropsWithChildren & { onClick: () => void }> = (props) => (
-  <Button onClick={props.onClick} variants={{ type: "ghost", size: "xs" }}>
+  <Button onClick={props.onClick} variant="transparent" size="small" width="fit" >
     {props.children}
   </Button>
 );

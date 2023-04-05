@@ -1,3 +1,4 @@
+import { useThemeStore } from "@/features/theme";
 import React, { FC } from "react";
 import SyntaxHighlighter from "react-syntax-highlighter";
 
@@ -8,11 +9,14 @@ interface Props {
 }
 
 const SyntaxHighligter: FC<Props> = (props) => {
-  if (!props.code) return null
+  const { theme } = useThemeStore();
+  const isLight = theme === "light";
+
+  if (!props.code) return null;
   return (
     <>
       <SyntaxHighlighter
-        style={dracula}
+        style={isLight ? docco : dracula}
         language="typescript"
         showLineNumbers
         customStyle={{ borderRadius: "5px", padding: "20px" }}

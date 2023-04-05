@@ -6,15 +6,36 @@ export const buttonRecipe = recipe({
     borderRadius: vars.borderRadius.sm,
     color: vars.colors.indigo9,
     border: `${vars.borderWidth.md} solid ${vars.colors.indigo9}`,
+    transition: `all 0.2s ease`,
+    cursor: "pointer",
+    ":hover": {
+      background: vars.colors.indigo3,
+    },
+    ":active": {
+      transform: "scale(0.95)"
+    },
   },
 
   variants: {
     variant: {
-      solid: { background: vars.colors.indigo9, color: vars.colors.white },
+      solid: {
+        background: vars.colors.indigo9,
+        color: vars.colors.white,
+        ":hover": {
+          background: vars.colors.indigo10,
+          borderColor: vars.colors.indigo10,
+        },
+      },
       ghost: {
         background: vars.colors.white,
       },
-      soft: { background: vars.colors.indigo3, borderColor: "transparent" },
+      soft: {
+        background: vars.colors.indigo3,
+        borderColor: "transparent",
+        ":hover": {
+          background: vars.colors.indigo4,
+        },
+      },
       transparent: { background: "transparent", borderColor: "transparent" },
     },
     size: {
