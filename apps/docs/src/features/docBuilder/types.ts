@@ -2,6 +2,7 @@ export type BuildElement = {
   label: string;
   example?: BuildExemple;
   codeSnippet?: string;
+  isCodeOpen?: boolean;
 };
 
 export type BuildExemple = {
@@ -11,5 +12,6 @@ export type BuildExemple = {
 
 export type BuillderProps = {
   title: string;
+  isCodeOpen?: boolean;
   build: () => BuildElement[];
 };

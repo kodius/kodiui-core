@@ -9,9 +9,7 @@ export const Builder: FC<BuildElement> = (props) => {
   // const [isViewCode, setIsViewCode] = useState(false);
 
   const withExamples = props.example ? <Examples {...props.example} /> : null;
-  const withCodeSnippet = props.codeSnippet ? (
-    <CodeSnippet snippet={props.codeSnippet} />
-  ) : null;
+  const withCodeSnippet = props.codeSnippet ? <CodeSnippet {...props} /> : null;
 
   return (
     <Stack gap="xs">

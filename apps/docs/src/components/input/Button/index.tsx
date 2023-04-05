@@ -1,5 +1,5 @@
 import { Text } from "@/components/typography/Text";
-import { Box, BoxProps, SpaceTypes } from "@kodiui/ui";
+import { Box, BoxProps } from "@kodiui/ui";
 import React, { FC } from "react";
 import { buttonRecipe } from "./button.css";
 

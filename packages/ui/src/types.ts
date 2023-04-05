@@ -2,7 +2,6 @@ import {
   ElementType,
   HTMLAttributes,
   PropsWithChildren,
-  ReactNode,
 } from "react";
 import { Sprinkles } from "./styles/sprinkles.css";
 
@@ -14,6 +13,5 @@ export type BuilderProps = PropsWithChildren<
   NativeProps & AsElement & Sprinkles
 >;
 
-export interface BuilderInterface extends NativeProps, AsElement, Sprinkles {
-  children?: ReactNode;
+export interface BuilderInterface extends NativeProps, AsElement, Sprinkles, PropsWithChildren {
 }

@@ -2,37 +2,44 @@ import React, { FC, Suspense, useState } from "react";
 import { BuildElement } from "../../types";
 import { Button } from "@/components";
 import dynamic from "next/dynamic";
-import { Animation, FlexBox } from "@kodiui/ui";
+import { Animation, Cluster } from "@kodiui/ui";
 
 const Syntax = dynamic(() => import("@/components/input/SyntaxHighligter"), {
   ssr: false,
 });
 
-export const CodeSnippet: FC<{ snippet: BuildElement["codeSnippet"] }> = (
-  props
-) => {
-  const [isSyntaxOpen, setIsSyntaxOpen] = useState(false);
+const ButtonProps = {
+  size: "small",
+  variant: "transparent",
+  width: "fit",
+} as const;
 
-  if (!props.snippet) return null;
+export const CodeSnippet: FC<BuildElement> = (props) => {
+  const [isSyntaxOpen, setIsSyntaxOpen] = useState(() => props.isCodeOpen);
 
-  const hasSnippet = Boolean(props.snippet) && isSyntaxOpen;
+  if (!props.codeSnippet) return null;
+
+  const hasSnippet = Boolean(props.codeSnippet) && isSyntaxOpen;
 
   const onClick = () => setIsSyntaxOpen((prev) => !prev);
 
   return (
     <>
-      <FlexBox justifyContent="flex-end">
-        <Button onClick={onClick} size="small" variant="soft" width="fit">
-          code
-        </Button>
-      </FlexBox>
       {hasSnippet && (
         <Animation animation="fadeIn">
           <Suspense fallback={<>Loading...</>}>
-            <Syntax code={props.snippet} />
+            <Syntax code={props.codeSnippet} />
           </Suspense>
         </Animation>
       )}
+      <Cluster justifyContent="flex-end" gap="xs">
+        <Button onClick={onClick} {...ButtonProps}>
+          code
+        </Button>
+        <Button onClick={onClick} {...ButtonProps}>
+          copy
+        </Button>
+      </Cluster>
     </>
   );
 };
