@@ -39,11 +39,6 @@ export const navigatorLinks: Navigator[] = [
         name: "Box",
         href: routes.box,
       },
-      {
-        id: 3,
-        name: "Stack",
-        href: routes.stack,
-      },
     ],
   },
   {

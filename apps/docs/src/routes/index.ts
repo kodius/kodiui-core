@@ -8,7 +8,6 @@ export const routes = {
   "new-project": `${guides}/new-project`,
   // Ui
   box: `${ui}/box`,
-  stack: `${ui}/stack`,
   installKodiui: `${ui}/install-kodi-ui`,
   multipleThemes: `${ui}/multiple-themes`,
   // Primitives

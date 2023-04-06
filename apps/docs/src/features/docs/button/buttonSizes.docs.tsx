@@ -14,16 +14,16 @@ export const buttonSizes: BuildElement = {
         <Button variant="transparent">Transparent</Button>
       </Cluster>,
       <Cluster>
-        <Button variant="solid" size="small">
+        <Button variant="solid" size="sm">
           Solid
         </Button>
-        <Button variant="ghost" size="small">
+        <Button variant="ghost" size="sm">
           Ghost
         </Button>
-        <Button variant="soft" size="small">
+        <Button variant="soft" size="sm">
           Soft
         </Button>
-        <Button variant="transparent" size="small">
+        <Button variant="transparent" size="sm">
           Transparent
         </Button>
       </Cluster>,

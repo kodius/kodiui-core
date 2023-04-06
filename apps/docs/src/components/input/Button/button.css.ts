@@ -4,10 +4,10 @@ import { recipe, RecipeVariants } from "@vanilla-extract/recipes";
 export const buttonRecipe = recipe({
   base: {
     borderRadius: vars.borderRadius.sm,
-    border: `${vars.borderWidth.md} solid ${vars.colors.indigo9}`,
+    borderWidth: vars.borderWidth.sm,
+    borderStyle: "solid",
     transition: `all 0.2s ease`,
     cursor: "pointer",
-    fill: vars.colors.indigo3,
     ":active": {
       transform: "scale(0.95)",
     },
@@ -15,75 +15,104 @@ export const buttonRecipe = recipe({
 
   variants: {
     tone: {
+      brand: {
+        background: vars.colors.brand,
+        borderColor: vars.colors.brand,
+        color: vars.colors.brand,
+        ":hover": {
+          background: vars.colors.brandHover,
+          borderColor: vars.colors.brandHover,
+        },
+        fill: vars.colors.brandSoft,
+      },
       brandAccent: {
-        background: vars.colors.purple8,
+        background: vars.colors.brandAccent,
+        borderColor: vars.colors.brandAccent,
+        color: vars.colors.brandAccent,
+        ":hover": {
+          background: vars.colors.brandAccentHover,
+          borderColor: vars.colors.brandAccentHover,
+        },
+        fill: vars.colors.brandAccentSoft,
+      },
+      neutral: {
+        background: vars.colors.neutral,
+        borderColor: vars.colors.neutral,
+        color: vars.colors.neutral,
+        ":hover": {
+          background: vars.colors.neutralHover,
+          borderColor: vars.colors.neutralHover,
+        },
+        fill: vars.colors.neutralSoft,
       },
     },
     variant: {
       solid: {
-        background: vars.colors.indigo9,
         color: vars.colors.white,
-        ":hover": {
-          background: vars.colors.indigo10,
-          borderColor: vars.colors.indigo10,
-        },
       },
       ghost: {
         background: vars.colors.white,
-        color: vars.colors.indigo9,
-        ":hover": {
-          background: vars.colors.indigo3,
-        },
       },
       soft: {
-        background: vars.colors.indigo3,
         borderColor: "transparent",
-        color: vars.colors.indigo9,
         ":hover": {
-          background: vars.colors.indigo4,
+          borderColor: "transparent",
         },
       },
       transparent: {
-        color: vars.colors.indigo9,
-        background: "transparent",
+        background: vars.colors.white,
         borderColor: "transparent",
-        ":hover": {
-          background: vars.colors.indigo3,
-        },
       },
     },
     size: {
-      small: { padding: `${vars.space.xxs} ${vars.space.xs}` },
+      sm: { padding: `${vars.space.xxs} ${vars.space.xs}` },
       standard: { padding: `${vars.space.xs} ${vars.space.sm}` },
-      test: { padding: 0 },
     },
   },
-
   compoundVariants: [
+    // Brand
     {
-      variants: {
-        variant: "solid",
-        tone: "brandAccent",
-      },
+      variants: { variant: "ghost", tone: "brand" },
       style: {
-        background: vars.colors.crimson9,
-        borderColor: vars.colors.crimson9,
         ":hover": {
-          background: vars.colors.crimson10,
-          borderColor: vars.colors.crimson10,
+          background: vars.colors.brandSoftHover,
         },
       },
     },
     {
       variants: {
-        variant: "ghost",
+        variant: "soft",
+        tone: "brand",
+      },
+      style: {
+        background: vars.colors.brandSoft,
+        ":hover": {
+          background: vars.colors.brandSoftHover,
+        },
+      },
+    },
+    {
+      variants: {
+        variant: "transparent",
+        tone: "brand",
+      },
+      style: {
+        ":hover": {
+          background: vars.colors.brandSoftHover,
+          borderColor: vars.colors.brandSoftHover,
+        },
+      },
+    },
+    // Brand Acent
+    {
+      variants: {
+        variant: "transparent",
         tone: "brandAccent",
       },
       style: {
-        color: vars.colors.crimson10,
-        borderColor: vars.colors.crimson10,
         ":hover": {
-          background: vars.colors.crimson3,
+          background: vars.colors.brandAccentSoftHover,
+          borderColor: vars.colors.brandAccentSoftHover,
         },
       },
     },
@@ -93,28 +122,57 @@ export const buttonRecipe = recipe({
         tone: "brandAccent",
       },
       style: {
-        color: vars.colors.crimson10,
-        background: vars.colors.crimson3,
+        background: vars.colors.brandAccentSoft,
         ":hover": {
-          background: vars.colors.crimson4,
+          background: vars.colors.brandAccentSoftHover,
+        },
+      },
+    },
+    {
+      variants: { variant: "ghost", tone: "brandAccent" },
+      style: {
+        ":hover": {
+          background: vars.colors.brandAccentSoftHover,
+        },
+      },
+    },
+    // Neutral
+    {
+      variants: {
+        variant: "transparent",
+        tone: "neutral",
+      },
+      style: {
+        ":hover": {
+          background: vars.colors.neutralSoftHover,
+          borderColor: vars.colors.neutralSoftHover,
         },
       },
     },
     {
       variants: {
-        variant: "transparent",
-        tone: "brandAccent",
+        variant: "soft",
+        tone: "neutral",
       },
       style: {
-        color: vars.colors.crimson10,
+        background: vars.colors.neutralSoft,
         ":hover": {
-          background: vars.colors.crimson3,
+          background: vars.colors.neutralSoftHover,
+        },
+      },
+    },
+    {
+      variants: { variant: "ghost", tone: "neutral" },
+      style: {
+        ":hover": {
+          background: vars.colors.neutralSoftHover,
         },
       },
     },
   ],
 
   defaultVariants: {
+    tone: "brand",
     variant: "solid",
     size: "standard",
   },

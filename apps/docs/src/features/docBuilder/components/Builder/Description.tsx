@@ -25,7 +25,7 @@ export const Description: FC<BuildElement["description"]> = (props) => {
       <FlexBox justifyContent="flex-end">
         <Button
           onClick={() => copyText(props.codeSnippet[i])}
-          size="small"
+          size="sm"
           variant="transparent"
         >
           copy
