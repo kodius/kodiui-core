@@ -8,10 +8,10 @@ import { NavigatorItem } from "./NavigatorItem";
 
 export const Navigator = () => {
   const links = navigatorLinks.map((nav) => (
-    <>
-      <NavigatorItem key={nav.id} {...nav} />
+    <React.Fragment key={nav.id}>
+      <NavigatorItem {...nav} />
       <Box paddingBottom="md" />
-    </>
+    </React.Fragment>
   ));
 
   const content = (
@@ -19,7 +19,7 @@ export const Navigator = () => {
       {links}
       <Footer />
     </>
-  )
+  );
 
   return (
     <>
