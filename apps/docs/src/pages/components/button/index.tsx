@@ -1,8 +1,12 @@
 import { DocBuilder } from "@/features/docBuilder";
-import { buttonVariants, loadingButton } from "@/features/docs";
-import { buttonCssFile } from "@/features/docs/button/button.css";
-import { buttonFile } from "@/features/docs/button/button.file";
-import { buttonSizes } from "@/features/docs/button/buttonSizes.docs";
+import {
+  buttonBranding,
+  buttonCssFile,
+  buttonFile,
+  buttonSizes,
+  buttonVariants,
+  loadingButton,
+} from "@/features/docs";
 import React from "react";
 
 const ButtonPage = () => {
@@ -12,6 +16,7 @@ const ButtonPage = () => {
       build={() => [
         buttonVariants,
         buttonSizes,
+        buttonBranding,
         loadingButton,
         buttonFile,
         buttonCssFile,

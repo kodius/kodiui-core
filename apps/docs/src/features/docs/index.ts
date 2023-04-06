@@ -1,5 +1,9 @@
 export { buttonVariants } from "./button/buttonVariants.docs";
+export { buttonSizes } from "./button/buttonSizes.docs";
+export { buttonFile } from "./button/button.file";
+export { buttonCssFile } from "./button/button.css";
 export { loadingButton } from "./button/loadingButton.docs";
+export { buttonBranding } from "./button/buttonBranding.docs";
 export { installDependecies } from "./installKodiUi/installDependecies.docs";
 export { nextJsConfig } from "./installKodiUi/nextJsConfig.docs";
 export { loadTheme } from "./installKodiUi/loadTheme.docs";
