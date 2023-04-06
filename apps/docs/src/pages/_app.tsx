@@ -16,7 +16,7 @@ export default function App({ Component, pageProps }: AppProps) {
     <div className={inter.className}>
       <Box p="sm" className={theme} background={"white"}>
         {/* TODO maxWidth={mobile size or so on}  */}
-        <Center __maxWidth={1100}>
+        <Center width={"full"} __maxWidth={1100}>
           <Sidebar
             gap={0}
             flexDirection={{ mobileExtraSmall: "column", tablet: "row" }}

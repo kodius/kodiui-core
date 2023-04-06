@@ -22,7 +22,7 @@ export const Button: FC<ButtonType> = (props) => {
     </Box>
   );
 
-  console.log(vars.colors.brand);
+
   return (
     <Box
       as="button"

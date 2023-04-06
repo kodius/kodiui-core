@@ -17,5 +17,5 @@ export { Stack } from "./components/primitives/Stack";
 export { Cluster } from "./components/primitives/Cluster";
 export { Switcher } from "./components/primitives/Switcher/Switcher";
 export { Split } from "./components/primitives/Split";
-export { Center } from "./components/primitives/Center";
+export { Center } from "./components/primitives/Center/Center";
 export { Sidebar } from "./components/primitives/Sidebar/Sidebar";
