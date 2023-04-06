@@ -1,26 +1,33 @@
-import { Documentation } from "@/features/documentation";
-import { Stack } from "@kodiui/ui";
+import { Doc } from "@/features/documentation";
+import { Stack, vars } from "@kodiui/ui";
 import React from "react";
-import { Checkboxes } from "./Checkboxes";
+import { Sprinkles } from "@kodiui/ui/dist/styles/sprinkles.css";
+import { Checkbox } from "@/features/documentation/Checkboxes";
+import { generateCheckboxes } from "@/features/documentation/utils";
 
 const StackPage = () => {
+  const spaceArr = Object.keys(vars.space) as Sprinkles["gap"][];
+  const [checkboxes, setCheckboxes] = React.useState<
+    Checkbox<Sprinkles["gap"]>[]
+  >(generateCheckboxes<Sprinkles["gap"]>(spaceArr));
+
   return (
-    <Documentation>
-      <Documentation.Title>Stack</Documentation.Title>
-      <Documentation.Example>
-        <Checkboxes>
+    <Doc>
+      <Doc.Title>Stack</Doc.Title>
+      <Doc.Example>
+        <Doc.Checkboxes checkboxes={checkboxes} setCheckboxes={setCheckboxes}>
           {(checked) => {
             return (
               <Stack gap={checked?.value}>
-                <Documentation.Placeholder />
-                <Documentation.Placeholder />
-                <Documentation.Placeholder />
+                <Doc.Placeholder />
+                <Doc.Placeholder />
+                <Doc.Placeholder />
               </Stack>
             );
           }}
-        </Checkboxes>
-      </Documentation.Example>
-    </Documentation>
+        </Doc.Checkboxes>
+      </Doc.Example>
+    </Doc>
   );
 };
 

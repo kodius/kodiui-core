@@ -1,6 +1,7 @@
 import React from "react";
 import { Box, Stack } from "@kodiui/ui";
 import { Heading } from "@/components/typography/Heading";
+import { Checkboxes } from "./Checkboxes";
 
 interface Props {
   children: React.ReactNode;
@@ -11,7 +12,7 @@ const boxStyles = {
   p: "md",
 } as const;
 
-export const Documentation = ({ children }: Props) => {
+export const Doc = ({ children }: Props) => {
   return (
     <Box p={{ mobileExtraSmall: "sm", tablet: "3xl" }}>
       <Box paddingTop={{ mobileExtraSmall: 0, tablet: "3xl" }} />
@@ -50,6 +51,7 @@ const Placeholder = ({ children }: Partial<Props>) => {
   );
 };
 
-Documentation.Title = Title;
-Documentation.Example = Example;
-Documentation.Placeholder = Placeholder;
+Doc.Title = Title;
+Doc.Example = Example;
+Doc.Placeholder = Placeholder;
+Doc.Checkboxes = Checkboxes;
