@@ -5,25 +5,48 @@ import { Sprinkles } from "@kodiui/ui/dist/styles/sprinkles.css";
 import { Checkbox } from "@/features/documentation/Checkboxes";
 import { generateCheckboxes } from "@/features/documentation/utils";
 
+import { Type, alignCheckboxesArr } from "./consts";
+
 const StackPage = () => {
   const spaceArr = Object.keys(vars.space) as Sprinkles["gap"][];
-  const [checkboxes, setCheckboxes] = React.useState<
+  const [gapCheckboxes, setGapCheckboxes] = React.useState<
     Checkbox<Sprinkles["gap"]>[]
   >(generateCheckboxes(spaceArr));
-
-  // TODO: Checkboxes for Alignment
+  const [alignCheckboxes, setAlignCheckboxes] =
+    React.useState<Checkbox<Type>[]>(alignCheckboxesArr);
 
   return (
     <Doc>
       <Doc.Title>Stack</Doc.Title>
+      <Doc.Subtitle>Gap</Doc.Subtitle>
       <Doc.Example>
-        <Doc.Checkboxes checkboxes={checkboxes} setCheckboxes={setCheckboxes}>
+        <Doc.Checkboxes
+          checkboxes={gapCheckboxes}
+          setCheckboxes={setGapCheckboxes}
+        >
           {(checked) => {
             return (
               <Stack gap={checked?.value} alignItems="center">
                 <Doc.Placeholder />
                 <Doc.Placeholder />
                 <Doc.Placeholder />
+              </Stack>
+            );
+          }}
+        </Doc.Checkboxes>
+      </Doc.Example>
+      <Doc.Subtitle>Alignment</Doc.Subtitle>
+      <Doc.Example>
+        <Doc.Checkboxes
+          checkboxes={alignCheckboxes}
+          setCheckboxes={setAlignCheckboxes}
+        >
+          {(checked) => {
+            return (
+              <Stack alignItems={checked?.value}>
+                <Doc.Placeholder width="6/12" />
+                <Doc.Placeholder width="6/12" />
+                <Doc.Placeholder width="6/12" />
               </Stack>
             );
           }}
