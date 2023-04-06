@@ -100,6 +100,15 @@ const responsiveProperties = defineProperties({
     },
     ...flexProperties,
     ...spaceProperties,
+    overflow: [
+      "visible",
+      "hidden",
+      "clip",
+      "scroll",
+      "auto",
+      "initial",
+      "inherit",
+    ] as const,
   },
   shorthands: {
     p: [`paddingTop`, `paddingBottom`, `paddingLeft`, `paddingRight`],

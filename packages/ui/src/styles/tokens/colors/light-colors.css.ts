@@ -5,16 +5,16 @@ import { whiteALight } from "./white";
 export const LightColors = {
   body: colors.gray.gray2,
 
-  brand: colors.indigo.indigo9,
-  brandActive: colors.indigo.indigo10,
-  brandHover: colors.indigo.indigo8,
+  brand: colors.indigo.indigo10,
+  brandActive: colors.indigo.indigo11,
+  brandHover: colors.indigo.indigo9,
   brandSoft: colors.indigo.indigo3,
   brandSoftActive: colors.indigo.indigo4,
   brandSoftHover: colors.indigo.indigo4,
 
-  brandAccent: colors.crimson.crimson9,
-  brandAccentActive: colors.crimson.crimson10,
-  brandAccentHover: colors.crimson.crimson8,
+  brandAccent: colors.crimson.crimson10,
+  brandAccentActive: colors.crimson.crimson11,
+  brandAccentHover: colors.crimson.crimson9,
   brandAccentSoft: colors.crimson.crimson3,
   brandAccentSoftActive: colors.crimson.crimson4,
   brandAccentSoftHover: colors.crimson.crimson4,
