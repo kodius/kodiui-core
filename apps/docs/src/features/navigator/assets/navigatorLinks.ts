@@ -42,12 +42,29 @@ export const navigatorLinks: Navigator[] = [
       {
         id: 3,
         name: "Stack",
-        href: routes["new-project"],
+        href: routes.stack,
       },
     ],
   },
   {
     id: 2,
+    name: "primitives",
+    isParent: true,
+    children: [
+      {
+        id: 0,
+        name: "Stack",
+        href: routes.stack,
+      },
+      {
+        id: 1,
+        name: "Center",
+        href: routes.center,
+      },
+    ],
+  },
+  {
+    id: 3,
     name: "components",
     isParent: true,
     children: [
