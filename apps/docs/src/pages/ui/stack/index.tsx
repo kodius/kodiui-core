@@ -11,6 +11,8 @@ const StackPage = () => {
     Checkbox<Sprinkles["gap"]>[]
   >(generateCheckboxes<Sprinkles["gap"]>(spaceArr));
 
+  // TODO: Checkboxes for Alignment
+
   return (
     <Doc>
       <Doc.Title>Stack</Doc.Title>
@@ -18,7 +20,7 @@ const StackPage = () => {
         <Doc.Checkboxes checkboxes={checkboxes} setCheckboxes={setCheckboxes}>
           {(checked) => {
             return (
-              <Stack gap={checked?.value}>
+              <Stack gap={checked?.value} alignItems="center">
                 <Doc.Placeholder />
                 <Doc.Placeholder />
                 <Doc.Placeholder />

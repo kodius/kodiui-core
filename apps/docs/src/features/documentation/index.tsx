@@ -2,6 +2,7 @@ import React from "react";
 import { Box, Stack } from "@kodiui/ui";
 import { Heading } from "@/components/typography/Heading";
 import { Checkboxes } from "./Checkboxes";
+import { placeholder } from "./Doc.css";
 
 interface Props {
   children: React.ReactNode;
@@ -25,6 +26,10 @@ const Title = ({ children }: Props) => {
   return <Heading.H1>{children}</Heading.H1>;
 };
 
+const SubTitle = ({ children }: Props) => {
+  return <Heading.H3>{children}</Heading.H3>;
+};
+
 const Example = ({ children }: Props) => {
   return (
     <Box background="gray2" {...boxStyles}>
@@ -39,12 +44,12 @@ const Example = ({ children }: Props) => {
 const Placeholder = ({ children }: Partial<Props>) => {
   return (
     <Box
-      width="full"
-      background="gray2"
+      width="6/12"
       padding="sm"
       borderWidth="lg"
       borderColor="gray5"
       borderStyle="solid"
+      className={placeholder}
     >
       {children}
     </Box>
@@ -52,6 +57,7 @@ const Placeholder = ({ children }: Partial<Props>) => {
 };
 
 Doc.Title = Title;
+Doc.Subtitle = SubTitle;
 Doc.Example = Example;
 Doc.Placeholder = Placeholder;
 Doc.Checkboxes = Checkboxes;

@@ -1,5 +1,4 @@
 import { FlexBox, Stack, vars } from "@kodiui/ui";
-import { Sprinkles } from "@kodiui/ui/dist/styles/sprinkles.css";
 import React from "react";
 
 export interface Checkbox<T> {
