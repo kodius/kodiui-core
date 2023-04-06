@@ -1,4 +1,4 @@
-import { Animation, Box, FlexBox } from "@kodiui/ui";
+import { Animation, FlexBox } from "@kodiui/ui";
 import React from "react";
 import { DotsBounceIcon } from "./DotsBounceIcon";
 
