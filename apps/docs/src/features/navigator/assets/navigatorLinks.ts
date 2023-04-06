@@ -42,7 +42,7 @@ export const navigatorLinks: Navigator[] = [
       {
         id: 3,
         name: "Stack",
-        href: routes["new-project"],
+        href: routes.stack,
       },
     ],
   },
