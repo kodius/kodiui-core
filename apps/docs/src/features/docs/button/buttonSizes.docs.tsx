@@ -4,10 +4,6 @@ import { Cluster } from "@kodiui/ui";
 
 export const buttonSizes: BuildElement = {
   label: "Button sizes",
-  description: {
-    description: ["test 1", "instaliraj kitu"],
-    codeSnippet: [`asdfdsaf`, `ovakko intarija`]
-  },
   example: {
     label: ["Base size", "Small size"],
     component: [

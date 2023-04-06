@@ -1,14 +1,14 @@
 import { Text } from "@/components/typography/Text";
-import { Box, BoxProps, vars } from "@kodiui/ui";
+import { Box, BoxProps } from "@kodiui/ui";
 import React, { FC } from "react";
-import { buttonRecipe, ButtonVariants } from "./button.css";
+import { buttonRecipe2, ButtonVariants2 } from "./button2.css";
 import { Loading } from "./Loading";
 
 interface Props {
   loading?: boolean;
 }
 
-type ButtonType = BoxProps & Props & ButtonVariants;
+type ButtonType = BoxProps & Props & ButtonVariants2;
 
 export const Button: FC<ButtonType> = (props) => {
   const loadingComponent = <Loading />;
@@ -22,14 +22,13 @@ export const Button: FC<ButtonType> = (props) => {
     </Box>
   );
 
-  console.log(vars.colors.brand);
   return (
     <Box
       as="button"
       position="relative"
-      className={buttonRecipe({
+      className={buttonRecipe2({
         variant: props.variant,
-        size: props.size,
+        size: props.size || "standard",
         tone: props.tone,
       })}
       {...props}

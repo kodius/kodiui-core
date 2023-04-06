@@ -58,6 +58,7 @@ export const buttonRecipe = recipe({
       test: { padding: 0 },
     },
   },
+
   compoundVariants: [
     {
       variants: {

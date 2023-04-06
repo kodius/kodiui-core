@@ -3,8 +3,48 @@ import * as colors from "./light";
 import { whiteALight } from "./white";
 
 export const LightColors = {
-  ...{ white: "#fff" },
-  ...{ black: "#000" },
+  body: colors.gray.gray2,
+
+  brand: colors.indigo.indigo9,
+  brandActive: colors.indigo.indigo10,
+  brandHover: colors.indigo.indigo8,
+  brandSoft: colors.indigo.indigo3,
+  brandSoftActive: colors.indigo.indigo4,
+  brandSoftHover: colors.indigo.indigo4,
+
+  brandAccent: colors.crimson.crimson9,
+  brandAccentActive: colors.crimson.crimson10,
+  brandAccentHover: colors.crimson.crimson8,
+  brandAccentSoft: colors.crimson.crimson3,
+  brandAccentSoftActive: colors.crimson.crimson4,
+  brandAccentSoftHover: colors.crimson.crimson4,
+
+  caution: colors.yellow.yellow8,
+  cautionLight: colors.yellow.yellow2,
+  critical: colors.red.red10,
+  criticalActive: colors.red.red11,
+  criticalHover: colors.red.red11,
+  criticalLight: colors.red.red3,
+  criticalSoft: colors.red.red2,
+  criticalSoftActive: colors.red.red5,
+  criticalSoftHover: colors.red.red3,
+
+  info: colors.indigo.indigo9,
+  infoLight: colors.indigo.indigo3,
+
+  neutral: colors.gray.gray12,
+  neutralActive: colors.gray.gray12,
+  neutralHover: colors.slate.slate12,
+  neutralLight: colors.gray.gray3,
+  neutralSoft: colors.gray.gray2,
+  neutralSoftActive: colors.slate.slate7,
+  neutralSoftHover: colors.slate.slate3,
+  positive: colors.green.green11,
+  positiveLight: colors.green.green4,
+
+  white: "#fff",
+  black: "#000",
+
   ...whiteALight,
   ...blackADark,
   ...colors.amber,
