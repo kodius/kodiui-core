@@ -15,4 +15,5 @@ export const routes = {
   center: `${primitives}/center`,
   // Component
   button: `${components}/button`,
+  drawer: `${components}/drawer`,
 };

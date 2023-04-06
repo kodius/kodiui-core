@@ -7,6 +7,7 @@ export const buttonRecipe = recipe({
     borderWidth: vars.borderWidth.sm,
     borderStyle: "solid",
     transition: `all 0.2s ease`,
+    height: 'fit-content',
     cursor: "pointer",
     ":active": {
       transform: "scale(0.95)",

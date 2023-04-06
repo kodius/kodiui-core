@@ -4,3 +4,5 @@ export { Text } from "./typography/Text";
 
 export { Button } from "./input/Button";
 export { type ButtonVariants } from "./input/Button/button.css";
+
+export { Drawer } from "./ui/Drawer";

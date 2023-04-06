@@ -1,5 +1,5 @@
 import React from "react";
-import { Box, Stack } from "@kodiui/ui";
+import { Box, Stack, BoxProps } from "@kodiui/ui";
 import { Heading } from "@/components/typography/Heading";
 import { Checkboxes } from "./Checkboxes";
 import { placeholder } from "./Doc.css";
@@ -41,15 +41,15 @@ const Example = ({ children }: Props) => {
 };
 
 // TODO: Make it cooler
-const Placeholder = ({ children }: Partial<Props>) => {
+const Placeholder = ({ children, ...props }: Partial<Props> & BoxProps) => {
   return (
     <Box
-      width="6/12"
       padding="sm"
-      borderWidth="lg"
-      borderColor="gray5"
+      borderWidth="md"
+      borderColor="gray12"
       borderStyle="solid"
       className={placeholder}
+      {...props}
     >
       {children}
     </Box>

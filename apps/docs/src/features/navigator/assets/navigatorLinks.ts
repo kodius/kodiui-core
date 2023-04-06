@@ -68,6 +68,11 @@ export const navigatorLinks: Navigator[] = [
         name: "Button",
         href: routes.button,
       },
+      {
+        id: 1,
+        name: "Drawer",
+        href: routes.drawer,
+      },
     ],
   },
 ];
