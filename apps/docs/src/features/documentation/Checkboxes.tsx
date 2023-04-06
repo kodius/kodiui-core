@@ -7,7 +7,7 @@ export interface Checkbox<T> {
   checked: boolean;
   value: T;
 }
-interface Props<T> {
+export interface Props<T> {
   children: (item: Checkbox<T> | undefined) => JSX.Element;
   checkboxes: Checkbox<T>[];
   setCheckboxes: React.Dispatch<React.SetStateAction<Checkbox<T>[]>>;

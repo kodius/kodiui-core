@@ -3,6 +3,7 @@ import { Box, Stack, BoxProps } from "@kodiui/ui";
 import { Heading } from "@/components/typography/Heading";
 import { Checkboxes } from "./Checkboxes";
 import { placeholder } from "./Doc.css";
+import { Sprinkles } from "@kodiui/ui/dist/styles/sprinkles.css";
 
 interface Props {
   children: React.ReactNode;
@@ -39,6 +40,10 @@ const Example = ({ children }: Props) => {
     </Box>
   );
 };
+
+interface PlaceholderProps extends Props {
+  width?: Sprinkles["width"];
+}
 
 // TODO: Make it cooler
 const Placeholder = ({ children, ...props }: Partial<Props> & BoxProps) => {
