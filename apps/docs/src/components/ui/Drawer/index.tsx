@@ -1,6 +1,5 @@
 import { Box, FlexBox, Stack } from "@kodiui/ui";
 import React, { FC, PropsWithChildren, useState } from "react";
-import { fadeInLayer, fadeOutLayer } from "./drawer.css";
 import { Header } from "./Header";
 import { DrawerProps, DrawerState } from "./types";
 import { useDrawer } from "./useDrawer";
@@ -16,8 +15,13 @@ export const Drawer: FC<PropsWithChildren & DrawerProps> = (props) => {
     props.open ? DrawerState.Open : DrawerState.Closed
   );
 
-  const { drawerSide, getAnimation, handleAnimationEnd, isDrawerStateClosed } =
-    useDrawer(props, drawerState, setDrawerState);
+  const {
+    backdropAnimation,
+    drawerSide,
+    getAnimation,
+    handleAnimationEnd,
+    isDrawerStateClosed,
+  } = useDrawer(props, drawerState, setDrawerState);
 
   if (isDrawerStateClosed()) return null;
 
@@ -40,15 +44,14 @@ export const Drawer: FC<PropsWithChildren & DrawerProps> = (props) => {
         height="full"
       >
         <Box
-          background="blackA9"
+          // background={{ dark: "whiteA11", light: "blackA11" }}
+          __background={"rgba(000,000,000,0.7)"}
           position="absolute"
           width="full"
           height="full"
           zIndex="10"
           onClick={props.onClose}
-          className={
-            drawerState === DrawerState.Open ? fadeInLayer : fadeOutLayer
-          }
+          className={backdropAnimation}
         />
         <Box
           __maxWidth={props.width ? SpaceSize[props.width] : SpaceSize.md}

@@ -1,6 +1,6 @@
 import { Button } from "@/components/input/Button";
 import { Heading } from "@/components/typography/Heading";
-import { Box, Split } from "@kodiui/ui";
+import { Split } from "@kodiui/ui";
 import React, { FC, PropsWithChildren } from "react";
 import { DrawerProps } from "./types";
 
@@ -30,7 +30,12 @@ const WithClose: FC<WithCloseProps> = (props) => {
   return (
     <Split>
       {props.children}
-      <Button onClick={props.onClose} variant="transparent" tone="neutral">
+      <Button
+        onClick={props.onClose}
+        size="sm"
+        variant="transparent"
+        tone="neutral"
+      >
         close
       </Button>
     </Split>

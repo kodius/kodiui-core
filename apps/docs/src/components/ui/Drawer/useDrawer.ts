@@ -4,6 +4,8 @@ import { DrawerProps, DrawerState } from "./types";
 import {
   closeDrawerLeft,
   closeDrawerRight,
+  fadeInLayer,
+  fadeOutLayer,
   openDrawerLeft,
   openDrawerRight,
 } from "./drawer.css";
@@ -62,6 +64,9 @@ export const useDrawer = (
     else return false;
   };
 
+  const backdropAnimation =
+    drawerState === DrawerState.Open ? fadeInLayer : fadeOutLayer;
+
   return {
     drawerSide,
     handleAnimationEnd,
@@ -69,5 +74,6 @@ export const useDrawer = (
     getCloseSideAnimation,
     getAnimation,
     isDrawerStateClosed,
+    backdropAnimation
   };
 };
