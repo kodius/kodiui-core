@@ -23,3 +23,10 @@ export const generateCheckboxes = <S>(
   });
   return arr;
 };
+
+export const copyText = (text: string) => {
+  if (!text) alert("no tekst");
+  navigator.clipboard.writeText(text);
+  // Make this better when we have components
+  alert("copied");
+};
