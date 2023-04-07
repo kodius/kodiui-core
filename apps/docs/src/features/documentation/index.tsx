@@ -46,7 +46,7 @@ interface PlaceholderProps extends Props {
 }
 
 // TODO: Make it cooler
-const Placeholder = ({ children, ...props }: Partial<Props> & BoxProps) => {
+const Placeholder = ({ children, ...props }: Partial<PlaceholderProps>) => {
   return (
     <Box
       padding="sm"

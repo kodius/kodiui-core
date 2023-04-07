@@ -1,11 +1,10 @@
+import { toggleState } from "@/helpers";
 import { create } from "zustand";
 
 interface NavigatorStore {
   isNavigatorVisible: boolean;
   toggleNavigator: () => void;
 }
-
-const toggleState = (s: boolean): boolean => (s ? false : true);
 
 export const useNavigatorStore = create<NavigatorStore>((set) => ({
   isNavigatorVisible: false,

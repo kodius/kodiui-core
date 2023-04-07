@@ -1,6 +1,7 @@
 import type { AppProps } from "next/app";
 import { Box, Center, Sidebar } from "@kodiui/ui";
 import { Navigator } from "@/features/navigator";
+import { Configurator } from "@/features/configurator";
 import { useTheme } from "@/features/theme";
 
 import { Inter } from "next/font/google";
@@ -14,16 +15,17 @@ export default function App({ Component, pageProps }: AppProps) {
   const theme = useTheme();
   return (
     <div className={inter.className}>
-      <Box p="sm" className={theme} background={"white"}>
-        <Center width={"full"} __maxWidth={1100}>
+      <Box p="sm" className={theme} background="white">
+        <Center width="full" __maxWidth={1100}>
           <Sidebar
-            gap={0}
+            gap="0"
             flexDirection={{ mobileExtraSmall: "column", tablet: "row" }}
           >
             <Navigator />
             <Component {...pageProps} />
           </Sidebar>
         </Center>
+        <Configurator />
       </Box>
     </div>
   );

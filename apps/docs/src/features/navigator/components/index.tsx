@@ -1,4 +1,4 @@
-import { Box } from "@kodiui/ui";
+import { Box, Stack } from "@kodiui/ui";
 import React from "react";
 import { navigatorLinks } from "../assets/navigatorLinks";
 import { Desktop } from "./Desktop";
@@ -15,10 +15,10 @@ export const Navigator = () => {
   ));
 
   const content = (
-    <>
+    <Stack gap="xs">
       {links}
       <Footer />
-    </>
+    </Stack>
   );
 
   return (
