@@ -1,9 +1,12 @@
 import { useThemeStore } from "@/features/theme";
-import { Animation } from "@kodiui/ui";
+import { Animation, vars } from "@kodiui/ui";
 import React, { FC } from "react";
 import SyntaxHighlighter from "react-syntax-highlighter";
 
-import { docco, dracula } from "react-syntax-highlighter/dist/esm/styles/hljs";
+import {
+  atomOneDark,
+  arduinoLight,
+} from "react-syntax-highlighter/dist/esm/styles/hljs";
 
 interface Props {
   code: string;
@@ -18,10 +21,17 @@ const SyntaxHighligter: FC<Props> = (props) => {
   return (
     <Animation animation="fadeIn">
       <SyntaxHighlighter
-        style={isLight ? docco : dracula}
+        style={isLight ? atomOneDark : arduinoLight}
         language="typescript"
         showLineNumbers={props.showLineNumber}
-        customStyle={{ borderRadius: "5px", padding: "20px" }}
+        customStyle={{
+          fontSize: "1rem",
+          borderRadius: "5px",
+          padding: "1.25rem",
+          fontWeight: 600,
+          fontFamily: "monospace",
+          color: vars.colors.blue4,
+        }}
       >
         {props.code}
       </SyntaxHighlighter>

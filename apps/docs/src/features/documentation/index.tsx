@@ -4,6 +4,8 @@ import { Heading } from "@/components/typography/Heading";
 import { Checkboxes } from "./Checkboxes";
 import { placeholder } from "./Doc.css";
 import { Sprinkles } from "@kodiui/ui/dist/styles/sprinkles.css";
+import { HardStyles } from "@kodiui/ui/dist/styles/hardStyle";
+import { CodeSnippet } from "./CodeSnippet";
 
 interface Props {
   children: React.ReactNode;
@@ -42,11 +44,15 @@ const Example = ({ children }: Props) => {
 };
 
 interface PlaceholderProps extends Props {
-  width?: Sprinkles["width"];
+  width: Sprinkles["width"];
+  height: Sprinkles["height"];
 }
 
 // TODO: Make it cooler
-const Placeholder = ({ children, ...props }: Partial<Props> & BoxProps) => {
+const Placeholder = ({
+  children,
+  ...props
+}: Partial<PlaceholderProps & HardStyles>) => {
   return (
     <Box
       padding="sm"
@@ -66,3 +72,4 @@ Doc.Subtitle = SubTitle;
 Doc.Example = Example;
 Doc.Placeholder = Placeholder;
 Doc.Checkboxes = Checkboxes;
+Doc.CodeSnippet = CodeSnippet;

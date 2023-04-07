@@ -7,6 +7,12 @@ import { generateCheckboxes } from "@/features/documentation/utils";
 
 import { Type, alignCheckboxesArr } from "./consts";
 
+const codeSnippet = `<Stack gap={checked?.value} alignItems="center">
+  <Doc.Placeholder width="full" />
+  <Doc.Placeholder width="full" />
+  <Doc.Placeholder width="full" />
+</Stack>`;
+
 const StackPage = () => {
   const spaceArr = Object.keys(vars.space) as Sprinkles["gap"][];
   const [gapCheckboxes, setGapCheckboxes] = React.useState<
@@ -27,13 +33,14 @@ const StackPage = () => {
           {(checked) => {
             return (
               <Stack gap={checked?.value} alignItems="center">
-                <Doc.Placeholder />
-                <Doc.Placeholder />
-                <Doc.Placeholder />
+                <Doc.Placeholder width="full" />
+                <Doc.Placeholder width="full" />
+                <Doc.Placeholder width="full" />
               </Stack>
             );
           }}
         </Doc.Checkboxes>
+        <Doc.CodeSnippet codeSnippet={codeSnippet} showLineNumbers={false} />
       </Doc.Example>
       <Doc.Subtitle>Alignment</Doc.Subtitle>
       <Doc.Example>
