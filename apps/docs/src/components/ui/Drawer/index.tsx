@@ -44,7 +44,6 @@ export const Drawer: FC<PropsWithChildren & DrawerProps> = (props) => {
         height="full"
       >
         <Box
-          // background={{ dark: "whiteA11", light: "blackA11" }}
           __background={"rgba(000,000,000,0.7)"}
           position="absolute"
           width="full"

@@ -10,7 +10,7 @@ globalStyle("body", {
 });
 
 globalStyle("*", {
-  transition: "background 0.3s ease",
+  transition: "background 0.2s ease",
 });
 
 globalStyle("p, h1, h2, h3, h4, h5, h6 ", {

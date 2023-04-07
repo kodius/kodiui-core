@@ -15,7 +15,6 @@ export const useTheme = () => {
 
     mq.addEventListener("change", function (evt) {
       const isDark = evt.matches;
-      console.log(isDark);
       document.documentElement.setAttribute(
         "data-theme",
         isDark ? "dark" : "light"

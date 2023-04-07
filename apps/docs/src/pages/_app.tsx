@@ -15,7 +15,6 @@ export default function App({ Component, pageProps }: AppProps) {
   return (
     <div className={inter.className}>
       <Box p="sm" className={theme} background={"white"}>
-        {/* TODO maxWidth={mobile size or so on}  */}
         <Center width={"full"} __maxWidth={1100}>
           <Sidebar
             gap={0}
