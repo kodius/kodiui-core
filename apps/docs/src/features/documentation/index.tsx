@@ -1,5 +1,5 @@
 import React from "react";
-import { Box, Stack, BoxProps } from "@kodiui/ui";
+import { Box, Stack } from "@kodiui/ui";
 import { Heading } from "@/components/typography/Heading";
 import { Checkboxes } from "./Checkboxes";
 import { placeholder } from "./Doc.css";
@@ -19,7 +19,7 @@ const boxStyles = {
 export const Doc = ({ children }: Props) => {
   return (
     <Box p={{ mobileExtraSmall: "sm", tablet: "3xl" }}>
-      <Box paddingTop={{ mobileExtraSmall: 0, tablet: "3xl" }} />
+      <Box paddingTop={{ mobileExtraSmall: "0", tablet: "3xl" }} />
       <Stack gap="lg">{children}</Stack>
     </Box>
   );

@@ -29,7 +29,7 @@ Heading.H3 = ({ children }) => (
   </Typography>
 );
 Heading.H4 = ({ children }) => (
-  <Typography color={"blue11"} as="h4">
+  <Typography color="brand" as="h4">
     {children}
   </Typography>
 );
