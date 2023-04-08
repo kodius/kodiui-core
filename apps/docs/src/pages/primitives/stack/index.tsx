@@ -19,7 +19,7 @@ const StackPage = () => {
     Checkbox<Sprinkles["gap"]>[]
   >(generateCheckboxes(spaceArr));
   const [alignCheckboxes, setAlignCheckboxes] =
-    React.useState<Checkbox<Type>[]>(alignCheckboxesArr);
+    React.useState(alignCheckboxesArr);
 
   return (
     <Doc>
