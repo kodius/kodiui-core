@@ -12,7 +12,7 @@ export const Content: FC<PropsWithChildren> = (props) => {
         width="screen"
         position="absolute"
         background="white"
-        left={0}
+        left="0"
         height="screen"
       >
         <Stack>{props.children}</Stack>

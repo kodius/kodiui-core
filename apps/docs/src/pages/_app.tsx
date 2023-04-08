@@ -15,7 +15,7 @@ export default function App({ Component, pageProps }: AppProps) {
   const theme = useTheme();
   return (
     <div className={inter.className}>
-      <Box p="sm" className={theme} background="white">
+      <Box p="sm" className={theme} background="body">
         <Center width="full" __maxWidth={1100}>
           <Sidebar
             gap="0"

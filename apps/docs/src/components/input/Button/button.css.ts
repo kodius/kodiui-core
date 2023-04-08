@@ -49,10 +49,10 @@ export const buttonRecipe = recipe({
     },
     variant: {
       solid: {
-        color: vars.colors.white,
+        color: vars.colors.body,
       },
       ghost: {
-        background: vars.colors.white,
+        background: vars.colors.body,
       },
       soft: {
         borderColor: "transparent",
@@ -61,7 +61,7 @@ export const buttonRecipe = recipe({
         },
       },
       transparent: {
-        background: vars.colors.white,
+        background: "transparent" ,
         borderColor: "transparent",
       },
     },

@@ -11,11 +11,6 @@ interface Props {
   children: React.ReactNode;
 }
 
-const boxStyles = {
-  borderRadius: "sm",
-  p: "md",
-} as const;
-
 export const Doc = ({ children }: Props) => {
   return (
     <Box p={{ mobileExtraSmall: "sm", tablet: "3xl" }}>
@@ -35,10 +30,8 @@ const SubTitle = ({ children }: Props) => {
 
 const Example = ({ children }: Props) => {
   return (
-    <Box background="gray2" {...boxStyles}>
-      <Box background="white" {...boxStyles}>
-        {children}
-      </Box>
+    <Box background="white" borderRadius="sm" p="md" borderColor="blackA5" borderStyle="solid">
+      {children}
     </Box>
   );
 };

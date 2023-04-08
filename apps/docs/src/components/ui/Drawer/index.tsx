@@ -34,8 +34,8 @@ export const Drawer: FC<PropsWithChildren & DrawerProps> = (props) => {
       width="screen"
       height="screen"
       zIndex="10"
-      top={0}
-      left={0}
+      top="0"
+      left="0"
     >
       <FlexBox
         position="relative"
@@ -44,7 +44,7 @@ export const Drawer: FC<PropsWithChildren & DrawerProps> = (props) => {
         height="full"
       >
         <Box
-          __background={"rgba(000,000,000,0.7)"}
+          background="blackA10"
           position="absolute"
           width="full"
           height="full"
@@ -57,7 +57,7 @@ export const Drawer: FC<PropsWithChildren & DrawerProps> = (props) => {
           p="2xl"
           width="full"
           zIndex="20"
-          background="white"
+          background="body"
           boxShadow="shadow-3"
           className={getAnimation(drawerState)}
           onAnimationEnd={handleAnimationEnd}
