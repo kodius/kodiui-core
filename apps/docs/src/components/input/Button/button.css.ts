@@ -7,7 +7,7 @@ export const buttonRecipe = recipe({
     borderWidth: vars.borderWidth.sm,
     borderStyle: "solid",
     transition: `all 0.2s ease`,
-    height: 'fit-content',
+    height: "fit-content",
     cursor: "pointer",
     ":active": {
       transform: "scale(0.95)",
@@ -45,6 +45,36 @@ export const buttonRecipe = recipe({
           borderColor: vars.colors.neutralHover,
         },
         fill: vars.colors.neutralSoft,
+      },
+      critical: {
+        background: vars.colors.critical,
+        borderColor: vars.colors.critical,
+        color: vars.colors.critical,
+        ":hover": {
+          background: vars.colors.criticalHover,
+          borderColor: vars.colors.criticalHover,
+        },
+        fill: vars.colors.criticalSoft,
+      },
+      info: {
+        background: vars.colors.info,
+        borderColor: vars.colors.info,
+        color: vars.colors.info,
+        ":hover": {
+          background: vars.colors.infoHover,
+          borderColor: vars.colors.infoHover,
+        },
+        fill: vars.colors.infoSoft,
+      },
+      success: {
+        background: vars.colors.success,
+        borderColor: vars.colors.success,
+        color: vars.colors.success,
+        ":hover": {
+          background: vars.colors.success,
+          borderColor: vars.colors.success,
+        },
+        fill: vars.colors.successSoft,
       },
     },
     variant: {
@@ -167,6 +197,105 @@ export const buttonRecipe = recipe({
       style: {
         ":hover": {
           background: vars.colors.neutralSoftHover,
+        },
+      },
+    },
+    // Critical
+    {
+      variants: {
+        variant: "transparent",
+        tone: "critical",
+      },
+      style: {
+        ":hover": {
+          background: vars.colors.criticalSoftHover,
+          borderColor: vars.colors.criticalSoftHover,
+        },
+      },
+    },
+    {
+      variants: {
+        variant: "soft",
+        tone: "critical",
+      },
+      style: {
+        background: vars.colors.criticalSoft,
+        ":hover": {
+          background: vars.colors.criticalSoftHover,
+        },
+      },
+    },
+    {
+      variants: { variant: "ghost", tone: "critical" },
+      style: {
+        ":hover": {
+          background: vars.colors.criticalSoftHover,
+        },
+      },
+    },
+    // Info
+    {
+      variants: {
+        variant: "transparent",
+        tone: "info",
+      },
+      style: {
+        ":hover": {
+          background: vars.colors.infoSoftHover,
+          borderColor: vars.colors.infoSoftHover,
+        },
+      },
+    },
+    {
+      variants: {
+        variant: "soft",
+        tone: "info",
+      },
+      style: {
+        background: vars.colors.infoSoft,
+        ":hover": {
+          background: vars.colors.infoSoftActive,
+        },
+      },
+    },
+    {
+      variants: { variant: "ghost", tone: "info" },
+      style: {
+        ":hover": {
+          background: vars.colors.infoSoftHover,
+        },
+      },
+    },
+    // Success
+    {
+      variants: {
+        variant: "transparent",
+        tone: "success",
+      },
+      style: {
+        ":hover": {
+          background: vars.colors.successSoftHover,
+          borderColor: vars.colors.successSoftHover,
+        },
+      },
+    },
+    {
+      variants: {
+        variant: "soft",
+        tone: "success",
+      },
+      style: {
+        background: vars.colors.successSoft,
+        ":hover": {
+          background: vars.colors.successSoftActive,
+        },
+      },
+    },
+    {
+      variants: { variant: "ghost", tone: "success" },
+      style: {
+        ":hover": {
+          background: vars.colors.successSoftHover,
         },
       },
     },
