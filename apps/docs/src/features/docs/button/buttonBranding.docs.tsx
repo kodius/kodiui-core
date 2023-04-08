@@ -5,7 +5,7 @@ import { Cluster } from "@kodiui/ui";
 export const buttonBranding: BuildElement = {
   label: "Branding",
   example: {
-    label: ["Brand Accent", "Neutral"],
+    label: ["Brand Accent", "Neutral", "Critical"],
     component: [
       <Cluster>
         <Button tone="brandAccent">Solid</Button>
@@ -28,6 +28,18 @@ export const buttonBranding: BuildElement = {
           Soft
         </Button>
         <Button tone="neutral" variant="transparent">
+          Transparent
+        </Button>
+      </Cluster>,
+      <Cluster>
+        <Button tone="critical">Solid</Button>
+        <Button tone="critical" variant="ghost">
+          Ghost
+        </Button>
+        <Button tone="critical" variant="soft">
+          Soft
+        </Button>
+        <Button tone="critical" variant="transparent">
           Transparent
         </Button>
       </Cluster>,

@@ -7,7 +7,7 @@ export const buttonRecipe = recipe({
     borderWidth: vars.borderWidth.sm,
     borderStyle: "solid",
     transition: `all 0.2s ease`,
-    height: 'fit-content',
+    height: "fit-content",
     cursor: "pointer",
     ":active": {
       transform: "scale(0.95)",
@@ -43,6 +43,16 @@ export const buttonRecipe = recipe({
         ":hover": {
           background: vars.colors.neutralHover,
           borderColor: vars.colors.neutralHover,
+        },
+        fill: vars.colors.neutralSoft,
+      },
+      critical: {
+        background: vars.colors.critical,
+        borderColor: vars.colors.critical,
+        color: vars.colors.critical,
+        ":hover": {
+          background: vars.colors.criticalHover,
+          borderColor: vars.colors.criticalHover,
         },
         fill: vars.colors.neutralSoft,
       },
@@ -167,6 +177,39 @@ export const buttonRecipe = recipe({
       style: {
         ":hover": {
           background: vars.colors.neutralSoftHover,
+        },
+      },
+    },
+    // Critical
+    {
+      variants: {
+        variant: "transparent",
+        tone: "critical",
+      },
+      style: {
+        ":hover": {
+          background: vars.colors.criticalSoftHover,
+          borderColor: vars.colors.criticalSoftHover,
+        },
+      },
+    },
+    {
+      variants: {
+        variant: "soft",
+        tone: "critical",
+      },
+      style: {
+        background: vars.colors.criticalSoft,
+        ":hover": {
+          background: vars.colors.criticalSoftHover,
+        },
+      },
+    },
+    {
+      variants: { variant: "ghost", tone: "critical" },
+      style: {
+        ":hover": {
+          background: vars.colors.criticalSoftHover,
         },
       },
     },
