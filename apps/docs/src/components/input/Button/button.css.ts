@@ -54,7 +54,27 @@ export const buttonRecipe = recipe({
           background: vars.colors.criticalHover,
           borderColor: vars.colors.criticalHover,
         },
-        fill: vars.colors.neutralSoft,
+        fill: vars.colors.criticalSoft,
+      },
+      info: {
+        background: vars.colors.info,
+        borderColor: vars.colors.info,
+        color: vars.colors.info,
+        ":hover": {
+          background: vars.colors.infoHover,
+          borderColor: vars.colors.infoHover,
+        },
+        fill: vars.colors.infoSoft,
+      },
+      success: {
+        background: vars.colors.success,
+        borderColor: vars.colors.success,
+        color: vars.colors.success,
+        ":hover": {
+          background: vars.colors.success,
+          borderColor: vars.colors.success,
+        },
+        fill: vars.colors.successSoft,
       },
     },
     variant: {
@@ -210,6 +230,72 @@ export const buttonRecipe = recipe({
       style: {
         ":hover": {
           background: vars.colors.criticalSoftHover,
+        },
+      },
+    },
+    // Info
+    {
+      variants: {
+        variant: "transparent",
+        tone: "info",
+      },
+      style: {
+        ":hover": {
+          background: vars.colors.infoSoftHover,
+          borderColor: vars.colors.infoSoftHover,
+        },
+      },
+    },
+    {
+      variants: {
+        variant: "soft",
+        tone: "info",
+      },
+      style: {
+        background: vars.colors.infoSoft,
+        ":hover": {
+          background: vars.colors.infoSoftActive,
+        },
+      },
+    },
+    {
+      variants: { variant: "ghost", tone: "info" },
+      style: {
+        ":hover": {
+          background: vars.colors.infoSoftHover,
+        },
+      },
+    },
+    // Success
+    {
+      variants: {
+        variant: "transparent",
+        tone: "success",
+      },
+      style: {
+        ":hover": {
+          background: vars.colors.successSoftHover,
+          borderColor: vars.colors.successSoftHover,
+        },
+      },
+    },
+    {
+      variants: {
+        variant: "soft",
+        tone: "success",
+      },
+      style: {
+        background: vars.colors.successSoft,
+        ":hover": {
+          background: vars.colors.successSoftActive,
+        },
+      },
+    },
+    {
+      variants: { variant: "ghost", tone: "success" },
+      style: {
+        ":hover": {
+          background: vars.colors.successSoftHover,
         },
       },
     },
