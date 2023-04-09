@@ -2,7 +2,7 @@ import { Checkbox } from "@/features/documentation/Checkboxes";
 
 export type Type = "flex-start" | "flex-end" | "center" | "baseline";
 
-export const alignCheckboxesArr = [
+export const alignCheckboxesArr: Checkbox<Type>[] = [
   {
     name: "flex-start",
     label: "flex-start",
@@ -27,4 +27,4 @@ export const alignCheckboxesArr = [
     checked: false,
     value: "baseline",
   },
-] satisfies Checkbox<Type>[];
+];

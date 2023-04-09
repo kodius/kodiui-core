@@ -35,7 +35,13 @@ const Description = ({ children }: Props) => {
 
 const Example = ({ children }: Props) => {
   return (
-    <Box background="white" borderRadius="sm" p="md" borderColor="blackA5" borderStyle="solid">
+    <Box
+      background="white"
+      borderRadius="sm"
+      p="md"
+      borderColor="blackA5"
+      borderStyle="solid"
+    >
       {children}
     </Box>
   );
@@ -54,10 +60,11 @@ const Placeholder = ({
   return (
     <Box
       padding="sm"
-      borderWidth="md"
-      borderColor="gray12"
+      borderWidth="sm"
+      borderColor="gray8"
       borderStyle="solid"
       className={placeholder}
+      borderRadius="sm"
       {...props}
     >
       {children}
