@@ -1,17 +1,12 @@
-import { SvgTypes } from "@/types";
 import { vars } from "@kodiui/ui";
-import { FC } from "react";
 
-export const AdjustmentsIcon: FC<SvgTypes> = () => {
+export const AdjustmentsIcon = () => {
   return (
     <svg
       xmlns="http://www.w3.org/2000/svg"
-      width="20"
-      height="20"
       viewBox="0 0 24 24"
-      stroke-width="1"
+      strokeWidth="1"
       stroke={vars.colors.black}
-      fill="none"
       strokeLinecap="round"
       strokeLinejoin="round"
     >

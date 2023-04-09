@@ -53,7 +53,7 @@ export const Drawer: FC<PropsWithChildren & DrawerProps> = (props) => {
           className={backdropAnimation}
         />
         <Box
-          __maxWidth={props.width ? SpaceSize[props.width] : SpaceSize.md}
+          __maxwidth={props.width ? SpaceSize[props.width] : SpaceSize.md}
           p="2xl"
           width="full"
           zIndex="20"

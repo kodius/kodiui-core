@@ -6,6 +6,7 @@ import { placeholder } from "./Doc.css";
 import { Sprinkles } from "@kodiui/ui/dist/styles/sprinkles.css";
 import { HardStyles } from "@kodiui/ui/dist/styles/hardStyle";
 import { CodeSnippet } from "./CodeSnippet";
+import { Text } from "@/components";
 
 interface Props {
   children: React.ReactNode;
@@ -26,6 +27,10 @@ const Title = ({ children }: Props) => {
 
 const SubTitle = ({ children }: Props) => {
   return <Heading.H3>{children}</Heading.H3>;
+};
+
+const Description = ({ children }: Props) => {
+  return <Text.Base>{children}</Text.Base>;
 };
 
 const Example = ({ children }: Props) => {
@@ -62,6 +67,7 @@ const Placeholder = ({
 
 Doc.Title = Title;
 Doc.Subtitle = SubTitle;
+Doc.Description = Description;
 Doc.Example = Example;
 Doc.Placeholder = Placeholder;
 Doc.Checkboxes = Checkboxes;

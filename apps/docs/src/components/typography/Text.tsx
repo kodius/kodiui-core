@@ -13,7 +13,7 @@ export const Text: FC<PropsWithChildren> & Props = () => {
   return null;
 };
 
-Text.Base = ({ children }) => <Typography color="black" fontSize="sm" as="p">{children}</Typography>;
+Text.Base = ({ children }) => <Typography color="black" fontSize="base" as="p">{children}</Typography>;
 
 Text.Caption = ({ children }) => (
   <Typography as="span" fontWeight="bolder" fontSize="sm">

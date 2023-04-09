@@ -7,11 +7,11 @@ export interface HardStyles {
   __padding?: CSSProperties["padding"] | number;
   __background?: CSSProperties["background"];
   __width?: CSSProperties["width"] | number;
-  __minWidth?: CSSProperties["minWidth"] | number;
-  __maxWidth?: CSSProperties["maxWidth"] | number;
+  __minwidth?: CSSProperties["minWidth"] | number;
+  __maxwidth?: CSSProperties["maxWidth"] | number;
   __height?: CSSProperties["height"] | number;
-  __minHeight?: CSSProperties["minHeight"] | number;
-  __maxHeight?: CSSProperties["maxHeight"] | number;
+  __minheight?: CSSProperties["minHeight"] | number;
+  __maxheight?: CSSProperties["maxHeight"] | number;
   __top?: CSSProperties["top"] | number;
   __left?: CSSProperties["left"] | number;
   __bottom?: CSSProperties["bottom"] | number;
@@ -24,11 +24,11 @@ export const hardStyle = (props: BoxProps): React.CSSProperties | undefined => {
     padding: props.__padding,
     background: props.__background,
     width: props.__width,
-    minWidth: props.__minWidth,
-    maxWidth: props.__maxWidth,
+    minWidth: props.__minwidth,
+    maxWidth: props.__maxwidth,
     height: props.__height,
-    minHeight: props.__minHeight,
-    maxHeight: props.__maxHeight,
+    minHeight: props.__minheight,
+    maxHeight: props.__maxheight,
     top: props.__top,
     left: props.__left,
     bottom: props.__bottom,

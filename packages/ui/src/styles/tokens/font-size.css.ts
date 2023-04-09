@@ -13,3 +13,5 @@ export const FontSize = {
   "8xl": "6rem " /* 96px */,
   "9xl": "8rem " /* 128px */,
 } as const;
+
+export type FontSizeTypes = keyof typeof FontSize

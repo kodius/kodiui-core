@@ -1,5 +1,5 @@
-import { SVGProps } from "react"
+import { FC, SVGProps } from "react"
 
-export type SvgTypes = SVGProps<SVGSVGElement> 
+export type SvgTypes = FC<SVGProps<SVGSVGElement>>
 
 

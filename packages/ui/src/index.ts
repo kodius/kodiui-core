@@ -4,7 +4,10 @@ export { tokens } from "./styles/tokens/index.css";
 export { translateTokens } from "./utils/translateTokens";
 export { DarkColors } from "./styles/tokens/colors/dark-colors.css";
 export { Typography } from "./components/Typography";
+
+// types
 export { type SpaceTypes } from "./styles/tokens/space.css";
+export { type FontSizeTypes } from "./styles/tokens/font-size.css";
 
 // Animations
 export { Animation } from "./components/Animation";
