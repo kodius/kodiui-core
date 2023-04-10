@@ -35,3 +35,12 @@ globalStyle(`a`, {
 globalStyle(`#root`, {
   isolation: `isolate`,
 });
+
+globalStyle("a:hover", {
+  textDecoration: "underline",
+  color: "inherit",
+});
+
+globalStyle("a", {
+  textDecoration: "none",
+});
