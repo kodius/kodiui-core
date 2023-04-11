@@ -38,7 +38,7 @@ export const centerVariants: BuildElement = {
             borderStyle="solid"
             direction="center"
           >
-            <Box background={"red5"}>Booth</Box>
+            <Box background={"red5"}>Center</Box>
           </Center>
         </Box>
       </Stack>,

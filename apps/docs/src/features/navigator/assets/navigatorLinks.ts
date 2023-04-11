@@ -56,6 +56,11 @@ export const navigatorLinks: Navigator[] = [
         name: "Center",
         href: routes.center,
       },
+      {
+        id: 2,
+        name: "Cluster",
+        href: routes.cluster,
+      },
     ],
   },
   {

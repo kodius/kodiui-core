@@ -14,6 +14,7 @@ export const routes = {
   // Primitives
   stack: `${primitives}/stack`,
   center: `${primitives}/center`,
+  cluster: `${primitives}/cluster`,
   // Component
   button: `${components}/button`,
   drawer: `${components}/drawer`,

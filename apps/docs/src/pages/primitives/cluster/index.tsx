@@ -1,19 +1,31 @@
 import { DocBuilder } from "@/features/docBuilder";
 import { centerVariants } from "@/features/docs/center/centerVariants.docs";
 import { Doc } from "@/features/documentation";
-import { Center, Box } from "@kodiui/ui";
+import { Center, Box, Cluster } from "@kodiui/ui";
 
-const CenterPage = () => {
+const ClusterPage = () => {
   return (
     <Doc>
-      <Doc.Title>Center</Doc.Title>
-      <Doc.Subtitle>Horizontal</Doc.Subtitle>
+      <Doc.Title>Cluster</Doc.Title>
+      <Doc.Subtitle>Wrapping children</Doc.Subtitle>
       <Doc.Example>
-        <Box height={"20"}>
+        <Cluster height={"20"}>
           <Center>
             <Doc.Placeholder />
           </Center>
-        </Box>
+          <Center>
+            <Doc.Placeholder />
+          </Center>
+          <Center>
+            <Doc.Placeholder />
+          </Center>
+          <Center>
+            <Doc.Placeholder />
+          </Center>
+          <Center>
+            <Doc.Placeholder />
+          </Center>
+        </Cluster>
       </Doc.Example>
 
       <Doc.Subtitle>Vertical</Doc.Subtitle>
@@ -37,4 +49,4 @@ const CenterPage = () => {
   );
 };
 
-export default CenterPage;
+export default ClusterPage;
