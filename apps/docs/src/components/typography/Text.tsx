@@ -1,6 +1,8 @@
 import { Box, Typography } from "@kodiui/ui";
 import { BuilderInterface } from "@kodiui/ui/dist/types";
 import { FC, PropsWithChildren, ReactNode } from "react";
+import { TextVariants, text, textStyle } from "./Text.css";
+import classNames from "classnames";
 
 type TextType = ({ children }: { children: ReactNode }) => JSX.Element;
 
@@ -15,21 +17,21 @@ export const Text: FC<PropsWithChildren> & Props = () => {
 };
 
 Text.Base = ({ children }) => (
-  <Typography color="black" fontSize="base" as="p">
+  <NewText color="black" fontSize="base" as="p">
     {children}
-  </Typography>
+  </NewText>
 );
 
 Text.Caption = ({ children }) => (
-  <Typography as="span" fontWeight="bolder" fontSize="sm">
+  <NewText as="span" fontWeight="bolder" fontSize="sm">
     {children}
-  </Typography>
+  </NewText>
 );
 
 Text.Sub = ({ children }) => (
-  <Typography as="p" textTransform="uppercase" fontSize="sm" color="gray12">
+  <NewText as="p" textTransform="uppercase" fontSize="sm" color="gray12">
     {children}
-  </Typography>
+  </NewText>
 );
 
 /////////////////////////////////////////////
@@ -45,15 +47,25 @@ type TextProps = Pick<
   | "cursor"
   | "as"
   | "color"
->;
+  | "fontSize"
+> &
+  TextVariants;
 
 export const NewText = ({
   as = "p",
+  tone,
   children,
   ...rest
 }: PropsWithChildren<TextProps>) => {
   return (
-    <Box as={as} {...rest}>
+    <Box
+      as={as}
+      display="flex"
+      gap="xxs"
+      alignItems="center"
+      {...rest}
+      className={classNames(textStyle, text({ tone: tone }))}
+    >
       {children}
     </Box>
   );
