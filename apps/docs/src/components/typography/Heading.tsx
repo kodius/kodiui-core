@@ -28,20 +28,16 @@ export const Heading = ({
   children,
   as,
   level = "h1",
-  align = {
-    mobile: "left",
-    tablet: "left",
-    desktop: "left",
-  },
+  align,
   ...rest
 }: PropsWithChildren<HeadingProps>) => {
-  const mobileAlignment = align.mobile && mobile[align.mobile];
-  const tabletAlignment = align.tablet && tablet[align.tablet];
-  const desktopAlignment = align.desktop && desktop[align.desktop];
-  const component = as ? as : level;
+  const mobileAlignment = align?.mobile && mobile[align.mobile];
+  const tabletAlignment = align?.tablet && tablet[align.tablet];
+  const desktopAlignment = align?.desktop && desktop[align.desktop];
+  const domElement = as ? as : level;
   return (
     <Box
-      as={component}
+      as={domElement}
       className={classNames(
         headings[level],
         mobileAlignment,

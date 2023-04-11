@@ -20,4 +20,5 @@ export const routes = {
   textLink: `${components}/text-link`,
   // Typography
   headings: `${typography}/headings`,
+  text: `${typography}/text`,
 };

@@ -90,6 +90,11 @@ export const navigatorLinks: Navigator[] = [
         name: "Headings",
         href: routes.headings,
       },
+      {
+        id: 1,
+        name: "Text",
+        href: routes.text,
+      },
     ],
   },
 ];

@@ -1,4 +1,4 @@
-import { Typography } from "@kodiui/ui";
+import { Box, Typography } from "@kodiui/ui";
 import { BuilderInterface } from "@kodiui/ui/dist/types";
 import { FC, PropsWithChildren, ReactNode } from "react";
 
@@ -34,19 +34,27 @@ Text.Sub = ({ children }) => (
 
 /////////////////////////////////////////////
 
-// type TextProps = Pick<
-//   BuilderInterface,
-//   | "textAlign"
-//   | "fontWeight"
-//   | "color"
-//   | "textDecoration"
-//   | "textAlign"
-//   | "textTransform"
-//   | "cursor"
-//   | "as"
-//   | "color"
-// >;
+type TextProps = Pick<
+  BuilderInterface,
+  | "textAlign"
+  | "fontWeight"
+  | "color"
+  | "textDecoration"
+  | "textAlign"
+  | "textTransform"
+  | "cursor"
+  | "as"
+  | "color"
+>;
 
-// export const Text = (props: TextProps) => {
-//   return <div>Text</div>;
-// };
+export const NewText = ({
+  as = "p",
+  children,
+  ...rest
+}: PropsWithChildren<TextProps>) => {
+  return (
+    <Box as={as} {...rest}>
+      {children}
+    </Box>
+  );
+};
