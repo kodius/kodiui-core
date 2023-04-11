@@ -14,7 +14,12 @@ export const Examples: FC<BuildExemple> = (props) => {
 
   const ComponentWithLabel = makeArray.map((_, i) => (
     <Stack gap="xxs" key={i}>
-      {props.label ? <Text.Base> {props.label[i]} </Text.Base> : null}
+      {props.label ? (
+        <Text color="black" fontSize="base">
+          {" "}
+          {props.label[i]}{" "}
+        </Text>
+      ) : null}
       {props.component[i]}
     </Stack>
   ));

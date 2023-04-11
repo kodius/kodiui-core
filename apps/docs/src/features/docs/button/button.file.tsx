@@ -22,7 +22,7 @@ export const Button: FC<ButtonType> = (props) => {
       className={buttonRecipe({ variant: props.variant, size: props.size })}
       {...props}
     >
-      <Text.Caption>{props.children}</Text.Caption>
+      <Text as="span" fontWeight="bolder" fontSize="sm">{props.children}</Text>
     </Box>
   );
 };`,

@@ -13,7 +13,9 @@ export const NavigatorItem: FC<Navigator> = (props) => {
   if (props.isParent) {
     return (
       <>
-        <Text.Sub>{props.name}</Text.Sub>
+        <Text textTransform="uppercase" fontSize="sm" color="gray12">
+          {props.name}
+        </Text>
         {children}
       </>
     );

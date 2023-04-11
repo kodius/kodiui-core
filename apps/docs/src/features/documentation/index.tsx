@@ -30,7 +30,11 @@ const SubTitle = ({ children }: Props) => {
 };
 
 const Description = ({ children }: Props) => {
-  return <Text.Base>{children}</Text.Base>;
+  return (
+    <Text color="black" fontSize="base">
+      {children}
+    </Text>
+  );
 };
 
 const Example = ({ children }: Props) => {

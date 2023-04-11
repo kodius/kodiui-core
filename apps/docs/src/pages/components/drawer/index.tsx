@@ -32,7 +32,11 @@ const DrawerPage = () => {
         <Button onClick={() => setDrawer("drawer", true)}>Open drawer</Button>
         <Drawer
           title="Drawer"
-          description={<Text.Base>Optional Description</Text.Base>}
+          description={
+            <Text color="black" fontSize="base">
+              Optional Description
+            </Text>
+          }
           open={drawerStates.drawer}
           onClose={() => setDrawer("drawer", false)}
           width="lg"

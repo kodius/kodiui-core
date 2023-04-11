@@ -18,7 +18,9 @@ export const Button: FC<ButtonType> = (props) => {
       style={{ transition: "0.2s ease all" }}
       opacity={props.loading ? "0" : "1"}
     >
-      <Text.Caption>{props.children}</Text.Caption>
+      <Text as="span" fontWeight="bolder" fontSize="sm">
+        {props.children}
+      </Text>
     </Box>
   );
 

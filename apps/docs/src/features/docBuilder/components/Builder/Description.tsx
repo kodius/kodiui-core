@@ -19,7 +19,9 @@ export const Description: FC<BuildElement["description"]> = (props) => {
   const Component = makeArray.map((_, i) => (
     <Stack gap="xxs" key={i}>
       {props.description ? (
-        <Text.Base> {props.description[i]} </Text.Base>
+        <Text color="black" fontSize="base">
+          {props.description[i]}{" "}
+        </Text>
       ) : null}
       <Syntax code={props.codeSnippet[i]} showLineNumber={false} />
       <FlexBox justifyContent="flex-end">
