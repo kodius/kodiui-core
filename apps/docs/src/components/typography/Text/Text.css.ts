@@ -8,6 +8,18 @@ export const text = recipe({
       brand: {
         color: vars.colors.brand,
       },
+      brandAccent: {
+        color: vars.colors.brandAccent,
+      },
+      critical: {
+        color: vars.colors.critical,
+      },
+      info: {
+        color: vars.colors.info,
+      },
+      success: {
+        color: vars.colors.success,
+      },
     },
   },
 });
