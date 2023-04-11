@@ -11,7 +11,7 @@ export const Header: FC<Props> = (props) => {
     return (
       <WithClose onClose={props.onClose}>
         <div>
-          <Heading.H1>{props.title}</Heading.H1>
+          <Heading level="h1">{props.title}</Heading>
           {props.description}
         </div>
       </WithClose>
@@ -19,7 +19,7 @@ export const Header: FC<Props> = (props) => {
   }
   return (
     <WithClose onClose={props.onClose}>
-      <Heading.H1>{props.title}</Heading.H1>
+      <Heading level="h1">{props.title}</Heading>
     </WithClose>
   );
 };

@@ -24,9 +24,10 @@ export const generateCheckboxes = <S>(
   return arr;
 };
 
-export const copyText = (text: string) => {
-  if (!text) alert("no tekst");
-  navigator.clipboard.writeText(text);
-  // Make this better when we have components
+export const copyText = async (text: string) => {
+  if (!text) alert("no text");
+  if ("clipboard" in navigator) {
+    return await navigator.clipboard.writeText(text);
+  }
   alert("copied");
 };

@@ -11,3 +11,51 @@ export const headings = styleVariants({
   h5: { fontSize: vars.fontSize["lg"] },
   h6: { fontSize: vars.fontSize["base"] },
 });
+
+export const mobile = styleVariants({
+  left: {
+    "@media": {
+      "screen and (max-width: 768px)": {
+        textAlign: "left",
+      },
+    },
+  },
+  right: {
+    "@media": {
+      "screen and (max-width: 768px)": {
+        textAlign: "right",
+      },
+    },
+  },
+  center: {
+    "@media": {
+      "screen and (max-width: 768px)": {
+        textAlign: "center",
+      },
+    },
+  },
+});
+
+export const tablet = styleVariants({
+  left: {
+    "@media": {
+      "screen and (max-width: 1024px) and (min-width: 768px)": {
+        textAlign: "left",
+      },
+    },
+  },
+  right: {
+    "@media": {
+      "screen and (max-width: 1024px) and (min-width: 768px)": {
+        textAlign: "right",
+      },
+    },
+  },
+  center: {
+    "@media": {
+      "screen and (max-width: 1024px) and (min-width: 768px)": {
+        textAlign: "center",
+      },
+    },
+  },
+});

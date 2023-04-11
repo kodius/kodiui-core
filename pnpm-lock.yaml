@@ -27,6 +27,9 @@ importers:
       '@vanilla-extract/recipes':
         specifier: ^0.4.0
         version: 0.4.0(@vanilla-extract/css@1.9.5)
+      classnames:
+        specifier: ^2.3.2
+        version: 2.3.2
       degen:
         specifier: ^0.0.125
         version: 0.0.125(react-dom@18.2.0)(react@18.2.0)
@@ -3351,7 +3354,6 @@ packages:
 
   /classnames@2.3.2:
     resolution: {integrity: sha512-CSbhY4cFEJRe6/GQzIk5qXZ4Jeg5pcsP7b5peFSDpffpe1cqjASH/n9UTjBwOp6XpMSTwQ8Za2K5V02ueA7Tmw==}
-    dev: true
 
   /cli-truncate@3.1.0:
     resolution: {integrity: sha512-wfOBkjXteqSnI59oPcJkcPl/ZmwvMMOj340qUIY1SKZCv0B9Cf4D4fAucRkIKQmsIuYK3x1rrgU7MeGRruiuiA==}

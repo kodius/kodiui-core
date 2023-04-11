@@ -22,11 +22,11 @@ export const Doc = ({ children }: Props) => {
 };
 
 const Title = ({ children }: Props) => {
-  return <Heading.H1>{children}</Heading.H1>;
+  return <Heading level="h1">{children}</Heading>;
 };
 
 const SubTitle = ({ children }: Props) => {
-  return <Heading.H3>{children}</Heading.H3>;
+  return <Heading level="h3">{children}</Heading>;
 };
 
 const Description = ({ children }: Props) => {

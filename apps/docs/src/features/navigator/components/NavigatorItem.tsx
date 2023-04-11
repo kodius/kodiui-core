@@ -25,7 +25,7 @@ export const NavigatorItem: FC<Navigator> = (props) => {
         <Link href={props.href}>
           <Cluster gap="xs">
             {props.icon && <Image width="25" src={props.icon} alt="icon" />}
-            <Heading.H4>{props.name}</Heading.H4>
+            <Heading level="h6">{props.name}</Heading>
           </Cluster>
         </Link>
       </Ident>
