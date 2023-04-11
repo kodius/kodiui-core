@@ -21,6 +21,7 @@ const HeadingsPage = () => {
                 <Heading
                   align={{ mobile: "right", tablet: "center" }}
                   level={checked.value}
+                  as="h3"
                 >
                   Heading
                 </Heading>

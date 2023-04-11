@@ -59,3 +59,27 @@ export const tablet = styleVariants({
     },
   },
 });
+
+export const desktop = styleVariants({
+  left: {
+    "@media": {
+      "screen and (min-width: 1024px)": {
+        textAlign: "left",
+      },
+    },
+  },
+  right: {
+    "@media": {
+      "screen and (min-width: 1024px)": {
+        textAlign: "right",
+      },
+    },
+  },
+  center: {
+    "@media": {
+      "screen and (min-width: 1024px)": {
+        textAlign: "center",
+      },
+    },
+  },
+});

@@ -1,4 +1,5 @@
 import { Typography } from "@kodiui/ui";
+import { BuilderInterface } from "@kodiui/ui/dist/types";
 import { FC, PropsWithChildren, ReactNode } from "react";
 
 type TextType = ({ children }: { children: ReactNode }) => JSX.Element;
@@ -13,7 +14,11 @@ export const Text: FC<PropsWithChildren> & Props = () => {
   return null;
 };
 
-Text.Base = ({ children }) => <Typography color="black" fontSize="base" as="p">{children}</Typography>;
+Text.Base = ({ children }) => (
+  <Typography color="black" fontSize="base" as="p">
+    {children}
+  </Typography>
+);
 
 Text.Caption = ({ children }) => (
   <Typography as="span" fontWeight="bolder" fontSize="sm">
@@ -26,3 +31,22 @@ Text.Sub = ({ children }) => (
     {children}
   </Typography>
 );
+
+/////////////////////////////////////////////
+
+// type TextProps = Pick<
+//   BuilderInterface,
+//   | "textAlign"
+//   | "fontWeight"
+//   | "color"
+//   | "textDecoration"
+//   | "textAlign"
+//   | "textTransform"
+//   | "cursor"
+//   | "as"
+//   | "color"
+// >;
+
+// export const Text = (props: TextProps) => {
+//   return <div>Text</div>;
+// };
