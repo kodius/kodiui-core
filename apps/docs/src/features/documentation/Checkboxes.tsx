@@ -38,6 +38,7 @@ export const Checkboxes = <T,>({
   };
 
   const selectedItem = checkboxes.find((c) => c.checked === true);
+
   return (
     <Stack gap="md">
       <FlexBox alignItems="center" gap="sm" flexWrap="wrap">

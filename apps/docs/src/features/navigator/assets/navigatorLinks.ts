@@ -72,10 +72,23 @@ export const navigatorLinks: Navigator[] = [
         id: 1,
         name: "Drawer",
         href: routes.drawer,
-      }, {
+      },
+      {
         id: 2,
         name: "TextLink",
         href: routes.textLink,
+      },
+    ],
+  },
+  {
+    id: 4,
+    name: "typography",
+    isParent: true,
+    children: [
+      {
+        id: 0,
+        name: "Headings",
+        href: routes.headings,
       },
     ],
   },

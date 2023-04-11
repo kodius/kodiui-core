@@ -1,5 +1,9 @@
-import { Typography } from "@kodiui/ui";
+import { Box, BoxProps, Typography } from "@kodiui/ui";
+import { AnimationsKeys } from "@kodiui/ui/dist/styles/tokens/animations";
+import { BuilderInterface } from "@kodiui/ui/dist/types";
+import { FlexPropertiesKeys } from "@kodiui/ui/dist/types/flexProperites";
 import { FC, PropsWithChildren } from "react";
+import { headings } from "./Heading.css";
 
 type HeadingType = FC<PropsWithChildren>;
 
@@ -35,3 +39,32 @@ Heading.H4 = ({ children }) => (
 );
 Heading.H5 = ({ children }) => <Typography as="h5">{children}</Typography>;
 Heading.H6 = ({ children }) => <Typography as="h6">{children}</Typography>;
+
+//////////////////////////////////////////
+
+type HeadingProps = Pick<
+  BuilderInterface,
+  | "textAlign"
+  | "fontWeight"
+  | "color"
+  | "textDecoration"
+  | "textAlign"
+  | "textTransform"
+  | "cursor"
+  | "as"
+> & {
+  level: keyof typeof headings | undefined;
+};
+
+export const NewHeading = ({
+  children,
+  as = "h1",
+  level = "h1",
+  ...rest
+}: PropsWithChildren<HeadingProps>) => {
+  return (
+    <Box as={as} className={headings[level]} {...rest}>
+      {children}
+    </Box>
+  );
+};

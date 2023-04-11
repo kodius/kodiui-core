@@ -11,7 +11,7 @@ export const DocBuilder: FC<BuillderProps> = (props) => {
 
   return (
     <Box p={{ mobileExtraSmall: "sm", tablet: "3xl" }}>
-      <Box paddingTop={{ mobileExtraSmall: 0, tablet: "3xl" }} />
+      <Box paddingTop={{ mobileExtraSmall: "0", tablet: "3xl" }} />
       <Stack gap="lg">
         <Heading.H1>{props.title}</Heading.H1>
         {builder}
