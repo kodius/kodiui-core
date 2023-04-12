@@ -10,7 +10,6 @@ const HeadingsPage = () => {
     <Doc>
       <Doc.Example>
         <Stack>
-          {" "}
           <Doc.Checkboxes
             checkboxes={levelCheckboxes}
             setCheckboxes={setLevelCheckboxes}

@@ -1,4 +1,3 @@
-import { Heading } from "@/components/typography/Heading";
 import { Doc } from "@/features/documentation";
 import React from "react";
 import { Cluster, Stack, Box } from "@kodiui/ui";

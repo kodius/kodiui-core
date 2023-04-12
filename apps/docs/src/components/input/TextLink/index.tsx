@@ -1,4 +1,4 @@
-import { Box, FlexBox } from "@kodiui/ui";
+import { Box } from "@kodiui/ui";
 import Link, { LinkProps } from "next/link";
 import React, { FC, PropsWithChildren } from "react";
 import { textLinkStyle } from "./textLink.css";
