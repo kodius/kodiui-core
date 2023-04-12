@@ -95,6 +95,11 @@ export const navigatorLinks: Navigator[] = [
         name: "Text",
         href: routes.text,
       },
+      {
+        id: 2,
+        name: "Text 2",
+        href: routes.text2,
+      },
     ],
   },
 ];

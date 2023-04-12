@@ -41,7 +41,7 @@ const SubTitle = ({ children }: Props) => {
 
 const Description = ({ children }: Props) => {
   return (
-    <Text color="blackA5" fontSize="base">
+    <Text color="blackA11" fontSize="base">
       {children}
     </Text>
   );

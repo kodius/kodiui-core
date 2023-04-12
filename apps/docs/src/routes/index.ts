@@ -21,4 +21,5 @@ export const routes = {
   // Typography
   headings: `${typography}/headings`,
   text: `${typography}/text`,
+  text2: `${typography}/text2`,
 };
