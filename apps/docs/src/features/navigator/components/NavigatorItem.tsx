@@ -1,7 +1,4 @@
-import { Heading, Ident, Text } from "@/components";
-import { Cluster } from "@kodiui/ui";
-import Image from "next/image";
-import Link from "next/link";
+import { Ident, Text2, TextLink } from "@/components";
 import React, { FC } from "react";
 import { Navigator } from "../types";
 
@@ -13,9 +10,9 @@ export const NavigatorItem: FC<Navigator> = (props) => {
   if (props.isParent) {
     return (
       <>
-        <Text textTransform="uppercase" fontSize="sm" color="gray12">
+        <Text2 textTransform="uppercase" size="small" color="gray12">
           {props.name}
-        </Text>
+        </Text2>
         {children}
       </>
     );
@@ -24,12 +21,9 @@ export const NavigatorItem: FC<Navigator> = (props) => {
   if (props.href) {
     return (
       <Ident space="xs">
-        <Link href={props.href}>
-          <Cluster gap="xs">
-            {props.icon && <Image width="25" src={props.icon} alt="icon" />}
-            <Heading level="h6">{props.name}</Heading>
-          </Cluster>
-        </Link>
+        <Text2 tone="brand" weight="strong">
+          <TextLink href={props.href}>{props.name}</TextLink>
+        </Text2>
       </Ident>
     );
   }

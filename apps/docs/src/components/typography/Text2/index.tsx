@@ -5,7 +5,7 @@ import { textRecipe, textStyle, TextVariants } from "./text.css";
 
 type TextProps = {
   icon?: JSX.Element;
-} & Pick<BoxProps, "textAlign" | "color">;
+} & Pick<BoxProps, "textAlign" | "color" | "textTransform" | "textDecoration">;
 
 export const Text: FC<PropsWithChildren & TextVariants & TextProps> = (
   props

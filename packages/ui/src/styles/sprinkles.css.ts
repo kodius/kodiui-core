@@ -19,7 +19,6 @@ const unresponsiveProperties = defineProperties({
     cursor: cursorProperties,
     ...borderProperties,
     ...animationProperties,
-    ...typographyProperties,
   },
 });
 
@@ -84,6 +83,7 @@ const responsiveProperties = defineProperties({
     minWidth: widthProperties,
     height: heightProperties,
     opacity: opacityProperties,
+    ...typographyProperties,
     zIndex: {
       "0": 0,
       "10": 10,
