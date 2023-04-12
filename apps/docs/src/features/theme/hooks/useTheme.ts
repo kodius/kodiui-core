@@ -23,7 +23,5 @@ export const useTheme = () => {
     });
   }, []);
 
-  console.log(activeTheme);
-
   return activeTheme;
 };

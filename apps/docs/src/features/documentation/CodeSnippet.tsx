@@ -16,7 +16,6 @@ export const CodeSnippet = ({
   const [isSnippetOpen, setIsSnippetOpen] = React.useState(false);
 
   const toggleSnippet = () => setIsSnippetOpen((prev) => !prev);
-  console.log(codeSnippet);
   return (
     <>
       {isSnippetOpen && (

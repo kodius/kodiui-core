@@ -16,22 +16,32 @@ export const Doc = ({ children }: Props) => {
   return (
     <Box p={{ mobileExtraSmall: "sm", tablet: "3xl" }}>
       <Box paddingTop={{ mobileExtraSmall: "0", tablet: "3xl" }} />
-      <Stack gap="lg">{children}</Stack>
+      <Stack gap="xs">{children}</Stack>
     </Box>
   );
 };
 
 const Title = ({ children }: Props) => {
-  return <Heading level="h1">{children}</Heading>;
+  return (
+    <Box>
+      <Heading color="blackA12" level="h1">
+        {children}
+      </Heading>
+    </Box>
+  );
 };
 
 const SubTitle = ({ children }: Props) => {
-  return <Heading level="h3">{children}</Heading>;
+  return (
+    <Heading color="blackA12" level="h3">
+      {children}
+    </Heading>
+  );
 };
 
 const Description = ({ children }: Props) => {
   return (
-    <Text color="black" fontSize="base">
+    <Text color="blackA5" fontSize="base">
       {children}
     </Text>
   );
@@ -43,6 +53,7 @@ const Example = ({ children }: Props) => {
       background="white"
       borderRadius="sm"
       p="md"
+      marginBottom="lg"
       borderColor="blackA5"
       borderStyle="solid"
     >
