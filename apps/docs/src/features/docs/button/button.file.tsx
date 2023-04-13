@@ -1,9 +1,6 @@
-import { BuildElement } from "@/features/docBuilder";
+import { Doc } from "@/features/documentation";
 
-export const buttonFile: BuildElement = {
-  label: "Button.tsx",
-  isCodeOpen: true,
-  codeSnippet: `import { Text } from "@/components/typography/Text";
+const codeSnippet = `import { Text } from "@/components/typography/Text";
 import { Box, BoxProps } from "@kodiui/ui";
 import React, { FC } from "react";
 import { buttonRecipe } from "./button.css";
@@ -25,5 +22,17 @@ export const Button: FC<ButtonType> = (props) => {
       <Text as="span" fontWeight="bolder" fontSize="sm">{props.children}</Text>
     </Box>
   );
-};`,
+};`;
+
+const ButtonFile = () => {
+  return (
+    <>
+      <Doc.Example>
+        <Doc.Subtitle>Button.tsx</Doc.Subtitle>
+        <Doc.CodeSnippet  codeSnippet={codeSnippet} showLineNumbers={true} />
+      </Doc.Example>
+    </>
+  );
 };
+
+export default ButtonFile;
