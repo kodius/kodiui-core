@@ -14,6 +14,13 @@ export const routes = {
   // Primitives
   stack: `${primitives}/stack`,
   center: `${primitives}/center`,
+  cluster: `${primitives}/cluster`,
+  split: `${primitives}/split`,
+  icon: `${primitives}/icon`,
+  imposter: `${primitives}/imposter`,
+  sidebar: `${primitives}/sidebar`,
+  switcher: `${primitives}/switcher`,
+  flexBox: `${primitives}/flexBox`,
   // Component
   button: `${components}/button`,
   drawer: `${components}/drawer`,

@@ -56,6 +56,41 @@ export const navigatorLinks: Navigator[] = [
         name: "Center",
         href: routes.center,
       },
+      {
+        id: 2,
+        name: "Cluster",
+        href: routes.cluster,
+      },
+      {
+        id: 3,
+        name: "Split",
+        href: routes.split,
+      },
+      {
+        id: 4,
+        name: "Icon",
+        href: routes.icon,
+      },
+      {
+        id: 5,
+        name: "Imposter",
+        href: routes.imposter,
+      },
+      {
+        id: 6,
+        name: "Sidebar",
+        href: routes.sidebar,
+      },
+      {
+        id: 7,
+        name: "Switcher",
+        href: routes.switcher,
+      },
+      {
+        id: 8,
+        name: "FlexBox",
+        href: routes.flexBox,
+      },
     ],
   },
   {
