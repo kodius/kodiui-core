@@ -25,7 +25,7 @@ export const Text: FC<PropsWithChildren & TextVariants & TextProps> = (
         display="flex"
         gap="xxs"
         alignItems="center"
-        as="p"
+        as="span"
         {...props}
       >
         {props.icon}
@@ -34,7 +34,7 @@ export const Text: FC<PropsWithChildren & TextVariants & TextProps> = (
     );
   }
   return (
-    <Box className={recipe} as="p" {...props}>
+    <Box className={recipe} as="span" {...props}>
       {props.children}
     </Box>
   );

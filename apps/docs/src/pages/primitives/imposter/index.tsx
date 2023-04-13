@@ -1,5 +1,5 @@
 import { Doc } from "@/features/documentation";
-import { Box } from "@kodiui/ui";
+import { Box  } from "@kodiui/ui";
 
 const ImposterPage = () => {
   return (
