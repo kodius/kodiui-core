@@ -1,40 +1,41 @@
-import { Box } from "@kodiui/ui";
-import { BuilderInterface } from "@kodiui/ui/dist/types";
-import { PropsWithChildren } from "react";
-import { TextVariants, text, textStyle } from "./Text.css";
+import { Box, BoxProps } from "@kodiui/ui";
 import classNames from "classnames";
+import React, { FC, PropsWithChildren } from "react";
+import { textRecipe, textStyle, TextVariants } from "./text.css";
 
-type TextProps = Pick<
-  BuilderInterface,
-  | "textAlign"
-  | "fontWeight"
-  | "color"
-  | "textDecoration"
-  | "textAlign"
-  | "textTransform"
-  | "cursor"
-  | "as"
-  | "color"
-  | "fontSize"
-> &
-  TextVariants;
+type TextProps = {
+  icon?: JSX.Element;
+} & Partial<
+  Pick<BoxProps, "textAlign" | "color" | "textTransform" | "textDecoration">
+>;
 
-export const Text = ({
-  as = "p",
-  tone,
-  children,
-  ...rest
-}: PropsWithChildren<TextProps>) => {
+export const Text: FC<PropsWithChildren & TextVariants & TextProps> = (
+  props
+) => {
+  const recipe = textRecipe({
+    size: props.size,
+    tone: props.tone,
+    weight: props.weight,
+  });
+
+  if (props.icon) {
+    return (
+      <Box
+        className={classNames(textStyle, recipe)}
+        display="flex"
+        gap="xxs"
+        alignItems="center"
+        as="p"
+        {...props}
+      >
+        {props.icon}
+        {props.children}
+      </Box>
+    );
+  }
   return (
-    <Box
-      as={as}
-      display="flex"
-      gap="xxs"
-      alignItems="center"
-      {...rest}
-      className={classNames(textStyle, text({ tone: tone }))}
-    >
-      {children}
+    <Box className={recipe} as="p" {...props}>
+      {props.children}
     </Box>
   );
 };
