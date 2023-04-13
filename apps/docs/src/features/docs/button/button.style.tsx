@@ -1,7 +1,6 @@
-export const buttonCssFile = {
-  label: "button.css.ts",
-  isCodeOpen: true,
-  codeSnippet: `import { vars } from "@kodiui/ui";
+import { Doc } from "@/features/documentation";
+
+const codeSnippet = `import { vars } from "@kodiui/ui";
 import { recipe, RecipeVariants } from "@vanilla-extract/recipes";
 
 export const buttonRecipe = recipe({
@@ -52,5 +51,17 @@ export const buttonRecipe = recipe({
     size: "standard",
   },
 }
-`,
+`;
+
+const ButtonCssFile = () => {
+  return (
+    <>
+      <Doc.Subtitle>button.css.ts</Doc.Subtitle>
+      <Doc.Example>
+        <Doc.CodeSnippet codeSnippet={codeSnippet} showLineNumbers={true} />
+      </Doc.Example>
+    </>
+  );
 };
+
+export default ButtonCssFile;
