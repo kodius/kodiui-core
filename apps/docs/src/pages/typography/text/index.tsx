@@ -1,6 +1,6 @@
 import { Text } from "@/components";
 import { Doc } from "@/features/documentation";
-import { Box, Cluster } from "@kodiui/ui";
+import { Box, Cluster, Stack } from "@kodiui/ui";
 import React from "react";
 import { ReactIcon } from "./ReactIcon";
 
@@ -52,7 +52,7 @@ const TextPage = () => {
       </Doc.Example>
       <Doc.Description>Icons</Doc.Description>
       <Doc.Example>
-        <Cluster>
+        <Stack>
           <Text icon={<ReactIcon />}>Neutral</Text>
           <Text icon={<ReactIcon />} tone="brand">
             Brand
@@ -72,7 +72,7 @@ const TextPage = () => {
           <Text icon={<ReactIcon />} color="orange10">
             Custom color
           </Text>
-        </Cluster>
+        </Stack>
       </Doc.Example>
       <Doc.Description>Alignment</Doc.Description>
       <Doc.Example>

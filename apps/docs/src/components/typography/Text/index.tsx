@@ -22,19 +22,26 @@ export const Text: FC<PropsWithChildren & TextVariants & TextProps> = (
     return (
       <Box
         className={classNames(textStyle, recipe)}
+        as="span"
         display="flex"
-        gap="xxs"
         alignItems="center"
-        as="p"
         {...props}
       >
-        {props.icon}
+        <span
+          style={{
+            display: "block",
+            verticalAlign: "baseline",
+            paddingRight: "0.5rem",
+          }}
+        >
+          {props.icon}
+        </span>
         {props.children}
       </Box>
     );
   }
   return (
-    <Box className={recipe} as="p" {...props}>
+    <Box className={recipe} as="span" display="flex" {...props}>
       {props.children}
     </Box>
   );
