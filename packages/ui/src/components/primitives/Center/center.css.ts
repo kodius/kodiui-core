@@ -8,11 +8,13 @@ export const centerVariants = styleVariants({
     display: "flex",
     alignItems: "center",
     height: "100%",
+    width: "100%",
   },
   center: {
     display: "flex",
     alignItems: "center",
     justifyContent: "center",
     height: "100%",
+    width: "100%",
   },
 });

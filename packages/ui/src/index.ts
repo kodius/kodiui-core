@@ -22,3 +22,4 @@ export { Switcher } from "./components/primitives/Switcher/Switcher";
 export { Split } from "./components/primitives/Split";
 export { Center } from "./components/primitives/Center/Center";
 export { Sidebar } from "./components/primitives/Sidebar/Sidebar";
+export { Imposter } from "./components/primitives/Imposter";

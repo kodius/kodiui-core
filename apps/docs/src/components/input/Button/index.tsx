@@ -1,4 +1,4 @@
-import { Text } from "@/components/typography/Text";
+import { Text } from "@/components/typography";
 import { Box, BoxProps } from "@kodiui/ui";
 import React, { FC } from "react";
 import { buttonRecipe, ButtonVariants } from "./button.css";
@@ -18,9 +18,7 @@ export const Button: FC<ButtonType> = (props) => {
       style={{ transition: "0.2s ease all" }}
       opacity={props.loading ? "0" : "1"}
     >
-      <Text as="span" fontWeight="bolder" fontSize="sm">
-        {props.children}
-      </Text>
+      <Text>{props.children}</Text>
     </Box>
   );
 
