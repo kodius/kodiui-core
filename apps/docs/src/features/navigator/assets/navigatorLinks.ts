@@ -73,11 +73,6 @@ export const navigatorLinks: Navigator[] = [
         name: "Drawer",
         href: routes.drawer,
       },
-      {
-        id: 2,
-        name: "TextLink",
-        href: routes.textLink,
-      },
     ],
   },
   {
@@ -99,6 +94,11 @@ export const navigatorLinks: Navigator[] = [
         id: 2,
         name: "Text 2",
         href: routes.text2,
+      },
+      {
+        id: 3,
+        name: "TextLink",
+        href: routes.textLink,
       },
     ],
   },

@@ -17,9 +17,9 @@ export const routes = {
   // Component
   button: `${components}/button`,
   drawer: `${components}/drawer`,
-  textLink: `${components}/text-link`,
   // Typography
   headings: `${typography}/headings`,
+  textLink: `${typography}/text-link`,
   text: `${typography}/text`,
   text2: `${typography}/text2`,
 };
