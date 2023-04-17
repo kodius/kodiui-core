@@ -1,4 +1,4 @@
-import { Checkbox } from "./Checkboxes";
+import { Checkbox } from "./component/Checkboxes";
 
 export const generateCheckboxes = <S>(
   keys: S[],

@@ -1,6 +1,6 @@
 import { TextLink } from "@/components";
 import { AdjustmentsIcon } from "@/features/configurator";
-import { Doc } from "@/features/documentation";
+import { Doc } from "@/features/documentation/Doc";
 import { Box, Cluster, Stack, Typography } from "@kodiui/ui";
 import React from "react";
 

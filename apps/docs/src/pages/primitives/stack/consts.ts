@@ -1,4 +1,4 @@
-import { Checkbox } from "@/features/documentation/Checkboxes";
+import { Checkbox } from "@/features/documentation/component/Checkboxes";
 
 export type Type = "flex-start" | "flex-end" | "center" | "baseline";
 

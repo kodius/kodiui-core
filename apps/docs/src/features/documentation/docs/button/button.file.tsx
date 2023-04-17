@@ -1,4 +1,4 @@
-import { Doc } from "@/features/documentation";
+import { Doc } from "@/features/documentation/Doc";
 
 const codeSnippet = `import { Text } from "@/components/typography/Text";
 import { Box, BoxProps } from "@kodiui/ui";

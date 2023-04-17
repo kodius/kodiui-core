@@ -1,5 +1,5 @@
 import { Heading } from "@/components/typography/Heading";
-import { Doc } from "@/features/documentation";
+import { Doc } from "@/features/documentation/Doc";
 import React from "react";
 import { levels, headingCodeSnippet } from "./const";
 import { Stack } from "@kodiui/ui";

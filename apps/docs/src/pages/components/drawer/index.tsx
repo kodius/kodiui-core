@@ -1,5 +1,5 @@
 import { Button, Drawer, Text } from "@/components";
-import { Doc } from "@/features/documentation";
+import { Doc } from "@/features/documentation/Doc";
 import { Cluster, Stack } from "@kodiui/ui";
 import React, { useState } from "react";
 

@@ -3,7 +3,7 @@ import { Cluster } from "@kodiui/ui";
 import dynamic from "next/dynamic";
 import React, { Suspense } from "react";
 import { SyntaxHighlighterProps } from "react-syntax-highlighter";
-import { copyText } from "./utils";
+import { copyText } from "../utils";
 
 const Syntax = dynamic(() => import("@/components/input/SyntaxHighligter"), {
   ssr: false,

@@ -1,4 +1,4 @@
-import { Doc } from "@/features/documentation";
+import { Doc } from "@/features/documentation/Doc";
 
 const codeSnippet = `import { vars } from "@kodiui/ui";
 import { recipe, RecipeVariants } from "@vanilla-extract/recipes";
