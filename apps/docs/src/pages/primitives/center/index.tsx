@@ -1,7 +1,7 @@
 import { DocBuilder } from "@/features/docBuilder";
 import { centerVariants } from "@/features/docs/center/centerVariants.docs";
-import { Doc } from "@/features/documentation";
-import { Center, Box ,} from "@kodiui/ui";
+import { Doc } from "@/features/documentation/Doc";
+import { Center, Box } from "@kodiui/ui";
 
 const CenterPage = () => {
   return (

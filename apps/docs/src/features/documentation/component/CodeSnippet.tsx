@@ -3,20 +3,21 @@ import { Cluster } from "@kodiui/ui";
 import dynamic from "next/dynamic";
 import React, { Suspense } from "react";
 import { SyntaxHighlighterProps } from "react-syntax-highlighter";
-import { copyText } from "./utils";
+import { copyText } from "../utils";
 
 const Syntax = dynamic(() => import("@/components/input/SyntaxHighligter"), {
   ssr: false,
 });
 
-export type CodeSnippetProps = Pick<
-  SyntaxHighlighterProps,
-  "showLineNumbers" | "codeSnippet"
->;
+interface CodeSnippetProps
+  extends Pick<SyntaxHighlighterProps, "showLineNumbers" | "codeSnippet"> {
+  isSnippetStartOpen?: boolean;
+}
 
 export const CodeSnippet = ({
   codeSnippet = "",
   showLineNumbers = false,
+  isSnippetStartOpen = false,
 }: CodeSnippetProps) => {
   const [isSnippetOpen, setIsSnippetOpen] = React.useState(false);
 

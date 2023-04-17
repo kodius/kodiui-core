@@ -1,4 +1,4 @@
-import { Checkbox } from "@/features/documentation/Checkboxes";
+import { Checkbox } from "@/features/documentation/component/Checkboxes";
 
 export type Type = "h1" | "h2" | "h3" | "h4" | "h5" | "h6";
 

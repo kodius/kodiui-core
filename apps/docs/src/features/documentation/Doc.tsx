@@ -1,11 +1,11 @@
 import React from "react";
 import { Box, Stack } from "@kodiui/ui";
 import { Heading } from "@/components/typography/Heading";
-import { Checkboxes } from "./Checkboxes";
+import { Checkboxes } from "./component/Checkboxes";
 import { placeholder } from "./Doc.css";
 import { Sprinkles } from "@kodiui/ui/dist/styles/sprinkles.css";
 import { HardStyles } from "@kodiui/ui/dist/styles/hardStyle";
-import { CodeSnippet } from "./CodeSnippet";
+import { CodeSnippet } from "./component/CodeSnippet";
 import { Button, Text } from "@/components";
 import reactElementToJSXString from "react-element-to-jsx-string";
 import { downloadFile, DownloadFileArgs } from "./utils";
