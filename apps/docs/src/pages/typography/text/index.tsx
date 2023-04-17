@@ -1,5 +1,5 @@
 import { Text } from "@/components";
-import { Doc } from "@/features/documentation";
+import { Doc } from "@/features/documentation/Doc";
 import { Box, Cluster, Stack } from "@kodiui/ui";
 import React from "react";
 import { ReactIcon } from "./ReactIcon";
@@ -9,7 +9,10 @@ const TextPage = () => {
   return (
     <Doc>
       <Doc.Title>Text</Doc.Title>
-      <Doc.Download href="http://localhost:3003/test.zip" fileName="test"></Doc.Download>
+      <Doc.Download
+        href="http://localhost:3003/test.zip"
+        fileName="test"
+      ></Doc.Download>
       <Doc.Description>Sizes and weights</Doc.Description>
       <Doc.ExampleWithCode>{SizesAndWeightExample()}</Doc.ExampleWithCode>
       <Doc.Description>Tones</Doc.Description>

@@ -1,8 +1,8 @@
-import { Doc } from "@/features/documentation";
+import { Doc } from "@/features/documentation/Doc";
 import { Stack, vars } from "@kodiui/ui";
 import React from "react";
 import { Sprinkles } from "@kodiui/ui/dist/styles/sprinkles.css";
-import { Checkbox } from "@/features/documentation/Checkboxes";
+import { Checkbox } from "@/features/documentation/component/Checkboxes";
 import { generateCheckboxes } from "@/features/documentation/utils";
 
 import { Type, alignCheckboxesArr } from "./consts";

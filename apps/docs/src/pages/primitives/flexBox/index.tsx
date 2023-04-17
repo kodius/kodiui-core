@@ -1,4 +1,4 @@
-import { Doc } from "@/features/documentation";
+import { Doc } from "@/features/documentation/Doc";
 import { FlexBox } from "@kodiui/ui";
 
 const FlexBoxPage = () => {

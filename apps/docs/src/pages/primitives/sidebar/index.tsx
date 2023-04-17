@@ -1,4 +1,4 @@
-import { Doc } from "@/features/documentation";
+import { Doc } from "@/features/documentation/Doc";
 import { Sidebar } from "@kodiui/ui";
 
 const SidebarPage = () => {
