@@ -8,11 +8,9 @@ export type BoxProps = Omit<BuilderInterface, AnimationPropertiesKeys> &
   HardStyles;
 
 export const Box = forwardRef<HTMLElement, BoxProps>((props, ref) => (
-  <Builder
-    style={hardStyle(props)}
-    ref={ref}
-    {...props}
-  >
+  <Builder style={hardStyle(props)} ref={ref} {...props}>
     {props.children}
   </Builder>
 ));
+
+Box.displayName = "Box";

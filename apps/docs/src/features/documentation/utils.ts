@@ -31,3 +31,19 @@ export const copyText = async (text: string) => {
   }
   alert("copied");
 };
+
+export type DownloadFileArgs = {
+  href: string;
+  fileName: string;
+};
+
+type DownloadFileFn = (args: DownloadFileArgs) => void;
+
+export const downloadFile: DownloadFileFn = ({ href, fileName }) => {
+  const link = document.createElement("a");
+  link.href = href;
+  link.download = fileName;
+  document.body.appendChild(link);
+  link.click();
+  document.body.removeChild(link);
+};

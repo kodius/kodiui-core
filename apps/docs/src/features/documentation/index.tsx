@@ -6,7 +6,10 @@ import { placeholder } from "./Doc.css";
 import { Sprinkles } from "@kodiui/ui/dist/styles/sprinkles.css";
 import { HardStyles } from "@kodiui/ui/dist/styles/hardStyle";
 import { CodeSnippet } from "./CodeSnippet";
-import { Text } from "@/components";
+import { Button, Text } from "@/components";
+import reactElementToJSXString from "react-element-to-jsx-string";
+import { downloadFile, DownloadFileArgs } from "./utils";
+import { DownloadIcon } from "@/assets/icons/DownloadIcon";
 
 interface Props {
   children: React.ReactNode;
@@ -41,7 +44,7 @@ const SubTitle = ({ children }: Props) => {
 
 const Description = ({ children }: Props) => {
   return (
-    <Text color="blackA11" fontSize="base">
+    <Text color="blackA11" size="standard">
       {children}
     </Text>
   );
@@ -59,6 +62,16 @@ const Example = ({ children }: Props) => {
     >
       {children}
     </Box>
+  );
+};
+
+const ExampleWithCode = ({ children }: Props) => {
+  const codeSnippet = reactElementToJSXString(children);
+  return (
+    <>
+      <Example>{children}</Example>
+      <CodeSnippet codeSnippet={codeSnippet} />
+    </>
   );
 };
 
@@ -87,10 +100,26 @@ const Placeholder = ({
   );
 };
 
+const Download = (args: DownloadFileArgs) => {
+  return (
+    <Button
+      variant="ghost"
+      tone="brandAccent"
+      onClick={() => downloadFile(args)}
+      size="sm"
+      width="fit"
+    >
+      Download
+    </Button>
+  );
+};
+
 Doc.Title = Title;
 Doc.Subtitle = SubTitle;
 Doc.Description = Description;
 Doc.Example = Example;
+Doc.ExampleWithCode = ExampleWithCode;
 Doc.Placeholder = Placeholder;
 Doc.Checkboxes = Checkboxes;
 Doc.CodeSnippet = CodeSnippet;
+Doc.Download = Download;
