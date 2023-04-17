@@ -1,4 +1,4 @@
-import { Box, BoxProps } from "@kodiui/ui";
+import { Animation, Box, BoxProps } from "@kodiui/ui";
 import classNames from "classnames";
 import React, { FC } from "react";
 import { buttonRecipe, buttonStyle, ButtonVariants } from "./button.css";
@@ -13,7 +13,13 @@ interface Props {
 type ButtonType = BoxProps & Props & ButtonVariants;
 
 export const Button: FC<ButtonType> = ({ loading, ...props }) => {
-  const loadingComponent = loading ? <Loading /> : null;
+  const children = !loading ? (
+    props.children
+  ) : (
+    <Animation animation="fadeIn">{props.children}</Animation>
+  );
+
+  const content = loading ? <Loading /> : children;
 
   const recipe = buttonRecipe({
     variant: props.variant,
@@ -21,20 +27,10 @@ export const Button: FC<ButtonType> = ({ loading, ...props }) => {
     tone: props.tone,
   });
 
-  const children = (
-    <Box
-      style={{ transition: "0.2s ease opacity" }}
-      opacity={loading ? "0" : "1"}
-    >
-      {props.children}
-    </Box>
-  );
-
   if (props.icon) {
     return (
       <Box
         as="button"
-        position="relative"
         display="flex"
         alignItems="center"
         gap="xxs"
@@ -42,22 +38,19 @@ export const Button: FC<ButtonType> = ({ loading, ...props }) => {
         {...props}
       >
         {props.side === "left" && props.icon}
-        {children}
+        {content}
         {props.side === "right" && props.icon}
-        {loadingComponent}
       </Box>
     );
   }
 
   return (
-    <Box as="button" position="relative" className={recipe} {...props}>
-      {children}
-      {loadingComponent}
+    <Box as="button" className={recipe} {...props}>
+      {content}
     </Box>
   );
 };
 
 Button.defaultProps = {
   side: "left",
-  // loading: false
 };

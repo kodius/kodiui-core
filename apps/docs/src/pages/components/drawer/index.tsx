@@ -33,7 +33,7 @@ const DrawerPage = () => {
         <Drawer
           title="Drawer"
           description={
-            <Text color="black" fontSize="base">
+            <Text color="black" size="standard">
               Optional Description
             </Text>
           }
@@ -69,6 +69,7 @@ const DrawerPage = () => {
           if (type === "sm" || type === "md" || type === "lg") {
             return (
               <Drawer
+                key={drawer}
                 title={type}
                 open={drawerStates[type]}
                 width={type}
@@ -109,6 +110,7 @@ const DrawerPage = () => {
           if (type === "left" || type === "right") {
             return (
               <Drawer
+                key={drawer}
                 title={type}
                 open={drawerStates[type]}
                 side={type}

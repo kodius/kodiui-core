@@ -6,11 +6,6 @@ export const Loading = () => {
   return (
     <Animation animation="fadeIn">
       <FlexBox
-        position="absolute"
-        top="0"
-        left="0"
-        width="full"
-        height="full"
         alignItems="center"
         justifyContent="center"
       >
