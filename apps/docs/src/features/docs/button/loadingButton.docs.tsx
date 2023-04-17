@@ -11,22 +11,11 @@ const codeSnippet = ` <Cluster>
 
 export const LoadingButton = () => {
   return (
-    <>
-      <Doc.Subtitle>Loading</Doc.Subtitle>
-      <Doc.Example>
-        <Stack>
-          <Cluster>
-            <Button loading={true}>Solid</Button>
-            <Button variant="ghost">Ghost</Button>
-            <Button variant="soft">Soft</Button>
-            <Button variant="transparent">Transparent</Button>
-          </Cluster>
-
-          <Doc.CodeSnippet codeSnippet={codeSnippet} showLineNumbers={false} />
-        </Stack>
-      </Doc.Example>
-    </>
+    <Cluster>
+      <Button loading={true}>Solid</Button>
+      <Button variant="ghost">Ghost</Button>
+      <Button variant="soft">Soft</Button>
+      <Button variant="transparent">Transparent</Button>
+    </Cluster>
   );
 };
-
-export default LoadingButton;

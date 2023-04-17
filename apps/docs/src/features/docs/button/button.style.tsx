@@ -53,15 +53,6 @@ export const buttonRecipe = recipe({
 }
 `;
 
-const ButtonCssFile = () => {
-  return (
-    <>
-      <Doc.Subtitle>button.css.ts</Doc.Subtitle>
-      <Doc.Example>
-        <Doc.CodeSnippet codeSnippet={codeSnippet} showLineNumbers={true} />
-      </Doc.Example>
-    </>
-  );
+export const ButtonCssFile = () => {
+  return <Doc.CodeSnippet codeSnippet={codeSnippet} showLineNumbers={true} />;
 };
-
-export default ButtonCssFile;
