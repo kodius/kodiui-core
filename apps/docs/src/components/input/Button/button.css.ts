@@ -1,5 +1,13 @@
 import { vars } from "@kodiui/ui";
+import { globalStyle, style } from "@vanilla-extract/css";
 import { recipe, RecipeVariants } from "@vanilla-extract/recipes";
+
+export const buttonStyle = style({});
+
+globalStyle(`${buttonStyle} svg`, {
+  height: "1.2em",
+  width: "1.2em",
+});
 
 export const buttonRecipe = recipe({
   base: {

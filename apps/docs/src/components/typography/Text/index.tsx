@@ -18,30 +18,25 @@ export const Text: FC<PropsWithChildren & TextVariants & TextProps> = (
     weight: props.weight,
   });
 
-  if (props.icon) {
-    return (
-      <Box
-        className={classNames(textStyle, recipe)}
-        as="span"
-        display="flex"
-        alignItems="center"
-        {...props}
-      >
-        <span
-          style={{
-            display: "block",
-            verticalAlign: "baseline",
-            paddingRight: "0.5rem",
-          }}
-        >
-          {props.icon}
-        </span>
-        {props.children}
-      </Box>
-    );
-  }
+  // return <>{props.children}</>;
+
+  // if (props.icon) {
+  //   return (
+  //     <Box
+  //       className={classNames(textStyle, recipe)}
+  //       as="span"
+  //       display="flex"
+  //       gap="xxs"
+  //       alignItems="center"
+  //       {...props}
+  //     >
+  //       {props.icon}
+  //       <Box as="p">{props.children}</Box>
+  //     </Box>
+  //   );
+  // }
   return (
-    <Box className={recipe} as="span" display="flex" {...props}>
+    <Box className={recipe} as="p" {...props}>
       {props.children}
     </Box>
   );
