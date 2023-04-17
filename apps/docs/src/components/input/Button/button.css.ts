@@ -32,7 +32,6 @@ export const buttonRecipe = recipe({
           background: vars.colors.brandHover,
           borderColor: vars.colors.brandHover,
         },
-        fill: vars.colors.brandSoft,
       },
       brandAccent: {
         background: vars.colors.brandAccent,
@@ -42,7 +41,6 @@ export const buttonRecipe = recipe({
           background: vars.colors.brandAccentHover,
           borderColor: vars.colors.brandAccentHover,
         },
-        fill: vars.colors.brandAccentSoft,
       },
       neutral: {
         background: vars.colors.neutral,
@@ -52,7 +50,6 @@ export const buttonRecipe = recipe({
           background: vars.colors.neutralHover,
           borderColor: vars.colors.neutralHover,
         },
-        fill: vars.colors.neutralSoft,
       },
       critical: {
         background: vars.colors.critical,
@@ -62,27 +59,24 @@ export const buttonRecipe = recipe({
           background: vars.colors.criticalHover,
           borderColor: vars.colors.criticalHover,
         },
-        fill: vars.colors.criticalSoft,
       },
       info: {
         background: vars.colors.info,
         borderColor: vars.colors.info,
-        color: vars.colors.info,
+        color: vars.colors.infoActive,
         ":hover": {
           background: vars.colors.infoHover,
           borderColor: vars.colors.infoHover,
         },
-        fill: vars.colors.infoSoft,
       },
       success: {
         background: vars.colors.success,
         borderColor: vars.colors.success,
         color: vars.colors.success,
         ":hover": {
-          background: vars.colors.success,
-          borderColor: vars.colors.success,
+          background: vars.colors.successHover,
+          borderColor: vars.colors.successHover,
         },
-        fill: vars.colors.successSoft,
       },
     },
     variant: {
@@ -104,7 +98,7 @@ export const buttonRecipe = recipe({
       },
     },
     size: {
-      sm: { padding: `${vars.space.xxs} ${vars.space.xs}` },
+      sm: { padding: `${vars.space.xxs} ${vars.space.xs}`, fontSize: vars.fontSize.sm },
       standard: { padding: `${vars.space.xs} ${vars.space.sm}` },
     },
   },
@@ -256,13 +250,22 @@ export const buttonRecipe = recipe({
     },
     {
       variants: {
+        variant: "solid",
+        tone: "info",
+      },
+      style: {
+        color: vars.colors.infoActive
+      },
+    },
+    {
+      variants: {
         variant: "soft",
         tone: "info",
       },
       style: {
         background: vars.colors.infoSoft,
         ":hover": {
-          background: vars.colors.infoSoftActive,
+          background: vars.colors.infoSoftHover,
         },
       },
     },
@@ -295,7 +298,7 @@ export const buttonRecipe = recipe({
       style: {
         background: vars.colors.successSoft,
         ":hover": {
-          background: vars.colors.successSoftActive,
+          background: vars.colors.successSoftHover,
         },
       },
     },

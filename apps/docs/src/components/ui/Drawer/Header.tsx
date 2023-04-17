@@ -1,5 +1,4 @@
-import { Button } from "@/components/input/Button";
-import { Heading } from "@/components/typography/Heading";
+import { Button, Heading } from "@/components";
 import { Split } from "@kodiui/ui";
 import React, { FC, PropsWithChildren } from "react";
 import { DrawerProps } from "./types";
@@ -11,7 +10,7 @@ export const Header: FC<Props> = (props) => {
     return (
       <WithClose onClose={props.onClose}>
         <div>
-          <Heading level="h1">{props.title}</Heading>
+          <Heading level="1">{props.title}</Heading>
           {props.description}
         </div>
       </WithClose>
@@ -19,7 +18,7 @@ export const Header: FC<Props> = (props) => {
   }
   return (
     <WithClose onClose={props.onClose}>
-      <Heading level="h1">{props.title}</Heading>
+      <Heading level="1">{props.title}</Heading>
     </WithClose>
   );
 };

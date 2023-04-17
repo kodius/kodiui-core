@@ -1,15 +1,13 @@
 import React from "react";
 import { Box, Stack } from "@kodiui/ui";
-import { Heading } from "@/components/typography/Heading";
 import { Checkboxes } from "./component/Checkboxes";
 import { placeholder } from "./Doc.css";
 import { Sprinkles } from "@kodiui/ui/dist/styles/sprinkles.css";
 import { HardStyles } from "@kodiui/ui/dist/styles/hardStyle";
 import { CodeSnippet } from "./component/CodeSnippet";
-import { Button, Text } from "@/components";
+import { Button, Heading, Text } from "@/components";
 import reactElementToJSXString from "react-element-to-jsx-string";
 import { downloadFile, DownloadFileArgs } from "./utils";
-import { DownloadIcon } from "@/assets/icons/DownloadIcon";
 
 interface Props {
   children: React.ReactNode;
@@ -27,7 +25,7 @@ export const Doc = ({ children }: Props) => {
 const Title = ({ children }: Props) => {
   return (
     <Box>
-      <Heading color="blackA12" level="h1">
+      <Heading color="blackA12" level="1">
         {children}
       </Heading>
     </Box>
@@ -36,7 +34,7 @@ const Title = ({ children }: Props) => {
 
 const SubTitle = ({ children }: Props) => {
   return (
-    <Heading color="blackA12" level="h3">
+    <Heading color="blackA12" level="3">
       {children}
     </Heading>
   );

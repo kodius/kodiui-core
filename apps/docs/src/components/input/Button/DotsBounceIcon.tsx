@@ -1,7 +1,6 @@
-import { vars } from "@kodiui/ui";
 import React, { FC } from "react";
 
-export const DotsBounceIcon: FC<{ fill?: string }> = (props) => {
+export const DotsBounceIcon: FC = () => {
   return (
     <svg
       width="24"
@@ -13,7 +12,7 @@ export const DotsBounceIcon: FC<{ fill?: string }> = (props) => {
         {`
         .spinner_qM83 {
           animation: spinner_8HQG 1.05s infinite;
-          fill: inherite
+          fill: currentColor
         }
         .spinner_oXPr {
           animation-delay: 0.1s;
@@ -40,8 +39,4 @@ export const DotsBounceIcon: FC<{ fill?: string }> = (props) => {
       <circle className="spinner_qM83 spinner_ZTLf" cx="20" cy="12" r="3" />
     </svg>
   );
-};
-
-DotsBounceIcon.defaultProps = {
-  fill: vars.colors.indigo3,
 };
