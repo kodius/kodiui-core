@@ -152,3 +152,5 @@ export const ButtonBranding = () => {
     </Stack>
   );
 };
+
+export default ButtonBranding;

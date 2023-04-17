@@ -55,3 +55,5 @@ export const ButtonSizes = () => {
     </Stack>
   );
 };
+
+export default ButtonSizes;

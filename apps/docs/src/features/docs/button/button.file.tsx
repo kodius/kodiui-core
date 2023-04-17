@@ -27,3 +27,5 @@ export const Button: FC<ButtonType> = (props) => {
 export const ButtonFile = () => {
   return <Doc.CodeSnippet codeSnippet={codeSnippet} showLineNumbers={true} />;
 };
+
+export default ButtonFile;

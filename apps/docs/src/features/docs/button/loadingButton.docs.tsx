@@ -19,3 +19,5 @@ export const LoadingButton = () => {
     </Cluster>
   );
 };
+
+export default LoadingButton;

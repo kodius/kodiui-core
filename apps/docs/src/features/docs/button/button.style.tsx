@@ -56,3 +56,5 @@ export const buttonRecipe = recipe({
 export const ButtonCssFile = () => {
   return <Doc.CodeSnippet codeSnippet={codeSnippet} showLineNumbers={true} />;
 };
+
+export default ButtonCssFile;

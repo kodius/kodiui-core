@@ -12,3 +12,5 @@ export const ButtonVariants = () => {
     </Cluster>
   );
 };
+
+export default ButtonVariants;
