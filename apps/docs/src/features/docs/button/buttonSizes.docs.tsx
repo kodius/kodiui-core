@@ -2,26 +2,7 @@ import { Button, Heading } from "@/components";
 import { Doc } from "@/features/documentation";
 import { Box, Stack, Cluster } from "@kodiui/ui";
 
-const codeSnippet = `<Cluster>
-<Button>Solid</Button>
-<Button variant="ghost">Ghost</Button>
-<Button variant="soft">Soft</Button>
-<Button variant="transparent">Transparent</Button>
-</Cluster>,
-<Cluster>
-<Button variant="solid" size="small">
-  Solid
-</Button>
-<Button variant="ghost" size="small">
-  Ghost
-</Button>
-<Button variant="soft" size="small">
-  Soft
-</Button>
-<Button variant="transparent" size="small">
-  Transparent
-</Button>
-</Cluster>,`;
+
 
 export const ButtonSizes = () => {
   return (
