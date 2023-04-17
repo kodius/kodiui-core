@@ -9,14 +9,15 @@ const Syntax = dynamic(() => import("@/components/input/SyntaxHighligter"), {
   ssr: false,
 });
 
-export type CodeSnippetProps = Pick<
-  SyntaxHighlighterProps,
-  "showLineNumbers" | "codeSnippet"
->;
+interface CodeSnippetProps
+  extends Pick<SyntaxHighlighterProps, "showLineNumbers" | "codeSnippet"> {
+  isSnippetStartOpen?: boolean;
+}
 
 export const CodeSnippet = ({
   codeSnippet = "",
   showLineNumbers = false,
+  isSnippetStartOpen = false,
 }: CodeSnippetProps) => {
   const [isSnippetOpen, setIsSnippetOpen] = React.useState(false);
 

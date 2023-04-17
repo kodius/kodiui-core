@@ -27,9 +27,9 @@ export const Button: FC<ButtonType> = (props) => {
 const ButtonFile = () => {
   return (
     <>
+      <Doc.Subtitle>Button.tsx</Doc.Subtitle>
       <Doc.Example>
-        <Doc.Subtitle>Button.tsx</Doc.Subtitle>
-        <Doc.CodeSnippet  codeSnippet={codeSnippet} showLineNumbers={true} />
+        <Doc.CodeSnippet codeSnippet={codeSnippet} showLineNumbers={true} />
       </Doc.Example>
     </>
   );
