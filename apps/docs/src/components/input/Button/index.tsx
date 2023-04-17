@@ -1,40 +1,63 @@
-import { Text } from "@/components/typography";
 import { Box, BoxProps } from "@kodiui/ui";
+import classNames from "classnames";
 import React, { FC } from "react";
-import { buttonRecipe, ButtonVariants } from "./button.css";
+import { buttonRecipe, buttonStyle, ButtonVariants } from "./button.css";
 import { Loading } from "./Loading";
 
 interface Props {
   loading?: boolean;
+  icon?: JSX.Element;
+  side?: "left" | "right";
 }
 
 type ButtonType = BoxProps & Props & ButtonVariants;
 
-export const Button: FC<ButtonType> = (props) => {
-  const loadingComponent = <Loading />;
+export const Button: FC<ButtonType> = ({ loading, ...props }) => {
+  const loadingComponent = loading ? <Loading /> : null;
+
+  const recipe = buttonRecipe({
+    variant: props.variant,
+    size: props.size || "standard",
+    tone: props.tone,
+  });
 
   const children = (
     <Box
-      style={{ transition: "0.2s ease all" }}
-      opacity={props.loading ? "0" : "1"}
+      style={{ transition: "0.2s ease opacity" }}
+      opacity={loading ? "0" : "1"}
     >
-      <Text>{props.children}</Text>
+      {props.children}
     </Box>
   );
 
+  if (props.icon) {
+    return (
+      <Box
+        as="button"
+        position="relative"
+        display="flex"
+        alignItems="center"
+        gap="xxs"
+        className={classNames(buttonStyle, recipe)}
+        {...props}
+      >
+        {props.side === "left" && props.icon}
+        {children}
+        {props.side === "right" && props.icon}
+        {loadingComponent}
+      </Box>
+    );
+  }
+
   return (
-    <Box
-      as="button"
-      position="relative"
-      className={buttonRecipe({
-        variant: props.variant,
-        size: props.size || "standard",
-        tone: props.tone,
-      })}
-      {...props}
-    >
+    <Box as="button" position="relative" className={recipe} {...props}>
       {children}
-      {props.loading && loadingComponent}
+      {loadingComponent}
     </Box>
   );
+};
+
+Button.defaultProps = {
+  side: "left",
+  // loading: false
 };
