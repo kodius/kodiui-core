@@ -7,7 +7,8 @@
     "build": "next build",
     "start": "next start",
     "lint": "next lint",
-    "compress": "bash compress.sh $KODIUI_PATH"
+    "compress": "bash compress.sh $KODIUI_PATH",
+    "install-component": "bash install-component.sh"
   },
   "dependencies": {
     "@hookform/error-message": "^2.0.1",

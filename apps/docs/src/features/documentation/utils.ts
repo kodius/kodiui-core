@@ -40,23 +40,13 @@ type DownloadFileFn = (args: DownloadFileArgs) => void;
 
 export const downloadFile: DownloadFileFn = ({ fileName }) => {
   const link = document.createElement("a");
-  // link.href = `${process.env.NEXT_PUBLIC_URL}/${fileName}.zip`;
-  link.href = "http://localhost:3003/input.zip";
-
-  //koji KURAC se desava sad
-
-  // link.download = `${fileName}.zip`;
-  link.download = "input";
-  // <Doc.Download href="http://localhost:3003/button.zip" fileName="button" />
-  //
-  // link.href = href;
-  // link.download = fileName;
-
+  link.href = `${process.env.NEXT_PUBLIC_URL}/compress/${fileName}.zip`;
+  link.download = `${fileName}`;
   document.body.appendChild(link);
-
-  console.log(link.href);
-
   link.click();
-
   document.body.removeChild(link);
+};
+
+export const installFile = () => {
+  // KODIUI_MY_PROJECT_PATH
 };

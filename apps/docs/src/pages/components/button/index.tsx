@@ -10,8 +10,7 @@ import React from "react";
 const ButtonPage = () => {
   return (
     <Doc>
-      <Doc.Title>Button</Doc.Title>
-      <Doc.Download fileName="Button" />
+      <Doc.Title download="Button" install="Button">Button</Doc.Title>
       <Doc.Description>Button Variants</Doc.Description>
       <Doc.ExampleWithCode>{ButtonVariants()}</Doc.ExampleWithCode>
       <Doc.Description>Button sizes</Doc.Description>

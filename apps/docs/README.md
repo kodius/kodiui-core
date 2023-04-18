@@ -1,19 +1,11 @@
 ## Compressing components
 
-### create a enviroment varabile using $KODIUI_PATH to kodiui-core
+### create a enviroment varabile
 
 #### Exmaples:
 
-#### .bashrc or .zshrc
-
-```bash
-export KODIUI_PATH=~/kodius
 ```
-
-#### .fish
-
-```fish
-set -x KODIUI_PATH ~/kodius
+KODIUI_DOCS_PATH=~/kodius/kodiui-core/apps/docs
 ```
 
 #### run
@@ -35,5 +27,25 @@ dirs=('typography/Text: Text' 'typography/Heading: Heading', 'ui/Example1': Exam
 #### run
 
 ```
-    "compress": "bash compress.sh $KODIUI_PATH"
+pnpm compress
+```
+
+## Installing component
+
+### create a enviroment varabile
+
+#### Exmaples:
+
+```
+MY_PROJECT_PATH=~/projects/bmb-elixir/bmb-fe
+```
+
+```
+#### run script
+```
+
+pnpm install-component
+
+```
+
 ```
