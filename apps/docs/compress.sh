@@ -1,6 +1,6 @@
 KODIUI_PATH=$1
 
-dirs=('typography/Text: Text' 'typography/Heading: Heading')
+dirs=('typography/Text: Text' 'typography/Heading: Heading' 'input/Input: Input')
 
 shift
 for dir in "${dirs[@]}"; do

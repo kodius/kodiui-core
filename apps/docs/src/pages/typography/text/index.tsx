@@ -9,10 +9,6 @@ const TextPage = () => {
   return (
     <Doc>
       <Doc.Title>Text</Doc.Title>
-      <Doc.Download
-        href="http://localhost:3003/test.zip"
-        fileName="test"
-      ></Doc.Download>
       <Doc.Description>Sizes and weights</Doc.Description>
       <Doc.ExampleWithCode>{SizesAndWeightExample()}</Doc.ExampleWithCode>
       <Doc.Description>Tones</Doc.Description>

@@ -24,6 +24,7 @@ export const routes = {
   // Component
   button: `${components}/button`,
   drawer: `${components}/drawer`,
+  input: `${components}/input`,
   // Typography
   headings: `${typography}/headings`,
   textLink: `${typography}/text-link`,

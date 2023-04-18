@@ -11,7 +11,7 @@ const ButtonPage = () => {
   return (
     <Doc>
       <Doc.Title>Button</Doc.Title>
-      <Doc.Download href="http://localhost:3003/button.zip" fileName="button" />
+      <Doc.Download fileName="Button" />
       <Doc.Description>Button Variants</Doc.Description>
       <Doc.ExampleWithCode>{ButtonVariants()}</Doc.ExampleWithCode>
       <Doc.Description>Button sizes</Doc.Description>

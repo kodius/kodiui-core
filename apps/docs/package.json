@@ -10,6 +10,7 @@
     "compress": "bash compress.sh $KODIUI_PATH"
   },
   "dependencies": {
+    "@hookform/error-message": "^2.0.1",
     "@kodiui/ui": "workspace",
     "@types/node": "18.15.11",
     "@types/react": "^18.0.27",
@@ -24,6 +25,7 @@
     "react": "^18.2.0",
     "react-code-blocks": "0.0.9-0",
     "react-dom": "^18.2.0",
+    "react-hook-form": "^7.43.9",
     "react-syntax-highlighter": "^15.5.0",
     "typescript": "^4.9.3",
     "webpack": "^5.77.0",
