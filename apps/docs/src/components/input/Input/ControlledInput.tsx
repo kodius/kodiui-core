@@ -1,4 +1,4 @@
-import { Text } from "@/components/typography/Text";
+import { Text } from "@/components";
 import { Stack } from "@kodiui/ui";
 import { FieldValues } from "react-hook-form";
 import { InputProps } from "./Input";

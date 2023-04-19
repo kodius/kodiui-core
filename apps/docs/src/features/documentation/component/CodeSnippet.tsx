@@ -1,4 +1,4 @@
-import { Button } from "@/components/input/Button";
+import { Button } from "@/components";
 import { Cluster } from "@kodiui/ui";
 import dynamic from "next/dynamic";
 import React, { Suspense } from "react";

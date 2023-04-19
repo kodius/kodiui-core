@@ -17,7 +17,7 @@ export const Builder: FC<BuildElement> = (props) => {
 
   return (
     <Stack gap="xs">
-      <Heading level="h3">{props.label}</Heading>
+      <Heading level="3">{props.label}</Heading>
       {withDescription}
       {withExamples}
       {withCodeSnippet}

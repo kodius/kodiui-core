@@ -2,8 +2,7 @@ import { FieldValues, RegisterOptions, Path } from "react-hook-form";
 import { InputHTMLAttributes } from "react";
 import { ControlledInput } from "./ControlledInput";
 import { UncontrolledInput } from "./UncontrolledInput";
-import { Text } from "@/components/typography/Text";
-// import { LabelType } from '../Label'
+import { Text } from "@/components";
 
 export interface InputProps<T> extends InputHTMLAttributes<HTMLInputElement> {
   label?: string;

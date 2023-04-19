@@ -18,7 +18,6 @@ const InputPage = () => {
   return (
     <Doc>
       <Doc.Title>Input</Doc.Title>
-      <Doc.Download fileName="Input" />
       <Doc.Description>Input with reac-hook form</Doc.Description>
       <Doc.Example>
         <FormProvider {...form}>

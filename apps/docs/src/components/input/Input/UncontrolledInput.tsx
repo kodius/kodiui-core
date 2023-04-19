@@ -1,4 +1,4 @@
-import { Text } from "@/components/typography/Text";
+import { Text } from "@/components";
 import {
   ErrorMessage,
   FieldValuesFromFieldErrors,
@@ -28,7 +28,7 @@ export const UncontrolledInput = <T extends FieldValues>(props: Props<T>) => {
 
   const ifError = Boolean(errors[props.name]);
 
-  const styleVariant = ifError ? "error" : "none" 
+  const styleVariant = ifError ? "error" : "none";
 
   const content = (
     <>

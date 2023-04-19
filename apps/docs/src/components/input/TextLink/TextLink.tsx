@@ -1,9 +1,15 @@
 import { Box } from "@kodiui/ui";
 import Link, { LinkProps } from "next/link";
 import React, { FC, PropsWithChildren } from "react";
-import { textLinkStyle } from "./textLink.css";
+import {
+  textLinkRecipe,
+  textLinkStyle,
+  TextLinkVariants,
+} from "./textLink.css";
 
-type Props = FC<PropsWithChildren & LinkProps & TextLinkProps>;
+type Props = FC<
+  PropsWithChildren & LinkProps & TextLinkProps & TextLinkVariants
+>;
 
 type TextLinkProps = {
   icon?: JSX.Element;
@@ -11,6 +17,11 @@ type TextLinkProps = {
 };
 
 export const TextLink: Props = ({ children, ...props }) => {
+  const recipe = textLinkRecipe({
+    size: props.size,
+    weight: props.weight,
+  });
+
   if (props.icon) {
     return (
       <Box
@@ -26,7 +37,11 @@ export const TextLink: Props = ({ children, ...props }) => {
       </Box>
     );
   }
-  return <Link {...props}>{children}</Link>;
+  return (
+    <Link className={recipe} {...props}>
+      {children}
+    </Link>
+  );
 };
 
 TextLink.defaultProps = {
