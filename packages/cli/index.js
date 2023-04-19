@@ -1,6 +1,9 @@
 #!/usr/bin/env node
 
 import inquirer from "inquirer";
+import fs from "fs";
+import path from "path";
+import { fileURLToPath } from "url";
 import { greetings } from "./greetings.js";
 import { installComponent } from "./installComponent.js";
 
@@ -8,6 +11,15 @@ const prompt = inquirer.createPromptModule();
 
 async function run() {
   greetings();
+
+  const currentModulePath = fileURLToPath(import.meta.url);
+  const componentsDir = path.join(
+    path.dirname(currentModulePath),
+    "components"
+  );
+  const choices = fs.readdirSync(componentsDir).map((filename) => {
+    return path.parse(filename).name;
+  });
 
   const answer = await prompt([
     {
@@ -20,15 +32,14 @@ async function run() {
       name: "component",
       message: "Choose component to install?",
       type: "list",
-      choices: ["Button", "Heading", "Input", "Text"],
-      when: function(answers) {
+      choices: choices,
+      when: function (answers) {
         return answers.action === "Install a component";
       },
     },
   ]);
 
   if (answer.action === "Install a component") {
-
     // Parse the command-line arguments
     const args = process.argv.slice(2);
     const argMap = args.reduce((acc, arg, index) => {

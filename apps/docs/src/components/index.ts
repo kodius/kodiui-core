@@ -1,11 +1,13 @@
-export { Ident } from "./layout/Ident";
-export { Heading } from "./typography/Heading/Heading";
-export { Text } from "./typography/Text/Text";
-
+// Input
+export { Heading } from "./input/Heading/Heading";
+export { Text } from "./input//Text/Text";
+export { TextLink } from "./input/TextLink/TextLink";
+export { Input } from "./input/Input/Input";
 export { Button } from "./input/Button/Button";
 export { type ButtonVariants } from "./input/Button/button.css";
 
-export { Drawer } from "./ui/Drawer";
-export { TextLink } from "./input/TextLink/TextLink";
+// Layout
+export { Ident } from "./layout/Ident";
 
-export { Input } from "./input/Input/Input";
+// Ui
+export { Drawer } from "./ui/Drawer";
