@@ -8,6 +8,7 @@
     "start": "next start",
     "lint": "next lint",
     "compress": "bash compress.sh $KODIUI_PATH",
+    "compress-to-cli": "bash compress-to-cli.sh $KODIUI_PATH",
     "install-component": "bash install-component.sh"
   },
   "dependencies": {
