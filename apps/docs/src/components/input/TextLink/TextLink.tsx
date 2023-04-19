@@ -32,7 +32,9 @@ export const TextLink: Props = ({ children, ...props }) => {
         className={textLinkStyle}
       >
         {props.side === "left" && <>{props.icon}</>}
-        <Link {...props}>{children}</Link>
+        <Link className={recipe} {...props}>
+          {children}
+        </Link>
         {props.side === "right" && <>{props.icon}</>}
       </Box>
     );
