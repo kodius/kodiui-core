@@ -31,6 +31,8 @@ export const CodeSnippet = ({
     ? ({ bottom: "0" } as const)
     : ({ top: "0" } as const);
 
+  const codeText = !isSnippetOpen ? "code" : "close";
+
   return (
     <Box position="relative">
       {isSnippetOpen && (
@@ -54,7 +56,7 @@ export const CodeSnippet = ({
             variant="transparent"
             width="fit"
           >
-            code
+            {codeText}
           </Button>
         )}
         {isSnippetOpen && (

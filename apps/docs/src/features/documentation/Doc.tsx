@@ -18,7 +18,7 @@ export const Doc = ({ children, downloadable }: Props) => {
   return (
     <Box p={{ mobileExtraSmall: "sm", tablet: "3xl" }}>
       <Box paddingTop={{ mobileExtraSmall: "0", tablet: "3xl" }} />
-      <Stack gap="5xxl">
+      <Stack gap="xl">
         {children}
         {downloadable && <Downloadable />}
       </Stack>
@@ -76,6 +76,22 @@ const ExampleWithCode = ({ children }: Props) => {
   );
 };
 
+interface BlockProps {
+  subTitle: string;
+  description?: string;
+  exampleWithCode: React.ReactNode;
+}
+
+const Block = ({ exampleWithCode, subTitle, description }: BlockProps) => {
+  return (
+    <Stack gap={"sm"}>
+      <SubTitle>{subTitle}</SubTitle>
+      <Description>{description}</Description>
+      <ExampleWithCode>{exampleWithCode}</ExampleWithCode>
+    </Stack>
+  );
+};
+
 interface PlaceholderProps extends Props {
   width: Sprinkles["width"];
   height: Sprinkles["height"];
@@ -109,3 +125,4 @@ Doc.ExampleWithCode = ExampleWithCode;
 Doc.Placeholder = Placeholder;
 Doc.Checkboxes = Checkboxes;
 Doc.CodeSnippet = CodeSnippet;
+Doc.Block = Block;

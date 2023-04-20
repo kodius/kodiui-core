@@ -1,11 +1,11 @@
 import { Button } from "@/components";
 import { Doc } from "@/features/documentation/Doc";
-import { Box, Stack, Cluster } from "@kodiui/ui";
+import { Stack, Cluster } from "@kodiui/ui";
 
 export const ButtonBranding = () => {
   return (
     <Stack>
-      <Box>
+      <Stack gap="xs">
         <Doc.Description>Brand Accent</Doc.Description>
         <Cluster>
           <Button tone="brandAccent">Solid</Button>
@@ -19,8 +19,8 @@ export const ButtonBranding = () => {
             Transparent
           </Button>
         </Cluster>
-      </Box>
-      <Box>
+      </Stack>
+      <Stack gap="xs">
         <Doc.Description>Neutral</Doc.Description>
         <Cluster>
           <Button tone="neutral">Solid</Button>
@@ -34,8 +34,8 @@ export const ButtonBranding = () => {
             Transparent
           </Button>
         </Cluster>
-      </Box>
-      <Box>
+      </Stack>
+      <Stack gap="xs">
         <Doc.Description>Critical</Doc.Description>
 
         <Cluster>
@@ -50,8 +50,8 @@ export const ButtonBranding = () => {
             Transparent
           </Button>
         </Cluster>
-      </Box>
-      <Box>
+      </Stack>
+      <Stack gap="xs">
         <Doc.Description>Info</Doc.Description>
 
         <Cluster>
@@ -66,8 +66,8 @@ export const ButtonBranding = () => {
             Transparent
           </Button>
         </Cluster>
-      </Box>
-      <Box>
+      </Stack>
+      <Stack gap="xs">
         <Doc.Description>Success</Doc.Description>
 
         <Cluster>
@@ -82,7 +82,7 @@ export const ButtonBranding = () => {
             Transparent
           </Button>
         </Cluster>
-      </Box>
+      </Stack>
     </Stack>
   );
 };
