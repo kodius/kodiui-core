@@ -7,6 +7,7 @@ interface SidebarProps {
    * default to left
    */
   side?: "left" | "right";
+  sideWith?: string;
 }
 
 export const Sidebar: FC<Omit<BoxProps, "display"> & SidebarProps> = (
@@ -14,13 +15,15 @@ export const Sidebar: FC<Omit<BoxProps, "display"> & SidebarProps> = (
 ) => {
   const sidebarOnLeft = props.side === "left";
   const className = sidebarOnLeft ? SidebarOnLeft : SidebarOnRight;
+
   return (
     <Box
+      {...props}
+      className={className}
       display="flex"
       flexWrap={props.flexWrap || "wrap"}
       gap={props.gap || "sm"}
-      className={className}
-      {...props}
+      __flexBasis={props.sideWith || "0"}
     >
       {props.children}
     </Box>
