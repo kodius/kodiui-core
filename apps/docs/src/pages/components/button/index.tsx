@@ -5,19 +5,23 @@ import {
   LoadingButton,
 } from "@/features/documentation";
 import { Doc } from "@/features/documentation/Doc";
+import { Stack } from "@kodiui/ui";
 import React from "react";
 
 const ButtonPage = () => {
   return (
-    <Doc>
-      <Doc.Title download="Button" install="Button">Button</Doc.Title>
-      <Doc.Description>Button Variants</Doc.Description>
-      <Doc.ExampleWithCode>{ButtonVariants()}</Doc.ExampleWithCode>
-      <Doc.Description>Button sizes</Doc.Description>
+    <Doc downloadable>
+      <Doc.Title>Button</Doc.Title>
+      {/* <Doc.Block sub="asdf" ex="asdf" /> */}
+      <Stack gap='xs'>
+        <Doc.Subtitle>Button Variants</Doc.Subtitle>
+        <Doc.ExampleWithCode>{ButtonVariants()}</Doc.ExampleWithCode>
+      </Stack>
+      <Doc.Subtitle>Button sizes</Doc.Subtitle>
       <Doc.ExampleWithCode>{ButtonSizes()}</Doc.ExampleWithCode>
-      <Doc.Description>Branding</Doc.Description>
+      <Doc.Subtitle>Branding</Doc.Subtitle>
       <Doc.ExampleWithCode>{ButtonBranding()}</Doc.ExampleWithCode>
-      <Doc.Description>Loading</Doc.Description>
+      <Doc.Subtitle>Loading</Doc.Subtitle>
       <Doc.ExampleWithCode>{LoadingButton()}</Doc.ExampleWithCode>
     </Doc>
   );

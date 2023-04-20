@@ -1,60 +1,46 @@
 import React from "react";
-import { Box, Cluster, Split, Stack } from "@kodiui/ui";
+import { Box, Stack } from "@kodiui/ui";
 import { Checkboxes } from "./component/Checkboxes";
 import { placeholder } from "./Doc.css";
 import { Sprinkles } from "@kodiui/ui/dist/styles/sprinkles.css";
 import { HardStyles } from "@kodiui/ui/dist/styles/hardStyle";
 import { CodeSnippet } from "./component/CodeSnippet";
-import {  Heading, Text } from "@/components";
+import { Heading, Text } from "@/components";
 import reactElementToJSXString from "react-element-to-jsx-string";
-import { Download } from "./component/Download";
-import { Install } from "./component/Install";
+import { Downloadable } from "./component/Downloadable";
 
 interface Props {
   children: React.ReactNode;
+  downloadable?: boolean;
 }
 
-interface TitleProps extends Props {
-  download?: string;
-  install?: string;
-}
-
-export const Doc = ({ children }: Props) => {
+export const Doc = ({ children, downloadable }: Props) => {
   return (
     <Box p={{ mobileExtraSmall: "sm", tablet: "3xl" }}>
       <Box paddingTop={{ mobileExtraSmall: "0", tablet: "3xl" }} />
-      <Stack gap="xs">{children}</Stack>
+      <Stack gap="5xxl">
+        {children}
+        {downloadable && <Downloadable />}
+      </Stack>
     </Box>
   );
 };
 
-const Title = ({ children, download, install }: TitleProps) => {
-  const content = (
+const Title = ({ children }: Props) => {
+  return (
     <Box>
       <Heading color="blackA12" level="1">
         {children}
       </Heading>
     </Box>
   );
-  if (download || install) {
-    return (
-      <Split alignItems="center">
-        {content}
-        <Cluster>
-          {download && <Download fileName={download} />}
-          {install && <Install />}
-        </Cluster>
-      </Split>
-    );
-  }
-  return <>{content}</>;
 };
 
 const SubTitle = ({ children }: Props) => {
   return (
-    <Heading color="blackA12" level="3">
+    <Text color="blackA12" weight="medium">
       {children}
-    </Heading>
+    </Text>
   );
 };
 
@@ -72,7 +58,6 @@ const Example = ({ children }: Props) => {
       background="white"
       borderRadius="sm"
       p="md"
-      marginBottom="lg"
       borderColor="blackA5"
       borderStyle="solid"
     >
@@ -115,7 +100,6 @@ const Placeholder = ({
     </Box>
   );
 };
-
 
 Doc.Title = Title;
 Doc.Subtitle = SubTitle;

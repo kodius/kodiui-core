@@ -8,7 +8,7 @@ export const SpaceSize = {
   sm: 700,
   md: 940,
   lg: 1200,
-} as const;
+};
 
 export const Drawer: FC<PropsWithChildren & DrawerProps> = (props) => {
   const [drawerState, setDrawerState] = useState<DrawerState>(
