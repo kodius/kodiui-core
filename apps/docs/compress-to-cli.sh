@@ -1,6 +1,6 @@
 source .env
 
-dirs=('input/Text:Text' 'input/Heading:Heading' 'input/Input:Input' 'input/Button:Button' 'input/TextLink:TextLink')
+dirs=('input/Text:Text' 'input/Heading:Heading' 'input/Input:Input' 'input/Button:Button' 'input/TextLink:TextLink' 'ui/Drawer:Drawer')
 
 shift
 for dir in "${dirs[@]}"; do

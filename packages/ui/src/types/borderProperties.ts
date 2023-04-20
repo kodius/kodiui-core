@@ -11,7 +11,7 @@ const borderStyle = [
   "ridge",
   "inset",
   "outset",
-];
+] as const;
 
 export const borderProperties = {
   borderRadius: vars.borderRadius,
