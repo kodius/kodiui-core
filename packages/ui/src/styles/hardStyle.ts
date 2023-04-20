@@ -16,7 +16,7 @@ export interface HardStyles {
   __left?: CSSProperties["left"] | number;
   __bottom?: CSSProperties["bottom"] | number;
   __right?: CSSProperties["right"] | number;
-  __flexBasis: CSSProperties["flexBasis"] | string;
+  __flexBasis?: CSSProperties["flexBasis"] | string;
 }
 
 export const hardStyle = (props: BoxProps): React.CSSProperties | undefined => {
