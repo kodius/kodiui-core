@@ -13,3 +13,5 @@ export const Imposter: FC<Omit<BoxProps, "display">> = (props) => {
     </Box>
   );
 };
+
+Imposter.displayName = "Imposter";

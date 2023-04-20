@@ -1,15 +1,10 @@
 import { forwardRef } from "react";
-import { BuilderInterface } from "../../types";
-import { Builder } from "../Builder";
+import { Box, BoxProps } from "./Box/Box";
 
-export const FlexBox = forwardRef<HTMLElement, BuilderInterface>(
-  (props, ref) => (
-    <Builder
-      display={props.display || "flex"}
-      ref={ref}
-      {...props}
-    >
-      {props.children}
-    </Builder>
-  )
-);
+export const FlexBox = forwardRef<HTMLElement, BoxProps>((props, ref) => (
+  <Box display={props.display || "flex"} ref={ref} {...props}>
+    {props.children}
+  </Box>
+));
+
+FlexBox.displayName = "FlexBox"

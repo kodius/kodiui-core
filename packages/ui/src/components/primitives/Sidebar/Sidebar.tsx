@@ -30,3 +30,5 @@ export const Sidebar: FC<Omit<BoxProps, "display"> & SidebarProps> = (
 Sidebar.defaultProps = {
   side: "left",
 };
+
+Sidebar.displayName = "Sidebar";

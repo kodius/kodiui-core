@@ -20,3 +20,5 @@ export const Center: FC<
     </Box>
   );
 };
+
+Center.displayName = "Center";

@@ -15,3 +15,5 @@ export const Cluster: FC<Omit<BoxProps, "display">> = (props) => {
     </Box>
   );
 };
+
+Cluster.displayName = "Cluster"

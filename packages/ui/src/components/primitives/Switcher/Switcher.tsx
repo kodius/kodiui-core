@@ -15,3 +15,5 @@ export const Switcher: FC<Omit<BoxProps, "display">> = (props) => {
     </Box>
   );
 };
+
+Switcher.displayName = "Switcher";
