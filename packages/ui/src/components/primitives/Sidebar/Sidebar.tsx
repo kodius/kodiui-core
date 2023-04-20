@@ -7,7 +7,6 @@ interface SidebarProps {
    * default to left
    */
   side?: "left" | "right";
-  sideWith?: string;
 }
 
 export const Sidebar: FC<Omit<BoxProps, "display"> & SidebarProps> = (
