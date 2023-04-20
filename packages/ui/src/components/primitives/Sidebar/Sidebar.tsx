@@ -23,7 +23,6 @@ export const Sidebar: FC<Omit<BoxProps, "display"> & SidebarProps> = (
       display="flex"
       flexWrap={props.flexWrap || "wrap"}
       gap={props.gap || "sm"}
-      __flexBasis={props.sideWith || "0"}
     >
       {props.children}
     </Box>
