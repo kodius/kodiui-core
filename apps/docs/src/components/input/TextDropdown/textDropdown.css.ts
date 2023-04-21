@@ -5,4 +5,5 @@ export const textDropdownStyle = style({
   padding: vars.space.xxs,
   border: "none",
   cursor: "pointer",
+  color: "currentColor",
 });

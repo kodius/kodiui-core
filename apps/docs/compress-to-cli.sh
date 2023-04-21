@@ -9,6 +9,7 @@ dirs=(
 'input/TextLink:TextLink'
 'input/TextDropdown:TextDropdown'
 'ui/Drawer:Drawer'
+'ui/Divider:Divider'
 )
 
 shift

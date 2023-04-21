@@ -123,6 +123,11 @@ export const navigatorLinks: Navigator[] = [
         name: "TextDropdown",
         href: routes.textDropdown,
       },
+      {
+        id: 5,
+        name: "Divider",
+        href: routes.divider,
+      },
     ],
   },
   {
