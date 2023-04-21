@@ -113,6 +113,21 @@ export const navigatorLinks: Navigator[] = [
         name: "Input",
         href: routes.input,
       },
+      {
+        id: 3,
+        name: "ButtonLink",
+        href: routes.buttonLink,
+      },
+      {
+        id: 4,
+        name: "TextDropdown",
+        href: routes.textDropdown,
+      },
+      {
+        id: 5,
+        name: "Divider",
+        href: routes.divider,
+      },
     ],
   },
   {

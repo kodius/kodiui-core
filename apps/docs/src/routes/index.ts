@@ -23,8 +23,11 @@ export const routes = {
   flexBox: `${primitives}/flexBox`,
   // Component
   button: `${components}/button`,
+  buttonLink: `${components}/button-link`,
   drawer: `${components}/drawer`,
   input: `${components}/input`,
+  textDropdown: `${components}/text-dropdown`,
+  divider: `${components}/divider`,
   // Typography
   headings: `${typography}/headings`,
   textLink: `${typography}/text-link`,
