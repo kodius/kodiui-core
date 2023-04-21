@@ -1,8 +1,8 @@
+import { ReactIcon } from "@/assets";
 import { Text } from "@/components";
 import { Doc } from "@/features/documentation/Doc";
 import { Box, Cluster, Stack } from "@kodiui/ui";
 import React from "react";
-import { ReactIcon } from "./ReactIcon";
 import { SizesAndWeightExample } from "./SizesAndWeightExample";
 
 const TextPage = () => {

@@ -7,6 +7,7 @@ const CenterPage = () => {
       <Doc.Title>Center</Doc.Title>
 
       <Doc.Block
+        canPlay
         subTitle="Horizontal"
         exampleWithCode={
           <Box height={"20"}>
@@ -18,6 +19,7 @@ const CenterPage = () => {
       />
 
       <Doc.Block
+        canPlay
         subTitle="Vertical"
         exampleWithCode={
           <Box height={"20"}>
@@ -29,6 +31,7 @@ const CenterPage = () => {
       />
 
       <Doc.Block
+        canPlay
         subTitle="Vertical"
         exampleWithCode={
           <Box height={"20"}>

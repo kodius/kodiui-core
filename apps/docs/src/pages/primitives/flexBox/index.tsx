@@ -11,7 +11,7 @@ const FlexBoxPage = () => {
         exampleWithCode={
           <FlexBox flexDirection={"column"}>
             <Doc.Placeholder />
-            <Doc.Placeholder />
+            <Doc.Placeholder color={"red10"} />
           </FlexBox>
         }
       />
@@ -21,7 +21,7 @@ const FlexBoxPage = () => {
         exampleWithCode={
           <FlexBox flexDirection={"row"}>
             <Doc.Placeholder />
-            <Doc.Placeholder />
+            <Doc.Placeholder color={"red10"} />
           </FlexBox>
         }
       />
@@ -31,7 +31,7 @@ const FlexBoxPage = () => {
         exampleWithCode={
           <FlexBox flexDirection={"column-reverse"}>
             <Doc.Placeholder />
-            <Doc.Placeholder />
+            <Doc.Placeholder color={"red10"} />
           </FlexBox>
         }
       />
@@ -41,7 +41,7 @@ const FlexBoxPage = () => {
         exampleWithCode={
           <FlexBox flexDirection={"row-reverse"}>
             <Doc.Placeholder />
-            <Doc.Placeholder />
+            <Doc.Placeholder color={"red10"} />
           </FlexBox>
         }
       />
@@ -51,7 +51,7 @@ const FlexBoxPage = () => {
         exampleWithCode={
           <FlexBox flexDirection={"revert-layer"}>
             <Doc.Placeholder />
-            <Doc.Placeholder />
+            <Doc.Placeholder color={"red10"} />
           </FlexBox>
         }
       />

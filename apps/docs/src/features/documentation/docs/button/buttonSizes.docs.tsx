@@ -1,6 +1,6 @@
-import { Button, Heading } from "@/components";
+import { Button } from "@/components";
 import { Doc } from "@/features/documentation/Doc";
-import { Box, Stack, Cluster } from "@kodiui/ui";
+import { Stack, Cluster } from "@kodiui/ui";
 
 export const ButtonSizes = () => {
   return (

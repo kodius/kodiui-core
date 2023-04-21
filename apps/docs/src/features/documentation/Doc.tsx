@@ -1,16 +1,19 @@
-import React from "react";
-import { Box, Stack } from "@kodiui/ui";
+import React, { useEffect, useState } from "react";
+import { Box, BoxProps, FlexBox, Stack } from "@kodiui/ui";
 import { Checkboxes } from "./component/Checkboxes";
 import { placeholder } from "./Doc.css";
 import { Sprinkles } from "@kodiui/ui/dist/styles/sprinkles.css";
 import { HardStyles } from "@kodiui/ui/dist/styles/hardStyle";
 import { CodeSnippet } from "./component/CodeSnippet";
-import { Heading, Text } from "@/components";
+import { Button, Heading, Text } from "@/components";
 import reactElementToJSXString from "react-element-to-jsx-string";
 import { Downloadable } from "./component/Downloadable";
+import { PlayIcon } from "@/assets/icons/PlayIcon";
+import { PauseIcon } from "@/assets";
+import { changeBoxWidth } from "./utils";
 
 interface Props {
-  children: React.ReactNode;
+  children?: React.ReactNode;
   downloadable?: boolean;
 }
 
@@ -18,7 +21,7 @@ export const Doc = ({ children, downloadable }: Props) => {
   return (
     <Box p={{ mobileExtraSmall: "sm", tablet: "3xl" }}>
       <Box paddingTop={{ mobileExtraSmall: "0", tablet: "3xl" }} />
-      <Stack gap="xl">
+      <Stack gap="5xxl">
         {children}
         {downloadable && <Downloadable />}
       </Stack>
@@ -52,42 +55,77 @@ const Description = ({ children }: Props) => {
   );
 };
 
-const Example = ({ children }: Props) => {
+interface ExampleProps extends Props {
+  canPlay?: boolean;
+}
+
+const Example = ({ children, canPlay = false }: ExampleProps) => {
+  const [isPlaying, setIsPlaying] = useState(false);
+  const width = changeBoxWidth(isPlaying);
+
+  const handlePlayClick = () => {
+    setIsPlaying(!isPlaying);
+  };
+
   return (
-    <Box
-      background="white"
-      borderRadius="sm"
-      p="md"
-      borderColor="blackA5"
-      borderStyle="solid"
-    >
-      {children}
-    </Box>
+    <Stack>
+      {canPlay && (
+        <Button
+          width={"fit"}
+          size="sm"
+          borderRadius="xs"
+          variant="transparent"
+          onClick={handlePlayClick}
+          background="white"
+        >
+          <Text icon={isPlaying ? <PauseIcon /> : <PlayIcon />}>
+            {isPlaying ? "Pause" : "Play"}
+          </Text>
+        </Button>
+      )}
+      <Box
+        background="white"
+        borderRadius="sm"
+        __width={`${width}%`}
+        p="md"
+        borderColor="blackA5"
+        borderStyle="solid"
+      >
+        {children}
+      </Box>
+    </Stack>
   );
 };
 
-const ExampleWithCode = ({ children }: Props) => {
+const ExampleWithCode = ({ children, canPlay }: ExampleProps) => {
   const codeSnippet = reactElementToJSXString(children);
   return (
     <>
-      <Example>{children}</Example>
+      <Example canPlay={canPlay}>{children}</Example>
       <CodeSnippet codeSnippet={codeSnippet} />
     </>
   );
 };
 
-interface BlockProps {
+interface BlockProps extends ExampleProps {
   subTitle: string;
   description?: string;
   exampleWithCode: React.ReactNode;
 }
 
-const Block = ({ exampleWithCode, subTitle, description }: BlockProps) => {
+const Block = ({
+  exampleWithCode,
+  subTitle,
+  description,
+  canPlay,
+  children,
+}: BlockProps) => {
   return (
-    <Stack gap={"sm"}>
+    <Stack gap={"xs"}>
       <SubTitle>{subTitle}</SubTitle>
       <Description>{description}</Description>
-      <ExampleWithCode>{exampleWithCode}</ExampleWithCode>
+      <ExampleWithCode canPlay={canPlay}>{exampleWithCode}</ExampleWithCode>
+      {children}
     </Stack>
   );
 };
@@ -101,11 +139,12 @@ interface PlaceholderProps extends Props {
 const Placeholder = ({
   children,
   ...props
-}: Partial<PlaceholderProps & HardStyles>) => {
+}: Partial<PlaceholderProps & HardStyles & BoxProps>) => {
   return (
     <Box
       padding="sm"
       borderWidth="sm"
+      color={props.color || "gray10"}
       borderColor="gray8"
       borderStyle="solid"
       className={placeholder}

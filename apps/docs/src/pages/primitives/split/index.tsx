@@ -7,6 +7,7 @@ const SplitPage = () => {
       <Doc.Title>Split</Doc.Title>
 
       <Doc.Block
+        canPlay
         subTitle="Separates the passed children by splitting them apart as much as
         possible."
         exampleWithCode={
@@ -16,7 +17,6 @@ const SplitPage = () => {
           </Split>
         }
       />
-      
     </Doc>
   );
 };
