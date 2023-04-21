@@ -7,6 +7,7 @@ dirs=(
 'input/Button:Button'
 'input/ButtonLink:ButtonLink'
 'input/TextLink:TextLink'
+'input/TextDropdown:TextDropdown'
 'ui/Drawer:Drawer'
 )
 

@@ -118,6 +118,11 @@ export const navigatorLinks: Navigator[] = [
         name: "ButtonLink",
         href: routes.buttonLink,
       },
+      {
+        id: 4,
+        name: "TextDropdown",
+        href: routes.textDropdown,
+      },
     ],
   },
   {

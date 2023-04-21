@@ -26,6 +26,7 @@ export const routes = {
   buttonLink: `${components}/button-link`,
   drawer: `${components}/drawer`,
   input: `${components}/input`,
+  textDropdown: `${components}/text-dropdown`,
   // Typography
   headings: `${typography}/headings`,
   textLink: `${typography}/text-link`,
