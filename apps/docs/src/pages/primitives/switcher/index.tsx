@@ -12,8 +12,8 @@ const SwitcherPage = () => {
         out children vertically"
         exampleWithCode={
           <Switcher>
-            <Doc.Placeholder width={"1/2"} />
-            <Doc.Placeholder width={"1/2"} />
+            <Doc.Placeholder width={"2"} />
+            <Doc.Placeholder width={"2"} />
           </Switcher>
         }
       />

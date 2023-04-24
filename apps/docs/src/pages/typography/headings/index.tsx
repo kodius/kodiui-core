@@ -6,10 +6,10 @@ const HeadingsPage = () => {
   return (
     <Doc>
       <Doc.Title>Heading</Doc.Title>
-      <Doc.Description>Levels and weight</Doc.Description>
-      <Doc.ExampleWithCode>
-        {HeadingLevels()}
-      </Doc.ExampleWithCode>
+      <Doc.Block
+        subTitle="Levels and weight"
+        exampleWithCode={HeadingLevels()}
+      />
     </Doc>
   );
 };

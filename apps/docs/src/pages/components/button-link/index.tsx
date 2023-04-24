@@ -6,8 +6,10 @@ const ButtonLinkPage = () => {
   return (
     <Doc>
       <Doc.Title>ButtonLink</Doc.Title>
-      <Doc.Description>Looks like a button but its a link</Doc.Description>
-      <Doc.ExampleWithCode>{ButtonLinkBase()}</Doc.ExampleWithCode>
+      <Doc.Block
+        subTitle="Looks like a button but its a link"
+        exampleWithCode={ButtonLinkBase()}
+      />
     </Doc>
   );
 };
