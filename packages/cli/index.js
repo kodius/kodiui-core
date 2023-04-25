@@ -9,8 +9,9 @@ import { installComponent } from "./installComponent.js";
 
 const prompt = inquirer.createPromptModule();
 
-async function run() {
-  greetings();
+
+export async function run() {
+  await greetings();
 
   const currentModulePath = fileURLToPath(import.meta.url);
   const componentsDir = path.join(
@@ -26,7 +27,7 @@ async function run() {
       name: "action",
       message: "What would you like to do?",
       type: "list",
-      choices: ["Install a component", "Quit"],
+      choices: ["Install a component", "Create a new project", "Quit"],
     },
     {
       name: "component",

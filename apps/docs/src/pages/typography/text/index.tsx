@@ -5,7 +5,7 @@ import React from 'react'
 
 const TextPage = () => {
   return (
-    <Doc>
+    <Doc downloadable>
       <Doc.Title>Text</Doc.Title>
       <Doc.Block subTitle="Sizes and weights" exampleWithCode={SizesAndWeights()} />
       <Doc.Block

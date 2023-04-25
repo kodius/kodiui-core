@@ -3,7 +3,7 @@ import React from 'react'
 
 const TextDropdownPage = () => {
   return (
-    <Doc>
+    <Doc downloadable>
       <Doc.Block subTitle="Text Dropdown" exampleWithCode={TextDropDownBasic()} />
     </Doc>
   )

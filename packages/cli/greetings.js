@@ -1,6 +1,12 @@
 import chalk from "chalk";
+import chalkAnimation from "chalk-animation";
+import { sleep } from "./utils.js";
 
-export function greetings() {
+
+export async function greetings() {
+  const rainbowTitle = chalkAnimation.glitch("                KODI UI 3");
+
+  await sleep();
   console.log(
     chalk.green(
       `

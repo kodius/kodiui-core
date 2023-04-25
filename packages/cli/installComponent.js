@@ -5,6 +5,7 @@ import extract from "extract-zip";
 import chalk from "chalk";
 
 import url from "url";
+import { run } from "./index.js";
 
 const prompt = inquirer.createPromptModule();
 
@@ -36,6 +37,7 @@ export async function installComponent(componentName, directory) {
         `Component ${componentName} has been successfully installed.`
       )
     );
+    run();
   } catch (err) {
     console.error(err);
   }

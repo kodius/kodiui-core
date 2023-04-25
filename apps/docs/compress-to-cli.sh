@@ -8,8 +8,11 @@ dirs=(
 'input/ButtonLink:ButtonLink'
 'input/TextLink:TextLink'
 'input/TextDropdown:TextDropdown'
+'input/Badge:Badge'
+'input/Switch:Switch'
 'ui/Drawer:Drawer'
 'ui/Divider:Divider'
+'tabs:Tabs'
 )
 
 shift

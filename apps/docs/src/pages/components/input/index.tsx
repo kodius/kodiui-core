@@ -1,5 +1,6 @@
-import { Input } from '@/components'
+import { Badge, Input } from '@/components'
 import { Doc } from '@/features/documentation'
+import { Stack } from '@kodiui/ui'
 
 import { FormProvider, useForm } from 'react-hook-form'
 
@@ -16,8 +17,11 @@ const InputPage = () => {
   }
 
   return (
-    <Doc>
-      <Doc.Title>Input</Doc.Title>
+    <Doc downloadable>
+      <Stack>
+        <Doc.Title>Input</Doc.Title>
+        <Badge tone="brandAccent">react-hook-form</Badge>
+      </Stack>
       <Doc.Block
         subTitle="Input with reac-hook form"
         exampleWithCode={

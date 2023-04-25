@@ -3,7 +3,7 @@ import React from 'react'
 
 const HeadingsPage = () => {
   return (
-    <Doc>
+    <Doc downloadable>
       <Doc.Title>Heading</Doc.Title>
       <Doc.Block subTitle="Levels and weight" exampleWithCode={HeadingLevels()} />
     </Doc>

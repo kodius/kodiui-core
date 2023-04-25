@@ -23,6 +23,7 @@ export const Heading: FC<PropsWithChildren & HeadingProps> = (props) => {
   return (
     <Box
       className={headingRecipe({ weight: props.weight })}
+      color={props.color || 'black'}
       as={levelsToHeading[props.level]}
       {...props}
     >

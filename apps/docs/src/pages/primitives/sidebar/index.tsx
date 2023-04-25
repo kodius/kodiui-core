@@ -12,9 +12,10 @@ const SidebarPage = () => {
         the combined width is not possible to display inline, the second column is stacked instead
         of inline.
       </Doc.Subtitle>
-      <Doc.Example>
+      <Doc.Example canPlay>
         <Sidebar>
-          <Doc.Placeholder />
+          <Doc.Placeholder color="blue10" />
+          <Doc.Placeholder style={{ flexBasis: 300 }} color="red10" />
         </Sidebar>
       </Doc.Example>
     </Doc>

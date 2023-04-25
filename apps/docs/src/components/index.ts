@@ -17,3 +17,6 @@ export { Ident } from './layout/Ident'
 // Ui
 export { Drawer } from './ui/Drawer/Drawer'
 export { Divider } from './ui/Divider/Divider'
+
+// Tabs
+export { Tabs, TabsList, TabsContent, TabsTrigger } from './tabs/Tabs'

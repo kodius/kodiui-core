@@ -1,10 +1,15 @@
 import * as React from 'react'
-import { Tabs, TabsList, TabsContent, TabsTrigger } from '@/components/tabs/tabs'
+import { Tabs, TabsList, TabsContent, TabsTrigger, Badge } from '@/components'
 import { Doc } from '@/features/documentation'
+import { Stack } from '@kodiui/ui'
 
 const TabsPage = () => {
   return (
-    <Doc>
+    <Doc downloadable>
+      <Stack>
+        <Doc.Title>Tabs</Doc.Title>
+        <Badge>@radix-ui/react-tabs</Badge>
+      </Stack>
       <Doc.Block
         subTitle="Usage"
         exampleWithCode={

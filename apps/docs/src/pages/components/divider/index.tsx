@@ -5,7 +5,7 @@ import React from 'react'
 
 const DividerPage = () => {
   return (
-    <Doc>
+    <Doc downloadable>
       <Doc.Block
         subTitle=""
         exampleWithCode={

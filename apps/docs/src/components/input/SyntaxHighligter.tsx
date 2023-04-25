@@ -3,7 +3,7 @@ import { Animation, vars } from '@kodiui/ui'
 import React, { FC } from 'react'
 import SyntaxHighlighter from 'react-syntax-highlighter'
 
-import { atomOneDark, arduinoLight } from 'react-syntax-highlighter/dist/esm/styles/hljs'
+import * as Themes from 'react-syntax-highlighter/dist/esm/styles/hljs'
 
 interface Props {
   code: string
@@ -18,7 +18,7 @@ const SyntaxHighligter: FC<Props> = (props) => {
   return (
     <Animation animation="fadeIn">
       <SyntaxHighlighter
-        style={isLight ? atomOneDark : arduinoLight}
+        style={isLight ? Themes.atomOneDark : Themes.atelierPlateauLight}
         language="typescript"
         showLineNumbers={props.showLineNumber}
         customStyle={{
@@ -26,7 +26,7 @@ const SyntaxHighligter: FC<Props> = (props) => {
           borderRadius: '5px',
           padding: '1.25rem',
           fontWeight: 600,
-          fontFamily: 'monospace',
+          fontFamily: 'inter',
           color: vars.colors.blue4,
         }}
       >
