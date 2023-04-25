@@ -1,22 +1,22 @@
-import { Button } from "@/components";
-import { Animation, Box, Cluster } from "@kodiui/ui";
-import Image from "next/image";
-import React, { FC, PropsWithChildren } from "react";
-import { MenuSvg, useNavigatorStore } from "../..";
-import { Logo } from "../Logo";
-import { Content } from "./Content";
+import { Button } from '@/components'
+import { Animation, Box, Cluster } from '@kodiui/ui'
+import Image from 'next/image'
+import React, { FC, PropsWithChildren } from 'react'
+import { MenuSvg, useNavigatorStore } from '../..'
+import { Logo } from '../Logo'
+import { Content } from './Content'
 
 export const Mobile: FC<PropsWithChildren> = (props) => {
-  const { toggleNavigator } = useNavigatorStore();
+  const { toggleNavigator } = useNavigatorStore()
 
-  const toggleContent = () => toggleNavigator();
+  const toggleContent = () => toggleNavigator()
 
   return (
     <Box
       display={{
-        mobileExtraSmall: "block",
-        mobileSmall: "block",
-        tablet: "none",
+        mobileExtraSmall: 'block',
+        mobileSmall: 'block',
+        tablet: 'none',
       }}
     >
       <Cluster gap="xs">
@@ -29,5 +29,5 @@ export const Mobile: FC<PropsWithChildren> = (props) => {
       </Cluster>
       <Content>{props.children}</Content>
     </Box>
-  );
-};
+  )
+}

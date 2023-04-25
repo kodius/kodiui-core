@@ -1,9 +1,9 @@
-import { BuildElement } from "@/features/docBuilder";
+import { BuildElement } from '@/features/docBuilder'
 
 export const firstStep: BuildElement = {
-  label: "1. Create new Next.js project",
+  label: '1. Create new Next.js project',
   description: {
-    description: ["Create with:", "Select these options:"],
+    description: ['Create with:', 'Select these options:'],
     codeSnippet: [
       `pnpm create next-app`,
       `✔ What is your project named? … my-app
@@ -15,4 +15,4 @@ export const firstStep: BuildElement = {
 `,
     ],
   },
-};
+}

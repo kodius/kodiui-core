@@ -1,7 +1,7 @@
-import { Button, Drawer, Text } from "@/components";
-import { Doc } from "@/features/documentation/Doc";
-import { Cluster, Stack } from "@kodiui/ui";
-import React, { useState } from "react";
+import { Button, Drawer, Text } from '@/components'
+import { Doc } from '@/features/documentation'
+import { Cluster, Stack } from '@kodiui/ui'
+import React, { useState } from 'react'
 
 const placeholder = (
   <Stack gap="lg">
@@ -13,7 +13,7 @@ const placeholder = (
     <Doc.Placeholder height="36" />
     <Doc.Placeholder height="36" />
   </Stack>
-);
+)
 
 const DrawerPage = () => {
   const [drawerStates, setDrawerStates] = useState({
@@ -26,16 +26,16 @@ const DrawerPage = () => {
     nested1: false,
     nested2: false,
     nested3: false,
-  });
+  })
 
-  type DrawerTypes = keyof typeof drawerStates;
+  type DrawerTypes = keyof typeof drawerStates
 
   const setDrawer = (type: DrawerTypes, state: boolean) => {
     setDrawerStates({
       ...drawerStates,
       [type]: state,
-    });
-  };
+    })
+  }
 
   return (
     <Doc>
@@ -44,9 +44,7 @@ const DrawerPage = () => {
         subTitle=""
         exampleWithCode={
           <>
-            <Button onClick={() => setDrawer("drawer", true)}>
-              Open drawer
-            </Button>
+            <Button onClick={() => setDrawer('drawer', true)}>Open drawer</Button>
             <Drawer
               title="Drawer"
               description={
@@ -55,7 +53,7 @@ const DrawerPage = () => {
                 </Text>
               }
               open={drawerStates.drawer}
-              onClose={() => setDrawer("drawer", false)}
+              onClose={() => setDrawer('drawer', false)}
               width="lg"
             >
               {placeholder}
@@ -69,13 +67,13 @@ const DrawerPage = () => {
         exampleWithCode={
           <>
             <Cluster>
-              <Button onClick={() => setDrawer("sm", true)}>sm width</Button>
-              <Button onClick={() => setDrawer("md", true)}>md width</Button>
-              <Button onClick={() => setDrawer("lg", true)}>lg width</Button>
+              <Button onClick={() => setDrawer('sm', true)}>sm width</Button>
+              <Button onClick={() => setDrawer('md', true)}>md width</Button>
+              <Button onClick={() => setDrawer('lg', true)}>lg width</Button>
             </Cluster>
             {Object.keys(drawerStates).map((drawer) => {
-              const type = drawer as DrawerTypes;
-              if (type === "sm" || type === "md" || type === "lg") {
+              const type = drawer as DrawerTypes
+              if (type === 'sm' || type === 'md' || type === 'lg') {
                 return (
                   <Drawer
                     key={drawer}
@@ -86,7 +84,7 @@ const DrawerPage = () => {
                   >
                     {placeholder}
                   </Drawer>
-                );
+                )
               }
             })}
           </>
@@ -98,16 +96,12 @@ const DrawerPage = () => {
         exampleWithCode={
           <>
             <Cluster>
-              <Button onClick={() => setDrawer("left", true)}>
-                Open from left
-              </Button>
-              <Button onClick={() => setDrawer("right", true)}>
-                Open from right
-              </Button>
+              <Button onClick={() => setDrawer('left', true)}>Open from left</Button>
+              <Button onClick={() => setDrawer('right', true)}>Open from right</Button>
             </Cluster>
             {Object.keys(drawerStates).map((drawer) => {
-              const type = drawer as DrawerTypes;
-              if (type === "left" || type === "right") {
+              const type = drawer as DrawerTypes
+              if (type === 'left' || type === 'right') {
                 return (
                   <Drawer
                     key={drawer}
@@ -118,7 +112,7 @@ const DrawerPage = () => {
                   >
                     {placeholder}
                   </Drawer>
-                );
+                )
               }
             })}
           </>
@@ -129,42 +123,36 @@ const DrawerPage = () => {
         subTitle="Nested"
         exampleWithCode={
           <>
-            <Button onClick={() => setDrawer("nested1", true)}>
-              Open first drawer
-            </Button>
+            <Button onClick={() => setDrawer('nested1', true)}>Open first drawer</Button>
             <Drawer
-              title={"First drawer"}
+              title={'First drawer'}
               width="lg"
-              open={drawerStates["nested1"]}
-              onClose={() => setDrawer("nested1", false)}
+              open={drawerStates['nested1']}
+              onClose={() => setDrawer('nested1', false)}
             >
               <Stack>
                 {placeholder}
 
-                <Button onClick={() => setDrawer("nested2", true)}>
-                  Open second drawer
-                </Button>
+                <Button onClick={() => setDrawer('nested2', true)}>Open second drawer</Button>
               </Stack>
             </Drawer>
             <Drawer
               width="md"
-              title={"Second drawer"}
-              open={drawerStates["nested2"]}
-              onClose={() => setDrawer("nested2", false)}
+              title={'Second drawer'}
+              open={drawerStates['nested2']}
+              onClose={() => setDrawer('nested2', false)}
             >
               <Stack>
                 {placeholder}
 
-                <Button onClick={() => setDrawer("nested3", true)}>
-                  Open thrid drawer
-                </Button>
+                <Button onClick={() => setDrawer('nested3', true)}>Open thrid drawer</Button>
               </Stack>
             </Drawer>
             <Drawer
               width="sm"
-              title={"Third drawer"}
-              open={drawerStates["nested3"]}
-              onClose={() => setDrawer("nested3", false)}
+              title={'Third drawer'}
+              open={drawerStates['nested3']}
+              onClose={() => setDrawer('nested3', false)}
             >
               {placeholder}
             </Drawer>
@@ -172,7 +160,7 @@ const DrawerPage = () => {
         }
       />
     </Doc>
-  );
-};
+  )
+}
 
-export default DrawerPage;
+export default DrawerPage

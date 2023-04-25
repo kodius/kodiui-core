@@ -1,22 +1,18 @@
-import { Box, BoxProps } from "@kodiui/ui";
-import classNames from "classnames";
-import React, { FC, PropsWithChildren } from "react";
-import { textRecipe, textStyle, TextVariants } from "./text.css";
+import { Box, BoxProps } from '@kodiui/ui'
+import classNames from 'classnames'
+import React, { FC, PropsWithChildren } from 'react'
+import { textRecipe, textStyle, TextVariants } from './text.css'
 
 type TextProps = {
-  icon?: JSX.Element;
-} & Partial<
-  Pick<BoxProps, "textAlign" | "color" | "textTransform" | "textDecoration">
->;
+  icon?: JSX.Element
+} & Partial<Pick<BoxProps, 'textAlign' | 'color' | 'textTransform' | 'textDecoration'>>
 
-export const Text: FC<PropsWithChildren & TextVariants & TextProps> = (
-  props
-) => {
+export const Text: FC<PropsWithChildren & TextVariants & TextProps> = (props) => {
   const recipe = textRecipe({
     size: props.size,
     tone: props.tone,
     weight: props.weight,
-  });
+  })
 
   if (props.icon) {
     return (
@@ -29,13 +25,15 @@ export const Text: FC<PropsWithChildren & TextVariants & TextProps> = (
         {...props}
       >
         {props.icon}
-        <Box as="p" {...props}>{props.children}</Box>
+        <Box as="p" {...props}>
+          {props.children}
+        </Box>
       </Box>
-    );
+    )
   }
   return (
     <Box className={recipe} as="p" {...props}>
       {props.children}
     </Box>
-  );
-};
+  )
+}

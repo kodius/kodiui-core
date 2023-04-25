@@ -1,5 +1,5 @@
-import { Button } from "@/components";
-import { Cluster, Stack } from "@kodiui/ui";
+import { Button } from '@/components'
+import { Cluster, Stack } from '@kodiui/ui'
 
 export const LoadingButton = () => {
   return (
@@ -73,7 +73,7 @@ export const LoadingButton = () => {
         </Button>
       </Cluster>
     </Stack>
-  );
-};
+  )
+}
 
-export default LoadingButton;
+export default LoadingButton

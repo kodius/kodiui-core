@@ -1,6 +1,6 @@
-import { vars } from "@kodiui/ui";
-import { globalStyle, style } from "@vanilla-extract/css";
-import { recipe, RecipeVariants } from "@vanilla-extract/recipes";
+import { vars } from '@kodiui/ui'
+import { globalStyle, style } from '@vanilla-extract/css'
+import { recipe, RecipeVariants } from '@vanilla-extract/recipes'
 
 export const textRecipe = recipe({
   variants: {
@@ -20,7 +20,7 @@ export const textRecipe = recipe({
     },
     tone: {
       neutral: {
-        color: "inherite",
+        color: 'inherite',
       },
       brand: {
         color: vars.colors.brand,
@@ -40,30 +40,30 @@ export const textRecipe = recipe({
     },
     weight: {
       regular: {
-        fontWeight: "normal",
+        fontWeight: 'normal',
       },
       medium: {
         fontWeight: 500,
       },
       strong: {
-        fontWeight: "bolder",
+        fontWeight: 'bolder',
       },
     },
   },
   defaultVariants: {
-    size: "standard",
-    tone: "neutral",
-    weight: "regular",
+    size: 'standard',
+    tone: 'neutral',
+    weight: 'regular',
   },
-});
+})
 
-export const textStyle = style({});
+export const textStyle = style({})
 
 globalStyle(`${textStyle} svg`, {
-  stroke: "currentcolor",
-  fill: "currentcolor",
-  width: "1.2em",
-  height: "1.2em",
-});
+  stroke: 'currentcolor',
+  fill: 'currentcolor',
+  width: '1.2em',
+  height: '1.2em',
+})
 
-export type TextVariants = RecipeVariants<typeof textRecipe>;
+export type TextVariants = RecipeVariants<typeof textRecipe>

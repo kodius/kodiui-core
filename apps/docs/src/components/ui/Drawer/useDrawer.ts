@@ -1,6 +1,5 @@
-import { Sprinkles } from "@kodiui/ui/dist/styles/sprinkles.css";
-import { Dispatch, SetStateAction, useEffect } from "react";
-import { DrawerProps, DrawerState } from "./types";
+import { Dispatch, SetStateAction, useEffect } from 'react'
+import { DrawerProps, DrawerState } from './types'
 import {
   closeDrawerLeft,
   closeDrawerRight,
@@ -8,64 +7,64 @@ import {
   fadeOutLayer,
   openDrawerLeft,
   openDrawerRight,
-} from "./drawer.css";
+} from './drawer.css'
+import { BoxProps } from '@kodiui/ui'
 
 export const useDrawer = (
   props: DrawerProps,
   drawerState: DrawerState,
   setDrawerState: Dispatch<SetStateAction<DrawerState>>
 ) => {
-  const drawerSide: Sprinkles["justifyContent"] =
-    props.side === "left" ? "flex-start" : "flex-end";
+  const drawerSide: BoxProps['justifyContent'] = props.side === 'left' ? 'flex-start' : 'flex-end'
 
   useEffect(() => {
     if (props.open) {
-      setDrawerState(DrawerState.Open);
+      setDrawerState(DrawerState.Open)
     } else if (drawerState === DrawerState.Open) {
-      setDrawerState(DrawerState.Closing);
+      setDrawerState(DrawerState.Closing)
     }
-  }, [props.open]);
+    // eslint-disable-next-line react-hooks/exhaustive-deps
+  }, [props.open])
 
   const handleAnimationEnd = () => {
     if (drawerState === DrawerState.Closing) {
-      setDrawerState(DrawerState.Closed);
+      setDrawerState(DrawerState.Closed)
     }
-  };
+  }
 
   const getOpenSideAnimation = (): string => {
     switch (props.side) {
-      case "right":
-        return openDrawerRight;
-      case "left":
-        return openDrawerLeft;
+      case 'right':
+        return openDrawerRight
+      case 'left':
+        return openDrawerLeft
       default:
-        return openDrawerRight;
+        return openDrawerRight
     }
-  };
+  }
 
   const getCloseSideAnimation = (): string => {
     switch (props.side) {
-      case "right":
-        return closeDrawerRight;
-      case "left":
-        return closeDrawerLeft;
+      case 'right':
+        return closeDrawerRight
+      case 'left':
+        return closeDrawerLeft
       default:
-        return closeDrawerRight;
+        return closeDrawerRight
     }
-  };
+  }
 
   const getAnimation = (drawerState: DrawerState): string => {
-    if (drawerState === DrawerState.Open) return getOpenSideAnimation();
-    else return getCloseSideAnimation();
-  };
+    if (drawerState === DrawerState.Open) return getOpenSideAnimation()
+    else return getCloseSideAnimation()
+  }
 
   const isDrawerStateClosed = (): boolean => {
-    if (drawerState === DrawerState.Closed) return true;
-    else return false;
-  };
+    if (drawerState === DrawerState.Closed) return true
+    else return false
+  }
 
-  const backdropAnimation =
-    drawerState === DrawerState.Open ? fadeInLayer : fadeOutLayer;
+  const backdropAnimation = drawerState === DrawerState.Open ? fadeInLayer : fadeOutLayer
 
   return {
     drawerSide,
@@ -74,6 +73,6 @@ export const useDrawer = (
     getCloseSideAnimation,
     getAnimation,
     isDrawerStateClosed,
-    backdropAnimation
-  };
-};
+    backdropAnimation,
+  }
+}

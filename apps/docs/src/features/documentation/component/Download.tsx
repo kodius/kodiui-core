@@ -1,7 +1,7 @@
-import { DownloadIcon } from "@/assets/icons/DownloadIcon";
-import { Button } from "@/components";
-import React from "react";
-import { downloadFile, DownloadFileArgs } from "../utils";
+import { DownloadIcon } from '@/assets/icons/DownloadIcon'
+import { Button } from '@/components'
+import React from 'react'
+import { downloadFile, DownloadFileArgs } from '../utils'
 
 export const Download = (args: DownloadFileArgs) => {
   return (
@@ -15,5 +15,5 @@ export const Download = (args: DownloadFileArgs) => {
     >
       Download
     </Button>
-  );
-};
+  )
+}

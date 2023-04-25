@@ -1,8 +1,8 @@
-import { create } from "zustand";
+import { create } from 'zustand'
 
 interface ConfiguratorStore {
-  isConfiguratorOpen: boolean;
-  setConfiguratorState: (state: boolean) => void;
+  isConfiguratorOpen: boolean
+  setConfiguratorState: (state: boolean) => void
 }
 
 export const useConfiguratorStore = create<ConfiguratorStore>((set) => ({
@@ -11,4 +11,4 @@ export const useConfiguratorStore = create<ConfiguratorStore>((set) => ({
     set(() => ({
       isConfiguratorOpen: state,
     })),
-}));
+}))

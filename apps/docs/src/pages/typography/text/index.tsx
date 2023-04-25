@@ -1,21 +1,13 @@
-import { Text } from "@/components";
-import {
-  Icons,
-  TextWithBackground,
-  SizesAndWeights,
-} from "@/features/documentation";
-import { Doc } from "@/features/documentation/Doc";
-import { Cluster } from "@kodiui/ui";
-import React from "react";
+import { Text } from '@/components'
+import { Icons, TextWithBackground, SizesAndWeights, Doc } from '@/features/documentation'
+import { Cluster } from '@kodiui/ui'
+import React from 'react'
 
 const TextPage = () => {
   return (
     <Doc>
       <Doc.Title>Text</Doc.Title>
-      <Doc.Block
-        subTitle="Sizes and weights"
-        exampleWithCode={SizesAndWeights()}
-      />
+      <Doc.Block subTitle="Sizes and weights" exampleWithCode={SizesAndWeights()} />
       <Doc.Block
         subTitle="Tones"
         exampleWithCode={
@@ -41,21 +33,16 @@ const TextPage = () => {
             <Text textAlign="center">Center</Text>
             <Text textAlign="right">Right</Text>
             <Doc.Description>Responsive</Doc.Description>
-            <Text
-              textAlign={{ mobile: "right", tablet: "left", desktop: "center" }}
-            >
+            <Text textAlign={{ mobile: 'right', tablet: 'left', desktop: 'center' }}>
               Mobile right <br /> Tablet left <br /> Desktop center
             </Text>
           </>
         }
       />
 
-      <Doc.Block
-        subTitle="With background"
-        exampleWithCode={TextWithBackground()}
-      />
+      <Doc.Block subTitle="With background" exampleWithCode={TextWithBackground()} />
     </Doc>
-  );
-};
+  )
+}
 
-export default TextPage;
+export default TextPage

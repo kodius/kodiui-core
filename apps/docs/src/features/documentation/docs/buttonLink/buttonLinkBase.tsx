@@ -1,6 +1,6 @@
-import { ButtonLink } from "@/components";
-import { Cluster } from "@kodiui/ui";
-import React from "react";
+import { ButtonLink } from '@/components'
+import { Cluster } from '@kodiui/ui'
+import React from 'react'
 
 export const ButtonLinkBase = () => {
   return (
@@ -16,5 +16,5 @@ export const ButtonLinkBase = () => {
         Transparent
       </ButtonLink>
     </Cluster>
-  );
-};
+  )
+}

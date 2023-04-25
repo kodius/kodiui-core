@@ -1,4 +1,4 @@
-import { Doc } from "@/features/documentation/Doc";
+import { Doc } from '@/features/documentation'
 
 const codeSnippet = `import { Text } from "@/components/typography/Text";
 import { Box, BoxProps } from "@kodiui/ui";
@@ -22,10 +22,10 @@ export const Button: FC<ButtonType> = (props) => {
       <Text as="span" fontWeight="bolder" fontSize="sm">{props.children}</Text>
     </Box>
   );
-};`;
+};`
 
 export const ButtonFile = () => {
-  return <Doc.CodeSnippet codeSnippet={codeSnippet} showLineNumbers={true} />;
-};
+  return <Doc.CodeSnippet codeSnippet={codeSnippet} showLineNumbers={true} />
+}
 
-export default ButtonFile;
+export default ButtonFile

@@ -1,22 +1,22 @@
-import React, { FC } from "react";
-import { textDropdownStyle } from "./textDropdown.css";
+import React, { FC } from 'react'
+import { textDropdownStyle } from './textDropdown.css'
 
-type Props = TextDropdownProps & React.SelectHTMLAttributes<HTMLSelectElement>;
+type Props = TextDropdownProps & React.SelectHTMLAttributes<HTMLSelectElement>
 
 export interface TextDropdownItem {
-  value: string;
+  value: string
   options?: React.DetailedHTMLProps<
     React.OptionHTMLAttributes<HTMLOptionElement>,
     HTMLOptionElement
-  >;
+  >
 }
 
 interface TextDropdownProps {
-  items: TextDropdownItem[];
+  items: TextDropdownItem[]
 }
 
 export const TextDropdown: FC<Props> = (props) => {
-  if (!props.items) throw Error("Provide items");
+  if (!props.items) throw Error('Provide items')
 
   return (
     <select className={textDropdownStyle} {...props}>
@@ -25,8 +25,8 @@ export const TextDropdown: FC<Props> = (props) => {
           <option {...item.options} key={item.value}>
             {item.value}
           </option>
-        );
+        )
       })}
     </select>
-  );
-};
+  )
+}

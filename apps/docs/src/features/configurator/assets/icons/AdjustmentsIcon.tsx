@@ -1,4 +1,4 @@
-import { vars } from "@kodiui/ui";
+import { vars } from '@kodiui/ui'
 
 export const AdjustmentsIcon = () => {
   return (
@@ -21,5 +21,5 @@ export const AdjustmentsIcon = () => {
       <line x1="4" y1="18" x2="15" y2="18" />
       <line x1="19" y1="18" x2="20" y2="18" />
     </svg>
-  );
-};
+  )
+}

@@ -1,7 +1,7 @@
-import { OpenConfigurator } from "@/features/configurator";
-import { Cluster } from "@kodiui/ui";
-import React from "react";
-import { SwitchThemeMode } from "./SwitchThemeMode";
+import { OpenConfigurator } from '@/features/configurator'
+import { Cluster } from '@kodiui/ui'
+import React from 'react'
+import { SwitchThemeMode } from './SwitchThemeMode'
 
 export const Footer = () => {
   return (
@@ -9,5 +9,5 @@ export const Footer = () => {
       <SwitchThemeMode />
       <OpenConfigurator />
     </Cluster>
-  );
-};
+  )
+}

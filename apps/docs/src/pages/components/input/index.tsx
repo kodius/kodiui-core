@@ -1,20 +1,19 @@
-import { Input } from "@/components";
-import { Doc } from "@/features/documentation";
-import React, { useState } from "react";
+import { Input } from '@/components'
+import { Doc } from '@/features/documentation'
 
-import { FormProvider, useForm } from "react-hook-form";
+import { FormProvider, useForm } from 'react-hook-form'
 
 interface ExampleForm {
-  name: string;
-  password: string;
+  name: string
+  password: string
 }
 
 const InputPage = () => {
-  const form = useForm<ExampleForm>();
+  const form = useForm<ExampleForm>()
 
   const onSubmit = (data: ExampleForm) => {
-    console.log(data);
-  };
+    console.log(data)
+  }
 
   return (
     <Doc>
@@ -24,23 +23,15 @@ const InputPage = () => {
         exampleWithCode={
           <FormProvider {...form}>
             <form onSubmit={form.handleSubmit(onSubmit)}>
-              <Input<ExampleForm>
-                name="name"
-                label="uncontrolled"
-                placeholder="name"
-              />
+              <Input<ExampleForm> name="name" label="uncontrolled" placeholder="name" />
               <br />
-              <Input<ExampleForm>
-                controled
-                label="controlled"
-                placeholder="name"
-              />
+              <Input<ExampleForm> controled label="controlled" placeholder="name" />
             </form>
           </FormProvider>
         }
       />
     </Doc>
-  );
-};
+  )
+}
 
-export default InputPage;
+export default InputPage

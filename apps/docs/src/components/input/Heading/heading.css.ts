@@ -1,20 +1,19 @@
-import { recipe, RecipeVariants } from "@vanilla-extract/recipes";
+import { recipe, RecipeVariants } from '@vanilla-extract/recipes'
 
 export const headingRecipe = recipe({
   variants: {
     weight: {
       weak: {
-        fontWeight: "normal",
+        fontWeight: 'normal',
       },
       regular: {
-        fontWeight: "bolde",
+        fontWeight: 'bolde',
       },
     },
   },
   defaultVariants: {
-    weight: "regular",
+    weight: 'regular',
   },
-});
+})
 
-
-export type HeadingVariants = RecipeVariants<typeof headingRecipe>;
+export type HeadingVariants = RecipeVariants<typeof headingRecipe>

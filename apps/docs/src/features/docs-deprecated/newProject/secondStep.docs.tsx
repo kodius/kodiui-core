@@ -1,14 +1,14 @@
-import { BuildElement } from "@/features/docBuilder";
+import { BuildElement } from '@/features/docBuilder'
 
 export const secondStep: BuildElement = {
-  label: "2. Setup ESLint and Prettier",
+  label: '2. Setup ESLint and Prettier',
   description: {
     description: [
-      "Install dependencies",
-      "Rename .eslinttrc.json to .eslinttrc.js and paste this:",
-      "Create .prettierrc and paste this:",
-      "Create .eslintignore and paste this:",
-      "Create .prettierignore and paste this:",
+      'Install dependencies',
+      'Rename .eslinttrc.json to .eslinttrc.js and paste this:',
+      'Create .prettierrc and paste this:',
+      'Create .eslintignore and paste this:',
+      'Create .prettierignore and paste this:',
     ],
     codeSnippet: [
       `pnpm install -D prettier @typescript-eslint/eslint-plugin @typescript-eslint/parser eslint-config-prettier eslint-import-resolver-typescript eslint-plugin-import eslint-plugin-jsx-a11y eslint-plugin-prettier eslint-plugin-react eslint-plugin-react-hooks lint-staged npm-run-all tsconfig-paths-webpack-plugin `,
@@ -101,4 +101,4 @@ package.json
 coverage`,
     ],
   },
-};
+}

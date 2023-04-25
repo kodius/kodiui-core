@@ -1,9 +1,8 @@
-import { TextLink } from "@/components";
-import { AdjustmentsIcon } from "@/features/configurator";
-import { TextLinkWithBackground } from "@/features/documentation";
-import { Doc } from "@/features/documentation/Doc";
-import { Box, Cluster, Stack } from "@kodiui/ui";
-import React from "react";
+import { TextLink } from '@/components'
+import { AdjustmentsIcon } from '@/features/configurator'
+import { TextLinkWithBackground, Doc } from '@/features/documentation'
+import { Box, Cluster, Stack } from '@kodiui/ui'
+import React from 'react'
 
 const TextLinkPage = () => {
   return (
@@ -65,12 +64,9 @@ const TextLinkPage = () => {
         }
       />
 
-      <Doc.Block
-        subTitle="With Background"
-        exampleWithCode={TextLinkWithBackground()}
-      ></Doc.Block>
+      <Doc.Block subTitle="With Background" exampleWithCode={TextLinkWithBackground()}></Doc.Block>
     </Doc>
-  );
-};
+  )
+}
 
-export default TextLinkPage;
+export default TextLinkPage

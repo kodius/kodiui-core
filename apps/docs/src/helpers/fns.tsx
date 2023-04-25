@@ -1,1 +1,1 @@
-export const toggleState = (s: boolean): boolean => (s ? false : true);
+export const toggleState = (s: boolean): boolean => (s ? false : true)

@@ -1,7 +1,7 @@
-export { OpenConfigurator } from "./components/OpenConfigurator";
+export { OpenConfigurator } from './components/OpenConfigurator'
 
-export { AdjustmentsIcon } from "./assets/icons/AdjustmentsIcon";
+export { AdjustmentsIcon } from './assets/icons/AdjustmentsIcon'
 
-export * from "./store/useConfiguratorStore";
+export * from './store/useConfiguratorStore'
 
-export { Configurator } from "./Configurator";
+export { Configurator } from './Configurator'

@@ -1,165 +1,165 @@
-import { routes } from "@/routes";
-import { Navigator } from "../types";
+import { routes } from '@/routes'
+import { Navigator } from '../types'
 
 export const navigatorLinks: Navigator[] = [
   {
     id: 0,
-    name: "Guides",
+    name: 'Guides',
     isParent: true,
     children: [
       {
         id: 0,
-        name: "New Project",
-        href: routes["new-project"],
+        name: 'New Project',
+        href: routes['new-project'],
       },
       {
         id: 1,
-        name: "Dependecies",
-        href: routes["new-project"],
+        name: 'Dependecies',
+        href: routes['new-project'],
       },
     ],
   },
   {
     id: 1,
-    name: "ui",
+    name: 'ui',
     isParent: true,
     children: [
       {
         id: 0,
-        name: "Install",
+        name: 'Install',
         href: routes.installKodiui,
       },
       {
         id: 1,
-        name: "Multiple themes",
+        name: 'Multiple themes',
         href: routes.multipleThemes,
       },
       {
         id: 2,
-        name: "Box",
+        name: 'Box',
         href: routes.box,
       },
     ],
   },
   {
     id: 2,
-    name: "primitives",
+    name: 'primitives',
     isParent: true,
     children: [
       {
         id: 0,
-        name: "Stack",
+        name: 'Stack',
         href: routes.stack,
       },
       {
         id: 1,
-        name: "Center",
+        name: 'Center',
         href: routes.center,
       },
       {
         id: 2,
-        name: "Cluster",
+        name: 'Cluster',
         href: routes.cluster,
       },
       {
         id: 3,
-        name: "Split",
+        name: 'Split',
         href: routes.split,
       },
       {
         id: 4,
-        name: "Icon",
+        name: 'Icon',
         href: routes.icon,
       },
       {
         id: 5,
-        name: "Imposter",
+        name: 'Imposter',
         href: routes.imposter,
       },
       {
         id: 6,
-        name: "Sidebar",
+        name: 'Sidebar',
         href: routes.sidebar,
       },
       {
         id: 7,
-        name: "Switcher",
+        name: 'Switcher',
         href: routes.switcher,
       },
       {
         id: 8,
-        name: "FlexBox",
+        name: 'FlexBox',
         href: routes.flexBox,
       },
     ],
   },
   {
     id: 3,
-    name: "components",
+    name: 'components',
     isParent: true,
     children: [
       {
         id: 0,
-        name: "Button",
+        name: 'Button',
         href: routes.button,
       },
       {
         id: 1,
-        name: "Drawer",
+        name: 'Drawer',
         href: routes.drawer,
       },
       {
         id: 2,
-        name: "Input",
+        name: 'Input',
         href: routes.input,
       },
       {
         id: 3,
-        name: "ButtonLink",
+        name: 'ButtonLink',
         href: routes.buttonLink,
       },
       {
         id: 4,
-        name: "TextDropdown",
+        name: 'TextDropdown',
         href: routes.textDropdown,
       },
       {
         id: 5,
-        name: "Divider",
+        name: 'Divider',
         href: routes.divider,
       },
       {
         id: 6,
-        name: "Switch",
+        name: 'Switch',
         href: routes.switch,
       },
       {
         id: 7,
-        name: "Tabs",
+        name: 'Tabs',
         href: routes.tabs,
       },
     ],
   },
   {
     id: 4,
-    name: "typography",
+    name: 'typography',
     isParent: true,
     children: [
       {
         id: 0,
-        name: "Headings",
+        name: 'Headings',
         href: routes.headings,
       },
       {
         id: 1,
-        name: "Text",
+        name: 'Text',
         href: routes.text,
       },
       {
         id: 2,
-        name: "TextLink",
+        name: 'TextLink',
         href: routes.textLink,
       },
     ],
   },
-];
+]

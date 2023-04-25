@@ -1,14 +1,13 @@
-import { vars } from "@kodiui/ui";
-import { globalStyle, style } from "@vanilla-extract/css";
-import { recipe, RecipeVariants } from "@vanilla-extract/recipes";
+import { vars } from '@kodiui/ui'
+import { globalStyle, style } from '@vanilla-extract/css'
+import { recipe, RecipeVariants } from '@vanilla-extract/recipes'
 
-export const textLinkStyle = style({});
+export const textLinkStyle = style({})
 
 globalStyle(`${textLinkStyle} svg`, {
-  width: "1.2em",
-  height: "1.2em"
-});
-
+  width: '1.2em',
+  height: '1.2em',
+})
 
 export const textLinkRecipe = recipe({
   variants: {
@@ -28,23 +27,22 @@ export const textLinkRecipe = recipe({
     },
     weight: {
       regular: {
-        fontWeight: "normal",
+        fontWeight: 'normal',
       },
       medium: {
         fontWeight: 500,
       },
       strong: {
-        fontWeight: "bolder",
+        fontWeight: 'bolder',
       },
     },
   },
   defaultVariants: {
-    size: "standard",
-    weight: "regular",
+    size: 'standard',
+    weight: 'regular',
   },
-});
+})
 
-export const textStyle = style({});
+export const textStyle = style({})
 
-
-export type TextLinkVariants = RecipeVariants<typeof textLinkRecipe>;
+export type TextLinkVariants = RecipeVariants<typeof textLinkRecipe>

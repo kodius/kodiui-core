@@ -1,5 +1,5 @@
-import { DocBuilder } from "@/features/docBuilder";
-import React from "react";
+import { DocBuilder } from '@/features/docBuilder'
+import React from 'react'
 
 const MultipleThemesPage = () => {
   return (
@@ -7,9 +7,9 @@ const MultipleThemesPage = () => {
       title="Multiple themes"
       build={() => [
         {
-          label: "1. Dark and Light theme",
+          label: '1. Dark and Light theme',
           description: {
-            description: ["contract.css.ts"],
+            description: ['contract.css.ts'],
             codeSnippet: [
               `import { vars, tokens, DarkColors } from "@kodiui/ui";
 import { createTheme } from "@vanilla-extract/css";
@@ -29,9 +29,9 @@ export const darkTheme = createTheme(vars, {
           },
         },
         {
-          label: "2. useThemeStore",
+          label: '2. useThemeStore',
           description: {
-            description: ["src/features/theme/store/useThemeStore.ts"],
+            description: ['src/features/theme/store/useThemeStore.ts'],
             codeSnippet: [
               `import { create } from "zustand";
 import { Theme } from "../types";
@@ -56,9 +56,9 @@ export const useThemeStore = create<ThemeStore>((set) => ({
           },
         },
         {
-          label: "3. useTheme hook",
+          label: '3. useTheme hook',
           description: {
-            description: ["src/features/theme/hooks/useTheme.ts"],
+            description: ['src/features/theme/hooks/useTheme.ts'],
             codeSnippet: [
               `import { darkTheme, lightTheme } from "@/styles/contract.css";
 import { useEffect } from "react";
@@ -87,9 +87,9 @@ export const useTheme = () => {
           },
         },
         {
-          label: "4. Load Themes",
+          label: '4. Load Themes',
           description: {
-            description: ["_app.tsx"],
+            description: ['_app.tsx'],
             codeSnippet: [
               `import type { AppProps } from "next/app";
 import { Box } from "@kodiui/ui";
@@ -110,7 +110,7 @@ export default function App({ Component, pageProps }: AppProps) {
         },
       ]}
     />
-  );
-};
+  )
+}
 
-export default MultipleThemesPage;
+export default MultipleThemesPage

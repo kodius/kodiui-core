@@ -1,5 +1,5 @@
-import { Text } from "@/components";
-import React from "react";
+import { Text } from '@/components'
+import React from 'react'
 
 export const SizesAndWeights = () => {
   return (
@@ -32,5 +32,5 @@ export const SizesAndWeights = () => {
         Text xsmall size, strong weight
       </Text>
     </>
-  );
-};
+  )
+}

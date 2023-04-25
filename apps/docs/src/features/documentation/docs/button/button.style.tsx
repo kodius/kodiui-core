@@ -1,4 +1,4 @@
-import { Doc } from "@/features/documentation/Doc";
+import { Doc } from '@/features/documentation'
 
 const codeSnippet = `import { vars } from "@kodiui/ui";
 import { recipe, RecipeVariants } from "@vanilla-extract/recipes";
@@ -51,10 +51,10 @@ export const buttonRecipe = recipe({
     size: "standard",
   },
 }
-`;
+`
 
 export const ButtonCssFile = () => {
-  return <Doc.CodeSnippet codeSnippet={codeSnippet} showLineNumbers={true} />;
-};
+  return <Doc.CodeSnippet codeSnippet={codeSnippet} showLineNumbers={true} />
+}
 
-export default ButtonCssFile;
+export default ButtonCssFile

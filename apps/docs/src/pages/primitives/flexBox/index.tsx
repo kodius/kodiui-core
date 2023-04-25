@@ -1,5 +1,5 @@
-import { Doc } from "@/features/documentation/Doc";
-import { FlexBox } from "@kodiui/ui";
+import { Doc } from '@/features/documentation'
+import { FlexBox } from '@kodiui/ui'
 
 const FlexBoxPage = () => {
   return (
@@ -9,9 +9,9 @@ const FlexBoxPage = () => {
       <Doc.Block
         subTitle="Column"
         exampleWithCode={
-          <FlexBox flexDirection={"column"}>
+          <FlexBox flexDirection={'column'}>
             <Doc.Placeholder />
-            <Doc.Placeholder color={"red10"} />
+            <Doc.Placeholder color={'red10'} />
           </FlexBox>
         }
       />
@@ -19,9 +19,9 @@ const FlexBoxPage = () => {
       <Doc.Block
         subTitle="Row"
         exampleWithCode={
-          <FlexBox flexDirection={"row"}>
+          <FlexBox flexDirection={'row'}>
             <Doc.Placeholder />
-            <Doc.Placeholder color={"red10"} />
+            <Doc.Placeholder color={'red10'} />
           </FlexBox>
         }
       />
@@ -29,9 +29,9 @@ const FlexBoxPage = () => {
       <Doc.Block
         subTitle="Column Reverse"
         exampleWithCode={
-          <FlexBox flexDirection={"column-reverse"}>
+          <FlexBox flexDirection={'column-reverse'}>
             <Doc.Placeholder />
-            <Doc.Placeholder color={"red10"} />
+            <Doc.Placeholder color={'red10'} />
           </FlexBox>
         }
       />
@@ -39,9 +39,9 @@ const FlexBoxPage = () => {
       <Doc.Block
         subTitle="Row Reverse"
         exampleWithCode={
-          <FlexBox flexDirection={"row-reverse"}>
+          <FlexBox flexDirection={'row-reverse'}>
             <Doc.Placeholder />
-            <Doc.Placeholder color={"red10"} />
+            <Doc.Placeholder color={'red10'} />
           </FlexBox>
         }
       />
@@ -49,14 +49,14 @@ const FlexBoxPage = () => {
       <Doc.Block
         subTitle="Revert Layer"
         exampleWithCode={
-          <FlexBox flexDirection={"revert-layer"}>
+          <FlexBox flexDirection={'revert-layer'}>
             <Doc.Placeholder />
-            <Doc.Placeholder color={"red10"} />
+            <Doc.Placeholder color={'red10'} />
           </FlexBox>
         }
       />
     </Doc>
-  );
-};
+  )
+}
 
-export default FlexBoxPage;
+export default FlexBoxPage

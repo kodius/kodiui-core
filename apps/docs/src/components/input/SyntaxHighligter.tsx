@@ -1,23 +1,20 @@
-import { useThemeStore } from "@/features/theme";
-import { Animation, vars } from "@kodiui/ui";
-import React, { FC } from "react";
-import SyntaxHighlighter from "react-syntax-highlighter";
+import { useThemeStore } from '@/features/theme'
+import { Animation, vars } from '@kodiui/ui'
+import React, { FC } from 'react'
+import SyntaxHighlighter from 'react-syntax-highlighter'
 
-import {
-  atomOneDark,
-  arduinoLight,
-} from "react-syntax-highlighter/dist/esm/styles/hljs";
+import { atomOneDark, arduinoLight } from 'react-syntax-highlighter/dist/esm/styles/hljs'
 
 interface Props {
-  code: string;
-  showLineNumber?: boolean;
+  code: string
+  showLineNumber?: boolean
 }
 
 const SyntaxHighligter: FC<Props> = (props) => {
-  const { theme } = useThemeStore();
-  const isLight = theme === "light";
+  const { theme } = useThemeStore()
+  const isLight = theme === 'light'
 
-  if (!props.code) return null;
+  if (!props.code) return null
   return (
     <Animation animation="fadeIn">
       <SyntaxHighlighter
@@ -25,22 +22,22 @@ const SyntaxHighligter: FC<Props> = (props) => {
         language="typescript"
         showLineNumbers={props.showLineNumber}
         customStyle={{
-          fontSize: "1rem",
-          borderRadius: "5px",
-          padding: "1.25rem",
+          fontSize: '1rem',
+          borderRadius: '5px',
+          padding: '1.25rem',
           fontWeight: 600,
-          fontFamily: "monospace",
+          fontFamily: 'monospace',
           color: vars.colors.blue4,
         }}
       >
         {props.code}
       </SyntaxHighlighter>
     </Animation>
-  );
-};
+  )
+}
 
-export default SyntaxHighligter;
+export default SyntaxHighligter
 
 SyntaxHighligter.defaultProps = {
   showLineNumber: true,
-};
+}

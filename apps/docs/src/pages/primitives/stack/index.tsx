@@ -1,13 +1,10 @@
-import { Doc } from '@/features/documentation/Doc'
-import { Checkbox } from '@/features/documentation/component/Checkboxes'
-import { Stack, vars } from '@kodiui/ui'
+import { Doc, Checkbox, generateCheckboxes } from '@/features/documentation'
+import { BoxProps, Stack, vars } from '@kodiui/ui'
 import React from 'react'
-import { Sprinkles } from '@kodiui/ui/dist/styles/sprinkles.css'
-import { generateCheckboxes } from '@/features/documentation/utils'
 
 const StackPage = () => {
-  const spaceArr = Object.keys(vars.space) as Sprinkles['gap'][]
-  const [gapCheckboxes, setGapCheckboxes] = React.useState<Checkbox<Sprinkles['gap']>[]>(
+  const spaceArr = Object.keys(vars.space) as BoxProps['gap'][]
+  const [gapCheckboxes, setGapCheckboxes] = React.useState<Checkbox<BoxProps['gap']>[]>(
     generateCheckboxes(spaceArr)
   )
   const [alignCheckboxes, setAlignCheckboxes] = React.useState(alignCheckboxesArr)

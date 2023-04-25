@@ -1,17 +1,13 @@
-import { Doc } from "@/features/documentation/Doc";
-import React from "react";
-import { HeadingLevels } from "@/features/documentation";
+import { Doc, HeadingLevels } from '@/features/documentation'
+import React from 'react'
 
 const HeadingsPage = () => {
   return (
     <Doc>
       <Doc.Title>Heading</Doc.Title>
-      <Doc.Block
-        subTitle="Levels and weight"
-        exampleWithCode={HeadingLevels()}
-      />
+      <Doc.Block subTitle="Levels and weight" exampleWithCode={HeadingLevels()} />
     </Doc>
-  );
-};
+  )
+}
 
-export default HeadingsPage;
+export default HeadingsPage

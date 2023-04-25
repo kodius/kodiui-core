@@ -1,24 +1,24 @@
-import { vars } from "@kodiui/ui";
-import { globalStyle, style } from "@vanilla-extract/css";
-import { recipe, RecipeVariants } from "@vanilla-extract/recipes";
+import { vars } from '@kodiui/ui'
+import { globalStyle, style } from '@vanilla-extract/css'
+import { recipe, RecipeVariants } from '@vanilla-extract/recipes'
 
-export const buttonStyle = style({});
+export const buttonStyle = style({})
 
 globalStyle(`${buttonStyle} svg`, {
-  height: "1.2em",
-  width: "1.2em",
-});
+  height: '1.2em',
+  width: '1.2em',
+})
 
 export const buttonRecipe = recipe({
   base: {
     borderRadius: vars.borderRadius.sm,
     borderWidth: vars.borderWidth.sm,
-    borderStyle: "solid",
+    borderStyle: 'solid',
     transition: `all 0.2s ease`,
-    height: "fit-content",
-    cursor: "pointer",
-    ":active": {
-      transform: "scale(0.95)",
+    height: 'fit-content',
+    cursor: 'pointer',
+    ':active': {
+      transform: 'scale(0.95)',
     },
   },
 
@@ -28,7 +28,7 @@ export const buttonRecipe = recipe({
         background: vars.colors.brand,
         borderColor: vars.colors.brand,
         color: vars.colors.brand,
-        ":hover": {
+        ':hover': {
           background: vars.colors.brandHover,
           borderColor: vars.colors.brandHover,
         },
@@ -37,7 +37,7 @@ export const buttonRecipe = recipe({
         background: vars.colors.brandAccent,
         borderColor: vars.colors.brandAccent,
         color: vars.colors.brandAccent,
-        ":hover": {
+        ':hover': {
           background: vars.colors.brandAccentHover,
           borderColor: vars.colors.brandAccentHover,
         },
@@ -46,7 +46,7 @@ export const buttonRecipe = recipe({
         background: vars.colors.neutral,
         borderColor: vars.colors.neutral,
         color: vars.colors.neutral,
-        ":hover": {
+        ':hover': {
           background: vars.colors.neutralHover,
           borderColor: vars.colors.neutralHover,
         },
@@ -55,7 +55,7 @@ export const buttonRecipe = recipe({
         background: vars.colors.critical,
         borderColor: vars.colors.critical,
         color: vars.colors.critical,
-        ":hover": {
+        ':hover': {
           background: vars.colors.criticalHover,
           borderColor: vars.colors.criticalHover,
         },
@@ -64,7 +64,7 @@ export const buttonRecipe = recipe({
         background: vars.colors.info,
         borderColor: vars.colors.info,
         color: vars.colors.infoActive,
-        ":hover": {
+        ':hover': {
           background: vars.colors.infoHover,
           borderColor: vars.colors.infoHover,
         },
@@ -73,7 +73,7 @@ export const buttonRecipe = recipe({
         background: vars.colors.success,
         borderColor: vars.colors.success,
         color: vars.colors.success,
-        ":hover": {
+        ':hover': {
           background: vars.colors.successHover,
           borderColor: vars.colors.successHover,
         },
@@ -87,14 +87,14 @@ export const buttonRecipe = recipe({
         background: vars.colors.white,
       },
       soft: {
-        borderColor: "transparent",
-        ":hover": {
-          borderColor: "transparent",
+        borderColor: 'transparent',
+        ':hover': {
+          borderColor: 'transparent',
         },
       },
       transparent: {
-        background: "transparent",
-        borderColor: "transparent",
+        background: 'transparent',
+        borderColor: 'transparent',
       },
     },
     size: {
@@ -105,32 +105,32 @@ export const buttonRecipe = recipe({
   compoundVariants: [
     // Brand
     {
-      variants: { variant: "ghost", tone: "brand" },
+      variants: { variant: 'ghost', tone: 'brand' },
       style: {
-        ":hover": {
+        ':hover': {
           background: vars.colors.brandSoftHover,
         },
       },
     },
     {
       variants: {
-        variant: "soft",
-        tone: "brand",
+        variant: 'soft',
+        tone: 'brand',
       },
       style: {
         background: vars.colors.brandSoft,
-        ":hover": {
+        ':hover': {
           background: vars.colors.brandSoftHover,
         },
       },
     },
     {
       variants: {
-        variant: "transparent",
-        tone: "brand",
+        variant: 'transparent',
+        tone: 'brand',
       },
       style: {
-        ":hover": {
+        ':hover': {
           background: vars.colors.brandSoftHover,
           borderColor: vars.colors.brandSoftHover,
         },
@@ -139,11 +139,11 @@ export const buttonRecipe = recipe({
     // Brand Acent
     {
       variants: {
-        variant: "transparent",
-        tone: "brandAccent",
+        variant: 'transparent',
+        tone: 'brandAccent',
       },
       style: {
-        ":hover": {
+        ':hover': {
           background: vars.colors.brandAccentSoftHover,
           borderColor: vars.colors.brandAccentSoftHover,
         },
@@ -151,20 +151,20 @@ export const buttonRecipe = recipe({
     },
     {
       variants: {
-        variant: "soft",
-        tone: "brandAccent",
+        variant: 'soft',
+        tone: 'brandAccent',
       },
       style: {
         background: vars.colors.brandAccentSoft,
-        ":hover": {
+        ':hover': {
           background: vars.colors.brandAccentSoftHover,
         },
       },
     },
     {
-      variants: { variant: "ghost", tone: "brandAccent" },
+      variants: { variant: 'ghost', tone: 'brandAccent' },
       style: {
-        ":hover": {
+        ':hover': {
           background: vars.colors.brandAccentSoftHover,
         },
       },
@@ -172,11 +172,11 @@ export const buttonRecipe = recipe({
     // Neutral
     {
       variants: {
-        variant: "transparent",
-        tone: "neutral",
+        variant: 'transparent',
+        tone: 'neutral',
       },
       style: {
-        ":hover": {
+        ':hover': {
           background: vars.colors.neutralSoftHover,
           borderColor: vars.colors.neutralSoftHover,
         },
@@ -184,20 +184,20 @@ export const buttonRecipe = recipe({
     },
     {
       variants: {
-        variant: "soft",
-        tone: "neutral",
+        variant: 'soft',
+        tone: 'neutral',
       },
       style: {
         background: vars.colors.neutralSoft,
-        ":hover": {
+        ':hover': {
           background: vars.colors.neutralSoftHover,
         },
       },
     },
     {
-      variants: { variant: "ghost", tone: "neutral" },
+      variants: { variant: 'ghost', tone: 'neutral' },
       style: {
-        ":hover": {
+        ':hover': {
           background: vars.colors.neutralSoftHover,
         },
       },
@@ -205,11 +205,11 @@ export const buttonRecipe = recipe({
     // Critical
     {
       variants: {
-        variant: "transparent",
-        tone: "critical",
+        variant: 'transparent',
+        tone: 'critical',
       },
       style: {
-        ":hover": {
+        ':hover': {
           background: vars.colors.criticalSoftHover,
           borderColor: vars.colors.criticalSoftHover,
         },
@@ -217,20 +217,20 @@ export const buttonRecipe = recipe({
     },
     {
       variants: {
-        variant: "soft",
-        tone: "critical",
+        variant: 'soft',
+        tone: 'critical',
       },
       style: {
         background: vars.colors.criticalSoft,
-        ":hover": {
+        ':hover': {
           background: vars.colors.criticalSoftHover,
         },
       },
     },
     {
-      variants: { variant: "ghost", tone: "critical" },
+      variants: { variant: 'ghost', tone: 'critical' },
       style: {
-        ":hover": {
+        ':hover': {
           background: vars.colors.criticalSoftHover,
         },
       },
@@ -238,11 +238,11 @@ export const buttonRecipe = recipe({
     // Info
     {
       variants: {
-        variant: "transparent",
-        tone: "info",
+        variant: 'transparent',
+        tone: 'info',
       },
       style: {
-        ":hover": {
+        ':hover': {
           background: vars.colors.infoSoftHover,
           borderColor: vars.colors.infoSoftHover,
         },
@@ -250,29 +250,29 @@ export const buttonRecipe = recipe({
     },
     {
       variants: {
-        variant: "solid",
-        tone: "info",
+        variant: 'solid',
+        tone: 'info',
       },
       style: {
-        color: vars.colors.infoActive
+        color: vars.colors.infoActive,
       },
     },
     {
       variants: {
-        variant: "soft",
-        tone: "info",
+        variant: 'soft',
+        tone: 'info',
       },
       style: {
         background: vars.colors.infoSoft,
-        ":hover": {
+        ':hover': {
           background: vars.colors.infoSoftHover,
         },
       },
     },
     {
-      variants: { variant: "ghost", tone: "info" },
+      variants: { variant: 'ghost', tone: 'info' },
       style: {
-        ":hover": {
+        ':hover': {
           background: vars.colors.infoSoftHover,
         },
       },
@@ -280,11 +280,11 @@ export const buttonRecipe = recipe({
     // Success
     {
       variants: {
-        variant: "transparent",
-        tone: "success",
+        variant: 'transparent',
+        tone: 'success',
       },
       style: {
-        ":hover": {
+        ':hover': {
           background: vars.colors.successSoftHover,
           borderColor: vars.colors.successSoftHover,
         },
@@ -292,20 +292,20 @@ export const buttonRecipe = recipe({
     },
     {
       variants: {
-        variant: "soft",
-        tone: "success",
+        variant: 'soft',
+        tone: 'success',
       },
       style: {
         background: vars.colors.successSoft,
-        ":hover": {
+        ':hover': {
           background: vars.colors.successSoftHover,
         },
       },
     },
     {
-      variants: { variant: "ghost", tone: "success" },
+      variants: { variant: 'ghost', tone: 'success' },
       style: {
-        ":hover": {
+        ':hover': {
           background: vars.colors.successSoftHover,
         },
       },
@@ -313,10 +313,10 @@ export const buttonRecipe = recipe({
   ],
 
   defaultVariants: {
-    tone: "brand",
-    variant: "solid",
-    size: "standard",
+    tone: 'brand',
+    variant: 'solid',
+    size: 'standard',
   },
-});
+})
 
-export type ButtonVariants = RecipeVariants<typeof buttonRecipe>;
+export type ButtonVariants = RecipeVariants<typeof buttonRecipe>

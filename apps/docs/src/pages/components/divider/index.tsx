@@ -1,7 +1,7 @@
-import { Divider } from "@/components";
-import { Doc } from "@/features/documentation";
-import { Stack } from "@kodiui/ui";
-import React from "react";
+import { Divider } from '@/components'
+import { Doc } from '@/features/documentation'
+import { Stack } from '@kodiui/ui'
+import React from 'react'
 
 const DividerPage = () => {
   return (
@@ -34,7 +34,7 @@ const DividerPage = () => {
         }
       />
     </Doc>
-  );
-};
+  )
+}
 
-export default DividerPage;
+export default DividerPage

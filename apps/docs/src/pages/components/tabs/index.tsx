@@ -1,11 +1,6 @@
-import * as React from "react";
-import {
-  Tabs,
-  TabsList,
-  TabsContent,
-  TabsTrigger,
-} from "@/components/tabs/tabs";
-import { Doc } from "@/features/documentation";
+import * as React from 'react'
+import { Tabs, TabsList, TabsContent, TabsTrigger } from '@/components/tabs/tabs'
+import { Doc } from '@/features/documentation'
 
 const TabsPage = () => {
   return (
@@ -24,7 +19,7 @@ const TabsPage = () => {
         }
       />
     </Doc>
-  );
-};
+  )
+}
 
-export default TabsPage;
+export default TabsPage

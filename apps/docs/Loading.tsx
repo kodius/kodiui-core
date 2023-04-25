@@ -1,6 +1,6 @@
-import { Animation, FlexBox, Center } from "@kodiui/ui";
-import React from "react";
-import { DotsBounceIcon } from "./DotsBounceIcon";
+import { Animation, FlexBox, Center } from '@kodiui/ui'
+import React from 'react'
+import { DotsBounceIcon } from './DotsBounceIcon'
 
 export const Loading = () => {
   return (
@@ -9,5 +9,5 @@ export const Loading = () => {
         <DotsBounceIcon />
       </Center>
     </Animation>
-  );
-};
+  )
+}

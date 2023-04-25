@@ -1,12 +1,12 @@
-const guides = "/guides";
-const ui = "/ui";
-const components = "/components";
-const primitives = "/primitives";
-const typography = "/typography";
+const guides = '/guides'
+const ui = '/ui'
+const components = '/components'
+const primitives = '/primitives'
+const typography = '/typography'
 
 export const routes = {
   // Guides
-  "new-project": `${guides}/new-project`,
+  'new-project': `${guides}/new-project`,
   // Ui
   box: `${ui}/box`,
   installKodiui: `${ui}/install-kodi-ui`,
@@ -34,4 +34,4 @@ export const routes = {
   headings: `${typography}/headings`,
   textLink: `${typography}/text-link`,
   text: `${typography}/text`,
-};
+}

@@ -1,5 +1,5 @@
-import { Button } from "@/components";
-import { Cluster } from "@kodiui/ui";
+import { Button } from '@/components'
+import { Cluster } from '@kodiui/ui'
 
 export const ButtonVariants = () => {
   return (
@@ -9,7 +9,7 @@ export const ButtonVariants = () => {
       <Button variant="soft">Soft</Button>
       <Button variant="transparent">Transparent</Button>
     </Cluster>
-  );
-};
+  )
+}
 
-export default ButtonVariants;
+export default ButtonVariants

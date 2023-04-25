@@ -1,5 +1,5 @@
 const BoxPage = () => {
-  return null;
-};
+  return null
+}
 
-export default BoxPage;
+export default BoxPage

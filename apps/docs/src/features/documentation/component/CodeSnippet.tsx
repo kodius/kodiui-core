@@ -1,50 +1,47 @@
-import { Button } from "@/components";
-import { Box, BoxProps, Cluster } from "@kodiui/ui";
-import dynamic from "next/dynamic";
-import React, { CSSProperties, Suspense, useEffect } from "react";
-import { SyntaxHighlighterProps } from "react-syntax-highlighter";
-import { copyText } from "../utils";
+import { Button } from '@/components'
+import { Box, BoxProps, Cluster } from '@kodiui/ui'
+import dynamic from 'next/dynamic'
+import React, { Suspense, useEffect } from 'react'
+import { SyntaxHighlighterProps } from 'react-syntax-highlighter'
+import { copyText } from '../utils'
 
-const Syntax = dynamic(() => import("@/components/input/SyntaxHighligter"), {
+const Syntax = dynamic(() => import('@/components/input/SyntaxHighligter'), {
   ssr: false,
-});
+})
 
-interface CodeSnippetProps
-  extends Pick<SyntaxHighlighterProps, "showLineNumbers" | "codeSnippet"> {
-  initialOpen?: boolean;
+interface CodeSnippetProps extends Pick<SyntaxHighlighterProps, 'showLineNumbers' | 'codeSnippet'> {
+  initialOpen?: boolean
 }
 
 export const CodeSnippet = ({
-  codeSnippet = "",
+  codeSnippet = '',
   showLineNumbers = false,
   initialOpen,
 }: CodeSnippetProps) => {
-  const [isSnippetOpen, setIsSnippetOpen] = React.useState(false);
-  const [isCopied, setIsCopied] = React.useState(false);
+  const [isSnippetOpen, setIsSnippetOpen] = React.useState(false)
+  const [isCopied, setIsCopied] = React.useState(false)
 
-  const toggleSnippet = () => setIsSnippetOpen((prev) => !prev);
+  const toggleSnippet = () => setIsSnippetOpen((prev) => !prev)
 
   useEffect(() => {
-    setIsSnippetOpen(initialOpen || false);
-  }, [initialOpen]);
+    setIsSnippetOpen(initialOpen || false)
+  }, [initialOpen])
 
   useEffect(() => {
     if (isCopied) {
       const timeout = setTimeout(() => {
-        setIsCopied(false);
-      }, 2000);
-      return () => clearTimeout(timeout);
+        setIsCopied(false)
+      }, 2000)
+      return () => clearTimeout(timeout)
     }
-  }, [isCopied]);
+  }, [isCopied])
 
   const handleCopy = (text: string) => {
-    copyText(text);
-    setIsCopied(true);
-  };
+    copyText(text)
+    setIsCopied(true)
+  }
 
-  const position: BoxProps = isSnippetOpen
-    ? ({ bottom: "0" } as const)
-    : ({ top: "0" } as const);
+  const position: BoxProps = isSnippetOpen ? ({ bottom: '0' } as const) : ({ top: '0' } as const)
 
   return (
     <Box position="relative">
@@ -69,20 +66,15 @@ export const CodeSnippet = ({
             variant="transparent"
             width="fit"
           >
-            {!isCopied ? "Copy" : "Copied!"}
+            {!isCopied ? 'Copy' : 'Copied!'}
           </Button>
         )}
         {!initialOpen && (
-          <Button
-            onClick={toggleSnippet}
-            size="sm"
-            variant="transparent"
-            width="fit"
-          >
-            {!isSnippetOpen ? "Code" : "Close"}
+          <Button onClick={toggleSnippet} size="sm" variant="transparent" width="fit">
+            {!isSnippetOpen ? 'Code' : 'Close'}
           </Button>
         )}
       </Cluster>
     </Box>
-  );
-};
+  )
+}

@@ -1,5 +1,5 @@
-import { Doc } from "@/features/documentation/Doc";
-import { Switcher } from "@kodiui/ui";
+import { Doc } from '@/features/documentation'
+import { Switcher } from '@kodiui/ui'
 
 const SwitcherPage = () => {
   return (
@@ -12,13 +12,13 @@ const SwitcherPage = () => {
         out children vertically"
         exampleWithCode={
           <Switcher>
-            <Doc.Placeholder width={"2"} />
-            <Doc.Placeholder width={"2"} />
+            <Doc.Placeholder width={'2'} />
+            <Doc.Placeholder width={'2'} />
           </Switcher>
         }
       />
     </Doc>
-  );
-};
+  )
+}
 
-export default SwitcherPage;
+export default SwitcherPage

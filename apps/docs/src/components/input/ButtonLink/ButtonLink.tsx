@@ -1,23 +1,23 @@
-import { Box, BoxProps } from "@kodiui/ui";
-import classNames from "classnames";
-import Link from "next/link";
-import React, { FC } from "react";
-import { buttonRecipe, buttonStyle, ButtonVariants } from "./buttonLink.css";
+import { Box, BoxProps } from '@kodiui/ui'
+import classNames from 'classnames'
+import Link from 'next/link'
+import React, { FC } from 'react'
+import { buttonRecipe, buttonStyle, ButtonVariants } from './buttonLink.css'
 
 interface Props {
-  icon?: JSX.Element;
-  side?: "left" | "right";
-  href: string;
+  icon?: JSX.Element
+  side?: 'left' | 'right'
+  href: string
 }
 
-type ButtonType = BoxProps & Props & ButtonVariants;
+type ButtonType = BoxProps & Props & ButtonVariants
 
 export const ButtonLink: FC<ButtonType> = (props) => {
   const recipe = buttonRecipe({
     variant: props.variant,
-    size: props.size || "standard",
+    size: props.size || 'standard',
     tone: props.tone,
-  });
+  })
 
   if (props.icon) {
     return (
@@ -30,12 +30,12 @@ export const ButtonLink: FC<ButtonType> = (props) => {
           className={classNames(buttonStyle, recipe)}
           {...props}
         >
-          {props.side === "left" && props.icon}
+          {props.side === 'left' && props.icon}
           {props.children}
-          {props.side === "right" && props.icon}
+          {props.side === 'right' && props.icon}
         </Box>
       </Link>
-    );
+    )
   }
 
   return (
@@ -44,9 +44,9 @@ export const ButtonLink: FC<ButtonType> = (props) => {
         {props.children}
       </Box>
     </Link>
-  );
-};
+  )
+}
 
 ButtonLink.defaultProps = {
-  side: "left",
-};
+  side: 'left',
+}

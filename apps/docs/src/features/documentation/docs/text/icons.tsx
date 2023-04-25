@@ -1,7 +1,7 @@
-import { ReactIcon } from "@/assets";
-import { Text } from "@/components";
-import { Stack } from "@kodiui/ui";
-import React from "react";
+import { ReactIcon } from '@/assets'
+import { Text } from '@/components'
+import { Stack } from '@kodiui/ui'
+import React from 'react'
 
 export const Icons = () => {
   return (
@@ -26,5 +26,5 @@ export const Icons = () => {
         Custom color
       </Text>
     </Stack>
-  );
-};
+  )
+}

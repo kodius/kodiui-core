@@ -1,9 +1,9 @@
-import { BuildElement } from "@/features/docBuilder";
+import { BuildElement } from '@/features/docBuilder'
 
 export const nextJsConfig: BuildElement = {
-  label: "2. Next JS config",
+  label: '2. Next JS config',
   description: {
-    description: ["next.config.js"],
+    description: ['next.config.js'],
     codeSnippet: [
       `// https://vanilla-extract.style/documentation/integrations/next/
 
@@ -21,4 +21,4 @@ module.exports = withVanillaExtract(nextConfig);
       `pnpm install @vanilla-extract/next-plugin`,
     ],
   },
-};
+}

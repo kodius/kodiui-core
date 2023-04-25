@@ -1,11 +1,9 @@
-import { Ident, Text, TextLink } from "@/components";
-import React, { FC } from "react";
-import { Navigator } from "../types";
+import { Ident, Text, TextLink } from '@/components'
+import React, { FC } from 'react'
+import { Navigator } from '../types'
 
 export const NavigatorItem: FC<Navigator> = (props) => {
-  const children = props.children?.map((nav) => (
-    <NavigatorItem key={nav.id} {...nav} />
-  ));
+  const children = props.children?.map((nav) => <NavigatorItem key={nav.id} {...nav} />)
 
   if (props.isParent) {
     return (
@@ -15,7 +13,7 @@ export const NavigatorItem: FC<Navigator> = (props) => {
         </Text>
         {children}
       </>
-    );
+    )
   }
 
   if (props.href) {
@@ -25,8 +23,8 @@ export const NavigatorItem: FC<Navigator> = (props) => {
           <TextLink href={props.href}>{props.name}</TextLink>
         </Text>
       </Ident>
-    );
+    )
   }
 
-  return null;
-};
+  return null
+}

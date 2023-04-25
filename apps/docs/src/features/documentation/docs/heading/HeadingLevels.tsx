@@ -1,6 +1,6 @@
-import { Heading } from "@/components";
-import { Stack } from "@kodiui/ui";
-import React from "react";
+import { Heading } from '@/components'
+import { Stack } from '@kodiui/ui'
+import React from 'react'
 
 export const HeadingLevels = () => {
   return (
@@ -30,5 +30,5 @@ export const HeadingLevels = () => {
         </Heading>
       </Stack>
     </Stack>
-  );
-};
+  )
+}

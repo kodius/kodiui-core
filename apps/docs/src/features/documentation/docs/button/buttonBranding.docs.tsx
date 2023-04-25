@@ -1,6 +1,6 @@
-import { Button } from "@/components";
-import { Doc } from "@/features/documentation/Doc";
-import { Stack, Cluster } from "@kodiui/ui";
+import { Button } from '@/components'
+import { Doc } from '@/features/documentation'
+import { Stack, Cluster } from '@kodiui/ui'
 
 export const ButtonBranding = () => {
   return (
@@ -84,7 +84,7 @@ export const ButtonBranding = () => {
         </Cluster>
       </Stack>
     </Stack>
-  );
-};
+  )
+}
 
-export default ButtonBranding;
+export default ButtonBranding

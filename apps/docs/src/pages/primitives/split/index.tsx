@@ -1,5 +1,5 @@
-import { Doc } from "@/features/documentation/Doc";
-import { Split } from "@kodiui/ui";
+import { Doc } from '@/features/documentation'
+import { Split } from '@kodiui/ui'
 
 const SplitPage = () => {
   return (
@@ -18,7 +18,7 @@ const SplitPage = () => {
         }
       />
     </Doc>
-  );
-};
+  )
+}
 
-export default SplitPage;
+export default SplitPage

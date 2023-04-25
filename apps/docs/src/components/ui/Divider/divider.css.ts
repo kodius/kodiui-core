@@ -1,17 +1,17 @@
-import { vars } from "@kodiui/ui";
-import { recipe, RecipeVariants } from "@vanilla-extract/recipes";
+import { vars } from '@kodiui/ui'
+import { recipe, RecipeVariants } from '@vanilla-extract/recipes'
 
 export const dividerRecipe = recipe({
   variants: {
     weight: {
       regular: {
-        borderWidth: "1px",
+        borderWidth: '1px',
       },
       md: {
-        borderWidth: "2px",
+        borderWidth: '2px',
       },
       lg: {
-        borderWidth: "3px",
+        borderWidth: '3px',
       },
     },
     tone: {
@@ -27,9 +27,9 @@ export const dividerRecipe = recipe({
     },
   },
   defaultVariants: {
-    weight: "regular",
-    tone: "light",
+    weight: 'regular',
+    tone: 'light',
   },
-});
+})
 
-export type DividerVariants = RecipeVariants<typeof dividerRecipe>;
+export type DividerVariants = RecipeVariants<typeof dividerRecipe>

@@ -1,4 +1,4 @@
-import React from "react";
+import React from 'react'
 
 export const DownloadIcon = () => {
   return (
@@ -19,5 +19,5 @@ export const DownloadIcon = () => {
       <line x1="12" y1="11" x2="12" y2="17" />
       <polyline points="9 14 12 17 15 14" />
     </svg>
-  );
-};
+  )
+}

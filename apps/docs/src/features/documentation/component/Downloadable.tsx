@@ -1,8 +1,8 @@
-import { Text } from "@/components";
-import { AdjustmentsIcon } from "@/features/configurator";
-import { Box, Stack } from "@kodiui/ui";
-import React from "react";
-import { CodeSnippet } from "./CodeSnippet";
+import { Text } from '@/components'
+import { AdjustmentsIcon } from '@/features/configurator'
+import { Box, Stack } from '@kodiui/ui'
+import React from 'react'
+import { CodeSnippet } from './CodeSnippet'
 
 export const Downloadable = () => {
   return (
@@ -14,7 +14,7 @@ export const Downloadable = () => {
       </Box>
       <Box p="xs" borderRadius="sm" background="yellow3">
         <Text icon={<AdjustmentsIcon />} color="yellow11">
-          --directory is optional 
+          --directory is optional
         </Text>
       </Box>
       <CodeSnippet
@@ -22,5 +22,5 @@ export const Downloadable = () => {
         codeSnippet={`npx @kodiui/cli@latest --directory <PATH_TO_PROJECT>`}
       />
     </Stack>
-  );
-};
+  )
+}
