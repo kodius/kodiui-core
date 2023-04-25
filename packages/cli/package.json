@@ -1,6 +1,6 @@
 {
   "name": "@kodiui/cli",
-  "version": "0.0.22",
+  "version": "0.0.23",
   "description": "",
   "main": "index.js",
   "scripts": {
@@ -19,10 +19,10 @@
     "download": "^8.0.0",
     "extract-zip": "^2.0.1",
     "inquirer": "^9.1.5",
-    "yargs": "^17.7.1"
+    "yargs": "^17.7.1",
+    "chalk-animation": "^2.0.3"
   },
   "devDependencies": {
-    "@types/play-sound": "^1.1.0",
-    "chalk-animation": "^2.0.3"
+    "@types/play-sound": "^1.1.0"
   }
 }

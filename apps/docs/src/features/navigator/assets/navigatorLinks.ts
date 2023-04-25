@@ -148,6 +148,12 @@ export const navigatorLinks: Navigator[] = [
         href: routes.badge,
         state: 'new',
       },
+      {
+        id: 9,
+        name: 'Animations',
+        href: routes.animations,
+        state: 'new',
+      },
     ],
   },
   {

@@ -31,6 +31,7 @@ export const routes = {
   switch: `${components}/switch`,
   tabs: `${components}/tabs`,
   badge: `${components}/badge`,
+  animations: `${components}/animations`,
   // Typography
   headings: `${typography}/headings`,
   textLink: `${typography}/text-link`,
