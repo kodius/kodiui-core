@@ -8,8 +8,9 @@
     "prepare": "husky install",
     "docslint": "cd ./apps/docs && pnpm lint",
     "docsformat": "cd ./apps/docs && pnpm format",
+    "docsBuild": "cd ./apps/docs && pnpm build",
     "format:fix": "cd ./apps/docs && pnpm format:fix",
-    "validate": "npm-run-all --parallel docslint docsformat"
+    "validate": "npm-run-all --parallel docslint docsformat docsBuild"
   },
   "keywords": [],
   "author": "dinoDanic",
