@@ -101,7 +101,7 @@ const AnimationsPage = () => {
                 animationDirection="alternate"
                 animationIterationCount="infinite"
               >
-                <Text tone="success" size="large" icon={<ReactIcon />}>
+                <Text tone="critical" size="large" icon={<ReactIcon />}>
                   ping + bounce
                 </Text>
               </Animation>
@@ -133,7 +133,7 @@ const AnimateItem: FC<AnimateItem> = (props) => {
         animationPlayState="both"
         animationIterationCount="infinite"
       >
-        {props.animation}
+        <Text>{props.animation}</Text>
       </Animation>
       <Button onClick={toggle} icon={isAnimating ? <PauseIcon /> : <PlayIcon />} size="sm" />
     </Split>
