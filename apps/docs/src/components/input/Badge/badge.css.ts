@@ -11,7 +11,8 @@ export const badgeRecipe = recipe({
   variants: {
     tone: {
       neutral: {
-        color: 'inherite',
+        background: vars.colors.neutralSoft,
+        color: vars.colors.neutral,
       },
       brand: {
         background: vars.colors.brandSoft,

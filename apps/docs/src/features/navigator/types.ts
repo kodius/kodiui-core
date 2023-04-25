@@ -10,4 +10,4 @@ export interface Navigator {
   state?: ComponentState
 }
 
-type ComponentState = 'completed' | 'in development' | 'new' | 'todo'
+export type ComponentState = 'completed' | 'dev' | 'new' | 'todo'

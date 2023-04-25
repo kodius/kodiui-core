@@ -9,6 +9,7 @@ export { ButtonLink } from './input/ButtonLink/ButtonLink'
 export { TextDropdown } from './input/TextDropdown/TextDropdown'
 export { Switch } from './input/Switch/Switch'
 export { Badge } from './input/Badge/Badge'
+export { type BadgeVariants } from './input/Badge/badge.css'
 
 // Layout
 export { Ident } from './layout/Ident'

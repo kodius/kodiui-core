@@ -9,7 +9,6 @@ export const routes = {
   NextJsProject: `${projectGuides}/next-js-project`,
   NextJsAppProject: `${projectGuides}/next-js-app-project`,
   // Ui
-  box: `${ui}/box`,
   installKodiui: `${ui}/install-kodi-ui`,
   multipleThemes: `${ui}/multiple-themes`,
   // Primitives
