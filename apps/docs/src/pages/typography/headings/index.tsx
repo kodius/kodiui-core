@@ -11,3 +11,5 @@ const HeadingsPage = () => {
 }
 
 export default HeadingsPage
+
+export const headingCodeSnippet = `<Heading level="h1">Heading</Heading>`
