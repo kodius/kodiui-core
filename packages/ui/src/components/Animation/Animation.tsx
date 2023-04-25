@@ -43,3 +43,5 @@ export const Animation = forwardRef<HTMLElement, AnimationProps>(
     );
   }
 );
+
+Animation.displayName = "Animation";
