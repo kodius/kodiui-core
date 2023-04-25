@@ -133,6 +133,11 @@ export const navigatorLinks: Navigator[] = [
         name: "Switch",
         href: routes.switch,
       },
+      {
+        id: 7,
+        name: "Tabs",
+        href: routes.tabs,
+      },
     ],
   },
   {
