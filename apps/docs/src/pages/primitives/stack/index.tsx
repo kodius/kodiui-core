@@ -1,10 +1,9 @@
 import { Doc } from "@/features/documentation/Doc";
+import { Checkbox } from "@/features/documentation/component/Checkboxes";
 import { Stack, vars } from "@kodiui/ui";
 import React from "react";
 import { Sprinkles } from "@kodiui/ui/dist/styles/sprinkles.css";
-import { Checkbox } from "@/features/documentation/component/Checkboxes";
 import { generateCheckboxes } from "@/features/documentation/utils";
-import { alignCheckboxesArr } from "./consts";
 
 const StackPage = () => {
   const spaceArr = Object.keys(vars.space) as Sprinkles["gap"][];
@@ -58,3 +57,32 @@ const StackPage = () => {
 };
 
 export default StackPage;
+
+export type Type = "flex-start" | "flex-end" | "center" | "baseline";
+
+const alignCheckboxesArr: Checkbox<Type>[] = [
+  {
+    name: "flex-start",
+    label: "flex-start",
+    checked: true,
+    value: "flex-start",
+  },
+  {
+    name: "center",
+    label: "center",
+    checked: false,
+    value: "center",
+  },
+  {
+    name: "flex-end",
+    label: "flex-end",
+    checked: false,
+    value: "flex-end",
+  },
+  {
+    name: "baseline",
+    label: "baseline",
+    checked: false,
+    value: "baseline",
+  },
+];
