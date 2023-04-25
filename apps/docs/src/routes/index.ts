@@ -28,6 +28,7 @@ export const routes = {
   input: `${components}/input`,
   textDropdown: `${components}/text-dropdown`,
   divider: `${components}/divider`,
+  switch: `${components}/switch`,
   // Typography
   headings: `${typography}/headings`,
   textLink: `${typography}/text-link`,

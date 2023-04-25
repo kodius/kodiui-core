@@ -26,7 +26,7 @@ const StackPage = () => {
           <Doc.Block
             subTitle="Gap"
             exampleWithCode={
-              <Stack gap={`${checked?.value}`} alignItems="center">
+              <Stack gap={checked?.value} alignItems="center">
                 <Doc.Placeholder width="full" />
                 <Doc.Placeholder width="full" />
                 <Doc.Placeholder width="full" />
@@ -44,7 +44,7 @@ const StackPage = () => {
           <Doc.Block
             subTitle="Alignment"
             exampleWithCode={
-              <Stack alignItems={`${checked?.value}`}>
+              <Stack alignItems={checked?.value}>
                 <Doc.Placeholder width="6/12" />
                 <Doc.Placeholder width="6/12" />
                 <Doc.Placeholder width="6/12" />

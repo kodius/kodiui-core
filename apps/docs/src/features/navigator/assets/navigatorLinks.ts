@@ -128,6 +128,11 @@ export const navigatorLinks: Navigator[] = [
         name: "Divider",
         href: routes.divider,
       },
+      {
+        id: 6,
+        name: "Switch",
+        href: routes.switch,
+      },
     ],
   },
   {

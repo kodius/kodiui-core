@@ -160,7 +160,6 @@ Doc.Title = Title;
 Doc.Subtitle = SubTitle;
 Doc.Description = Description;
 Doc.Example = Example;
-Doc.ExampleWithCode = ExampleWithCode;
 Doc.Placeholder = Placeholder;
 Doc.Checkboxes = Checkboxes;
 Doc.CodeSnippet = CodeSnippet;
