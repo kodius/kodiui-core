@@ -1,12 +1,13 @@
-const guides = '/guides'
+const projectGuides = '/project-guides'
 const ui = '/ui'
 const components = '/components'
 const primitives = '/primitives'
 const typography = '/typography'
 
 export const routes = {
-  // Guides
-  'new-project': `${guides}/new-project`,
+  // projectGuides
+  NextJsProject: `${projectGuides}/next-js-project`,
+  NextJsAppProject: `${projectGuides}/next-js-app-project`,
   // Ui
   box: `${ui}/box`,
   installKodiui: `${ui}/install-kodi-ui`,
@@ -30,6 +31,7 @@ export const routes = {
   divider: `${components}/divider`,
   switch: `${components}/switch`,
   tabs: `${components}/tabs`,
+  badge: `${components}/badge`,
   // Typography
   headings: `${typography}/headings`,
   textLink: `${typography}/text-link`,

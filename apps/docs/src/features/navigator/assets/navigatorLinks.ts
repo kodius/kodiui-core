@@ -4,18 +4,20 @@ import { Navigator } from '../types'
 export const navigatorLinks: Navigator[] = [
   {
     id: 0,
-    name: 'Guides',
+    name: 'Project Guides',
     isParent: true,
     children: [
       {
         id: 0,
-        name: 'New Project',
-        href: routes['new-project'],
+        name: 'NextJS',
+        href: routes.NextJsProject,
+        state: 'in development',
       },
       {
         id: 1,
-        name: 'Dependecies',
-        href: routes['new-project'],
+        name: 'NextJS App Directory',
+        href: routes.NextJsAppProject,
+        state: 'todo',
       },
     ],
   },
@@ -137,6 +139,12 @@ export const navigatorLinks: Navigator[] = [
         id: 7,
         name: 'Tabs',
         href: routes.tabs,
+      },
+      {
+        id: 8,
+        name: 'Badge',
+        href: routes.badge,
+        state: 'new',
       },
     ],
   },

@@ -1,4 +1,4 @@
-import { TextLink } from '@/components'
+import { Text, TextLink } from '@/components'
 import { AdjustmentsIcon } from '@/features/configurator'
 import { TextLinkWithBackground, Doc } from '@/features/documentation'
 import { Box, Cluster, Stack } from '@kodiui/ui'
@@ -30,16 +30,12 @@ const TextLinkPage = () => {
         subTitle="Icons"
         exampleWithCode={
           <Stack>
-            <Box as="p" color="brand">
-              <TextLink icon={<AdjustmentsIcon />} href="#">
-                Left side
-              </TextLink>
-            </Box>
-            <Box as="p" color="brand">
-              <TextLink side="right" icon={<AdjustmentsIcon />} href="#">
-                Right side
-              </TextLink>
-            </Box>
+            <Text tone="brand" icon={<AdjustmentsIcon />}>
+              <TextLink href="#">Left side</TextLink>
+            </Text>
+            <Text tone="brand" icon={<AdjustmentsIcon />}>
+              <TextLink href="#">Right side</TextLink>
+            </Text>
           </Stack>
         }
       />
@@ -48,18 +44,18 @@ const TextLinkPage = () => {
         subTitle="Colors"
         exampleWithCode={
           <Cluster>
-            <Box as="p" color="brand">
+            <Text tone="brand">
               <TextLink href="#">Brand</TextLink>
-            </Box>
-            <Box as="p" color="brandAccent">
+            </Text>
+            <Text tone="brandAccent">
               <TextLink href="#">Brand accent</TextLink>
-            </Box>
-            <Box as="p" color="neutral">
+            </Text>
+            <Text tone="neutral">
               <TextLink href="#">Neutral</TextLink>
-            </Box>
-            <Box as="p" color="orange10">
+            </Text>
+            <Text color="orange8">
               <TextLink href="#">Custom color</TextLink>
-            </Box>
+            </Text>
           </Cluster>
         }
       />
