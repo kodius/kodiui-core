@@ -20,12 +20,27 @@ export const CodeSnippet = ({
   initialOpen,
 }: CodeSnippetProps) => {
   const [isSnippetOpen, setIsSnippetOpen] = React.useState(false);
+  const [isCopied, setIsCopied] = React.useState(false);
 
   const toggleSnippet = () => setIsSnippetOpen((prev) => !prev);
 
   useEffect(() => {
     setIsSnippetOpen(initialOpen || false);
   }, [initialOpen]);
+
+  useEffect(() => {
+    if (isCopied) {
+      const timeout = setTimeout(() => {
+        setIsCopied(false);
+      }, 2000);
+      return () => clearTimeout(timeout);
+    }
+  }, [isCopied]);
+
+  const handleCopy = (text: string) => {
+    copyText(text);
+    setIsCopied(true);
+  };
 
   const position: BoxProps = isSnippetOpen
     ? ({ bottom: "0" } as const)
@@ -47,6 +62,16 @@ export const CodeSnippet = ({
         position="absolute"
         {...position}
       >
+        {isSnippetOpen && (
+          <Button
+            onClick={() => handleCopy(codeSnippet)}
+            size="sm"
+            variant="transparent"
+            width="fit"
+          >
+            {!isCopied ? "Copy" : "Copied!"}
+          </Button>
+        )}
         {!initialOpen && (
           <Button
             onClick={toggleSnippet}
@@ -54,17 +79,7 @@ export const CodeSnippet = ({
             variant="transparent"
             width="fit"
           >
-            code
-          </Button>
-        )}
-        {isSnippetOpen && (
-          <Button
-            onClick={() => copyText(codeSnippet)}
-            size="sm"
-            variant="transparent"
-            width="fit"
-          >
-            copy
+            {!isSnippetOpen ? "Code" : "Close"}
           </Button>
         )}
       </Cluster>

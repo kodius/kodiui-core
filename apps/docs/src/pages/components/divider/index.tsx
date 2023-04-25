@@ -6,9 +6,9 @@ import React from "react";
 const DividerPage = () => {
   return (
     <Doc>
-      <Doc.Title>Divider</Doc.Title>
-      <Doc.ExampleWithCode>
-        {
+      <Doc.Block
+        subTitle=""
+        exampleWithCode={
           <Stack gap="3xl">
             <Stack>
               <Divider />
@@ -21,18 +21,18 @@ const DividerPage = () => {
               <Divider tone="dark" />
             </Stack>
             <Stack>
-              <Divider weight='md' tone="light" />
-              <Divider weight='md' tone="neutral" />
-              <Divider weight='md' tone="dark" />
+              <Divider weight="md" tone="light" />
+              <Divider weight="md" tone="neutral" />
+              <Divider weight="md" tone="dark" />
             </Stack>
             <Stack>
-              <Divider weight='lg' tone="light" />
-              <Divider weight='lg' tone="neutral" />
-              <Divider weight='lg' tone="dark" />
+              <Divider weight="lg" tone="light" />
+              <Divider weight="lg" tone="neutral" />
+              <Divider weight="lg" tone="dark" />
             </Stack>
           </Stack>
         }
-      </Doc.ExampleWithCode>
+      />
     </Doc>
   );
 };

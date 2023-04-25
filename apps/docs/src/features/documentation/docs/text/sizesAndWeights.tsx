@@ -1,7 +1,7 @@
 import { Text } from "@/components";
 import React from "react";
 
-export const SizesAndWeightExample = () => {
+export const SizesAndWeights = () => {
   return (
     <>
       <Text size="large">Text large size, regular weight</Text>

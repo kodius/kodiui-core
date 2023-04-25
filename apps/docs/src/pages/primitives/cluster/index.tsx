@@ -1,33 +1,25 @@
 import { Doc } from "@/features/documentation/Doc";
-import { Center, Box, Cluster } from "@kodiui/ui";
+import { Cluster } from "@kodiui/ui";
 
 const ClusterPage = () => {
   return (
     <Doc>
       <Doc.Title>Cluster</Doc.Title>
-      <Doc.Subtitle>Wrapping children</Doc.Subtitle>
-      <Doc.Description>
-        Groups of 'inline' elements which can wrap when constrained by width.
-      </Doc.Description>
-      <Doc.Example>
-        <Cluster>
-          <Center>
+
+      <Doc.Block
+        canPlay
+        subTitle="Wrapping children"
+        description="Groups of 'inline' elements which can wrap when constrained by width."
+        exampleWithCode={
+          <Cluster>
             <Doc.Placeholder width={"60"} />
-          </Center>
-          <Center>
-            <Doc.Placeholder width={"60"} />
-          </Center>
-          <Center>
-            <Doc.Placeholder width={"60"} />
-          </Center>
-          <Center>
-            <Doc.Placeholder width={"60"} />
-          </Center>
-          <Center>
-            <Doc.Placeholder width={"60"} />
-          </Center>
-        </Cluster>
-      </Doc.Example>
+            <Doc.Placeholder width={"16"} />
+            <Doc.Placeholder width={"48"} />
+            <Doc.Placeholder width={"10"} />
+            <Doc.Placeholder width={"56"} />
+          </Cluster>
+        }
+      />
     </Doc>
   );
 };

@@ -52,8 +52,9 @@ export const Checkboxes = <T,>({
                 checked={checked}
                 onChange={handleOnChange}
                 type="checkbox"
+                id={c.name}
               />
-              <label>{c.label}</label>
+              <label htmlFor={c.name}>{c.label}</label>
             </FlexBox>
           );
         })}

@@ -5,8 +5,10 @@ import React from "react";
 const TextDropdownPage = () => {
   return (
     <Doc>
-      <Doc.Title>TextDropdown</Doc.Title>
-      <Doc.ExampleWithCode>{TextDropDownBasic()}</Doc.ExampleWithCode>
+      <Doc.Block
+        subTitle="Text Dropdown"
+        exampleWithCode={TextDropDownBasic()}
+      />
     </Doc>
   );
 };

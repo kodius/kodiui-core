@@ -1,22 +1,21 @@
-import { Button, Heading } from "@/components";
+import { Button } from "@/components";
 import { Doc } from "@/features/documentation/Doc";
-import { Box, Stack, Cluster } from "@kodiui/ui";
+import { Stack, Cluster } from "@kodiui/ui";
 
 export const ButtonSizes = () => {
   return (
     <Stack>
-      <Box>
-        <Stack gap="xs">
-          <Doc.Description>Basic size</Doc.Description>
-          <Cluster>
-            <Button>Solid</Button>
-            <Button variant="ghost">Ghost</Button>
-            <Button variant="soft">Soft</Button>
-            <Button variant="transparent">Transparent</Button>
-          </Cluster>
-        </Stack>
-      </Box>
-      <Box>
+      <Stack gap="xs">
+        <Doc.Description>Basic size</Doc.Description>
+        <Cluster>
+          <Button>Solid</Button>
+          <Button variant="ghost">Ghost</Button>
+          <Button variant="soft">Soft</Button>
+          <Button variant="transparent">Transparent</Button>
+        </Cluster>
+      </Stack>
+
+      <Stack gap="xs">
         <Doc.Description> Small size</Doc.Description>
         <Cluster>
           <Button variant="solid" size="sm">
@@ -32,7 +31,7 @@ export const ButtonSizes = () => {
             Transparent
           </Button>
         </Cluster>
-      </Box>
+      </Stack>
     </Stack>
   );
 };
