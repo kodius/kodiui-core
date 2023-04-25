@@ -20,12 +20,12 @@ export async function installComponent(componentName, directory) {
       type: "input",
       name: "target",
       message: `Enter the target directory to install the ${componentName} component:`,
-      default: directory ? directory : "~/Desktop/",
+      default: directory ? directory : "./src/components/",
     },
   ]);
 
   const targetPath = target.replace(/^~/, os.homedir());
-  const extractPath = path.join(targetPath, componentName);
+  const extractPath = path.join(process.cwd(), targetPath, componentName);
 
   console.log(chalk.bgBlue.black(`Installing ${componentName} component...`));
   try {

@@ -20,6 +20,20 @@ export const tokens = {
   animationTimingFunction: AnimationTimingFunction,
 };
 
+console.log('................................................');
+console.log('................................................');
+console.log('................................................');
+console.log('................................................');
+console.log('................................................');
+console.log('................................................');
+
+console.log(JSON.stringify(tokens));
+
+console.log('................................................');
+console.log('................................................');
+console.log('................................................');
+console.log('................................................');
+
 export type TokenKeys = keyof typeof tokens;
 
 export type Tokens = typeof tokens;

@@ -1,26 +1,22 @@
-import { Doc } from "@/features/documentation/Doc";
-import { Checkbox } from "@/features/documentation/component/Checkboxes";
-import { Stack, vars } from "@kodiui/ui";
-import React from "react";
-import { Sprinkles } from "@kodiui/ui/dist/styles/sprinkles.css";
-import { generateCheckboxes } from "@/features/documentation/utils";
+import { Doc } from '@/features/documentation/Doc'
+import { Checkbox } from '@/features/documentation/component/Checkboxes'
+import { Stack, vars } from '@kodiui/ui'
+import React from 'react'
+import { Sprinkles } from '@kodiui/ui/dist/styles/sprinkles.css'
+import { generateCheckboxes } from '@/features/documentation/utils'
 
 const StackPage = () => {
-  const spaceArr = Object.keys(vars.space) as Sprinkles["gap"][];
-  const [gapCheckboxes, setGapCheckboxes] = React.useState<
-    Checkbox<Sprinkles["gap"]>[]
-  >(generateCheckboxes(spaceArr));
-  const [alignCheckboxes, setAlignCheckboxes] =
-    React.useState(alignCheckboxesArr);
+  const spaceArr = Object.keys(vars.space) as Sprinkles['gap'][]
+  const [gapCheckboxes, setGapCheckboxes] = React.useState<Checkbox<Sprinkles['gap']>[]>(
+    generateCheckboxes(spaceArr)
+  )
+  const [alignCheckboxes, setAlignCheckboxes] = React.useState(alignCheckboxesArr)
 
   return (
     <Doc>
       <Doc.Title>Stack</Doc.Title>
 
-      <Doc.Checkboxes
-        checkboxes={gapCheckboxes}
-        setCheckboxes={setGapCheckboxes}
-      >
+      <Doc.Checkboxes checkboxes={gapCheckboxes} setCheckboxes={setGapCheckboxes}>
         {(checked) => (
           <Doc.Block
             subTitle="Gap"
@@ -35,10 +31,7 @@ const StackPage = () => {
         )}
       </Doc.Checkboxes>
 
-      <Doc.Checkboxes
-        checkboxes={alignCheckboxes}
-        setCheckboxes={setAlignCheckboxes}
-      >
+      <Doc.Checkboxes checkboxes={alignCheckboxes} setCheckboxes={setAlignCheckboxes}>
         {(checked) => (
           <Doc.Block
             subTitle="Alignment"
@@ -53,36 +46,36 @@ const StackPage = () => {
         )}
       </Doc.Checkboxes>
     </Doc>
-  );
-};
+  )
+}
 
-export default StackPage;
+export default StackPage
 
-export type Type = "flex-start" | "flex-end" | "center" | "baseline";
+export type Type = 'flex-start' | 'flex-end' | 'center' | 'baseline'
 
 const alignCheckboxesArr: Checkbox<Type>[] = [
   {
-    name: "flex-start",
-    label: "flex-start",
+    name: 'flex-start',
+    label: 'flex-start',
     checked: true,
-    value: "flex-start",
+    value: 'flex-start',
   },
   {
-    name: "center",
-    label: "center",
+    name: 'center',
+    label: 'center',
     checked: false,
-    value: "center",
+    value: 'center',
   },
   {
-    name: "flex-end",
-    label: "flex-end",
+    name: 'flex-end',
+    label: 'flex-end',
     checked: false,
-    value: "flex-end",
+    value: 'flex-end',
   },
   {
-    name: "baseline",
-    label: "baseline",
+    name: 'baseline',
+    label: 'baseline',
     checked: false,
-    value: "baseline",
+    value: 'baseline',
   },
-];
+]
