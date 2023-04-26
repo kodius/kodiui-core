@@ -29,7 +29,7 @@ export const switchThumb = style({
   backgroundColor: 'white',
   borderRadius: '9999px',
   boxShadow: `0 2px 2px ${vars.colors.blackA7}`,
-  transition: 'transform 40ms',
+  transition: 'transform 200ms ease-in',
   transform: 'translateX(2px)',
   willChange: 'transform',
   selectors: {
