@@ -1,8 +1,10 @@
 import { vars } from '@kodiui/ui'
 import { style } from '@vanilla-extract/css'
+import { RecipeVariants, recipe } from '@vanilla-extract/recipes'
 
 export const switchRoot = style({
   all: 'unset',
+  cursor: 'pointer',
   width: '42px',
   height: '25px',
   backgroundColor: vars.colors.blackA9,
@@ -15,7 +17,7 @@ export const switchRoot = style({
   },
   selectors: {
     '&[data-state="checked"]': {
-      backgroundColor: `${vars.colors.red9}`,
+      backgroundColor: `${vars.colors.blackA9}`,
     },
   },
 })
@@ -36,3 +38,73 @@ export const switchThumb = style({
     },
   },
 })
+
+export const rootRecipe = recipe({
+  base: switchRoot,
+  variants: {
+    tone: {
+      brand: {
+        backgroundColor: vars.colors.blackA9,
+        boxShadow: `0 2px 10px ${vars.colors.blackA7}`,
+        ':focus': {
+          boxShadow: `0 0 0 1px ${vars.colors.brand}`,
+        },
+        selectors: {
+          '&[data-state="checked"]': {
+            backgroundColor: `${vars.colors.brandActive}`,
+          },
+        },
+      },
+      brandAccent: {
+        backgroundColor: vars.colors.blackA9,
+        boxShadow: `0 2px 10px ${vars.colors.blackA7}`,
+        ':focus': {
+          boxShadow: `0 0 0 1px ${vars.colors.brandAccent}`,
+        },
+        selectors: {
+          '&[data-state="checked"]': {
+            backgroundColor: `${vars.colors.brandAccentActive}`,
+          },
+        },
+      },
+      success: {
+        backgroundColor: vars.colors.blackA9,
+        boxShadow: `0 2px 10px ${vars.colors.blackA7}`,
+        ':focus': {
+          boxShadow: `0 0 0 1px ${vars.colors.green7}`,
+        },
+        selectors: {
+          '&[data-state="checked"]': {
+            backgroundColor: `${vars.colors.green9}`,
+          },
+        },
+      },
+      info: {
+        backgroundColor: vars.colors.blackA9,
+        boxShadow: `0 2px 10px ${vars.colors.blackA7}`,
+        ':focus': {
+          boxShadow: `0 0 0 1px ${vars.colors.yellow7}`,
+        },
+        selectors: {
+          '&[data-state="checked"]': {
+            backgroundColor: `${vars.colors.yellow9}`,
+          },
+        },
+      },
+      critical: {
+        backgroundColor: vars.colors.blackA9,
+        boxShadow: `0 2px 10px ${vars.colors.blackA7}`,
+        ':focus': {
+          boxShadow: `0 0 0 1px ${vars.colors.red7}`,
+        },
+        selectors: {
+          '&[data-state="checked"]': {
+            backgroundColor: `${vars.colors.red9}`,
+          },
+        },
+      },
+    },
+  },
+})
+
+export type SwitchVariants = RecipeVariants<typeof rootRecipe>

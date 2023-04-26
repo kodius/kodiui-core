@@ -1,14 +1,19 @@
 import * as React from 'react'
 import * as SwitchPrimitives from '@radix-ui/react-switch'
-import { switchRoot, switchThumb } from './Switch.css'
+import { SwitchVariants, rootRecipe, switchThumb } from './Switch.css'
 import classNames from 'classnames'
 
-export const Switch = React.forwardRef<
-  React.ElementRef<typeof SwitchPrimitives.Root>,
-  React.ComponentPropsWithoutRef<typeof SwitchPrimitives.Root>
->(({ className, ...props }, ref) => (
-  <SwitchPrimitives.Root className={classNames(switchRoot, className)} {...props} ref={ref}>
-    <SwitchPrimitives.Thumb className={switchThumb} />
-  </SwitchPrimitives.Root>
-))
+type Props = React.ComponentPropsWithoutRef<typeof SwitchPrimitives.Root> & SwitchVariants
+
+export const Switch = React.forwardRef<React.ElementRef<typeof SwitchPrimitives.Root>, Props>(
+  ({ className, tone, ...props }, ref) => (
+    <SwitchPrimitives.Root
+      className={classNames(rootRecipe({ tone: tone }), className)}
+      {...props}
+      ref={ref}
+    >
+      <SwitchPrimitives.Thumb className={switchThumb} />
+    </SwitchPrimitives.Root>
+  )
+)
 Switch.displayName = SwitchPrimitives.Root.displayName
