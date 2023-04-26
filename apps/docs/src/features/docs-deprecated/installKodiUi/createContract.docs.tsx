@@ -5,7 +5,7 @@ export const createConract: BuildElement = {
   description: {
     description: ['styles/contract.css.ts'],
     codeSnippet: [
-      `import { vars } from "@kodiui/ui";
+      `import { vars, tokens } from "@kodiui/ui";
 import { createTheme } from "@vanilla-extract/css";
 
 export const theme = createTheme(vars, tokens);`,
