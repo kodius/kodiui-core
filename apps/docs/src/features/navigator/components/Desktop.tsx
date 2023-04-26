@@ -9,6 +9,7 @@ export const Desktop: FC<PropsWithChildren> = (props) => {
         mobileSmall: 'fixed',
         tablet: 'static',
       }}
+      overflow="auto"
       height="screen"
       width={{ mobile: 'screen', tablet: '60' }}
       display={{

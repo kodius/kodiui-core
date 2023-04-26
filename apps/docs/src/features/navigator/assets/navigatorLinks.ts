@@ -19,10 +19,26 @@ export const navigatorLinks: Navigator[] = [
         href: routes.NextJsAppProject,
         state: 'todo',
       },
+      {
+        id: 2,
+        name: 'Design Workflow',
+        href: routes.NextJsAppProject,
+        state: 'todo',
+      },
     ],
   },
   {
     id: 1,
+    name: 'Guides',
+    isParent: true,
+    children: [
+      { id: 0, name: 'Design Workflow', href: routes.tabs, state: 'todo' },
+      { id: 1, name: 'Development Workflow', href: routes.tabs, state: 'todo' },
+      { id: 2, name: 'Contributing', href: routes.tabs, state: 'todo' },
+    ],
+  },
+  {
+    id: 2,
     name: 'ui',
     isParent: true,
     children: [
@@ -41,7 +57,7 @@ export const navigatorLinks: Navigator[] = [
     ],
   },
   {
-    id: 2,
+    id: 3,
     name: 'primitives',
     isParent: true,
     children: [
@@ -90,7 +106,7 @@ export const navigatorLinks: Navigator[] = [
     ],
   },
   {
-    id: 3,
+    id: 4,
     name: 'components',
     isParent: true,
     children: [
@@ -154,10 +170,52 @@ export const navigatorLinks: Navigator[] = [
         href: routes.animations,
         state: 'new',
       },
+      {
+        id: 10,
+        name: 'Accordion',
+        href: routes.animations,
+        state: 'todo',
+      },
+      {
+        id: 11,
+        name: 'Box',
+        href: routes.animations,
+        state: 'todo',
+      },
+      {
+        id: 12,
+        name: 'Alerts',
+        href: routes.animations,
+        state: 'todo',
+      },
+      {
+        id: 13,
+        name: 'Card',
+        href: routes.animations,
+        state: 'todo',
+      },
+      {
+        id: 14,
+        name: 'Checkbox',
+        href: routes.animations,
+        state: 'todo',
+      },
+      {
+        id: 15,
+        name: 'HiddenVisually',
+        href: routes.animations,
+        state: 'todo',
+      },
+      {
+        id: 16,
+        name: 'Loader',
+        href: routes.animations,
+        state: 'todo',
+      },
     ],
   },
   {
-    id: 4,
+    id: 5,
     name: 'typography',
     isParent: true,
     children: [

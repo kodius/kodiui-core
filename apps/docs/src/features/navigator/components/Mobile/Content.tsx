@@ -7,7 +7,15 @@ export const Content: FC<PropsWithChildren> = (props) => {
   if (!isVisible) return null
   return (
     <Animation animation="fadeIn" animationDuration="0.3s">
-      <Box p="md" width="screen" position="absolute" background="white" left="0" height="screen">
+      <Box
+        p="md"
+        width="screen"
+        position="absolute"
+        background="white"
+        left="0"
+        height="screen"
+        zIndex="90"
+      >
         <Stack>{props.children}</Stack>
       </Box>
     </Animation>
