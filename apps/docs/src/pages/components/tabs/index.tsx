@@ -15,11 +15,15 @@ const TabsPage = () => {
         exampleWithCode={
           <Tabs defaultValue="tab1">
             <TabsList>
-              <TabsTrigger value="tab1">Tab1</TabsTrigger>
-              <TabsTrigger value="tab2">Tab2</TabsTrigger>
+              <TabsTrigger value="tab1">Tab 1</TabsTrigger>
+              <TabsTrigger value="tab2">Tab 2</TabsTrigger>
             </TabsList>
-            <TabsContent value="tab1">Tab1 Content</TabsContent>
-            <TabsContent value="tab2">Tab2 Content</TabsContent>
+            <TabsContent value="tab1">
+              <Doc.Pane height="64">Tab 1</Doc.Pane>
+            </TabsContent>
+            <TabsContent value="tab2">
+              <Doc.Pane height="64">Tab 2</Doc.Pane>
+            </TabsContent>
           </Tabs>
         }
       />

@@ -1,5 +1,5 @@
 import React, { useState } from 'react'
-import { Box, BoxProps, Stack } from '@kodiui/ui'
+import { Box, BoxProps, Center, Stack } from '@kodiui/ui'
 import { Checkboxes } from './component/Checkboxes'
 import { placeholder } from './Doc.css'
 import { CodeSnippet } from './component/CodeSnippet'
@@ -129,7 +129,6 @@ interface PlaceholderProps extends Props {
   height: BoxProps['height']
 }
 
-// TODO: Make it cooler
 const Placeholder = ({ children, ...props }: Partial<PlaceholderProps & HardStyles & BoxProps>) => {
   return (
     <Box
@@ -147,6 +146,24 @@ const Placeholder = ({ children, ...props }: Partial<PlaceholderProps & HardStyl
   )
 }
 
+const Pane = ({ children, ...props }: Partial<PlaceholderProps & HardStyles & BoxProps>) => {
+  return (
+    <Box
+      padding="sm"
+      borderWidth="md"
+      color={'gray11'}
+      borderColor="gray8"
+      background="gray3"
+      borderStyle="solid"
+      fontSize="sm"
+      style={{ fontFamily: 'monospace' }}
+      {...props}
+    >
+      <Center direction="center">{children}</Center>
+    </Box>
+  )
+}
+
 Doc.Title = Title
 Doc.Subtitle = SubTitle
 Doc.Description = Description
@@ -155,3 +172,4 @@ Doc.Placeholder = Placeholder
 Doc.Checkboxes = Checkboxes
 Doc.CodeSnippet = CodeSnippet
 Doc.Block = Block
+Doc.Pane = Pane
