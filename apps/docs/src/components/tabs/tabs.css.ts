@@ -18,6 +18,7 @@ export const tabsTriggerStyle = style({
   paddingLeft: vars.space.xs,
   paddingRight: vars.space.xs,
   paddingBottom: vars.space.xs,
+  color: vars.colors.blackA12,
   selectors: {
     '&[data-state=active]': {
       fontWeight: 'bolder',
