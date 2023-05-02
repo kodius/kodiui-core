@@ -65,7 +65,7 @@ export const navigatorLinks: Navigator[] = [
         id: 0,
         name: 'Stack',
         href: routes.stack,
-        state: 'dev',
+        state: 'new',
       },
       {
         id: 1,
