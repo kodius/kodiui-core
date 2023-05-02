@@ -107,36 +107,11 @@ interface BlockProps extends ExampleProps {
   subTitle?: string
   description?: string
   exampleWithCode?: React.ReactNode
-  dependencies?: BlockDependencies[]
-  title?: string
 }
 
-type BlockDependencies = 'Radix-ui'
-
-const Block = ({
-  exampleWithCode,
-  subTitle,
-  description,
-  canPlay,
-  children,
-  dependencies,
-  title,
-}: BlockProps) => {
-  const renderDependecies = dependencies?.map((d) => (
-    <TextLink key={d} href={'https://www.radix-ui.com/'}>
-      <Badge tone="neutral">{d}</Badge>
-    </TextLink>
-  ))
+const Block = ({ exampleWithCode, subTitle, description, canPlay, children }: BlockProps) => {
   return (
     <>
-      {title && dependencies && (
-        <Cluster alignItems="center">
-          <Title>{title}</Title>
-          {renderDependecies}
-        </Cluster>
-      )}
-      {!title && dependencies && renderDependecies}
-      {title && !dependencies && <Title>{title}</Title>}
       <Stack gap={'lg'}>
         <Stack gap="xs">
           <SubTitle>{subTitle}</SubTitle>
@@ -230,11 +205,22 @@ interface Prop {
 
 interface PropsProps {
   props: Prop[]
+  link?: {
+    href: string
+    name: string
+  }
 }
 
 const Props = (props: PropsProps) => {
   return (
     <Stack gap="3xl">
+      {props.link && (
+        <Text tone="brand">
+          <TextLink target="_blank" href={props.link.href}>
+            {props.link.name}
+          </TextLink>
+        </Text>
+      )}
       {props.props.map((prop) => {
         return (
           <Stack key={prop.name}>
@@ -253,6 +239,26 @@ const Props = (props: PropsProps) => {
   )
 }
 
+type Dependencies = 'Radix-ui'
+
+interface HeaderProps {
+  title: string
+  description?: string
+  dependsOn?: Dependencies
+}
+
+const Header = (props: HeaderProps) => {
+  return (
+    <Stack>
+      <Cluster>
+        <Title>{props.title}</Title>
+        <Badge tone="neutral">{props.dependsOn}</Badge>
+      </Cluster>
+      {props.description && <Description>{props.description}</Description>}
+    </Stack>
+  )
+}
+
 Doc.Title = Title
 Doc.Subtitle = SubTitle
 Doc.Description = Description
@@ -265,3 +271,4 @@ Doc.Pane = Pane
 Doc.Download = Download
 Doc.Versions = Versions
 Doc.Props = Props
+Doc.Header = Header

@@ -6,7 +6,11 @@ import React from 'react'
 const StackPage = () => {
   return (
     <Doc>
-      <Doc.Title>Stack</Doc.Title>
+      <Doc.Header
+        title="Stack"
+        dependsOn="Radix-ui"
+        description="Stack is a container component for arranging elements vertically"
+      />
       <Tabs defaultValue="tab1">
         <TabsList>
           <TabsTrigger value="tab1">Component</TabsTrigger>
@@ -15,10 +19,6 @@ const StackPage = () => {
         </TabsList>
         <TabsContent value="tab1">
           <Stack gap="3xl">
-            <Doc.Block
-              subTitle="Introduction"
-              description="Stack is a container component for arranging elements vertically"
-            />
             <Doc.Block
               subTitle="Example"
               description={`The spacing between childrens can be adjusted using the gap prop.`}
@@ -46,6 +46,10 @@ const StackPage = () => {
         </TabsContent>
         <TabsContent value="tab2">
           <Doc.Props
+            link={{
+              name: 'Radix doc',
+              href: 'https://www.radix-ui.com/docs/primitives/components/context-menu#root',
+            }}
             props={[
               {
                 name: 'gap',
