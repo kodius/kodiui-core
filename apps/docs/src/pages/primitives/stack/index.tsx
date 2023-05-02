@@ -1,47 +1,74 @@
-import { Doc, Checkbox, generateCheckboxes } from '@/features/documentation'
-import { BoxProps, Stack, vars } from '@kodiui/ui'
+import { Tabs, TabsList, TabsTrigger, TabsContent } from '@/components'
+import { Doc } from '@/features/documentation'
+import { Space, Stack } from '@kodiui/ui'
 import React from 'react'
 
 const StackPage = () => {
-  const spaceArr = Object.keys(vars.space) as BoxProps['gap'][]
-  const [gapCheckboxes, setGapCheckboxes] = React.useState<Checkbox<BoxProps['gap']>[]>(
-    generateCheckboxes(spaceArr)
-  )
-  const [alignCheckboxes, setAlignCheckboxes] = React.useState(alignCheckboxesArr)
-
   return (
     <Doc>
       <Doc.Title>Stack</Doc.Title>
-
-      <Doc.Checkboxes checkboxes={gapCheckboxes} setCheckboxes={setGapCheckboxes}>
-        {(checked) => (
-          <Doc.Block
-            subTitle="Gap"
-            exampleWithCode={
-              <Stack gap={checked?.value} alignItems="center">
-                <Doc.Placeholder width="full" />
-                <Doc.Placeholder width="full" />
-                <Doc.Placeholder width="full" />
-              </Stack>
-            }
+      <Tabs defaultValue="tab1">
+        <TabsList>
+          <TabsTrigger value="tab1">Component</TabsTrigger>
+          <TabsTrigger value="tab2">Props</TabsTrigger>
+          <TabsTrigger value="tab3">Versions</TabsTrigger>
+        </TabsList>
+        <TabsContent value="tab1">
+          <Stack gap="3xl">
+            <Doc.Block
+              subTitle="Introduction"
+              description="Stack is a container component for arranging elements vertically"
+            />
+            <Doc.Block
+              subTitle="Example"
+              description={`The spacing between childrens can be adjusted using the gap prop.`}
+              exampleWithCode={
+                <Stack>
+                  <Doc.Pane>Element 1</Doc.Pane>
+                  <Doc.Pane>Element 2</Doc.Pane>
+                  <Doc.Pane>Element 3</Doc.Pane>
+                </Stack>
+              }
+            />
+            <Doc.Block
+              subTitle="Resposive properties"
+              description="You can set responsive properties as gap={{ mobile: '5xxl', desktop: 'sm' }}"
+              exampleWithCode={
+                <Stack gap={{ mobile: '5xxl', desktop: 'sm' }}>
+                  <Doc.Pane>Element 1</Doc.Pane>
+                  <Doc.Pane>Element 2</Doc.Pane>
+                  <Doc.Pane>Element 3</Doc.Pane>
+                </Stack>
+              }
+            />
+          </Stack>
+          <Doc.Download />
+        </TabsContent>
+        <TabsContent value="tab2">
+          <Doc.Props
+            props={[
+              {
+                name: 'gap',
+                values: Object.keys(Space).map((space) => space),
+                description: 'The spacing between childrens can be adjusted using the gap prop.',
+              },
+            ]}
           />
-        )}
-      </Doc.Checkboxes>
-
-      <Doc.Checkboxes checkboxes={alignCheckboxes} setCheckboxes={setAlignCheckboxes}>
-        {(checked) => (
-          <Doc.Block
-            subTitle="Alignment"
-            exampleWithCode={
-              <Stack alignItems={checked?.value}>
-                <Doc.Placeholder width="6/12" />
-                <Doc.Placeholder width="6/12" />
-                <Doc.Placeholder width="6/12" />
-              </Stack>
-            }
+        </TabsContent>
+        <TabsContent value="tab3">
+          <Doc.Versions
+            versions={[
+              {
+                title: 'Resposive values',
+                description:
+                  "You can set responsive properties as gap={{ mobile: '5xxl', desktop: 'sm' }}",
+                version: '0.0.2',
+              },
+              { title: 'Initial', description: 'Initial', version: '0.0.1' },
+            ]}
           />
-        )}
-      </Doc.Checkboxes>
+        </TabsContent>
+      </Tabs>
     </Doc>
   )
 }
@@ -49,30 +76,3 @@ const StackPage = () => {
 export default StackPage
 
 export type Type = 'flex-start' | 'flex-end' | 'center' | 'baseline'
-
-const alignCheckboxesArr: Checkbox<Type>[] = [
-  {
-    name: 'flex-start',
-    label: 'flex-start',
-    checked: true,
-    value: 'flex-start',
-  },
-  {
-    name: 'center',
-    label: 'center',
-    checked: false,
-    value: 'center',
-  },
-  {
-    name: 'flex-end',
-    label: 'flex-end',
-    checked: false,
-    value: 'flex-end',
-  },
-  {
-    name: 'baseline',
-    label: 'baseline',
-    checked: false,
-    value: 'baseline',
-  },
-]

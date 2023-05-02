@@ -9,7 +9,7 @@ import React from 'react'
 
 const ButtonPage = () => {
   return (
-    <Doc downloadable>
+    <Doc>
       <Doc.Title>Button</Doc.Title>
       <Doc.Block subTitle="Button Variants" exampleWithCode={ButtonVariants()} />
       <Doc.Block subTitle="Button sizes" exampleWithCode={ButtonSizes()} />

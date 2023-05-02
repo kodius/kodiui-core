@@ -17,7 +17,7 @@ const InputPage = () => {
   }
 
   return (
-    <Doc downloadable>
+    <Doc>
       <Stack>
         <Doc.Title>Input</Doc.Title>
         <Badge tone="brandAccent">react-hook-form</Badge>

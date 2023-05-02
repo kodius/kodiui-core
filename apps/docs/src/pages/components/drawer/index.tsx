@@ -38,7 +38,7 @@ const DrawerPage = () => {
   }
 
   return (
-    <Doc downloadable>
+    <Doc>
       <Doc.Title>Drawer</Doc.Title>
       <Doc.Block
         subTitle=""

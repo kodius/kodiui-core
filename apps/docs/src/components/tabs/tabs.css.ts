@@ -17,7 +17,7 @@ export const tabsTriggerStyle = style({
   cursor: 'pointer',
   paddingLeft: vars.space.xs,
   paddingRight: vars.space.xs,
-  paddingBottom: vars.space.xxs,
+  paddingBottom: vars.space.xs,
   selectors: {
     '&[data-state=active]': {
       fontWeight: 'bolder',
@@ -28,5 +28,5 @@ export const tabsTriggerStyle = style({
 })
 
 export const tabsContentStyle = style({
-  paddingTop: vars.space.md,
+  paddingTop: vars.space['3xl'],
 })

@@ -6,7 +6,7 @@ import React from 'react'
 
 const TextLinkPage = () => {
   return (
-    <Doc downloadable>
+    <Doc>
       <Doc.Title>TextLink</Doc.Title>
       <Doc.Block
         subTitle=""

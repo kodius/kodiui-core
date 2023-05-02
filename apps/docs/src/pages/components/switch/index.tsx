@@ -7,7 +7,7 @@ import { Cluster, Stack } from '@kodiui/ui'
 const SwitchPage = () => {
   const [isChecked, toggleSwitch] = React.useState(false)
   return (
-    <Doc downloadable>
+    <Doc>
       <Stack>
         <Doc.Title>Switch</Doc.Title>
         <Badge>@radix-ui/react-switch</Badge>

@@ -5,7 +5,7 @@ import { Stack } from '@kodiui/ui'
 
 const TabsPage = () => {
   return (
-    <Doc downloadable>
+    <Doc>
       <Stack>
         <Doc.Title>Tabs</Doc.Title>
         <Badge>@radix-ui/react-tabs</Badge>

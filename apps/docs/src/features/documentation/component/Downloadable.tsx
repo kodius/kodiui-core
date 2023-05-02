@@ -5,8 +5,11 @@ import { CodeSnippet } from './CodeSnippet'
 
 export const Downloadable = () => {
   return (
-    <Stack gap="sm">
-      <Doc.Subtitle>Install</Doc.Subtitle>
+    <Stack gap="md">
+      <Doc.Block
+        subTitle="Install"
+        description="You can install this component by running a CLI script"
+      />
       <CodeSnippet initialOpen codeSnippet={`npx @kodiui/cli@latest`} />
     </Stack>
   )

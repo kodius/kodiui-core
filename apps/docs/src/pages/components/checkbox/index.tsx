@@ -7,7 +7,7 @@ import { Checkbox } from '@/components/inputs/Checkbox/Checkbox'
 
 const CheckboxPage = () => {
   return (
-    <Doc downloadable>
+    <Doc>
       <Stack>
         <Doc.Title>Switch</Doc.Title>
         <Badge>@radix-ui/react-checkbox</Badge>

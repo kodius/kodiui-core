@@ -21,7 +21,7 @@ export const Mobile: FC<PropsWithChildren> = (props) => {
     >
       <Cluster gap="xs">
         <Animation animation="fadeInBloom" animationDuration="0.3s">
-          <Button onClick={toggleContent} variant="ghost">
+          <Button onClick={toggleContent} variant="transparent">
             <Image src={MenuSvg} alt="menu" width="25" />
           </Button>
         </Animation>

@@ -9,6 +9,9 @@ export { Typography } from "./components/Typography";
 export { type SpaceTypes } from "./styles/tokens/space.css";
 export { type FontSizeTypes } from "./styles/tokens/font-size.css";
 
+// Properties
+export { Space } from "./styles/tokens/space.css";
+
 // Animations
 export { Animation } from "./components/Animation";
 

@@ -5,7 +5,7 @@ import React from 'react'
 
 const BadgePage = () => {
   return (
-    <Doc downloadable>
+    <Doc>
       <Doc.Title>Badge</Doc.Title>
       <Doc.Block
         subTitle="Tone"

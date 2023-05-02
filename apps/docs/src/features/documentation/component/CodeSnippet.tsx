@@ -1,5 +1,6 @@
+import { ChevronDown, ChevronUp, Clipboard, ClipboardCheck } from '@/assets'
 import { Button } from '@/components'
-import { Box, BoxProps, Cluster } from '@kodiui/ui'
+import { BoxProps, Cluster, Stack } from '@kodiui/ui'
 import dynamic from 'next/dynamic'
 import React, { Suspense, useEffect } from 'react'
 import { SyntaxHighlighterProps } from 'react-syntax-highlighter'
@@ -44,24 +45,18 @@ export const CodeSnippet = ({
   const position: BoxProps = isSnippetOpen ? ({ bottom: '0' } as const) : ({ top: '0' } as const)
 
   return (
-    <Box position="relative">
+    <Stack gap="sm">
       {isSnippetOpen && (
         <Suspense fallback={<div>Loading...</div>}>
           <Syntax showLineNumber={showLineNumbers} code={codeSnippet} />
         </Suspense>
       )}
-      <Cluster
-        justifyContent="flex-end"
-        gap="xs"
-        right="0"
-        background="white"
-        borderRadius="xs"
-        position="absolute"
-        {...position}
-      >
+      <Cluster justifyContent="flex-end" gap="xs" background="white" {...position}>
         {isSnippetOpen && (
           <Button
             onClick={() => handleCopy(codeSnippet)}
+            icon={isCopied ? <ClipboardCheck /> : <Clipboard />}
+            tone={isCopied ? 'success' : 'neutral'}
             size="sm"
             variant="transparent"
             width="fit"
@@ -70,11 +65,18 @@ export const CodeSnippet = ({
           </Button>
         )}
         {!initialOpen && (
-          <Button onClick={toggleSnippet} size="sm" variant="transparent" width="fit">
+          <Button
+            tone="neutral"
+            onClick={toggleSnippet}
+            size="sm"
+            icon={isSnippetOpen ? <ChevronUp /> : <ChevronDown />}
+            variant="transparent"
+            width="fit"
+          >
             {!isSnippetOpen ? 'Code' : 'Close'}
           </Button>
         )}
       </Cluster>
-    </Box>
+    </Stack>
   )
 }
