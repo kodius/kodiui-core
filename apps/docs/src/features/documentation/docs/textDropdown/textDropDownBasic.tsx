@@ -1,5 +1,5 @@
 import { Text, TextDropdown } from '@/components'
-import { TextDropdownItem } from '@/components/input/TextDropdown/TextDropdown'
+import { TextDropdownItem } from '@/components/inputs/TextDropdown/TextDropdown'
 import { Stack } from '@kodiui/ui'
 import React, { useState } from 'react'
 

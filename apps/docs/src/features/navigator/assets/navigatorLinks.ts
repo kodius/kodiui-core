@@ -150,13 +150,13 @@ export const navigatorLinks: Navigator[] = [
         id: 6,
         name: 'Switch',
         href: routes.switch,
-        state: 'dev',
+        state: 'new',
       },
       {
         id: 7,
         name: 'Tabs',
         href: routes.tabs,
-        state: 'dev',
+        state: 'new',
       },
       {
         id: 8,
@@ -197,8 +197,8 @@ export const navigatorLinks: Navigator[] = [
       {
         id: 14,
         name: 'Checkbox',
-        href: routes.animations,
-        state: 'todo',
+        href: routes.checkbox,
+        state: 'dev',
       },
       {
         id: 15,

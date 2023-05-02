@@ -5,7 +5,7 @@ import React, { Suspense, useEffect } from 'react'
 import { SyntaxHighlighterProps } from 'react-syntax-highlighter'
 import { copyText } from '../utils'
 
-const Syntax = dynamic(() => import('@/components/input/SyntaxHighligter'), {
+const Syntax = dynamic(() => import('@/components/inputs/SyntaxHighligter'), {
   ssr: false,
 })
 

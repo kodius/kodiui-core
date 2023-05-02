@@ -1,14 +1,17 @@
 import * as React from 'react'
 
-import { Switch } from '@/components'
+import { Badge, Switch } from '@/components'
 import { Doc } from '@/features/documentation'
-import { Cluster } from '@kodiui/ui'
+import { Cluster, Stack } from '@kodiui/ui'
 
 const SwitchPage = () => {
   const [isChecked, toggleSwitch] = React.useState(false)
   return (
     <Doc downloadable>
-      <Doc.Title>Switch</Doc.Title>
+      <Stack>
+        <Doc.Title>Switch</Doc.Title>
+        <Badge>@radix-ui/react-switch</Badge>
+      </Stack>
       <Doc.Block
         subTitle="Tone"
         exampleWithCode={

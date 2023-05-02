@@ -5,7 +5,7 @@ import dynamic from 'next/dynamic'
 import { BoxProps, Cluster } from '@kodiui/ui'
 import { copyText } from '../../helpers/copyText'
 
-const Syntax = dynamic(() => import('@/components/input/SyntaxHighligter'), {
+const Syntax = dynamic(() => import('@/components/inputs/SyntaxHighligter'), {
   ssr: false,
 })
 

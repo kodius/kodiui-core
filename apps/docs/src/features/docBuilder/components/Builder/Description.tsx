@@ -5,7 +5,7 @@ import React, { FC } from 'react'
 import { copyText } from '../../helpers/copyText'
 import { BuildElement } from '../../types'
 
-const Syntax = dynamic(() => import('@/components/input/SyntaxHighligter'), {
+const Syntax = dynamic(() => import('@/components/inputs/SyntaxHighligter'), {
   ssr: false,
 })
 
