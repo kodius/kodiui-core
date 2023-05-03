@@ -3,7 +3,6 @@ import * as React from 'react'
 import { Switch, Tabs, TabsContent, TabsList, TabsTrigger } from '@/components'
 import { Doc, PropsProps, VersionsProps } from '@/features/documentation'
 import { Cluster, Stack } from '@kodiui/ui'
-import { Space } from '@kodiui/ui'
 
 const SwitchPage = () => {
   const [isChecked, toggleSwitch] = React.useState(false)
@@ -68,7 +67,13 @@ const SwitchPage = () => {
                 </Cluster>
               }
             />
+            <Doc.Block
+              subTitle="Disabled"
+              description="When disabled the user can't toggle the component."
+              exampleWithCode={<Switch disabled />}
+            />
           </Stack>
+          <Doc.Download />
         </TabsContent>
         <TabsContent value="tab2">
           <Doc.Props {...props}>tab2</Doc.Props>
