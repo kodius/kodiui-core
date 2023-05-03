@@ -1,5 +1,5 @@
 import React from 'react'
-import { Doc } from '@/features/documentation'
+import { Doc, PropsProps, VersionsProps } from '@/features/documentation'
 import { Stack } from '@kodiui/ui'
 import { Tabs, TabsList, TabsTrigger, TabsContent } from '@/components/tabs/Tabs'
 import { Slider } from '@/components/Slider/Slider'
@@ -20,15 +20,22 @@ const SliderPage = () => {
         </TabsList>
         <TabsContent value="tab1">
           <Stack gap="3xl">
-            <Doc.Block exampleWithCode={<Slider defaultValue={[50]} max={100} step={1} />} />{' '}
+            <Doc.Block
+              subTitle="Example"
+              exampleWithCode={<Slider defaultValue={[50]} max={100} step={1} />}
+            />{' '}
+            <Doc.Block
+              subTitle="Disabled"
+              exampleWithCode={<Slider defaultValue={[50]} max={100} step={1} disabled />}
+            />{' '}
           </Stack>
           <Doc.Download />
         </TabsContent>
         <TabsContent value="tab2">
-          <>props</>
+          <Doc.Props {...props} />
         </TabsContent>
         <TabsContent value="tab3">
-          <>vers</>
+          <Doc.Versions {...versions} />
         </TabsContent>
       </Tabs>
     </Doc>
@@ -36,3 +43,20 @@ const SliderPage = () => {
 }
 
 export default SliderPage
+
+const props: PropsProps = {
+  link: {
+    name: 'Radix doc',
+    href: 'https://www.radix-ui.com/docs/primitives/components/slider#api-reference',
+  },
+}
+const versions: VersionsProps = {
+  versions: [
+    {
+      title: 'Initial component API using Radix and custom styles.',
+      description: 'Component API is 1 on 1 with Radix',
+      version: '0.0.1',
+    },
+    { title: 'Initial', description: 'Initial', version: '0.0.1' },
+  ],
+}

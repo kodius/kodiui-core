@@ -205,7 +205,7 @@ interface Prop {
 }
 
 export interface PropsProps {
-  props: Prop[]
+  props?: Prop[]
   link?: {
     href: string
     name: string
@@ -222,20 +222,21 @@ const Props = (props: PropsProps) => {
           </TextLink>
         </Text>
       )}
-      {props.props.map((prop) => {
-        return (
-          <Stack key={prop.name}>
-            <Cluster gap="xs">
-              <Text weight="strong">{prop.name}: </Text>
-              {prop.values.map((value) => {
-                return <Text color="gray10" key={value}>{`"${value}"`}</Text>
-              })}
-            </Cluster>
-            <Description>{prop.description}</Description>
-            <Divider />
-          </Stack>
-        )
-      })}
+      {props.props &&
+        props.props.map((prop) => {
+          return (
+            <Stack key={prop.name}>
+              <Cluster gap="xs">
+                <Text weight="strong">{prop.name}: </Text>
+                {prop.values.map((value) => {
+                  return <Text color="gray10" key={value}>{`"${value}"`}</Text>
+                })}
+              </Cluster>
+              <Description>{prop.description}</Description>
+              <Divider />
+            </Stack>
+          )
+        })}
     </Stack>
   )
 }
