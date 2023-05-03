@@ -36,6 +36,12 @@ export const accordionContentStyle = style({
 
 export const accordionItemStyle = style({
   overflow: 'hidden',
+  outline: 'none',
+  ':focus-within': {
+    position: 'relative',
+    zIndex: 1,
+    boxShadow: `0 0 0 1px ${vars.colors.gray7}`,
+  },
 })
 
 export const accordionContentText = style({
@@ -44,6 +50,7 @@ export const accordionContentText = style({
 
 export const accordionTriggerStyle = style({
   cursor: 'pointer',
+  outline: 'none',
   border: 'none',
   fontFamily: 'inherit',
   padding: `0 ${vars.space.md}`,
@@ -79,3 +86,7 @@ globalStyle(`${accordionTriggerStyle} svg`, {
 globalStyle(`${accordionTriggerStyle}[data-state=open] > svg`, {
   transform: 'rotate(180deg)',
 })
+
+// globalStyle('button', {
+//   outline: 'none',
+// })

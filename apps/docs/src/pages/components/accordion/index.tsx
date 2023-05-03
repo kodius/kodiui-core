@@ -141,5 +141,12 @@ const props: PropsProps = {
   props: [],
 }
 const versions: VersionsProps = {
-  versions: [{ title: 'Initial', description: 'Initial', version: '0.0.1' }],
+  versions: [
+    {
+      title: 'Accesiblity',
+      description: 'Add accesibility for outline on target',
+      version: '0.0.2',
+    },
+    { title: 'Initial', description: 'Initial', version: '0.0.1' },
+  ],
 }
