@@ -174,7 +174,7 @@ export const navigatorLinks: Navigator[] = [
         id: 10,
         name: 'Accordion',
         href: routes.accordion,
-        state: 'dev',
+        state: 'new',
       },
       {
         id: 11,
