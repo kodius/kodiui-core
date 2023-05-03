@@ -214,6 +214,12 @@ export const navigatorLinks: Navigator[] = [
       },
       {
         id: 17,
+        name: 'Tooltip',
+        href: routes.tooltip,
+        state: 'new',
+      },
+      {
+        id: 18,
         name: 'Slider',
         href: routes.slider,
         state: 'dev',

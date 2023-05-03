@@ -1,6 +1,6 @@
 import { Animation, Box, BoxProps } from '@kodiui/ui'
 import classNames from 'classnames'
-import React, { FC } from 'react'
+import React from 'react'
 import { buttonRecipe, buttonStyle, ButtonVariants } from './button.css'
 import { Loading } from './Loading'
 
@@ -12,7 +12,8 @@ interface Props {
 
 type ButtonType = BoxProps & Props & ButtonVariants
 
-export const Button: FC<ButtonType> = ({ loading, ...props }) => {
+export const Button = React.forwardRef<HTMLButtonElement, ButtonType>((props, forwardRef) => {
+  const { loading } = props
   const children = !loading ? (
     props.children
   ) : (
@@ -45,12 +46,14 @@ export const Button: FC<ButtonType> = ({ loading, ...props }) => {
   }
 
   return (
-    <Box as="button" className={recipe} {...props}>
+    <Box as="button" ref={forwardRef} className={recipe} {...props}>
       {content}
     </Box>
   )
-}
+})
 
 Button.defaultProps = {
   side: 'left',
 }
+
+Button.displayName = 'Button'

@@ -1,4 +1,4 @@
-import React, { useState } from 'react'
+import React, { FC, PropsWithChildren, useState } from 'react'
 import { Box, BoxProps, Center, Cluster, Stack } from '@kodiui/ui'
 import { Checkboxes } from './component/Checkboxes'
 import { placeholder } from './Doc.css'
@@ -7,7 +7,7 @@ import { Badge, Button, Divider, Heading, Text, TextLink } from '@/components'
 import reactElementToJSXString from 'react-element-to-jsx-string'
 import { Downloadable } from './component/Downloadable'
 import { PlayIcon } from '@/assets/icons/PlayIcon'
-import { PauseIcon } from '@/assets'
+import { InfoCircle, PauseIcon } from '@/assets'
 import { ChangeBoxWidth } from './utils'
 // eslint-disable-next-line import/no-unresolved
 import { HardStyles } from '@kodiui/ui/dist/styles/hardStyle'
@@ -107,16 +107,18 @@ interface BlockProps extends ExampleProps {
   subTitle?: string
   description?: string
   exampleWithCode?: React.ReactNode
+  note?: string
 }
 
-const Block = ({ exampleWithCode, subTitle, description, canPlay }: BlockProps) => {
+const Block = ({ exampleWithCode, subTitle, description, canPlay, note }: BlockProps) => {
   return (
     <>
       <Stack gap={'lg'}>
         <Stack gap="xs">
-          <SubTitle>{subTitle}</SubTitle>
-          <Description>{description}</Description>
+          {subTitle && <SubTitle>{subTitle}</SubTitle>}
+          {description && <Description>{description}</Description>}
         </Stack>
+        {note && <Note>{note}</Note>}
         {exampleWithCode && <ExampleWithCode canPlay={canPlay}>{exampleWithCode}</ExampleWithCode>}
       </Stack>
     </>
@@ -258,6 +260,16 @@ const Header = (props: HeaderProps) => {
   )
 }
 
+const Note: FC<PropsWithChildren> = ({ children }) => {
+  return (
+    <Box p="sm" background="infoLight" borderRadius="sm" color="infoActive">
+      <Text icon={<InfoCircle />} tone="info">
+        {children}
+      </Text>
+    </Box>
+  )
+}
+
 Doc.Title = Title
 Doc.Subtitle = SubTitle
 Doc.Description = Description
@@ -271,3 +283,4 @@ Doc.Download = Download
 Doc.Versions = Versions
 Doc.Props = Props
 Doc.Header = Header
+Doc.Note = Note
