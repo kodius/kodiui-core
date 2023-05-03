@@ -173,8 +173,8 @@ export const navigatorLinks: Navigator[] = [
       {
         id: 10,
         name: 'Accordion',
-        href: routes.animations,
-        state: 'todo',
+        href: routes.accordion,
+        state: 'dev',
       },
       {
         id: 11,

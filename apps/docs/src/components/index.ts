@@ -23,3 +23,6 @@ export { Tabs, TabsList, TabsContent, TabsTrigger } from './tabs/Tabs'
 
 // Tooltip
 export { Tooltip } from './Tooltip/Tooltip'
+
+// Accordion
+export * from './Accordion/Accordion'

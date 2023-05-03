@@ -34,6 +34,7 @@ export const routes = {
   animations: `${components}/animations`,
   checkbox: `${components}/checkbox`,
   tooltip: `${components}/tooltip`,
+  accordion: `${components}/accordion`,
   // Typography
   headings: `${typography}/headings`,
   textLink: `${typography}/text-link`,
