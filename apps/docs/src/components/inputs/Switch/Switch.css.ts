@@ -17,7 +17,7 @@ export const switchRoot = style({
   },
   selectors: {
     '&[data-state="checked"]': {
-      backgroundColor: `${vars.colors.blackA9}`,
+      backgroundColor: `${vars.colors.blackA12}`,
     },
   },
 })
@@ -26,7 +26,7 @@ export const switchThumb = style({
   display: 'block',
   width: '21px',
   height: '21px',
-  backgroundColor: 'white',
+  backgroundColor: vars.colors.white,
   borderRadius: '9999px',
   boxShadow: `0 2px 2px ${vars.colors.blackA7}`,
   transition: 'transform 200ms ease-in',

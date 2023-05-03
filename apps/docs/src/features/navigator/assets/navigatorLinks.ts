@@ -150,7 +150,7 @@ export const navigatorLinks: Navigator[] = [
         id: 6,
         name: 'Switch',
         href: routes.switch,
-        state: 'dev',
+        state: 'new',
       },
       {
         id: 7,
