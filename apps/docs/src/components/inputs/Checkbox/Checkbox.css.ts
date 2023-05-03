@@ -13,10 +13,14 @@ export const checkboxRoot = style({
   justifyContent: 'center',
   boxShadow: `0 2px 10px ${vars.colors.blackA7}`,
   ':hover': {
-    backgroundColor: vars.colors.red6,
+    // TODO: change indigo6 to some brand color
+    backgroundColor: vars.colors.indigo6,
   },
   ':focus': {
     boxShadow: `0 0 0 1px ${vars.colors.blackA12}`,
+  },
+  ':disabled': {
+    backgroundColor: vars.colors.gray2,
   },
 })
 

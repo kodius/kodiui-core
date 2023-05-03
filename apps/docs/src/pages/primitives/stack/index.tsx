@@ -1,7 +1,7 @@
+import React from 'react'
 import { Tabs, TabsList, TabsTrigger, TabsContent } from '@/components'
 import { Doc, PropsProps, VersionsProps } from '@/features/documentation'
 import { Space, Stack } from '@kodiui/ui'
-import React from 'react'
 
 const StackPage = () => {
   return (
