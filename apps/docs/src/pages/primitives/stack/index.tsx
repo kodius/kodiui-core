@@ -1,5 +1,5 @@
 import { Tabs, TabsList, TabsTrigger, TabsContent } from '@/components'
-import { Doc } from '@/features/documentation'
+import { Doc, PropsProps, VersionsProps } from '@/features/documentation'
 import { Space, Stack } from '@kodiui/ui'
 import React from 'react'
 
@@ -45,32 +45,10 @@ const StackPage = () => {
           <Doc.Download />
         </TabsContent>
         <TabsContent value="tab2">
-          <Doc.Props
-            link={{
-              name: 'Radix doc',
-              href: 'https://www.radix-ui.com/docs/primitives/components/context-menu#root',
-            }}
-            props={[
-              {
-                name: 'gap',
-                values: Object.keys(Space).map((space) => space),
-                description: 'The spacing between childrens can be adjusted using the gap prop.',
-              },
-            ]}
-          />
+          <Doc.Props {...props} />
         </TabsContent>
         <TabsContent value="tab3">
-          <Doc.Versions
-            versions={[
-              {
-                title: 'Resposive values',
-                description:
-                  "You can set responsive properties as gap={{ mobile: '5xxl', desktop: 'sm' }}",
-                version: '0.0.2',
-              },
-              { title: 'Initial', description: 'Initial', version: '0.0.1' },
-            ]}
-          />
+          <Doc.Versions {...versions} />
         </TabsContent>
       </Tabs>
     </Doc>
@@ -79,4 +57,26 @@ const StackPage = () => {
 
 export default StackPage
 
-export type Type = 'flex-start' | 'flex-end' | 'center' | 'baseline'
+const props: PropsProps = {
+  link: {
+    name: 'Radix doc',
+    href: 'https://www.radix-ui.com/docs/primitives/components/context-menu#root',
+  },
+  props: [
+    {
+      name: 'gap',
+      values: Object.keys(Space).map((space) => space),
+      description: 'The spacing between childrens can be adjusted using the gap prop.',
+    },
+  ],
+}
+const versions: VersionsProps = {
+  versions: [
+    {
+      title: 'Resposive values',
+      description: "You can set responsive properties as gap={{ mobile: '5xxl', desktop: 'sm' }}",
+      version: '0.0.2',
+    },
+    { title: 'Initial', description: 'Initial', version: '0.0.1' },
+  ],
+}

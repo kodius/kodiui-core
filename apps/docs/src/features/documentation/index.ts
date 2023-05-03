@@ -1,4 +1,4 @@
-export { Doc } from './Doc'
+export { Doc, type VersionsProps, type PropsProps } from './Doc'
 // docs
 export { ButtonBranding } from './docs/button/buttonBranding.docs'
 export { ButtonSizes } from './docs/button/buttonSizes.docs'

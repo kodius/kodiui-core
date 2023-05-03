@@ -19,3 +19,8 @@ pnpm compress-to-cli
 ```
 npx @kodiui/cli@latest
 ```
+
+## TODO
+
+- Remove Placeholder use Pane
+- Update all doc pages with <Doc.Block /> and Tab. Example => Stack

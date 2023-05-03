@@ -109,7 +109,7 @@ interface BlockProps extends ExampleProps {
   exampleWithCode?: React.ReactNode
 }
 
-const Block = ({ exampleWithCode, subTitle, description, canPlay, children }: BlockProps) => {
+const Block = ({ exampleWithCode, subTitle, description, canPlay }: BlockProps) => {
   return (
     <>
       <Stack gap={'lg'}>
@@ -118,7 +118,6 @@ const Block = ({ exampleWithCode, subTitle, description, canPlay, children }: Bl
           <Description>{description}</Description>
         </Stack>
         {exampleWithCode && <ExampleWithCode canPlay={canPlay}>{exampleWithCode}</ExampleWithCode>}
-        {children}
       </Stack>
     </>
   )
@@ -174,7 +173,7 @@ interface Version {
   description: string
 }
 
-interface VersionsProps {
+export interface VersionsProps {
   versions: Version[]
 }
 
@@ -203,7 +202,7 @@ interface Prop {
   description?: string
 }
 
-interface PropsProps {
+export interface PropsProps {
   props: Prop[]
   link?: {
     href: string
@@ -252,7 +251,7 @@ const Header = (props: HeaderProps) => {
     <Stack>
       <Cluster>
         <Title>{props.title}</Title>
-        <Badge tone="neutral">{props.dependsOn}</Badge>
+        {props.dependsOn && <Badge tone="neutral">{props.dependsOn}</Badge>}
       </Cluster>
       {props.description && <Description>{props.description}</Description>}
     </Stack>
