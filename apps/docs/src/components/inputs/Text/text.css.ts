@@ -32,7 +32,7 @@ export const textRecipe = recipe({
         color: vars.colors.critical,
       },
       info: {
-        color: vars.colors.info,
+        color: vars.colors.infoActive,
       },
       success: {
         color: vars.colors.success,
@@ -60,8 +60,6 @@ export const textRecipe = recipe({
 export const textStyle = style({})
 
 globalStyle(`${textStyle} svg`, {
-  stroke: 'currentcolor',
-  fill: 'currentcolor',
   width: '1.2em',
   height: '1.2em',
 })

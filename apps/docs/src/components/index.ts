@@ -20,3 +20,6 @@ export { Divider } from './ui/Divider/Divider'
 
 // Tabs
 export { Tabs, TabsList, TabsContent, TabsTrigger } from './tabs/Tabs'
+
+// Tooltip
+export { Tooltip } from './Tooltip/Tooltip'
