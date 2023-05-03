@@ -35,6 +35,7 @@ export const routes = {
   checkbox: `${components}/checkbox`,
   tooltip: `${components}/tooltip`,
   accordion: `${components}/accordion`,
+  slider: `${components}/slider`,
   // Typography
   headings: `${typography}/headings`,
   textLink: `${typography}/text-link`,
