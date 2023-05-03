@@ -12,7 +12,6 @@ const SwitchPage = () => {
         title="Switch"
         dependsOn="Radix-ui"
         description="Toggle is a checkbox that is styled to look like a switch button.
-
 "
       />
       <Tabs defaultValue="tab1">

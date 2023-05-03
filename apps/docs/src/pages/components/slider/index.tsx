@@ -1,7 +1,7 @@
 import React from 'react'
 import { Doc, PropsProps, VersionsProps } from '@/features/documentation'
 import { Stack } from '@kodiui/ui'
-import { Tabs, TabsList, TabsTrigger, TabsContent } from '@/components/tabs/Tabs'
+import { Tabs, TabsList, TabsTrigger, TabsContent } from '@/components/Tabs/Tabs'
 import { Slider } from '@/components/Slider/Slider'
 
 const SliderPage = () => {

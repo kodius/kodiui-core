@@ -19,7 +19,10 @@ export { Drawer } from './ui/Drawer/Drawer'
 export { Divider } from './ui/Divider/Divider'
 
 // Tabs
-export { Tabs, TabsList, TabsContent, TabsTrigger } from './tabs/Tabs'
+export { Tabs, TabsList, TabsContent, TabsTrigger } from './Tabs/Tabs'
 
 // Tooltip
 export { Tooltip } from './Tooltip/Tooltip'
+
+// ProgressBar
+export { ProgressBar } from './ProgressBar/ProgressBar'

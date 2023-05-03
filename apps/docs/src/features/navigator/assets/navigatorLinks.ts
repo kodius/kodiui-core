@@ -198,7 +198,7 @@ export const navigatorLinks: Navigator[] = [
         id: 14,
         name: 'Checkbox',
         href: routes.checkbox,
-        state: 'dev',
+        state: 'new',
       },
       {
         id: 15,
@@ -222,6 +222,12 @@ export const navigatorLinks: Navigator[] = [
         id: 18,
         name: 'Slider',
         href: routes.slider,
+        state: 'new',
+      },
+      {
+        id: 19,
+        name: 'ProgressBar',
+        href: routes.progress,
         state: 'dev',
       },
     ],

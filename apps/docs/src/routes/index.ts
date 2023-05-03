@@ -35,6 +35,8 @@ export const routes = {
   checkbox: `${components}/checkbox`,
   tooltip: `${components}/tooltip`,
   slider: `${components}/slider`,
+  progress: `${components}/progress-bar`,
+
   // Typography
   headings: `${typography}/headings`,
   textLink: `${typography}/text-link`,

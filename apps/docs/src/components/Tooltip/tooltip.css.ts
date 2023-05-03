@@ -48,7 +48,7 @@ const slideLeftAndFade = keyframes({
 export const tooltipStyle = style({
   position: 'relative',
   animationDuration: '400ms',
-  animationTimingFunction: 'cubic- bezier(0.16, 1, 0.3, 1)',
+  animationTimingFunction: 'cubic-bezier(0.16, 1, 0.3, 1)',
   padding: `${vars.space.xs} ${vars.space.sm}`,
   borderRadius: vars.borderRadius.sm,
   fontSize: vars.fontSize.sm,
