@@ -212,6 +212,12 @@ export const navigatorLinks: Navigator[] = [
         href: routes.animations,
         state: 'todo',
       },
+      {
+        id: 17,
+        name: 'Slider',
+        href: routes.slider,
+        state: 'dev',
+      },
     ],
   },
   {
