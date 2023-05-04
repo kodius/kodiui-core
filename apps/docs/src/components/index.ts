@@ -26,3 +26,6 @@ export { Tooltip } from './Tooltip/Tooltip'
 
 // ProgressBar
 export { ProgressBar } from './ProgressBar/ProgressBar'
+
+// Accordion
+export * from './Accordion/Accordion'

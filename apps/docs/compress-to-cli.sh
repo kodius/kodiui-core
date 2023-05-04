@@ -1,18 +1,22 @@
 source .env
 
 dirs=(
-'input/Text:Text'
-'input/Heading:Heading'
-'input/Input:Input'
-'input/Button:Button'
-'input/ButtonLink:ButtonLink'
-'input/TextLink:TextLink'
-'input/TextDropdown:TextDropdown'
-'input/Badge:Badge'
-'input/Switch:Switch'
+'inputs/Text:Text'
+'inputs/Heading:Heading'
+'inputs/Input:Input'
+'inputs/Button:Button'
+'inputs/ButtonLink:ButtonLink'
+'inputs/TextLink:TextLink'
+'inputs/TextDropdown:TextDropdown'
+'inputs/Badge:Badge'
+'inputs/Switch:Switch'
+'inputs/Checkbox:Checkbox'
 'ui/Drawer:Drawer'
 'ui/Divider:Divider'
 'tabs:Tabs'
+'Accordion:Accordion'
+'Slider:Slider'
+'Tooltip:Tooltip'
 )
 
 shift

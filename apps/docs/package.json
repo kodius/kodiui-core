@@ -17,6 +17,7 @@
   "dependencies": {
     "@hookform/error-message": "^2.0.1",
     "@kodiui/ui": "workspace",
+    "@radix-ui/react-accordion": "^1.1.1",
     "@radix-ui/react-checkbox": "^1.0.3",
     "@radix-ui/react-progress": "^1.0.2",
     "@radix-ui/react-slider": "^1.1.1",
