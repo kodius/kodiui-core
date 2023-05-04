@@ -71,7 +71,7 @@ export const navigatorLinks: Navigator[] = [
         id: 1,
         name: 'Center',
         href: routes.center,
-        state: 'dev',
+        state: 'new',
       },
       {
         id: 2,

@@ -228,8 +228,12 @@ const Props = (props: PropsProps) => {
             <Stack key={prop.name}>
               <Cluster gap="xs">
                 <Text weight="strong">{prop.name}: </Text>
-                {prop.values.map((value) => {
-                  return <Text color="gray10" key={value}>{`"${value}"`}</Text>
+                {prop.values.map((value, i) => {
+                  return (
+                    <Text color="gray10" key={value}>{`"${value}"  ${
+                      i !== prop.values.length - 1 ? '|' : ''
+                    }`}</Text>
+                  )
                 })}
               </Cluster>
               <Description>{prop.description}</Description>
