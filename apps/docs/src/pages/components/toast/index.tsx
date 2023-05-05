@@ -1,22 +1,11 @@
 import React from 'react'
 import { Doc } from '@/features/documentation'
-import {
-  ToastTitle,
-  Toast,
-  ToastDescription,
-  ToastAction,
-  ToastViewport,
-  ToastProvider,
-  Button,
-  ToastClose,
-} from '@/components'
-import { CrossCircledIcon } from '@radix-ui/react-icons'
+import { ToastAction, Button, useToast } from '@/components'
 
 const ToastPage = () => {
-  const [open, setOpen] = React.useState(false)
+  const { toast } = useToast()
   return (
     <Doc>
-      <CrossCircledIcon />
       <Doc.Header
         title="Toast"
         dependsOn="Radix-ui"
@@ -26,27 +15,24 @@ const ToastPage = () => {
         subTitle="Example"
         description="Basic example"
         exampleWithCode={
-          <ToastProvider swipeDirection="right">
-            <Button
-              onClick={() => {
-                setOpen(false)
-                setOpen(true)
-              }}
-            >
-              Open Toast
-            </Button>
-            <Toast open={open} onOpenChange={setOpen}>
-              <ToastTitle>Title</ToastTitle>
-              <ToastDescription>Description</ToastDescription>
-              <ToastClose asChild />
-              <ToastAction asChild altText="Undo">
-                <Button tone="success" size="sm" variant="ghost">
-                  Undo
-                </Button>
-              </ToastAction>
-            </Toast>
-            <ToastViewport />
-          </ToastProvider>
+          <Button
+            onClick={() => {
+              toast({
+                variant: 'destructive',
+                title: 'Uh oh! Something went wrong.',
+                description: 'There was a problem with your request.',
+                action: (
+                  <ToastAction altText="Try again">
+                    <Button tone="success" size="sm" variant="ghost">
+                      Undo
+                    </Button>
+                  </ToastAction>
+                ),
+              })
+            }}
+          >
+            Open Toast
+          </Button>
         }
       />
     </Doc>

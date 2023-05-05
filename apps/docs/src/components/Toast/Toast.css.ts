@@ -64,7 +64,7 @@ export const toastRoot = style({
   },
   backgroundColor: 'white',
   borderRadius: '6px',
-  boxShadow: vars.boxShadow['shadow-3'],
+  boxShadow: vars.boxShadow['shadow-2'],
   padding: '1rem',
   display: 'grid',
   gridTemplateAreas: `'title action' 'description action'`,

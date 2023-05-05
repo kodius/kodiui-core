@@ -8,6 +8,7 @@ import { Inter } from 'next/font/google'
 
 import '@kodiui/ui/style.css'
 import '@/styles/global.css'
+import { Toaster } from '@/components'
 
 const inter = Inter({ subsets: ['latin'] })
 
@@ -21,6 +22,7 @@ export default function App({ Component, pageProps }: AppProps) {
             <Navigator />
             <Component {...pageProps} />
           </Sidebar>
+          <Toaster />
         </Center>
         <Configurator />
       </Box>

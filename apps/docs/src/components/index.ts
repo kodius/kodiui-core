@@ -32,3 +32,5 @@ export * from './Accordion/Accordion'
 
 // Accordion
 export * from './Toast/Toast'
+export * from './Toast/useToast'
+export * from './Toast/Toaster'
