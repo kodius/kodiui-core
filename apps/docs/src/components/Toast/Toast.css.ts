@@ -69,6 +69,7 @@ export const toastRoot = style({
   display: 'grid',
   gridTemplateAreas: `'title action' 'description action'`,
   gridTemplateColumns: 'auto max-content',
+  gap: '.5rem',
   alignItems: 'center',
   selectors: {
     '&[data-state=open]': {
@@ -106,7 +107,8 @@ export const toastDescription = style({
   lineHeight: '1.3',
 })
 
-export const icon = style({
-  width: '20px',
-  height: '20px',
+export const toastAction = style({
+  justifySelf: 'self-end',
+  alignSelf: 'self-start',
+  cursor: 'pointer',
 })

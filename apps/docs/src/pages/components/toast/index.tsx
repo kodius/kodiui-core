@@ -8,8 +8,8 @@ import {
   ToastViewport,
   ToastProvider,
   Button,
+  ToastClose,
 } from '@/components'
-import { ToastClose } from '@radix-ui/react-toast'
 import { CrossCircledIcon } from '@radix-ui/react-icons'
 
 const ToastPage = () => {
@@ -22,7 +22,6 @@ const ToastPage = () => {
         dependsOn="Radix-ui"
         description="A succinct message that is displayed temporarily."
       />
-
       <Doc.Block
         subTitle="Example"
         description="Basic example"
@@ -39,7 +38,7 @@ const ToastPage = () => {
             <Toast open={open} onOpenChange={setOpen}>
               <ToastTitle>Title</ToastTitle>
               <ToastDescription>Description</ToastDescription>
-              <ToastClose />
+              <ToastClose asChild />
               <ToastAction asChild altText="Undo">
                 <Button tone="success" size="sm" variant="ghost">
                   Undo
