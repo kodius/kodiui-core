@@ -228,7 +228,7 @@ export const navigatorLinks: Navigator[] = [
         id: 19,
         name: 'ProgressBar',
         href: routes.progress,
-        state: 'dev',
+        state: 'new',
       },
     ],
   },
