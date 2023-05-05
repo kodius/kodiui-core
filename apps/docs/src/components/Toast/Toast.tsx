@@ -25,9 +25,7 @@ Toast.displayName = ToastPrimitives.Root.displayName
 const ToastAction = React.forwardRef<
   React.ElementRef<typeof ToastPrimitives.Action>,
   React.ComponentPropsWithoutRef<typeof ToastPrimitives.Action>
->(({ className, ...props }, ref) => (
-  <ToastPrimitives.Action ref={ref} className={classNames(toastAction, className)} {...props} />
-))
+>(({ ...props }, ref) => <ToastPrimitives.Action ref={ref} {...props} />)
 ToastAction.displayName = ToastPrimitives.Action.displayName
 
 // TODO: XIcon

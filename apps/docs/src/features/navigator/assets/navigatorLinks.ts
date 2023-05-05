@@ -230,6 +230,12 @@ export const navigatorLinks: Navigator[] = [
         href: routes.progress,
         state: 'new',
       },
+      {
+        id: 20,
+        name: 'Toast',
+        href: routes.toast,
+        state: 'dev',
+      },
     ],
   },
   {

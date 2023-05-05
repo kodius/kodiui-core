@@ -29,3 +29,6 @@ export { ProgressBar } from './ProgressBar/ProgressBar'
 
 // Accordion
 export * from './Accordion/Accordion'
+
+// Accordion
+export * from './Toast/Toast'

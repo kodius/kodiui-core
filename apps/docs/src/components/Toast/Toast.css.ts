@@ -1,15 +1,12 @@
 import { vars } from '@kodiui/ui'
-import { createVar, style, keyframes } from '@vanilla-extract/css'
+import { createVar, style, keyframes, globalStyle } from '@vanilla-extract/css'
 
 export const paddingVar = createVar()
 
-export const viewportPadding = style({
+const hide = keyframes({
   vars: {
     [paddingVar]: '25px',
   },
-})
-
-const hide = keyframes({
   from: {
     opacity: 1,
   },
@@ -19,8 +16,11 @@ const hide = keyframes({
 })
 
 const slideIn = keyframes({
+  vars: {
+    [paddingVar]: '25px',
+  },
   from: {
-    transform: `translateX(calc(100% + ${viewportPadding}))`,
+    transform: `translateX(calc(100% + ${paddingVar}))`,
   },
   to: {
     transform: 'translateX(0)',
@@ -28,21 +28,27 @@ const slideIn = keyframes({
 })
 
 const swipeOut = keyframes({
+  vars: {
+    [paddingVar]: '25px',
+  },
   from: {
     transform: 'translateX(var(--radix-toast-swipe-end-x))',
   },
   to: {
-    transform: `translateX(calc(100% + ${viewportPadding}))`,
+    transform: `translateX(calc(100% + ${paddingVar}))`,
   },
 })
 
 export const toastViewport = style({
+  vars: {
+    [paddingVar]: '25px',
+  },
   position: 'fixed',
   bottom: '0',
   right: '0',
   display: 'flex',
   flexDirection: 'column',
-  padding: viewportPadding,
+  padding: paddingVar,
   gap: '10px',
   width: '390px',
   maxWidth: '100vw',
@@ -53,6 +59,9 @@ export const toastViewport = style({
 })
 
 export const toastRoot = style({
+  vars: {
+    [paddingVar]: '25px',
+  },
   backgroundColor: 'white',
   borderRadius: '6px',
   boxShadow: vars.boxShadow['shadow-3'],
@@ -85,7 +94,7 @@ export const toastTitle = style({
   gridArea: 'title',
   marginBottom: '5px',
   fontWeight: '500',
-  color: vars.colors.slate11,
+  color: vars.colors.slate12,
   fontSize: '15px',
 })
 

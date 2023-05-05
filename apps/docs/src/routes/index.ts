@@ -37,6 +37,7 @@ export const routes = {
   accordion: `${components}/accordion`,
   slider: `${components}/slider`,
   progress: `${components}/progress-bar`,
+  toast: `${components}/toast`,
 
   // Typography
   headings: `${typography}/headings`,
