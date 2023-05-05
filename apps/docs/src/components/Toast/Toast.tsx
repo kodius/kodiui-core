@@ -2,7 +2,14 @@ import * as React from 'react'
 import * as ToastPrimitives from '@radix-ui/react-toast'
 import { CrossCircledIcon } from '@radix-ui/react-icons'
 import classNames from 'classnames'
-import { toastAction, toastDescription, toastRoot, toastTitle, toastViewport } from './Toast.css'
+import {
+  icon,
+  toastAction,
+  toastDescription,
+  toastRoot,
+  toastTitle,
+  toastViewport,
+} from './Toast.css'
 
 const ToastProvider = ToastPrimitives.Provider
 
@@ -40,7 +47,7 @@ const ToastClose = React.forwardRef<
     toast-close=""
     {...props}
   >
-    <CrossCircledIcon />
+    <CrossCircledIcon className={icon} />
   </ToastPrimitives.Close>
 ))
 ToastClose.displayName = ToastPrimitives.Close.displayName

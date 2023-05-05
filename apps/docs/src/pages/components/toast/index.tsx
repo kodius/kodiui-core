@@ -3,7 +3,7 @@ import { Doc } from '@/features/documentation'
 import { ToastAction, Button, useToast } from '@/components'
 
 const ToastPage = () => {
-  const { toast } = useToast()
+  const { toast, dismiss } = useToast()
   return (
     <Doc>
       <Doc.Header
@@ -18,12 +18,11 @@ const ToastPage = () => {
           <Button
             onClick={() => {
               toast({
-                variant: 'destructive',
                 title: 'Uh oh! Something went wrong.',
                 description: 'There was a problem with your request.',
                 action: (
                   <ToastAction altText="Try again">
-                    <Button tone="success" size="sm" variant="ghost">
+                    <Button tone="success" size="sm" variant="ghost" onClick={() => dismiss}>
                       Undo
                     </Button>
                   </ToastAction>

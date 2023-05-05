@@ -62,7 +62,7 @@ export const toastRoot = style({
   vars: {
     [paddingVar]: '25px',
   },
-  backgroundColor: 'white',
+  backgroundColor: vars.colors.slate3,
   borderRadius: '6px',
   boxShadow: vars.boxShadow['shadow-2'],
   padding: '1rem',
@@ -111,4 +111,8 @@ export const toastAction = style({
   justifySelf: 'self-end',
   alignSelf: 'self-start',
   cursor: 'pointer',
+})
+
+export const icon = style({
+  color: vars.colors.slate11,
 })
