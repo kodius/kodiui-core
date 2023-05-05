@@ -9,11 +9,14 @@ import {
   ToastProvider,
   Button,
 } from '@/components'
+import { ToastClose } from '@radix-ui/react-toast'
+import { CrossCircledIcon } from '@radix-ui/react-icons'
 
 const ToastPage = () => {
   const [open, setOpen] = React.useState(false)
   return (
     <Doc>
+      <CrossCircledIcon />
       <Doc.Header
         title="Toast"
         dependsOn="Radix-ui"
@@ -33,16 +36,17 @@ const ToastPage = () => {
             >
               Open Toast
             </Button>
-            <Toast className="ToastRoot" open={open} onOpenChange={setOpen}>
+            <Toast open={open} onOpenChange={setOpen}>
               <ToastTitle>Title</ToastTitle>
               <ToastDescription>Description</ToastDescription>
+              <ToastClose />
               <ToastAction asChild altText="Undo">
                 <Button tone="success" size="sm" variant="ghost">
                   Undo
                 </Button>
               </ToastAction>
             </Toast>
-            <ToastViewport className="ToastViewport" />
+            <ToastViewport />
           </ToastProvider>
         }
       />

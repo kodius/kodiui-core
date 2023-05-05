@@ -105,3 +105,8 @@ export const toastDescription = style({
   fontSize: '13px',
   lineHeight: '1.3',
 })
+
+export const icon = style({
+  width: '20px',
+  height: '20px',
+})
