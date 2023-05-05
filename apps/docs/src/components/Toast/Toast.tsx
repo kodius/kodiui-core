@@ -1,7 +1,7 @@
 import * as React from 'react'
 import * as ToastPrimitives from '@radix-ui/react-toast'
 import classNames from 'classnames'
-import { toastAction, toastDescription, toastRoot, toastTitle, toastViewport } from './Toast.css'
+import { toastDescription, toastRoot, toastTitle, toastViewport } from './Toast.css'
 
 const ToastProvider = ToastPrimitives.Provider
 

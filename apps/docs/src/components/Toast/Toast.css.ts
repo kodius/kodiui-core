@@ -1,5 +1,5 @@
 import { vars } from '@kodiui/ui'
-import { createVar, style, keyframes, globalStyle } from '@vanilla-extract/css'
+import { createVar, style, keyframes } from '@vanilla-extract/css'
 
 export const paddingVar = createVar()
 
@@ -104,8 +104,4 @@ export const toastDescription = style({
   color: vars.colors.slate11,
   fontSize: '13px',
   lineHeight: '1.3',
-})
-
-export const toastAction = style({
-  gridArea: 'action',
 })
