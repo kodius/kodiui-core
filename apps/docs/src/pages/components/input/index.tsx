@@ -29,7 +29,7 @@ const InputPage = () => {
             <form onSubmit={form.handleSubmit(onSubmit)}>
               <Input<ExampleForm> name="name" label="uncontrolled" placeholder="name" />
               <br />
-              <Input<ExampleForm> controled label="controlled" placeholder="name" />
+              <Input<ExampleForm> controlled label="controlled" placeholder="name" />
             </form>
           </FormProvider>
         }

@@ -6,7 +6,7 @@ export const checkboxRoot = style({
   cursor: 'pointer',
   width: '25px',
   height: '25px',
-  borderColor: vars.colors.blackA12,
+  border: `1px solid ${vars.colors.blackA12}`,
   borderRadius: vars.borderRadius.sm,
   display: 'flex',
   alignItems: 'center',

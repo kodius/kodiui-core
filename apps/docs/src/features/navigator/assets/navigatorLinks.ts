@@ -236,6 +236,12 @@ export const navigatorLinks: Navigator[] = [
         href: routes.toast,
         state: 'new',
       },
+      {
+        id: 21,
+        name: 'Label',
+        href: routes.label,
+        state: 'dev',
+      },
     ],
   },
   {

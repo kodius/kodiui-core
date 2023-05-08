@@ -38,7 +38,7 @@ export const routes = {
   slider: `${components}/slider`,
   progress: `${components}/progress-bar`,
   toast: `${components}/toast`,
-
+  label: `${components}/label`,
   // Typography
   headings: `${typography}/headings`,
   textLink: `${typography}/text-link`,

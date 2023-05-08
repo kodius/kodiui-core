@@ -7,7 +7,7 @@ import { Text } from '@/components'
 export interface InputProps<T> extends InputHTMLAttributes<HTMLInputElement> {
   label?: string
   registerOptions?: RegisterOptions
-  controled?: boolean
+  controlled?: boolean
   name?: Path<T>
   dontPrefilDate?: boolean
   background?: string
@@ -15,12 +15,12 @@ export interface InputProps<T> extends InputHTMLAttributes<HTMLInputElement> {
 }
 
 export const Input = <T extends FieldValues>(props: InputProps<T>) => {
-  if (props.controled) {
+  if (props.controlled) {
     return <ControlledInput {...props} />
   } else if (props.name) return <UncontrolledInput<T> name={props.name} {...props} />
   else return <Text tone="critical">name is required</Text>
 }
 
 Input.defaultProps = {
-  controled: false,
+  controlled: false,
 }
