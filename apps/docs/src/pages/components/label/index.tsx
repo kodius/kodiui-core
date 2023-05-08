@@ -1,7 +1,7 @@
 import React from 'react'
-import { Divider, Input, Tabs, TabsContent, TabsList, TabsTrigger } from '@/components'
+import { Input, Tabs, TabsContent, TabsList, TabsTrigger } from '@/components'
 import { Label } from '@/components/inputs/Label/Label'
-import { Doc } from '@/features/documentation'
+import { Doc, PropsProps, VersionsProps } from '@/features/documentation'
 import { Stack } from '@kodiui/ui'
 import { Checkbox } from '@/components/inputs/Checkbox/Checkbox'
 import { Slider } from '@/components/Slider/Slider'
@@ -30,12 +30,10 @@ const LabelPage = () => {
                     <Label htmlFor="input">Label</Label>
                     <Input id="input" name="input" placeholder="Placeholder" controlled />
                   </Stack>
-                  <Divider weight="regular" tone="neutral" />
                   <Stack gap="0">
                     <Label htmlFor="checkbox">Label</Label>
                     <Checkbox id="checkbox" name="checkbox" />
                   </Stack>
-                  <Divider weight="regular" tone="neutral" />
                   <Stack gap="0">
                     <Label htmlFor="slider">Label</Label>
                     <Slider id="slider" name="slider" />
@@ -47,10 +45,10 @@ const LabelPage = () => {
           <Doc.Download />
         </TabsContent>
         <TabsContent value="tab2">
-          <>props</>
+          <Doc.Props {...props}>props</Doc.Props>
         </TabsContent>
         <TabsContent value="tab3">
-          <>vers</>
+          <Doc.Versions {...versions}>vers</Doc.Versions>
         </TabsContent>
       </Tabs>
     </Doc>
@@ -58,3 +56,19 @@ const LabelPage = () => {
 }
 
 export default LabelPage
+const props: PropsProps = {
+  link: {
+    name: 'Radix doc',
+    href: 'https://www.radix-ui.com/docs/primitives/components/label#api-reference',
+  },
+}
+const versions: VersionsProps = {
+  versions: [
+    {
+      title: 'Initial component API using Radix and custom styles.',
+      description: 'Component API is 1 on 1 with Radix.',
+      version: '0.0.1',
+    },
+    { title: 'Initial', description: 'Initial', version: '0.0.1' },
+  ],
+}
