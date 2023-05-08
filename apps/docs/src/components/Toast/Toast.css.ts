@@ -9,10 +9,10 @@ const hide = keyframes({
     [paddingVar]: '25px',
   },
   from: {
-    opacity: 1,
+    transform: 'translateX(0)',
   },
   to: {
-    opacity: 0,
+    transform: `translateX(calc(100% + ${paddingVar}))`,
   },
 })
 
@@ -77,7 +77,7 @@ export const toastRoot = style({
       animation: `${slideIn} 150ms cubic-bezier(0.16, 1, 0.3, 1)`,
     },
     '&[data-state=closed]': {
-      animation: `${hide} 100ms ease-in`,
+      animation: `${hide} 150ms cubic-bezier(0.16, 1, 0.3, 1)`,
     },
     '&[data-swipe=move]': {
       transform: 'translateX(var(--radix-toast-swipe-move-x))',
@@ -92,39 +92,38 @@ export const toastRoot = style({
   },
 })
 
+const borderStyles = {
+  borderStyle: 'solid',
+  borderWidth: '1px',
+}
+
 export const toastRecipe = recipe({
   base: [toastRoot],
   variants: {
     tone: {
       brand: {
         borderColor: vars.colors.brand,
-        borderStyle: 'solid',
-        borderWidth: '1px',
+        ...borderStyles,
       },
       brandAccent: {
         borderColor: vars.colors.brandAccent,
-        borderStyle: 'solid',
-        borderWidth: '1px',
+        ...borderStyles,
       },
       success: {
         borderColor: vars.colors.success,
-        borderStyle: 'solid',
-        borderWidth: '1px',
+        ...borderStyles,
       },
       critical: {
         borderColor: vars.colors.critical,
-        borderStyle: 'solid',
-        borderWidth: '1px',
+        ...borderStyles,
       },
       info: {
         borderColor: vars.colors.info,
-        borderStyle: 'solid',
-        borderWidth: '1px',
+        ...borderStyles,
       },
       neutral: {
         borderColor: vars.colors.neutral,
-        borderStyle: 'solid',
-        borderWidth: '1px',
+        ...borderStyles,
       },
     },
   },

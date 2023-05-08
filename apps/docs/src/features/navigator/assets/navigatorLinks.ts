@@ -234,7 +234,7 @@ export const navigatorLinks: Navigator[] = [
         id: 20,
         name: 'Toast',
         href: routes.toast,
-        state: 'dev',
+        state: 'new',
       },
     ],
   },

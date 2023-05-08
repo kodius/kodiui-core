@@ -12,7 +12,7 @@ export function Toaster() {
   const { toasts } = useToast()
 
   return (
-    <ToastProvider>
+    <ToastProvider swipeDirection="right">
       {toasts.map(({ id, title, description, action, ...props }) => {
         return (
           <Toast key={id} {...props} duration={555555555555}>
