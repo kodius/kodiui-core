@@ -14,7 +14,6 @@ export function Toaster() {
   return (
     <ToastProvider>
       {toasts.map(({ id, title, description, action, ...props }) => {
-        console.log(props)
         return (
           <Toast key={id} {...props} duration={555555555555}>
             {title && (

@@ -3,10 +3,11 @@ import * as ToastPrimitives from '@radix-ui/react-toast'
 import { CrossCircledIcon } from '@radix-ui/react-icons'
 import classNames from 'classnames'
 import {
+  ToastVariants,
   icon,
   toastAction,
   toastDescription,
-  toastRoot,
+  toastRecipe,
   toastTitle,
   toastViewport,
 } from './Toast.css'
@@ -24,9 +25,15 @@ ToastViewport.displayName = ToastPrimitives.Viewport.displayName
 // TODO: Add variants
 const Toast = React.forwardRef<
   React.ElementRef<typeof ToastPrimitives.Root>,
-  React.ComponentPropsWithoutRef<typeof ToastPrimitives.Root>
->(({ className, ...props }, ref) => {
-  return <ToastPrimitives.Root ref={ref} className={classNames(toastRoot, className)} {...props} />
+  React.ComponentPropsWithoutRef<typeof ToastPrimitives.Root> & ToastVariants
+>(({ className, tone, ...props }, ref) => {
+  return (
+    <ToastPrimitives.Root
+      ref={ref}
+      className={classNames(toastRecipe({ tone: tone }), className)}
+      {...props}
+    />
+  )
 })
 Toast.displayName = ToastPrimitives.Root.displayName
 

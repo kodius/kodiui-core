@@ -1,5 +1,6 @@
 import { vars } from '@kodiui/ui'
 import { createVar, style, keyframes } from '@vanilla-extract/css'
+import { RecipeVariants, recipe } from '@vanilla-extract/recipes'
 
 export const paddingVar = createVar()
 
@@ -90,6 +91,46 @@ export const toastRoot = style({
     },
   },
 })
+
+export const toastRecipe = recipe({
+  base: [toastRoot],
+  variants: {
+    tone: {
+      brand: {
+        borderColor: vars.colors.brand,
+        borderStyle: 'solid',
+        borderWidth: '1px',
+      },
+      brandAccent: {
+        borderColor: vars.colors.brandAccent,
+        borderStyle: 'solid',
+        borderWidth: '1px',
+      },
+      success: {
+        borderColor: vars.colors.success,
+        borderStyle: 'solid',
+        borderWidth: '1px',
+      },
+      critical: {
+        borderColor: vars.colors.critical,
+        borderStyle: 'solid',
+        borderWidth: '1px',
+      },
+      info: {
+        borderColor: vars.colors.info,
+        borderStyle: 'solid',
+        borderWidth: '1px',
+      },
+      neutral: {
+        borderColor: vars.colors.neutral,
+        borderStyle: 'solid',
+        borderWidth: '1px',
+      },
+    },
+  },
+})
+
+export type ToastVariants = RecipeVariants<typeof toastRecipe>
 
 export const toastTitle = style({
   gridArea: 'title',

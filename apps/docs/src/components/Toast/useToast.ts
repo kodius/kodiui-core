@@ -1,10 +1,10 @@
 // Inspired by react-hot-toast library
 import * as React from 'react'
 
-import { ToastActionElement, type ToastProps } from '@/components'
+import { ToastActionElement, type ToastProps } from '@/components/ui/toast'
 
-const TOAST_LIMIT = 5
-const TOAST_REMOVE_DELAY = 10
+const TOAST_LIMIT = 3
+const TOAST_REMOVE_DELAY = 5000
 
 type ToasterToast = ToastProps & {
   id: string
@@ -57,7 +57,6 @@ const addToRemoveQueue = (toastId: string) => {
   if (toastTimeouts.has(toastId)) {
     return
   }
-
   const timeout = setTimeout(() => {
     toastTimeouts.delete(toastId)
     dispatch({
@@ -72,6 +71,7 @@ const addToRemoveQueue = (toastId: string) => {
 export const reducer = (state: State, action: Action): State => {
   switch (action.type) {
     case 'ADD_TOAST':
+      addToRemoveQueue(action.toast.id)
       return {
         ...state,
         toasts: [action.toast, ...state.toasts].slice(0, TOAST_LIMIT),
