@@ -6,18 +6,19 @@ import { FieldErrors, FieldName, FieldValues, Path, useFormContext } from 'react
 import { isUncontrolledDirty } from './helpers'
 import { InputProps } from './Input'
 import { inputStyle, inputStyleVariants } from './input.css'
+import { Label } from '../Label/Label'
 
 interface Props<T> extends InputProps<T> {
   name: Path<T>
 }
 
-export const UncontrolledInput = <T extends FieldValues>(props: Props<T>) => {
+export const UncontrolledInput = <T extends FieldValues>({ label, ...rest }: Props<T>) => {
   const form = useFormContext<T>()
   const {
     formState: { errors },
   } = form
 
-  const ifError = Boolean(errors[props.name])
+  const ifError = Boolean(errors[rest.name])
 
   const styleVariant = ifError ? 'error' : 'none'
 
@@ -25,23 +26,25 @@ export const UncontrolledInput = <T extends FieldValues>(props: Props<T>) => {
     <>
       <input
         className={classNames(inputStyle, inputStyleVariants[styleVariant])}
-        {...form.register(props.name, props.registerOptions)}
-        {...props}
+        {...form.register(rest.name, rest.registerOptions)}
+        {...rest}
+        id={rest.id}
+        name={rest.name}
       />
       <ErrorMessage
         errors={errors}
-        name={props.name as unknown as FieldName<FieldValuesFromFieldErrors<FieldErrors<T>>>}
+        name={rest.name as unknown as FieldName<FieldValuesFromFieldErrors<FieldErrors<T>>>}
         render={({ message }) => <Text tone="critical">{message}</Text>}
       />
     </>
   )
 
-  if (isUncontrolledDirty<T>(props)) return null
+  if (isUncontrolledDirty<T>(rest)) return null
 
-  if (props.label) {
+  if (label) {
     return (
-      <Stack gap="xxs">
-        <Text size="small">{props.label}</Text>
+      <Stack gap="0">
+        <Label htmlFor={rest.name}>{label}</Label>
         {content}
       </Stack>
     )

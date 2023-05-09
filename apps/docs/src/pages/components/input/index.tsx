@@ -23,7 +23,7 @@ const InputPage = () => {
         <Badge tone="brandAccent">react-hook-form</Badge>
       </Stack>
       <Doc.Block
-        subTitle="Input with reac-hook form"
+        subTitle="Input with react-hook form"
         exampleWithCode={
           <FormProvider {...form}>
             <form onSubmit={form.handleSubmit(onSubmit)}>
