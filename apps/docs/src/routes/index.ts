@@ -39,6 +39,7 @@ export const routes = {
   progress: `${components}/progress-bar`,
   toast: `${components}/toast`,
   label: `${components}/label`,
+  avatar: `${components}/avatar`,
   // Typography
   headings: `${typography}/headings`,
   textLink: `${typography}/text-link`,

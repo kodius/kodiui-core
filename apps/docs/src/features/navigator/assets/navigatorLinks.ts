@@ -240,6 +240,12 @@ export const navigatorLinks: Navigator[] = [
         id: 21,
         name: 'Label',
         href: routes.label,
+        state: 'new',
+      },
+      {
+        id: 22,
+        name: 'Avatar',
+        href: routes.avatar,
         state: 'dev',
       },
     ],
