@@ -63,7 +63,7 @@ export const toastRoot = style({
   vars: {
     [paddingVar]: '25px',
   },
-  backgroundColor: vars.colors.slate3,
+  backgroundColor: vars.colors.white,
   borderRadius: '6px',
   boxShadow: vars.boxShadow['shadow-2'],
   padding: '1rem',
