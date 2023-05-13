@@ -6,10 +6,10 @@
   "scripts": {
     "test": "echo \"Error: no test specified\" && exit 1",
     "prepare": "husky install",
-    "docslint": "cd ./apps/docs && pnpm lint",
-    "docsformat": "cd ./apps/docs && pnpm format",
-    "docsBuild": "cd ./apps/docs && pnpm build",
-    "format:fix": "cd ./apps/docs && pnpm format:fix",
+    "docslint": "cd ./apps/kodidocs && pnpm lint",
+    "docsformat": "cd ./apps/kodidocs && pnpm format",
+    "docsBuild": "cd ./apps/kodidocs && pnpm build",
+    "format:fix": "cd ./apps/kodidocs && pnpm format:fix",
     "validate": "npm-run-all --parallel docslint docsformat docsBuild"
   },
   "keywords": [],

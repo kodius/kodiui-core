@@ -86,7 +86,3 @@ globalStyle(`${accordionTriggerStyle} svg`, {
 globalStyle(`${accordionTriggerStyle}[data-state=open] > svg`, {
   transform: 'rotate(180deg)',
 })
-
-// globalStyle('button', {
-//   outline: 'none',
-// })
