@@ -1,0 +1,49 @@
+schema {
+  query: RootQueryType
+  mutation: RootMutationType
+}
+
+type Account implements Node {
+  email: String
+  firstName: String
+
+  """
+  The ID of an object
+  """
+  id: ID!
+  lastName: String
+  userName: String
+}
+
+input CreateSessionInput {
+  email: String
+  password: String!
+  username: String
+}
+
+interface Node {
+  """
+  The ID of the object.
+  """
+  id: ID!
+}
+
+type RootMutationType {
+  createSession(input: CreateSessionInput): Session
+}
+
+type RootQueryType {
+  healthCheck: Boolean
+  me: Account
+  node(
+    """
+    The ID of an object.
+    """
+    id: ID!
+  ): Node
+}
+
+type Session {
+  account: Account
+  token: String
+}
