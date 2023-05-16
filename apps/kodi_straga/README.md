@@ -17,3 +17,7 @@
 ## Remote access to console on server
 
 `_build/prod/rel/kodi_straga/bin/kodi_straga remote`
+
+## If you have problems with elixir and erland version
+
+`https://www.pluralsight.com/guides/installing-elixir-erlang-with-asdf`
