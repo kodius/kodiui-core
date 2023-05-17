@@ -12,9 +12,9 @@ defmodule KodiStragaWeb.Router do
       forward("/", Absinthe.Plug, schema: Graphql.Schemas.Schema)
     end
 
-    # if System.fetch_env!("RELEASE_LEVEL") == "dev" do
+    if Mix.env() == :dev do
     forward("/graphiql", Absinthe.Plug.GraphiQL, schema: Graphql.Schemas.Schema)
-    # end
+    end
   end
 
   # # Enable Swoosh mailbox preview in development
