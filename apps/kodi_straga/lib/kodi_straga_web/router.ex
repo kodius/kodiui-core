@@ -13,7 +13,7 @@ defmodule KodiStragaWeb.Router do
     end
 
     if Mix.env() == :dev do
-    forward("/graphiql", Absinthe.Plug.GraphiQL, schema: Graphql.Schemas.Schema)
+      forward("/graphiql", Absinthe.Plug.GraphiQL, schema: Graphql.Schemas.Schema)
     end
   end
 
