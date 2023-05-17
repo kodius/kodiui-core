@@ -1,7 +1,6 @@
 defmodule KodiStragaWeb.Router do
   use KodiStragaWeb, :router
 
-
   pipeline :graphql do
     plug KodiStragaWeb.Context
   end
@@ -13,9 +12,9 @@ defmodule KodiStragaWeb.Router do
       forward("/", Absinthe.Plug, schema: Graphql.Schemas.Schema)
     end
 
-    if System.fetch_env!("RELEASE_LEVEL") == "dev" do
-      forward("/graphiql", Absinthe.Plug.GraphiQL, schema: Graphql.Schemas.Schema)
-    end
+    # if System.fetch_env!("RELEASE_LEVEL") == "dev" do
+    forward("/graphiql", Absinthe.Plug.GraphiQL, schema: Graphql.Schemas.Schema)
+    # end
   end
 
   # # Enable Swoosh mailbox preview in development

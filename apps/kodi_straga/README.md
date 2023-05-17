@@ -18,6 +18,6 @@
 
 `_build/prod/rel/kodi_straga/bin/kodi_straga remote`
 
-## If you have problems with elixir and erland version
+## If you have problems with elixir and erlang version
 
 `https://www.pluralsight.com/guides/installing-elixir-erlang-with-asdf`
