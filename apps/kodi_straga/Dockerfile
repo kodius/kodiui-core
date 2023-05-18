@@ -38,6 +38,7 @@ COPY . .
 
 RUN mix do release
 
+EXPOSE 4000
 COPY entrypoint.sh /usr/bin/
 RUN chmod +x /usr/bin/entrypoint.sh
 ENTRYPOINT ["entrypoint.sh"]
