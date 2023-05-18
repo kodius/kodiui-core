@@ -73,7 +73,7 @@ defmodule Graphql.Schemas.Schema do
 
     field :create_element, :element do
       arg(:name, non_null(:string))
-      arg(:description , non_null(:string))
+      arg(:description, non_null(:string))
       arg(:category_id, non_null(:id))
       resolve(&CreateElement.create_element/3)
     end

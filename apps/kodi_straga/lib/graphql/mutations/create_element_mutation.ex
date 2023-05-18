@@ -3,6 +3,7 @@ defmodule Graphql.Mutations.CreateElement do
   alias Schemas.Element
 
   def create_element(_, args, _) do
+    IO.inspect(args)
     %Element{}
     |> Element.changeset(args)
     |> Repo.insert()
