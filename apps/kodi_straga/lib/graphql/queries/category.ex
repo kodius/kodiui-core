@@ -7,7 +7,7 @@ defmodule Graphql.Queries.Category do
 
   def get_categories(_, _, _) do
     response =
-      Repo.get(Category, 1)
+      Repo.all(Category)
       |> Repo.preload(elements: [:history_releases])
 
     {:ok, response}

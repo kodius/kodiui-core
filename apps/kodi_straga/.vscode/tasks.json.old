@@ -1,10 +1,12 @@
 {
-  "version": "2.0.0",
+  "version": "0.1.0",
   "command": "mix",
+  "isShellCommand": true,
+  "showOutput": "always",
+  "suppressTaskName": true,
   "tasks": [
     {
-      "label": "build",
-      "type": "shell",
+      "taskName": "build",
       "args": [
         "compile"
       ],
@@ -12,14 +14,10 @@
         "$mixCompileError",
         "$mixCompileWarning"
       ],
-      "group": {
-        "_id": "build",
-        "isDefault": false
-      }
+      "isBuildCommand": true
     },
     {
-      "label": "test",
-      "type": "shell",
+      "taskName": "test",
       "args": [
         "test"
       ],
@@ -28,10 +26,7 @@
         "$mixCompileWarning",
         "$mixTestFailure"
       ],
-      "group": {
-        "_id": "test",
-        "isDefault": false
-      }
+      "isTestCommand": true
     }
   ]
 }
