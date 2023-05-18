@@ -8,7 +8,8 @@ defmodule KodiStragaWeb.Auth.CustomMiddleware do
         if Enum.member?(
              [
                :create_session,
-               :token
+               :token,
+               :get_categories
              ],
              field.identifier
            ) or field.identifier === :session or
