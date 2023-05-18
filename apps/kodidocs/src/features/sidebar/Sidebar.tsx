@@ -1,5 +1,3 @@
-'use client'
-
 import { Accordion, AccordionContent, AccordionItem, AccordionTrigger } from '@/cli-components'
 import React from 'react'
 import { FlexBox } from '@kodiui/ui'
