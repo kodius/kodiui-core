@@ -5,7 +5,7 @@ defmodule Schemas.Element do
   alias Schemas.Category
   alias Schemas.HistoryRelease
 
-  @changeset ~w(name description)a
+  @changeset ~w(name description category_id)a
 
   schema "elements" do
     field :name, :string
@@ -18,6 +18,6 @@ defmodule Schemas.Element do
   def changeset(element, args \\ %{}) do
     element
     |> cast(args, @changeset)
-    |> validate_required([:name, :description])
+    |> validate_required([:name, :description, :category_id])
   end
 end
