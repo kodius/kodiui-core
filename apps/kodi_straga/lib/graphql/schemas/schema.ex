@@ -54,6 +54,7 @@ defmodule Graphql.Schemas.Schema do
     end
     
     field :get_element_by_id, :element do
+      arg(:id, :id)
       resolve(&GetElementById.resolve/3)
     end
 

@@ -1,18 +1,14 @@
-
 defmodule Graphql.Queries.GetElementById do
   import Ecto.Query, warn: false
   alias KodiStraga.Repo
   alias Schemas.Category
   alias Schemas.Element
 
-  def resolve(_, _, _) do
-    IO.puts("KURCINA")
-    # query =
-    #   from c in Category,
-    #     join: e in Element,
-    #     on: e.category_id == c.id,
-    #     select: %{c | elements: e }
+  def resolve(_, args, _) do
+    response =
+      Repo.get(Element, args.id)
+      |> Repo.preload(:history_releases)
 
-    # {:ok, Repo.all(query)}
+    {:ok, response}
   end
 end
