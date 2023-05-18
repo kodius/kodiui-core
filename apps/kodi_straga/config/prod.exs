@@ -11,7 +11,8 @@ config :logger, level: :info
 
 config :cors_plug,
   origin: [
-    "http://localhost:3000/",
+    "http://116.203.201.51:4000/",
+    "http://localhost:3002",
     "http://localhost:3000"
   ],
   methods: ["GET", "POST", "FETCH", "OPTIONS"]
