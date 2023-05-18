@@ -10,11 +10,18 @@
     "compress-to-cli": "bash compress-to-cli.sh",
     "format": "prettier --check --ignore-path .gitignore --ignore-path .prettierignore .",
     "format:fix": "prettier --write --ignore-path .gitignore --ignore-path .prettierignore .",
-    "validate": "npm-run-all --parallel lint format"
+    "validate": "npm-run-all --parallel lint format",
+    "types": "graphql-codegen --config codegen.ts"
   },
   "dependencies": {
+    "@hookform/error-message": "^2.0.1",
     "@kodiui/ui": "workspace",
     "@radix-ui/react-accordion": "^1.1.1",
+    "@radix-ui/react-checkbox": "^1.0.3",
+    "@radix-ui/react-label": "^2.0.1",
+    "@radix-ui/react-switch": "^1.0.2",
+    "@tanstack/react-query": "^4.29.7",
+    "@tanstack/react-query-devtools": "^4.29.7",
     "@types/node": "20.1.4",
     "@types/react": "18.2.6",
     "@types/react-dom": "18.2.4",
@@ -24,16 +31,21 @@
     "classnames": "^2.3.2",
     "eslint": "8.40.0",
     "eslint-config-next": "13.4.2",
+    "graphql": "^16.6.0",
+    "graphql-request": "^6.0.0",
     "next": "13.4.2",
     "react": "18.2.0",
     "react-dom": "18.2.0",
-    "typescript": "5.0.4",
+    "react-hook-form": "^7.43.9",
     "zustand": "^4.3.7"
   },
   "devDependencies": {
-    "@vanilla-extract/next-plugin": "^2.1.2",
+    "@graphql-codegen/cli": "3.3.1",
+    "@graphql-codegen/client-preset": "3.0.1",
+    "@graphql-typed-document-node/core": "^3.2.0",
     "@typescript-eslint/eslint-plugin": "^5.59.1",
     "@typescript-eslint/parser": "^5.57.0",
+    "@vanilla-extract/next-plugin": "^2.1.2",
     "eslint-config-prettier": "^8.8.0",
     "eslint-import-resolver-typescript": "^3.5.4",
     "eslint-plugin-import": "^2.27.5",
@@ -44,6 +56,7 @@
     "lint-staged": "^13.2.1",
     "npm-run-all": "^4.1.5",
     "prettier": "^2.8.7",
-    "tsconfig-paths-webpack-plugin": "^4.0.1"
+    "tsconfig-paths-webpack-plugin": "^4.0.1",
+    "typescript": "5.0.4"
   }
 }

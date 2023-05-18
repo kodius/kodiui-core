@@ -1,22 +1,34 @@
-import { Accordion, AccordionContent, AccordionItem, AccordionTrigger } from '@/components'
-import React from 'react'
-import { navLinks } from './data/links'
-import { Box } from '@kodiui/ui'
-import Link from 'next/link'
-console.log('server component Sidebar')
+'use client'
 
-export const Sidebar = () => {
+import { Accordion, AccordionContent, AccordionItem, AccordionTrigger } from '@/cli-components'
+import React from 'react'
+import { FlexBox } from '@kodiui/ui'
+import Link from 'next/link'
+import { graphQlClient } from '@lib'
+import { GetCategoriesDocument } from '@gql/graphql'
+import { Footer } from './components'
+
+export const Sidebar = async () => {
+  const { getCategories: categories } = await graphQlClient.request(GetCategoriesDocument)
+
   return (
-    <Box minWidth="80" background="gray1" height="screen">
+    <FlexBox
+      flexDirection="column"
+      justifyContent="space-between"
+      minWidth="80"
+      background="gray1"
+      height="screen"
+      py="sm"
+    >
       <Accordion type="single">
-        {navLinks.map((nav) => {
+        {categories?.map((category) => {
           return (
-            <AccordionItem value={nav.name}>
-              <AccordionTrigger>{nav.name}</AccordionTrigger>
-              {nav.items?.map((item) => {
+            <AccordionItem key={category?.name} value={category?.name || ''}>
+              <AccordionTrigger>{category?.name}</AccordionTrigger>
+              {category?.elements?.map((Element) => {
                 return (
-                  <AccordionContent>
-                    <Link href={item.href}>{item.name}</Link>
+                  <AccordionContent key={Element?.name}>
+                    <Link href={Element?.id || ''}>{Element?.name}</Link>
                   </AccordionContent>
                 )
               })}
@@ -24,6 +36,7 @@ export const Sidebar = () => {
           )
         })}
       </Accordion>
-    </Box>
+      <Footer />
+    </FlexBox>
   )
 }

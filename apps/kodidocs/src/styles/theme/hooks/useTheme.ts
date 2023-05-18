@@ -1,6 +1,6 @@
 'use client'
 
-import { darkTheme, lightTheme, useThemeStore } from '@/styles'
+import { darkTheme, lightTheme, useThemeStore } from '@styles'
 
 export const useTheme = () => {
   const { theme } = useThemeStore()

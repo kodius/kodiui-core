@@ -1,7 +1,7 @@
 export { lightTheme, darkTheme } from './contract.css'
 
 // hooks
-export { useTheme } from './theme/hooks/useTheme'
+// export { useTheme } from './theme/hooks/useTheme'
 
 // components
 export { ThemeProvider } from './theme/components/ThemeProvider'

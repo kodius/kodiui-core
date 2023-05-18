@@ -9,10 +9,11 @@ interface SidebarProps {
   side?: "left" | "right";
 }
 
-export const Sidebar: FC<Omit<BoxProps, "display"> & SidebarProps> = (
-  props
-) => {
-  const sidebarOnLeft = props.side === "left";
+export const Sidebar: FC<Omit<BoxProps, "display"> & SidebarProps> = ({
+  side = "left",
+  ...props
+}) => {
+  const sidebarOnLeft = side === "left";
   const className = sidebarOnLeft ? SidebarOnLeft : SidebarOnRight;
 
   return (
@@ -26,10 +27,6 @@ export const Sidebar: FC<Omit<BoxProps, "display"> & SidebarProps> = (
       {props.children}
     </Box>
   );
-};
-
-Sidebar.defaultProps = {
-  side: "left",
 };
 
 Sidebar.displayName = "Sidebar";
