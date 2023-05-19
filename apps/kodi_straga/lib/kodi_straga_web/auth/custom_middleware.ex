@@ -9,7 +9,15 @@ defmodule KodiStragaWeb.Auth.CustomMiddleware do
              [
                :create_session,
                :token,
-               :get_categories
+               :get_categories,
+               :category,
+               :elements,
+               :history_releases,
+               :name,
+               :description,
+               :elementId,
+               :version,
+               :id,
              ],
              field.identifier
            ) or field.identifier === :session or

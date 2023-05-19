@@ -11,6 +11,7 @@ import {
   AccordionTrigger,
 } from '@cli-components/Accordion'
 import { useToast } from '@cli-components/Toast'
+import { Button } from '@cli-components/Button'
 
 export const Sidebar = async () => {
   const { getCategories: categories } = await graphQlClient.request(GetCategoriesDocument)
@@ -36,6 +37,9 @@ export const Sidebar = async () => {
                   </AccordionContent>
                 )
               })}
+              <AccordionContent>
+                <Button variant="transparent">Create new Element</Button>
+              </AccordionContent>
             </AccordionItem>
           )
         })}
