@@ -18,9 +18,7 @@ const DialogTrigger = DialogPrimitive.Trigger
 
 const DialogPortal = ({ className, children, ...props }: DialogPrimitive.DialogPortalProps) => (
   <DialogPrimitive.Portal className={classNames(className)} {...props}>
-    <div className="fixed inset-0 z-50 flex items-start justify-center sm:items-center">
-      {children}
-    </div>
+    {children}
   </DialogPrimitive.Portal>
 )
 DialogPortal.displayName = DialogPrimitive.Portal.displayName
@@ -59,21 +57,6 @@ const DialogClose = React.forwardRef<
 ))
 DialogClose.displayName = DialogPrimitive.Close.displayName
 
-const DialogFooter = ({
-  className,
-  dangerouslySetInnerHTML,
-  ...props
-}: React.HTMLAttributes<HTMLDivElement>) => (
-  <div
-    className={classNames(
-      'flex flex-col-reverse sm:flex-row sm:justify-end sm:space-x-2',
-      className
-    )}
-    {...props}
-  />
-)
-DialogFooter.displayName = 'DialogFooter'
-
 const DialogTitle = React.forwardRef<
   React.ElementRef<typeof DialogPrimitive.Title>,
   React.ComponentPropsWithoutRef<typeof DialogPrimitive.Title>
@@ -94,12 +77,4 @@ const DialogDescription = React.forwardRef<
 ))
 DialogDescription.displayName = DialogPrimitive.Description.displayName
 
-export {
-  Dialog,
-  DialogTrigger,
-  DialogContent,
-  DialogFooter,
-  DialogTitle,
-  DialogDescription,
-  DialogClose,
-}
+export { Dialog, DialogTrigger, DialogContent, DialogTitle, DialogDescription, DialogClose }
