@@ -8,6 +8,7 @@ defmodule Graphql.Schemas.Schema do
   alias Graphql.Mutations.CreateCategory
   alias Graphql.Mutations.CreateElement
   alias Graphql.Mutations.CreateHistoryRelease
+  alias Graphql.Mutations.DeleteHistoryRelease
 
   import_types(Graphql.Types.Inputs.{CreateSessionInput, CreateHistoryReleaseInput})
   import_types(Graphql.Types.Objects.AccountType)
@@ -52,7 +53,7 @@ defmodule Graphql.Schemas.Schema do
     field :get_categories, list_of(:category) do
       resolve(&Category.get_categories/3)
     end
-    
+
     field :get_element_by_id, :element do
       arg(:id, :id)
       resolve(&GetElementById.resolve/3)
@@ -81,6 +82,11 @@ defmodule Graphql.Schemas.Schema do
     field :create_history_release, :history_release do
       arg(:input, :create_history_release_input)
       resolve(&CreateHistoryRelease.resolve/3)
+    end
+
+    field :delete_history_release, :history_release do
+      arg(:id, non_null(:id))
+      resolve(&DeleteHistoryRelease.resolve/2)
     end
   end
 end
