@@ -64,5 +64,5 @@ export const CateogriesDialog = () => {
 }
 
 const resolver = z.object<ZodKeyChecker<CreateCategoryMutationVariables>>({
-  name: z.string().min(1),
+  name: z.string().min(3),
 })

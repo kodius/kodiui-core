@@ -14,3 +14,9 @@ mutation createCategory($name: String!) {
     id
   }
 }
+
+mutation createElement($categoryId: ID!, $description: String!, $name: String!) {
+  createElement(categoryId: $categoryId, description: $description, name: $name) {
+    id
+  }
+}

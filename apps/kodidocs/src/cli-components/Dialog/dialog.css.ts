@@ -70,17 +70,3 @@ export const dialogClose = style({
     },
   },
 })
-
-export const dialogTitle = style({
-  margin: 0,
-  fontWeight: 'bolder',
-  color: vars.colors.black,
-  fontSize: vars.fontSize.lg,
-})
-
-export const dialogDescription = style({
-  margin: '10px 0 20px',
-  color: vars.colors.gray11,
-  fontSize: vars.fontSize.sm,
-  lineHeight: '1.5',
-})

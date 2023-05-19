@@ -5,3 +5,4 @@ node_modules
 package.json
 **/*.test.js
 coverage
+src/gql

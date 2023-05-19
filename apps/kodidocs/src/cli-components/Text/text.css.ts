@@ -20,7 +20,7 @@ export const textRecipe = recipe({
     },
     tone: {
       neutral: {
-        color: vars.colors.black,
+        color: vars.colors.gray11,
       },
       brand: {
         color: vars.colors.brand,

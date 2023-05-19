@@ -10,8 +10,7 @@ import {
   AccordionItem,
   AccordionTrigger,
 } from '@cli-components/Accordion'
-import { useToast } from '@cli-components/Toast'
-import { Button } from '@cli-components/Button'
+import { CreateNewElement } from './components/Footer/CreateNewElement'
 
 export const Sidebar = async () => {
   const { getCategories: categories } = await graphQlClient.request(GetCategoriesDocument)
@@ -37,9 +36,11 @@ export const Sidebar = async () => {
                   </AccordionContent>
                 )
               })}
-              <AccordionContent>
-                <Button variant="transparent">Create new Element</Button>
-              </AccordionContent>
+              {category && (
+                <AccordionContent>
+                  <CreateNewElement {...category} />
+                </AccordionContent>
+              )}
             </AccordionItem>
           )
         })}

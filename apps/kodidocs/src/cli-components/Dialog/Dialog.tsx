@@ -4,13 +4,9 @@ import * as React from 'react'
 import * as DialogPrimitive from '@radix-ui/react-dialog'
 import { X } from 'lucide-react'
 import classNames from 'classnames'
-import {
-  dialogClose,
-  dialogContent,
-  dialogDescription,
-  dialogOverlay,
-  dialogTitle,
-} from './dialog.css'
+import { dialogClose, dialogContent, dialogOverlay } from './dialog.css'
+import { Heading } from '@cli-components/Heading'
+import { Text } from '@cli-components/Text'
 
 const Dialog = DialogPrimitive.Root
 
@@ -61,7 +57,9 @@ const DialogTitle = React.forwardRef<
   React.ElementRef<typeof DialogPrimitive.Title>,
   React.ComponentPropsWithoutRef<typeof DialogPrimitive.Title>
 >(({ className, ...props }, ref) => (
-  <DialogPrimitive.Title ref={ref} className={classNames(dialogTitle, className)} {...props} />
+  <DialogPrimitive.Title ref={ref} className={classNames(className)} asChild {...props}>
+    <Heading level="2">{props.children}</Heading>
+  </DialogPrimitive.Title>
 ))
 DialogTitle.displayName = DialogPrimitive.Title.displayName
 
@@ -69,11 +67,9 @@ const DialogDescription = React.forwardRef<
   React.ElementRef<typeof DialogPrimitive.Description>,
   React.ComponentPropsWithoutRef<typeof DialogPrimitive.Description>
 >(({ className, ...props }, ref) => (
-  <DialogPrimitive.Description
-    ref={ref}
-    className={classNames(dialogDescription, className)}
-    {...props}
-  />
+  <DialogPrimitive.Description ref={ref} className={classNames(className)} {...props}>
+    <Text size="small">{props.children}</Text>
+  </DialogPrimitive.Description>
 ))
 DialogDescription.displayName = DialogPrimitive.Description.displayName
 

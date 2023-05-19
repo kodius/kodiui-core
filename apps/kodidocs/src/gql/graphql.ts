@@ -73,6 +73,7 @@ export type RootMutationType = {
   createElement?: Maybe<Element>
   createHistoryRelease?: Maybe<HistoryRelease>
   createSession?: Maybe<Session>
+  deleteHistoryRelease?: Maybe<HistoryRelease>
 }
 
 export type RootMutationTypeCreateCategoryArgs = {
@@ -91,6 +92,10 @@ export type RootMutationTypeCreateHistoryReleaseArgs = {
 
 export type RootMutationTypeCreateSessionArgs = {
   input?: InputMaybe<CreateSessionInput>
+}
+
+export type RootMutationTypeDeleteHistoryReleaseArgs = {
+  id: Scalars['ID']
 }
 
 export type RootQueryType = {
@@ -136,6 +141,17 @@ export type CreateCategoryMutationVariables = Exact<{
 export type CreateCategoryMutation = {
   __typename?: 'RootMutationType'
   createCategory?: { __typename?: 'Category'; id: string } | null
+}
+
+export type CreateElementMutationVariables = Exact<{
+  categoryId: Scalars['ID']
+  description: Scalars['String']
+  name: Scalars['String']
+}>
+
+export type CreateElementMutation = {
+  __typename?: 'RootMutationType'
+  createElement?: { __typename?: 'Element'; id: string } | null
 }
 
 export const GetCategoriesDocument = {
@@ -215,3 +231,69 @@ export const CreateCategoryDocument = {
     },
   ],
 } as unknown as DocumentNode<CreateCategoryMutation, CreateCategoryMutationVariables>
+export const CreateElementDocument = {
+  kind: 'Document',
+  definitions: [
+    {
+      kind: 'OperationDefinition',
+      operation: 'mutation',
+      name: { kind: 'Name', value: 'createElement' },
+      variableDefinitions: [
+        {
+          kind: 'VariableDefinition',
+          variable: { kind: 'Variable', name: { kind: 'Name', value: 'categoryId' } },
+          type: {
+            kind: 'NonNullType',
+            type: { kind: 'NamedType', name: { kind: 'Name', value: 'ID' } },
+          },
+        },
+        {
+          kind: 'VariableDefinition',
+          variable: { kind: 'Variable', name: { kind: 'Name', value: 'description' } },
+          type: {
+            kind: 'NonNullType',
+            type: { kind: 'NamedType', name: { kind: 'Name', value: 'String' } },
+          },
+        },
+        {
+          kind: 'VariableDefinition',
+          variable: { kind: 'Variable', name: { kind: 'Name', value: 'name' } },
+          type: {
+            kind: 'NonNullType',
+            type: { kind: 'NamedType', name: { kind: 'Name', value: 'String' } },
+          },
+        },
+      ],
+      selectionSet: {
+        kind: 'SelectionSet',
+        selections: [
+          {
+            kind: 'Field',
+            name: { kind: 'Name', value: 'createElement' },
+            arguments: [
+              {
+                kind: 'Argument',
+                name: { kind: 'Name', value: 'categoryId' },
+                value: { kind: 'Variable', name: { kind: 'Name', value: 'categoryId' } },
+              },
+              {
+                kind: 'Argument',
+                name: { kind: 'Name', value: 'description' },
+                value: { kind: 'Variable', name: { kind: 'Name', value: 'description' } },
+              },
+              {
+                kind: 'Argument',
+                name: { kind: 'Name', value: 'name' },
+                value: { kind: 'Variable', name: { kind: 'Name', value: 'name' } },
+              },
+            ],
+            selectionSet: {
+              kind: 'SelectionSet',
+              selections: [{ kind: 'Field', name: { kind: 'Name', value: 'id' } }],
+            },
+          },
+        ],
+      },
+    },
+  ],
+} as unknown as DocumentNode<CreateElementMutation, CreateElementMutationVariables>
