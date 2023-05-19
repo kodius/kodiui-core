@@ -12,6 +12,9 @@ import {
 import { Button } from '@cli-components/Button/Button'
 import { CreateNewCategory } from './CreateNewCategory'
 import { CateogriesDialog } from './CategoriesDialog'
+import { TextLink } from '@cli-components/TextLink'
+import { routes } from '@lib'
+import { Text } from '@cli-components/Text'
 
 export const Footer = () => {
   return (
@@ -21,7 +24,11 @@ export const Footer = () => {
           <Button variant="transparent" size="sm" icon={<Settings />} width="fit" />
         </DropdownMenuTrigger>
         <DropdownMenuContent>
-          <DropdownMenuItem>Item</DropdownMenuItem>
+          <DropdownMenuItem>
+            <Text tone="success">
+              <TextLink href={routes.signIn}>Login</TextLink>
+            </Text>
+          </DropdownMenuItem>
           <DropdownMenuSub>
             <DropdownMenuSubTrigger>Categories</DropdownMenuSubTrigger>
             <DropdownMenuSubContent>

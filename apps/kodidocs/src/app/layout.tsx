@@ -4,18 +4,21 @@ export const metadata = {
 }
 
 import { Toaster } from '@cli-components/Toast/Toaster'
+import { AuthProvider } from '@features/auth'
 import { QueryProvider } from '@lib'
 import { ThemeProvider } from '@styles'
 
 export default function RootLayout({ children }: { children: React.ReactNode }) {
   return (
     <html lang="en">
-      <QueryProvider>
-        <ThemeProvider>
-          {children}
-          <Toaster />
-        </ThemeProvider>
-      </QueryProvider>
+      <AuthProvider>
+        <QueryProvider>
+          <ThemeProvider>
+            {children}
+            <Toaster />
+          </ThemeProvider>
+        </QueryProvider>
+      </AuthProvider>
     </html>
   )
 }

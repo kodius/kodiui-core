@@ -1,6 +1,6 @@
 /* eslint-disable */
-import * as types from './graphql'
-import { TypedDocumentNode as DocumentNode } from '@graphql-typed-document-node/core'
+import * as types from './graphql';
+import { TypedDocumentNode as DocumentNode } from '@graphql-typed-document-node/core';
 
 /**
  * Map of all GraphQL operations in the project.
@@ -13,9 +13,9 @@ import { TypedDocumentNode as DocumentNode } from '@graphql-typed-document-node/
  * Therefore it is highly recommended to use the babel or swc plugin for production.
  */
 const documents = {
-  'query getCategories {\n  getCategories {\n    elements {\n      name\n      id\n    }\n    id\n    name\n  }\n}\n\nmutation createCategory($name: String!) {\n  createCategory(name: $name) {\n    id\n  }\n}\n\nmutation createElement($categoryId: ID!, $description: String!, $name: String!) {\n  createElement(categoryId: $categoryId, description: $description, name: $name) {\n    id\n  }\n}':
-    types.GetCategoriesDocument,
-}
+    "mutation createSession($input: CreateSessionInput) {\n  createSession(input: $input) {\n    token\n  }\n}\n\nquery me {\n  me {\n    id\n    email\n  }\n}": types.CreateSessionDocument,
+    "query getCategories {\n  getCategories {\n    elements {\n      name\n      id\n    }\n    id\n    name\n  }\n}\n\nmutation createCategory($name: String!) {\n  createCategory(name: $name) {\n    id\n  }\n}\n\nmutation createElement($categoryId: ID!, $description: String!, $name: String!) {\n  createElement(categoryId: $categoryId, description: $description, name: $name) {\n    id\n  }\n}": types.GetCategoriesDocument,
+};
 
 /**
  * The graphql function is used to parse GraphQL queries into a document that can be used by GraphQL clients.
@@ -29,18 +29,19 @@ const documents = {
  * The query argument is unknown!
  * Please regenerate the types.
  */
-export function graphql(source: string): unknown
+export function graphql(source: string): unknown;
 
 /**
  * The graphql function is used to parse GraphQL queries into a document that can be used by GraphQL clients.
  */
-export function graphql(
-  source: 'query getCategories {\n  getCategories {\n    elements {\n      name\n      id\n    }\n    id\n    name\n  }\n}\n\nmutation createCategory($name: String!) {\n  createCategory(name: $name) {\n    id\n  }\n}\n\nmutation createElement($categoryId: ID!, $description: String!, $name: String!) {\n  createElement(categoryId: $categoryId, description: $description, name: $name) {\n    id\n  }\n}'
-): (typeof documents)['query getCategories {\n  getCategories {\n    elements {\n      name\n      id\n    }\n    id\n    name\n  }\n}\n\nmutation createCategory($name: String!) {\n  createCategory(name: $name) {\n    id\n  }\n}\n\nmutation createElement($categoryId: ID!, $description: String!, $name: String!) {\n  createElement(categoryId: $categoryId, description: $description, name: $name) {\n    id\n  }\n}']
+export function graphql(source: "mutation createSession($input: CreateSessionInput) {\n  createSession(input: $input) {\n    token\n  }\n}\n\nquery me {\n  me {\n    id\n    email\n  }\n}"): (typeof documents)["mutation createSession($input: CreateSessionInput) {\n  createSession(input: $input) {\n    token\n  }\n}\n\nquery me {\n  me {\n    id\n    email\n  }\n}"];
+/**
+ * The graphql function is used to parse GraphQL queries into a document that can be used by GraphQL clients.
+ */
+export function graphql(source: "query getCategories {\n  getCategories {\n    elements {\n      name\n      id\n    }\n    id\n    name\n  }\n}\n\nmutation createCategory($name: String!) {\n  createCategory(name: $name) {\n    id\n  }\n}\n\nmutation createElement($categoryId: ID!, $description: String!, $name: String!) {\n  createElement(categoryId: $categoryId, description: $description, name: $name) {\n    id\n  }\n}"): (typeof documents)["query getCategories {\n  getCategories {\n    elements {\n      name\n      id\n    }\n    id\n    name\n  }\n}\n\nmutation createCategory($name: String!) {\n  createCategory(name: $name) {\n    id\n  }\n}\n\nmutation createElement($categoryId: ID!, $description: String!, $name: String!) {\n  createElement(categoryId: $categoryId, description: $description, name: $name) {\n    id\n  }\n}"];
 
 export function graphql(source: string) {
-  return (documents as any)[source] ?? {}
+  return (documents as any)[source] ?? {};
 }
 
-export type DocumentType<TDocumentNode extends DocumentNode<any, any>> =
-  TDocumentNode extends DocumentNode<infer TType, any> ? TType : never
+export type DocumentType<TDocumentNode extends DocumentNode<any, any>> = TDocumentNode extends DocumentNode<  infer TType,  any>  ? TType  : never;

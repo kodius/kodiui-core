@@ -1,0 +1,12 @@
+mutation createSession($input: CreateSessionInput) {
+  createSession(input: $input) {
+    token
+  }
+}
+
+query me {
+  me {
+    id
+    email
+  }
+}
