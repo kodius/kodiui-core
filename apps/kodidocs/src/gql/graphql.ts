@@ -129,6 +129,15 @@ export type GetCategoriesQuery = {
   } | null> | null
 }
 
+export type CreateCategoryMutationVariables = Exact<{
+  name: Scalars['String']
+}>
+
+export type CreateCategoryMutation = {
+  __typename?: 'RootMutationType'
+  createCategory?: { __typename?: 'Category'; id: string } | null
+}
+
 export const GetCategoriesDocument = {
   kind: 'Document',
   definitions: [
@@ -166,3 +175,43 @@ export const GetCategoriesDocument = {
     },
   ],
 } as unknown as DocumentNode<GetCategoriesQuery, GetCategoriesQueryVariables>
+export const CreateCategoryDocument = {
+  kind: 'Document',
+  definitions: [
+    {
+      kind: 'OperationDefinition',
+      operation: 'mutation',
+      name: { kind: 'Name', value: 'createCategory' },
+      variableDefinitions: [
+        {
+          kind: 'VariableDefinition',
+          variable: { kind: 'Variable', name: { kind: 'Name', value: 'name' } },
+          type: {
+            kind: 'NonNullType',
+            type: { kind: 'NamedType', name: { kind: 'Name', value: 'String' } },
+          },
+        },
+      ],
+      selectionSet: {
+        kind: 'SelectionSet',
+        selections: [
+          {
+            kind: 'Field',
+            name: { kind: 'Name', value: 'createCategory' },
+            arguments: [
+              {
+                kind: 'Argument',
+                name: { kind: 'Name', value: 'name' },
+                value: { kind: 'Variable', name: { kind: 'Name', value: 'name' } },
+              },
+            ],
+            selectionSet: {
+              kind: 'SelectionSet',
+              selections: [{ kind: 'Field', name: { kind: 'Name', value: 'id' } }],
+            },
+          },
+        ],
+      },
+    },
+  ],
+} as unknown as DocumentNode<CreateCategoryMutation, CreateCategoryMutationVariables>

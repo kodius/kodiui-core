@@ -10,6 +10,7 @@ import {
   AccordionItem,
   AccordionTrigger,
 } from '@cli-components/Accordion'
+import { useToast } from '@cli-components/Toast'
 
 export const Sidebar = async () => {
   const { getCategories: categories } = await graphQlClient.request(GetCategoriesDocument)

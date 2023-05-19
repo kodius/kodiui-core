@@ -8,3 +8,9 @@ query getCategories {
     name
   }
 }
+
+mutation createCategory($name: String!) {
+  createCategory(name: $name) {
+    id
+  }
+}
