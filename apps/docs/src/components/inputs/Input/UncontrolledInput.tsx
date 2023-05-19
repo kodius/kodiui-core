@@ -34,7 +34,11 @@ export const UncontrolledInput = <T extends FieldValues>({ label, ...rest }: Pro
       <ErrorMessage
         errors={errors}
         name={rest.name as unknown as FieldName<FieldValuesFromFieldErrors<FieldErrors<T>>>}
-        render={({ message }) => <Text tone="critical">{message}</Text>}
+        render={({ message }) => (
+          <Text size="xsmall" tone='success'>
+            {message} a
+          </Text>
+        )}
       />
     </>
   )
