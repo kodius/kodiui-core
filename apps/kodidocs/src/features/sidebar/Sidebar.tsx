@@ -1,10 +1,15 @@
-import { Accordion, AccordionContent, AccordionItem, AccordionTrigger } from '@/cli-components'
 import React from 'react'
 import { FlexBox } from '@kodiui/ui'
 import Link from 'next/link'
 import { graphQlClient } from '@lib'
 import { GetCategoriesDocument } from '@gql/graphql'
 import { Footer } from './components'
+import {
+  Accordion,
+  AccordionContent,
+  AccordionItem,
+  AccordionTrigger,
+} from '@cli-components/Accordion'
 
 export const Sidebar = async () => {
   const { getCategories: categories } = await graphQlClient.request(GetCategoriesDocument)
