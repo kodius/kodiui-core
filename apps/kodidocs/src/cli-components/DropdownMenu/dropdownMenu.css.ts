@@ -67,16 +67,18 @@ export const dropdownMenuItemStyle = style({})
 export const dropdownMenuRadioItemStyle = style({})
 export const dropdownMenuCheckboxItemStyle = style({})
 export const dropdownMenuLabelStyle = style({
-  paddingLeft: vars.space.lg,
   fontSize: 'small',
-  fontWeight: 'bold',
-  color: vars.colors.gray8,
+  padding: vars.space.xxs,
+  paddingLeft: vars.space.xs,
+  color: vars.colors.gray10,
 })
 
 export const dropdownMenuSeparatorStyle = style({
   backgroundColor: vars.colors.brandSoftActive,
   height: '1px',
   margin: '5px',
+  marginRight: vars.space['--xxs'],
+  marginLeft: vars.space['--xxs'],
 })
 
 export const dropdownMenuShortcutStyle = style({
@@ -145,9 +147,9 @@ globalStyle(
     display: 'flex',
     alignItems: 'center',
     height: '25px',
+    gap: vars.space.xxs,
     padding: vars.space.xs,
     position: 'relative',
-    paddingLeft: vars.space.lg,
     userSelect: 'none',
     outline: 'none',
   }

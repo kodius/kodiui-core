@@ -1,9 +1,11 @@
-import { Settings } from 'lucide-react'
+import { Settings, SettingsIcon, UserIcon } from 'lucide-react'
 import React from 'react'
 import {
   DropdownMenu,
   DropdownMenuContent,
   DropdownMenuItem,
+  DropdownMenuLabel,
+  DropdownMenuSeparator,
   DropdownMenuSub,
   DropdownMenuSubContent,
   DropdownMenuSubTrigger,
@@ -12,9 +14,7 @@ import {
 import { Button } from '@cli-components/Button/Button'
 import { CreateNewCategory } from './CreateNewCategory'
 import { CateogriesDialog } from './CategoriesDialog'
-import { TextLink } from '@cli-components/TextLink'
-import { routes } from '@lib'
-import { Text } from '@cli-components/Text'
+import { AuthItem } from './AuthItem'
 
 export const Footer = () => {
   return (
@@ -24,12 +24,19 @@ export const Footer = () => {
           <Button variant="transparent" size="sm" icon={<Settings />} width="fit" />
         </DropdownMenuTrigger>
         <DropdownMenuContent>
+          <DropdownMenuLabel>User</DropdownMenuLabel>
+          <DropdownMenuSeparator />
           <DropdownMenuItem>
-            <Text tone="success">
-              <TextLink href={routes.signIn}>Login</TextLink>
-            </Text>
+            <UserIcon width="14px" /> Profile
           </DropdownMenuItem>
+          <DropdownMenuItem>
+            <SettingsIcon width="14px" /> Settings
+          </DropdownMenuItem>
+          <AuthItem />
+          <DropdownMenuSeparator />
           <DropdownMenuSub>
+            <DropdownMenuLabel>Settings</DropdownMenuLabel>
+            <DropdownMenuSeparator />
             <DropdownMenuSubTrigger>Categories</DropdownMenuSubTrigger>
             <DropdownMenuSubContent>
               <CreateNewCategory />

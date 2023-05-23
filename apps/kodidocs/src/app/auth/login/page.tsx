@@ -10,19 +10,24 @@ import { CreateSessionInput } from '@gql/graphql'
 import { Input } from '@cli-components/Input'
 import { Button } from '@cli-components/Button'
 import { ZodKeyChecker } from '@types'
+import { useState } from 'react'
 
 const LoginPage = () => {
-  const form = useForm<CreateSessionInput>()
+  const form = useForm<CreateSessionInput>({ resolver: zodResolver(loginSchema) })
+
+  const [isLoading, setIsLoading] = useState(false)
 
   const onSubmit = async (data: CreateSessionInput) => {
-    console.log(data)
-
+    setIsLoading(true)
     await signIn('credentials', {
       email: data.email,
       password: data.password,
       redirect: true,
       callbackUrl: routes.home,
-    }).catch((err) => console.log('errrr', err))
+    }).catch(() => {
+      setIsLoading(false)
+    })
+    setIsLoading(false)
   }
   return (
     <Box height="screen">
@@ -42,7 +47,7 @@ const LoginPage = () => {
                 label="passwrod"
                 placeholder="passwrod"
               />
-              <Button>Login</Button>
+              <Button loading={isLoading}>Login</Button>
             </Stack>
           </form>
         </FormProvider>
@@ -54,7 +59,6 @@ const LoginPage = () => {
 export default LoginPage
 
 const loginSchema = z.object<ZodKeyChecker<CreateSessionInput>>({
-  email: z.string().email().optional(),
-  username: z.string().min(1, { message: 'Required' }),
+  email: z.string().email(),
   password: z.string().min(1, { message: 'Required' }),
 })

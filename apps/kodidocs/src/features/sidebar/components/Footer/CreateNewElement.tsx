@@ -10,6 +10,7 @@ import { Stack } from '@kodiui/ui'
 import { graphQlClient } from '@lib'
 import { useMutation } from '@tanstack/react-query'
 import { ZodKeyChecker } from '@types'
+import { BoxIcon } from 'lucide-react'
 import { useRouter } from 'next/navigation'
 import React, { FC, useState } from 'react'
 import { FormProvider, useForm } from 'react-hook-form'
@@ -46,7 +47,7 @@ export const CreateNewElement: FC<Category | undefined | null> = (category) => {
 
   return (
     <>
-      <Button onClick={onClick} width="full" size="sm" variant="transparent">
+      <Button tone="info" icon={<BoxIcon />} onClick={onClick} width="full" variant="transparent">
         Create new Element
       </Button>
       <DialogBlock
@@ -60,9 +61,7 @@ export const CreateNewElement: FC<Category | undefined | null> = (category) => {
             <Stack>
               <Input<CreateElementMutationVariables> name="name" label="name" />
               <Input<CreateElementMutationVariables> name="description" label="description" />
-              <Button loading={mutation.isLoading} variant="soft">
-                Create
-              </Button>
+              <Button loading={mutation.isLoading}>Create</Button>
             </Stack>
           </form>
         </FormProvider>

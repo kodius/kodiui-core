@@ -14,6 +14,7 @@ import { TypedDocumentNode as DocumentNode } from '@graphql-typed-document-node/
  */
 const documents = {
     "mutation createSession($input: CreateSessionInput) {\n  createSession(input: $input) {\n    token\n  }\n}\n\nquery me {\n  me {\n    id\n    email\n  }\n}": types.CreateSessionDocument,
+    "query getElementById($id: ID) {\n  getElementById(id: $id) {\n    name\n    id\n  }\n}\n\nquery getElements {\n  getElements {\n    name\n    id\n    description\n    historyReleases {\n      description\n      name\n      version\n      id\n    }\n  }\n}": types.GetElementByIdDocument,
     "query getCategories {\n  getCategories {\n    elements {\n      name\n      id\n    }\n    id\n    name\n  }\n}\n\nmutation createCategory($name: String!) {\n  createCategory(name: $name) {\n    id\n  }\n}\n\nmutation createElement($categoryId: ID!, $description: String!, $name: String!) {\n  createElement(categoryId: $categoryId, description: $description, name: $name) {\n    id\n  }\n}": types.GetCategoriesDocument,
 };
 
@@ -35,6 +36,10 @@ export function graphql(source: string): unknown;
  * The graphql function is used to parse GraphQL queries into a document that can be used by GraphQL clients.
  */
 export function graphql(source: "mutation createSession($input: CreateSessionInput) {\n  createSession(input: $input) {\n    token\n  }\n}\n\nquery me {\n  me {\n    id\n    email\n  }\n}"): (typeof documents)["mutation createSession($input: CreateSessionInput) {\n  createSession(input: $input) {\n    token\n  }\n}\n\nquery me {\n  me {\n    id\n    email\n  }\n}"];
+/**
+ * The graphql function is used to parse GraphQL queries into a document that can be used by GraphQL clients.
+ */
+export function graphql(source: "query getElementById($id: ID) {\n  getElementById(id: $id) {\n    name\n    id\n  }\n}\n\nquery getElements {\n  getElements {\n    name\n    id\n    description\n    historyReleases {\n      description\n      name\n      version\n      id\n    }\n  }\n}"): (typeof documents)["query getElementById($id: ID) {\n  getElementById(id: $id) {\n    name\n    id\n  }\n}\n\nquery getElements {\n  getElements {\n    name\n    id\n    description\n    historyReleases {\n      description\n      name\n      version\n      id\n    }\n  }\n}"];
 /**
  * The graphql function is used to parse GraphQL queries into a document that can be used by GraphQL clients.
  */

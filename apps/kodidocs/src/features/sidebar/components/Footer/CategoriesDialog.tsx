@@ -1,7 +1,7 @@
 'use client'
 
 import { Button } from '@cli-components/Button/Button'
-import { Dialog, DialogContent, DialogDescription, DialogTitle } from '@cli-components/Dialog'
+import { DialogBlock } from '@cli-components/Dialog'
 import { Input } from '@cli-components/Input'
 import { useSidebarStore } from '@features/sidebar'
 import { CreateCategoryDocument, CreateCategoryMutationVariables } from '@gql/graphql'
@@ -43,23 +43,21 @@ export const CateogriesDialog = () => {
   if (!isOpen) return null
 
   return (
-    <Dialog open={isOpen} onOpenChange={() => setCategoriesDialog(false)}>
-      <DialogContent>
-        <DialogTitle>Create a new Category</DialogTitle>
-        <DialogDescription>
-          Lorem ipsum dolor sit amet, qui minim labore adipisicing minim sint cillum sint
-          consectetur cupidatat.
-          <FormProvider {...form}>
-            <form onSubmit={form.handleSubmit(submit)}>
-              <Stack>
-                <Input<CreateCategoryMutationVariables> name="name" label="name" />
-                <Button loading={mutation.isLoading}>Create</Button>
-              </Stack>
-            </form>
-          </FormProvider>
-        </DialogDescription>
-      </DialogContent>
-    </Dialog>
+    <DialogBlock
+      open={isOpen}
+      title="Create a new Category"
+      description="Lorem ipsum dolor sit amet, officia excepteur ex fugiat reprehenderit enim labore culpa sint ad nisi Lorem pariatur mollit ex e"
+      onOpenChange={() => setCategoriesDialog(false)}
+    >
+      <FormProvider {...form}>
+        <form onSubmit={form.handleSubmit(submit)}>
+          <Stack>
+            <Input<CreateCategoryMutationVariables> name="name" label="name" />
+            <Button loading={mutation.isLoading}>Create</Button>
+          </Stack>
+        </form>
+      </FormProvider>
+    </DialogBlock>
   )
 }
 
