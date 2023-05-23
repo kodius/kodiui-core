@@ -8,12 +8,13 @@ defmodule Graphql.Schemas.Schema do
   alias Graphql.Mutations.CreateSession
   alias Graphql.Mutations.CreateCategory
   alias Graphql.Mutations.CreateElement
+  alias Graphql.Mutations.UpdateElement
   alias Graphql.Mutations.DeleteElement
   alias Graphql.Mutations.CreateHistoryRelease
   alias Graphql.Mutations.DeleteHistoryRelease
   alias Graphql.Mutations.UpdateHistoryRelease
 
-  import_types(Graphql.Types.Inputs.{CreateSessionInput, CreateHistoryReleaseInput, UpdateHistoryReleaseInput})
+  import_types(Graphql.Types.Inputs.{CreateSessionInput, CreateHistoryReleaseInput, UpdateHistoryReleaseInput, UpdateElementInput})
   import_types(Graphql.Types.Objects.AccountType)
   import_types(Graphql.Types.Objects.CreateSessionType)
   # import_types(Graphql.Types.Objects.CategoryType)
@@ -87,6 +88,12 @@ defmodule Graphql.Schemas.Schema do
     field :delete_element, :element do
       arg(:id, non_null(:id))
       resolve(&DeleteElement.resolve/2)
+    end
+
+    field :update_element, :element do
+      arg(:id, non_null(:id))
+      arg(:update_element_input, :update_element_input)
+      resolve(&UpdateElement.resolve/2)
     end
 
     field :create_history_release, :history_release do
