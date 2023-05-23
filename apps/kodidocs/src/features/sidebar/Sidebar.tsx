@@ -1,7 +1,7 @@
 import React from 'react'
 import { FlexBox } from '@kodiui/ui'
 import Link from 'next/link'
-import { graphQlClient } from '@lib'
+import { graphQlClient, routes } from '@lib'
 import { GetCategoriesDocument } from '@gql/graphql'
 import { Footer } from './components'
 import {
@@ -11,19 +11,28 @@ import {
   AccordionTrigger,
 } from '@cli-components/Accordion'
 import { CreateNewElement } from './components/Footer/CreateNewElement'
+import { getServerSession } from 'next-auth'
+import { Text } from '@cli-components/Text'
 
 export const Sidebar = async () => {
   const { getCategories: categories } = await graphQlClient.request(GetCategoriesDocument)
+  const session = await getServerSession()
+
+  const ifHaveUser = session?.user
 
   return (
     <FlexBox
       flexDirection="column"
       justifyContent="space-between"
       minWidth="80"
-      background="gray1"
       height="screen"
       py="sm"
+      borderRightStyle="solid"
+      borderRightWidth="md"
+      borderColor="blackA4"
     >
+      <Text>{session?.user?.email}</Text>
+
       <Accordion type="single">
         {categories?.map((category) => {
           return (
@@ -32,11 +41,11 @@ export const Sidebar = async () => {
               {category?.elements?.map((Element) => {
                 return (
                   <AccordionContent key={Element?.name}>
-                    <Link href={Element?.id || ''}>{Element?.name}</Link>
+                    <Link href={`${routes.components}/${Element?.id}`}>{Element?.name}</Link>
                   </AccordionContent>
                 )
               })}
-              {category && (
+              {category && ifHaveUser && (
                 <AccordionContent>
                   <CreateNewElement {...category} />
                 </AccordionContent>

@@ -6,18 +6,19 @@ import classNames from 'classnames'
 
 import '@kodiui/ui/style.css'
 import { Sidebar } from '@features/sidebar'
-import { lightTheme } from '@styles'
+import { darkTheme } from '@styles'
+import { bodyStyle } from './body.css'
 
 const roboto = Noto_Sans({ subsets: ['latin'], weight: ['400', '700', '900'] })
 
 export const ThemeProvider: FC<PropsWithChildren> = ({ children }) => {
   return (
-    <body className={classNames(roboto.className, lightTheme)}>
+    <body className={classNames(roboto.className, darkTheme, bodyStyle)}>
       <KodiSidebar gap="0">
         {/* this is not an error. Typescirpt dose not know about server components*/}
         {/* @ts-expect-error Server Component */}
         <Sidebar />
-        {children}
+        <div>{children}</div>
       </KodiSidebar>
     </body>
   )

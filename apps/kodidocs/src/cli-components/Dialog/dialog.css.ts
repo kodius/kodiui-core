@@ -22,7 +22,8 @@ const contentShow = keyframes({
 })
 
 export const dialogOverlay = style({
-  backgroundColor: vars.colors.blackA9,
+  backgroundColor: 'rgba(0,0,0,0.5)',
+  backdropFilter: 'blur(8px)',
   position: 'fixed',
   inset: 0,
   animation: `${overlayShow} 150ms cubic-bezier(0.16, 1, 0.3, 1)`,
@@ -32,6 +33,7 @@ export const dialogContent = style({
   backgroundColor: vars.colors.white,
   borderRadius: vars.borderRadius.sm,
   boxShadow: vars.boxShadow['shadow-2'],
+  border: `1px solid ${vars.colors.gray5}`,
   position: 'fixed',
   top: '50%',
   left: '50%',

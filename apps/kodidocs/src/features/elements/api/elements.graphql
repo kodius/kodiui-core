@@ -1,0 +1,20 @@
+query getElementById($id: ID) {
+  getElementById(id: $id) {
+    name
+    id
+  }
+}
+
+query getElements {
+  getElements {
+    name
+    id
+    description
+    historyReleases {
+      description
+      name
+      version
+      id
+    }
+  }
+}

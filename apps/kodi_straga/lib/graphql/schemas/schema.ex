@@ -3,6 +3,7 @@ defmodule Graphql.Schemas.Schema do
   use Absinthe.Relay.Schema, :modern
   use KodiStragaWeb.Auth.CustomMiddleware
 
+  alias Graphql.Queries.GetElements
   alias Graphql.Queries.{CurrentUser, HealthCheck, Category, GetElementById}
   alias Graphql.Mutations.CreateSession
   alias Graphql.Mutations.CreateCategory
@@ -16,7 +17,6 @@ defmodule Graphql.Schemas.Schema do
   import_types(Graphql.Types.Objects.CreateSessionType)
   # import_types(Graphql.Types.Objects.CategoryType)
   import_types(Graphql.Types.Objects.ElementType)
-
 
   connection(node_type: :account)
 
@@ -60,6 +60,9 @@ defmodule Graphql.Schemas.Schema do
       resolve(&GetElementById.resolve/3)
     end
 
+    field :get_elements, list_of(:element) do
+      resolve(&GetElements.resolve/3)
+    end
   end
 
   mutation do

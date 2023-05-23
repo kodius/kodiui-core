@@ -18,6 +18,8 @@ defmodule KodiStragaWeb.Auth.CustomMiddleware do
                :elementId,
                :version,
                :id,
+               :get_element_by_id,
+               :get_elements
              ],
              field.identifier
            ) or field.identifier === :session or

@@ -34,6 +34,7 @@ export const Button = React.forwardRef<HTMLButtonElement, ButtonType>((props, fo
         as="button"
         display="flex"
         alignItems="center"
+        justifyContent="center"
         gap="xxs"
         className={classNames(buttonStyle, recipe)}
         {...props}

@@ -22,7 +22,7 @@ const slideUp = keyframes({
 export const accordionContentStyle = style({
   overflow: 'hidden',
   fontSize: vars.fontSize.sm,
-  backgroundColor: vars.colors.gray2,
+  backgroundColor: vars.colors.sky2,
   color: vars.colors.gray11,
   selectors: {
     '&[data-state=open]': {
@@ -65,13 +65,13 @@ export const accordionTriggerStyle = style({
   lineHeight: 1,
   color: vars.colors.gray11,
   boxShadow: vars.boxShadow['shadow-5'],
-  backgroundColor: vars.colors.white,
+  backgroundColor: vars.colors.sky3,
   ':hover': {
-    backgroundColor: vars.colors.gray2,
+    backgroundColor: vars.colors.sky2,
   },
   selectors: {
     '&[data-state=open]': {
-      color: vars.colors.brand,
+      color: vars.colors.sky9,
       fontWeight: 'bold',
     },
   },
