@@ -14,7 +14,7 @@ defmodule Graphql.Schemas.Schema do
   import_types(Graphql.Types.Inputs.{CreateSessionInput, CreateHistoryReleaseInput, UpdateHistoryReleaseInput})
   import_types(Graphql.Types.Objects.AccountType)
   import_types(Graphql.Types.Objects.CreateSessionType)
-  import_types(Graphql.Types.Objects.CategoryType)
+  # import_types(Graphql.Types.Objects.CategoryType)
   import_types(Graphql.Types.Objects.ElementType)
 
 

@@ -7,7 +7,7 @@ defmodule Graphql.Queries.GetElementById do
   def resolve(_, args, _) do
     response =
       Repo.get(Element, args.id)
-      |> Repo.preload(:history_releases)
+      |> Repo.preload([:category, :history_releases])
 
     {:ok, response}
   end
