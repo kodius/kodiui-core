@@ -8,6 +8,7 @@ defmodule Graphql.Schemas.Schema do
   alias Graphql.Mutations.CreateSession
   alias Graphql.Mutations.CreateCategory
   alias Graphql.Mutations.CreateElement
+  alias Graphql.Mutations.DeleteElement
   alias Graphql.Mutations.CreateHistoryRelease
   alias Graphql.Mutations.DeleteHistoryRelease
   alias Graphql.Mutations.UpdateHistoryRelease
@@ -83,6 +84,11 @@ defmodule Graphql.Schemas.Schema do
       resolve(&CreateElement.create_element/3)
     end
 
+    field :delete_element, :element do
+      arg(:id, non_null(:id))
+      resolve(&DeleteElement.resolve/2)
+    end
+
     field :create_history_release, :history_release do
       arg(:input, :create_history_release_input)
       resolve(&CreateHistoryRelease.resolve/3)
@@ -99,5 +105,6 @@ defmodule Graphql.Schemas.Schema do
       arg(:history_release, :update_history_release_input)
       resolve(&UpdateHistoryRelease.resolve/2)
     end
+    
   end
 end
