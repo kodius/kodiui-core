@@ -11,6 +11,7 @@ export const categories: Category[] = [
       { name: 'Sidebar', progress: 'dev' },
       { name: 'Switcher', progress: 'dev' },
       { name: 'FlexBox', progress: 'dev' },
+      { name: 'Box', progress: 'dev' },
     ],
   },
   {
