@@ -1,24 +1,47 @@
-# Use the official Elixir image as the base image
-FROM elixir:latest
+FROM elixir:1.14.4-alpine AS build
 
-# Set the working directory in the container
+# ...
+
+FROM elixir:1.14.4-alpine AS app
+
+ARG database_url
+ENV DATABASE_URL=$database_url
+ARG port
+ENV PORT=$port
+ARG secret_key_base
+ENV SECRET_KEY_BASE=$secret_key_base
+ARG mix_env
+ENV MIX_ENV=$mix_env
+ARG release_level
+ENV RELEASE_LEVEL=$release_level
+
+RUN apk --no-cache update \
+    && apk --no-cache upgrade \
+    && apk add --no-cache \
+    ttf-liberation \
+    make \
+    build-base
+    
+RUN apk add --no-cache bash
+
+RUN mkdir /app
 WORKDIR /app
 
-# Copy the application files into the container
+COPY mix.exs mix.lock ./
+
+RUN mix do local.hex --force, local.rebar --force, deps.clean --all, deps.get, deps.compile
+
+# COPY assets/package.json ./assets/
+# RUN npm install --prefix ./assets
+
 COPY . .
 
-# Install dependencies
-RUN mix local.hex --force && \
-    mix local.rebar --force && \
-    mix deps.get
+RUN mix do release
 
-# Build the application
-RUN mix compile
-
-# Start the application
 EXPOSE 4000
 COPY entrypoint.sh /usr/bin/
 RUN chmod +x /usr/bin/entrypoint.sh
 ENTRYPOINT ["entrypoint.sh"]
+
 CMD ["mix", "phx.server"]
 

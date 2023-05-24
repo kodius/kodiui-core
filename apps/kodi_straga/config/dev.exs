@@ -2,11 +2,10 @@ import Config
 
 # Configure your database
 config :kodi_straga, KodiStraga.Repo,
-  username: "postgres",
-  password: "Ruda,actv1",
-  hostname: "167.235.150.40",
-  database: "kodiui-dev",
-  port: 5433,
+  username: "user",
+  password: "admin",
+  hostname: "116.203.201.51",
+  database: "kodiui",
   stacktrace: true,
   show_sensitive_data_on_connection_error: true,
   pool_size: 10
