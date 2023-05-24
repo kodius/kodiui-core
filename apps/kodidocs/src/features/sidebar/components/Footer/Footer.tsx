@@ -14,7 +14,6 @@ import {
 import { Button } from '@cli-components/Button/Button'
 import { CreateNewCategory } from './CreateNewCategory'
 import { CateogriesDialog } from './CategoriesDialog'
-import { AuthItem } from './AuthItem'
 
 export const Footer = () => {
   return (
@@ -32,7 +31,6 @@ export const Footer = () => {
           <DropdownMenuItem>
             <SettingsIcon width="14px" /> Settings
           </DropdownMenuItem>
-          <AuthItem />
           <DropdownMenuSeparator />
           <DropdownMenuSub>
             <DropdownMenuLabel>Settings</DropdownMenuLabel>
