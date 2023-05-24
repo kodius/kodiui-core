@@ -12,5 +12,6 @@ defmodule Graphql.Types.Objects.ElementType do
     field(:description, :string)
     field(:history_releases, list_of(:history_release))
     field(:category, :category)
+    field(:example, :string)
   end
 end
