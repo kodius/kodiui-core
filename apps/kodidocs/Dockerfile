@@ -8,6 +8,25 @@ WORKDIR /app
 
 # Install dependencies based on the preferred package manager
 COPY package.json yarn.lock* package-lock.json* pnpm-lock.yaml* ./
+
+ARG PNPM_LOCK_PATH
+COPY ${PNPM_LOCK_PATH} ./
+
+ARG PACKAGE_JSON_PATH 
+COPY ${PACKAGE_JSON_PATH} ./
+
+ARG PACKAGE_JSON_KODIDOCS_PATH
+COPY ${PACKAGE_JSON_KODIDOCS_PATH} ./
+
+
+# ARG YARN_LOCK_PATH 
+# COPY ${YARN_LOCK_PATH} ./
+
+ARG PACKAGE_LOCK_PATH 
+COPY ${PACKAGE_LOCK_PATH} ./
+
+RUN npm cache clean --force
+
 RUN \
   if [ -f yarn.lock ]; then yarn --frozen-lockfile; \
   elif [ -f package-lock.json ]; then npm ci; \
@@ -43,8 +62,7 @@ ENV NEXT_PUBLIC_GRAPHQL_API=$NEXT_PUBLIC_GRAPHQL_API
 
 RUN echo "NEXT_PUBLIC_GRAPHQL_API=$NEXT_PUBLIC_GRAPHQL_API"
 
-
-RUN yarn build && NEXT_PUBLIC_GRAPHQL_API=$NEXT_PUBLIC_GRAPHQL_API
+RUN yarn install && yarn build && NEXT_PUBLIC_GRAPHQL_API=$NEXT_PUBLIC_GRAPHQL_API
 
 
 # If using npm comment out above and use below instead

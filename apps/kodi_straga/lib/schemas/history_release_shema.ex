@@ -11,6 +11,7 @@ defmodule Schemas.HistoryRelease do
     field :name, :string
     field :description, :string
     field :version, :string
+    field :example, :string
     belongs_to :element, Element 
     timestamps()
   end

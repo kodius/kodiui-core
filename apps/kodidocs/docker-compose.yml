@@ -1,0 +1,16 @@
+version: '3'
+services:
+  app:
+    build:
+      context: ../..
+      dockerfile: apps/kodidocs/Dockerfile
+      args:
+        - PNPM_LOCK_PATH=pnpm-lock.yaml
+        - PACKAGE_JSON_PATH=package.json
+        - PACKAGE_JSON_KODIDOCS_PATH=apps/kodidocs/package.json
+        # - YARN_LOCK_PATH=yarn.lock
+        - PACKAGE_LOCK_PATH=apps/kodidocs/package-lock.json
+    ports:
+      - 3000:3000
+    environment:
+      - NEXT_PUBLIC_GRAPHQL_API=${NEXT_PUBLIC_GRAPHQL_API}

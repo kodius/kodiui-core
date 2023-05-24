@@ -7,5 +7,6 @@ defmodule Graphql.Types.Objects.HistoryReleaseType do
     field(:version, :string)
     field(:description, :string)
     field(:element_id, :id)
+    field(:example, :string)
   end
 end

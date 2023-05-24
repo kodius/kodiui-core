@@ -10,7 +10,7 @@ defmodule Graphql.Mutations.UpdateElement do
       name: update_element_params.name,
       description: update_element_params.description,
       version: update_element_params.version,
-      example: update_element_params.example
+      example: update_element_params.example,
       element_id: element.id
     }
     |> HistoryRelease.changeset()
