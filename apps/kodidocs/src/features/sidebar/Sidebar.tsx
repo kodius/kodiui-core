@@ -1,7 +1,6 @@
 import React from 'react'
-import { FlexBox } from '@kodiui/ui'
+import { FlexBox, Split } from '@kodiui/ui'
 import Link from 'next/link'
-import { routes } from '@lib'
 import { Footer } from './components'
 import {
   Accordion,
@@ -9,16 +8,22 @@ import {
   AccordionItem,
   AccordionTrigger,
 } from '@cli-components/Accordion'
-import { CreateNewElement } from './components/Footer/CreateNewElement'
-import { getServerSession } from 'next-auth'
-import { Text } from '@cli-components/Text'
 import { categories } from './data/categories'
+import { Badge } from '@cli-components/Badge'
+import { Progress } from '@types'
+
+const getTone = (progress: Progress) => {
+  switch (progress) {
+    case 'new':
+      return 'brand'
+    case 'dev':
+      return 'info'
+    default:
+      break
+  }
+}
 
 export const Sidebar = async () => {
-  const session = await getServerSession()
-
-  const ifHaveUser = session?.user
-
   return (
     <FlexBox
       flexDirection="column"
@@ -30,7 +35,6 @@ export const Sidebar = async () => {
       borderRightWidth="md"
       borderColor="blackA4"
     >
-      <Text>{session?.user?.email}</Text>
       <Accordion type="single">
         {categories?.map((category) => {
           return (
@@ -39,15 +43,15 @@ export const Sidebar = async () => {
               {category?.elements?.map((Element) => {
                 return (
                   <AccordionContent key={Element?.name}>
-                    <Link href={`${routes.components}/${Element?.id}`}>{Element?.name}</Link>
+                    <Split>
+                      <Link href={`${category.name.toLowerCase()}/${Element?.name.toLowerCase()}`}>
+                        {Element?.name}
+                      </Link>
+                      <Badge tone={getTone(Element.progress)}>{Element.progress}</Badge>
+                    </Split>
                   </AccordionContent>
                 )
               })}
-              {category && ifHaveUser && (
-                <AccordionContent>
-                  <CreateNewElement {...category} />
-                </AccordionContent>
-              )}
             </AccordionItem>
           )
         })}

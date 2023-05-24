@@ -15,8 +15,7 @@ const ComponentPage = async ({ params }: Props) => {
   return (
     <DefaultTemplate title={element?.name} description={element?.description}>
       <DocBuilder
-        componentTab={getComponentByType(element?.name)}
-        propsTab={<div>props</div>}
+        component={getComponentByType(element?.name)}
         props={getPropsByType(element?.name)}
         //@ts-ignore
         historyReleases={element?.historyReleases}

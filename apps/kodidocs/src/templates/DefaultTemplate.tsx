@@ -11,7 +11,7 @@ interface Props extends PropsWithChildren {
 
 export const DefaultTemplate: FC<Props> = (props) => {
   return (
-    <Stack gap="xl">
+    <Stack gap="xl" height="screen" overflow="auto" paddingBottom="5xxl">
       <div>
         <Box p="5xxl" paddingBottom="md">
           <Stack gap="xs">

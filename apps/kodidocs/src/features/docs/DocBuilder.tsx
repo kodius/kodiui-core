@@ -1,5 +1,4 @@
 import { Tabs, TabsContent, TabsList, TabsTrigger } from '@cli-components/Tabs/Tabs'
-import { HistoryRelease as HistoryReleaseType } from '@gql/graphql'
 import { Stack } from '@kodiui/ui'
 import React, { FC, ReactNode } from 'react'
 import { HistoryRelease } from './components/HistoryRelease'
@@ -7,11 +6,11 @@ import { PropsType } from '@features/documentation'
 import { Prop } from '@features/documentation/component/Prop'
 import { TextLink } from '@cli-components/TextLink'
 import { Text } from '@cli-components/Text'
+import { Version } from '@types'
 
 interface Props {
-  componentTab: ReactNode
-  historyReleases: HistoryReleaseType[]
-  versionsTab: ReactNode
+  component: ReactNode
+  versions: Version[]
   props: PropsType
 }
 
@@ -24,7 +23,7 @@ export const DocBuilder: FC<Props> = (props) => {
           <TabsTrigger value="tab2">Props</TabsTrigger>
           <TabsTrigger value="tab3">Versions</TabsTrigger>
         </TabsList>
-        <TabsContent value="tab1">{props.componentTab}</TabsContent>
+        <TabsContent value="tab1">{props.component}</TabsContent>
         <TabsContent value="tab2">
           <Stack>
             {props.props.link && (
@@ -41,10 +40,10 @@ export const DocBuilder: FC<Props> = (props) => {
         </TabsContent>
         <TabsContent value="tab3">
           <Stack>
-            {props.historyReleases?.map((history) => (
+            {props.versions?.map((version) => (
               // this is not an error. Typescirpt dose not know about server components
               // @ts-expect-error Server Component
-              <HistoryRelease {...history} />
+              <HistoryRelease {...version} />
             ))}
           </Stack>
         </TabsContent>
