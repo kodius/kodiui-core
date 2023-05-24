@@ -25,7 +25,9 @@ config :joken, default_signer: "secret"
 config :cors_plug,
   origin: [
     "http://localhost:3000/",
-    "http://localhost:3000"
+    "http://localhost:3000",
+    "http://116.203.201.51:3000/",
+    "http://116.203.201.51:3000",
   ],
   methods: ["GET", "POST", "FETCH", "OPTIONS"]
 

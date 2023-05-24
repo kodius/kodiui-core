@@ -1,6 +1,12 @@
 FROM node:18-alpine AS base
 # FROM node:18 AS base
 
+ARG next_public_graphql
+ARG nextauth_secret
+
+ENV NEXT_PUBLIC_GRAPHQL=$next_public_graphql
+ENV NEXTAUTH_SECRET=$nextauth_secret
+
 # Install dependencies only when needed
 FROM base AS deps
 # Check https://github.com/nodejs/docker-node/tree/b4117f9333da4138b03a546ec926ef50a31506c3#nodealpine to understand why libc6-compat might be needed.
@@ -31,7 +37,7 @@ COPY . .
 # Uncomment the following line in case you want to disable telemetry during the build.
 # ENV NEXT_TELEMETRY_DISABLED 1
 
-RUN yarn global add pnpm && pnpm build
+RUN yarn global add pnpm && pnpm build 
 
 # If using npm comment out above and use below instead
 # RUN npm run build
