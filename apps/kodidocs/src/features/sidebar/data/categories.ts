@@ -41,6 +41,7 @@ export const categories: Category[] = [
     elements: [
       { name: 'Heading', progress: 'dev' },
       { name: 'Text', progress: 'dev' },
+      { name: 'TextLink', progress: 'dev' },
     ],
   },
 ]
