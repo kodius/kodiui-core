@@ -1,38 +1,22 @@
-FROM node:18 AS base
+FROM node:18-alpine AS base
 
 # Install dependencies only when needed
 FROM base AS deps
 # Check https://github.com/nodejs/docker-node/tree/b4117f9333da4138b03a546ec926ef50a31506c3#nodealpine to understand why libc6-compat might be needed.
-# RUN apk add --no-cache libc6-compat
+RUN apk add --no-cache libc6-compat
 WORKDIR /app
 
 # Install dependencies based on the preferred package manager
-COPY package.json yarn.lock* package-lock.json* pnpm-lock.yaml* ./
+# COPY package.json yarn.lock* package-lock.json* pnpm-lock.yaml* ./
+# RUN \
+#   if [ -f yarn.lock ]; then yarn --frozen-lockfile; \
+#   elif [ -f package-lock.json ]; then npm ci; \
+#   elif [ -f pnpm-lock.yaml ]; then yarn global add pnpm && pnpm i --frozen-lockfile; \
+#   else echo "Lockfile not found." && exit 1; \
+#   fi
 
-ARG PNPM_LOCK_PATH
-COPY ${PNPM_LOCK_PATH} ./
-
-ARG PACKAGE_JSON_PATH 
-COPY ${PACKAGE_JSON_PATH} ./
-
-ARG PACKAGE_JSON_KODIDOCS_PATH
-COPY ${PACKAGE_JSON_KODIDOCS_PATH} ./
-
-
-# ARG YARN_LOCK_PATH 
-# COPY ${YARN_LOCK_PATH} ./
-
-ARG PACKAGE_LOCK_PATH 
-COPY ${PACKAGE_LOCK_PATH} ./
-
-RUN npm cache clean --force
-
-RUN \
-  if [ -f yarn.lock ]; then yarn --frozen-lockfile; \
-  elif [ -f package-lock.json ]; then npm ci; \
-  elif [ -f pnpm-lock.yaml ]; then yarn global add pnpm && pnpm i --frozen-lockfile; \
-  else echo "Lockfile not found." && exit 1; \
-  fi
+COPY package.json ./
+RUN yarn global add pnpm && pnpm i
 
 
 # Rebuild the source code only when needed
@@ -44,26 +28,9 @@ COPY . .
 # Next.js collects completely anonymous telemetry data about general usage.
 # Learn more here: https://nextjs.org/telemetry
 # Uncomment the following line in case you want to disable telemetry during the build.
-ENV NEXT_TELEMETRY_DISABLED 1
+# ENV NEXT_TELEMETRY_DISABLED 1
 
-# ARG next_public_graphql_api
-# ENV NEXT_PUBLIC_GRAPHQL_API=$next_public_graphql_api
-#
-# RUN echo NEXT_PUBLIC_GRAPHQL_API
-
-# COPY .env.local ./
-
-# RUN echo "NEXT_PUBLIC_GRAPHQL_API=$(cat .env.local)" >> .env
-
-ENV NODE_ENV production
-
-ARG NEXT_PUBLIC_GRAPHQL_API 
-ENV NEXT_PUBLIC_GRAPHQL_API=$NEXT_PUBLIC_GRAPHQL_API
-
-RUN echo "NEXT_PUBLIC_GRAPHQL_API=$NEXT_PUBLIC_GRAPHQL_API"
-
-RUN yarn install && yarn build && NEXT_PUBLIC_GRAPHQL_API=$NEXT_PUBLIC_GRAPHQL_API
-
+RUN yarn build
 
 # If using npm comment out above and use below instead
 # RUN npm run build
@@ -72,16 +39,15 @@ RUN yarn install && yarn build && NEXT_PUBLIC_GRAPHQL_API=$NEXT_PUBLIC_GRAPHQL_A
 FROM base AS runner
 WORKDIR /app
 
+ENV NODE_ENV production
 # Uncomment the following line in case you want to disable telemetry during runtime.
-ENV NEXT_TELEMETRY_DISABLED 1
+# ENV NEXT_TELEMETRY_DISABLED 1
 
 RUN addgroup --system --gid 1001 nodejs
 RUN adduser --system --uid 1001 nextjs
 
 COPY --from=builder /app/public ./public
 
-# Automatically leverage output traces to reduce image size
-# https://nextjs.org/docs/advanced-features/output-file-tracing
 COPY --from=builder --chown=nextjs:nodejs /app/.next/standalone ./
 COPY --from=builder --chown=nextjs:nodejs /app/.next/static ./.next/static
 
@@ -92,4 +58,3 @@ EXPOSE 3000
 ENV PORT 3000
 
 CMD ["node", "server.js"]
-
