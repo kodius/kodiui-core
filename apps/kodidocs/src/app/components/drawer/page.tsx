@@ -13,7 +13,7 @@ const Page = () => {
   }
 
   return (
-    <DefaultTemplate title="Flexbox" description="Power of Box with display flex">
+    <DefaultTemplate title="Drawer" description="Power of Box with display flex">
       <DocBuilder {...builderProps} />
     </DefaultTemplate>
   )
