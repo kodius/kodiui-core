@@ -1,8 +1,7 @@
 import React from 'react'
 import { FlexBox } from '@kodiui/ui'
 import Link from 'next/link'
-import { graphQlClient, routes } from '@lib'
-import { GetCategoriesDocument } from '@gql/graphql'
+import { routes } from '@lib'
 import { Footer } from './components'
 import {
   Accordion,
@@ -13,9 +12,9 @@ import {
 import { CreateNewElement } from './components/Footer/CreateNewElement'
 import { getServerSession } from 'next-auth'
 import { Text } from '@cli-components/Text'
+import { categories } from './data/categories'
 
 export const Sidebar = async () => {
-  const { getCategories: categories } = await graphQlClient.request(GetCategoriesDocument)
   const session = await getServerSession()
 
   const ifHaveUser = session?.user
@@ -32,7 +31,6 @@ export const Sidebar = async () => {
       borderColor="blackA4"
     >
       <Text>{session?.user?.email}</Text>
-
       <Accordion type="single">
         {categories?.map((category) => {
           return (
