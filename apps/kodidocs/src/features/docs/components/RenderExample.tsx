@@ -58,7 +58,7 @@ const ChangeBoxWidth = (isPlaying: boolean) => {
           if (currentWidth >= 100) {
             setIsGrowing(false)
             return currentWidth - widthChange
-          } else if (currentWidth <= 30) {
+          } else if (currentWidth <= 15) {
             setIsGrowing(true)
             return currentWidth + widthChange
           } else {
