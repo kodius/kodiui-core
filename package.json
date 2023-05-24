@@ -9,6 +9,7 @@
     "docslint": "cd ./apps/kodidocs && pnpm lint",
     "docsformat": "cd ./apps/kodidocs && pnpm format",
     "docsBuild": "cd ./apps/kodidocs && pnpm build",
+    "dockerDocsInstall": "cd ./apps/kodidocs && pnpm i --frozen-lockfile",
     "format:fix": "cd ./apps/kodidocs && pnpm format:fix",
     "validate": "npm-run-all --parallel docslint docsformat docsBuild"
   },

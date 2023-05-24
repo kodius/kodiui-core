@@ -13,4 +13,3 @@ for dir in "${dirs[@]}"; do
     echo -e "\033[32m $name was successfully compressed\033[0m"
 done
 
-

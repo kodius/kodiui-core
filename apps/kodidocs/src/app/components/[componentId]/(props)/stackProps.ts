@@ -1,5 +1,5 @@
 import { PropsType } from '@features/documentation'
-import { Space } from '@kodiui/ui'
+// import { Space } from '@kodiui/ui'
 
 export const stackProps: PropsType = {
   link: {
@@ -9,7 +9,8 @@ export const stackProps: PropsType = {
   props: [
     {
       name: 'gap',
-      values: Object.keys(Space).map((space) => space),
+      // values: Object.keys(Space).map((space) => space),
+      values: [],
       description: 'The spacing between childrens can be adjusted using the gap prop.',
       defaultValue: 'xs',
     },
