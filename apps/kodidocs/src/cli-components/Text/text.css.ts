@@ -40,13 +40,13 @@ export const textRecipe = recipe({
     },
     weight: {
       regular: {
-        fontWeight: 'normal',
+        fontWeight: 400,
       },
       medium: {
-        fontWeight: 500,
+        fontWeight: 700,
       },
       strong: {
-        fontWeight: 'bolder',
+        fontWeight: 900,
       },
     },
   },

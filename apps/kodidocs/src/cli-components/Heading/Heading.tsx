@@ -1,8 +1,9 @@
 import { Box, BoxProps } from '@kodiui/ui'
 import React, { FC, PropsWithChildren } from 'react'
-import { headingRecipe, HeadingVariants } from './heading.css'
+import { headingRecipe, headingStyle, HeadingVariants } from './heading.css'
+import classNames from 'classnames'
 
-type HeadingLevels = '1' | '2' | '3' | '4'
+type HeadingLevels = '1' | '2' | '3' | '4' | '5' | '6'
 
 type HeadingProps = {
   icon?: JSX.Element
@@ -20,9 +21,35 @@ const levelsToHeading = {
 } as const
 
 export const Heading: FC<PropsWithChildren & HeadingProps> = (props) => {
+  const recipe = headingRecipe({
+    weight: props.weight,
+  })
+
+  if (props.icon) {
+    return (
+      <Box
+        className={classNames(headingStyle, recipe)}
+        as="span"
+        display="flex"
+        gap="sm"
+        alignItems="center"
+        {...props}
+      >
+        {props.icon}
+        <Box
+          className={headingRecipe({ weight: props.weight })}
+          color={props.color || 'black'}
+          as={levelsToHeading[props.level]}
+          {...props}
+        >
+          {props.children}
+        </Box>
+      </Box>
+    )
+  }
   return (
     <Box
-      className={headingRecipe({ weight: props.weight })}
+      className={recipe}
       color={props.color || 'black'}
       as={levelsToHeading[props.level]}
       {...props}
