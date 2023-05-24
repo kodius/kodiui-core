@@ -51,7 +51,7 @@ export const UncontrolledInput = <T extends FieldValues>({
 
   if (label) {
     return (
-      <Stack gap="xxs">
+      <Stack gap="xs">
         <Label htmlFor={rest.name}>{label}</Label>
         {content}
       </Stack>

@@ -1,5 +1,5 @@
 import React from 'react'
-import { Center, FlexBox, Split } from '@kodiui/ui'
+import { Box, Center, FlexBox, Split } from '@kodiui/ui'
 import Link from 'next/link'
 import { Footer } from './components'
 import {
@@ -20,6 +20,8 @@ const getTone = (progress: Progress) => {
       return 'brand'
     case 'dev':
       return 'info'
+    case 'block':
+      return 'neutral'
     default:
       break
   }
@@ -49,14 +51,20 @@ export const Sidebar = async () => {
               <AccordionItem key={category?.name} value={category?.name || ''}>
                 <AccordionTrigger>{category?.name}</AccordionTrigger>
                 {category?.elements?.map((Element) => {
+                  const blockContent =
+                    Element.progress === 'block' ? (
+                      <Box opacity="0.50" cursor="no-drop">
+                        <Text>{Element.name}</Text>
+                      </Box>
+                    ) : (
+                      <Link href={`${category.name.toLowerCase()}/${Element?.name.toLowerCase()}`}>
+                        {Element?.name}
+                      </Link>
+                    )
                   return (
                     <AccordionContent key={Element?.name}>
                       <Split>
-                        <Link
-                          href={`${category.name.toLowerCase()}/${Element?.name.toLowerCase()}`}
-                        >
-                          {Element?.name}
-                        </Link>
+                        {blockContent}
                         <Badge tone={getTone(Element.progress)}>{Element.progress}</Badge>
                       </Split>
                     </AccordionContent>

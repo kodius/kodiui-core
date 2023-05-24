@@ -16,7 +16,7 @@ export const ControlledInput = <T extends FieldValues>({
 
   if (props.label) {
     return (
-      <Stack gap="0">
+      <Stack gap="xs">
         <Label htmlFor={props.name}>{props.label}</Label>
         {content}
       </Stack>
