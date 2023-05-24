@@ -1,4 +1,3 @@
-
 defmodule Graphql.Types.Inputs.DeleteHistoryReleaseInput do
   use Absinthe.Schema.Notation
 

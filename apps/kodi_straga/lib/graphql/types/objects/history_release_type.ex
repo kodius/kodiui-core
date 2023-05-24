@@ -1,7 +1,7 @@
 defmodule Graphql.Types.Objects.HistoryReleaseType do
   use Absinthe.Schema.Notation
 
-  object :history_release do
+  object :history_relesase do
     field :id, non_null(:id)
     field(:name, :string)
     field(:version, :string)
