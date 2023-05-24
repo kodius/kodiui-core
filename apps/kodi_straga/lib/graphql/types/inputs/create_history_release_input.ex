@@ -6,6 +6,7 @@ defmodule Graphql.Types.Inputs.CreateHistoryReleaseInput do
     field(:name, non_null(:string))
     field(:description, non_null(:string))
     field(:version, non_null(:string))
+    field(:example, :string)
     field(:element_id, non_null(:id))
   end
 end
