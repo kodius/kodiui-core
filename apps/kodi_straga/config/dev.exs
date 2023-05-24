@@ -2,13 +2,24 @@ import Config
 
 # Configure your database
 config :kodi_straga, KodiStraga.Repo,
-  username: "user",
-  password: "admin",
-  hostname: "116.203.201.51",
-  database: "kodiui",
+  # DINO BE
+  username: "postgres",
+  password: "Ruda,actv1",
+  hostname: "167.235.150.40",
+  database: "kodiui-dev",
+  port: 5433,
   stacktrace: true,
   show_sensitive_data_on_connection_error: true,
   pool_size: 10
+
+  # ANTE BE
+  # username: "user",
+  # password: "admin",
+  # hostname: "116.203.201.51",
+  # database: "kodiui",
+  # stacktrace: true,
+  # show_sensitive_data_on_connection_error: true,
+  # pool_size: 10
 
 # For development, we disable any cache and enable
 # debugging and code reloading.
