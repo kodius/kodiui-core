@@ -6,5 +6,6 @@ defmodule Graphql.Types.Inputs.UpdateElementInput do
     field(:name, non_null(:string))
     field(:description, non_null(:string))
     field(:version, non_null(:string))
+    field(:example, :string)
   end
 end
