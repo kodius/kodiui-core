@@ -1,22 +1,14 @@
-import { SpacingKeys, gapSpacing } from "@tailwind/spacing";
+import { SpacingKeys, gapSpacing } from "@tailwind";
+import classNames from "classnames";
 import React, { FC, ReactNode } from "react";
 
 interface StackProps {
   children: ReactNode;
-  space?: SpacingKeys;
+  gap?: SpacingKeys;
   className?: string;
 }
 
-export const Stack: FC<StackProps> = ({
-  children,
-  space = "md",
-  className,
-}) => {
-  return (
-    <div
-      className={`bg-blue-500 flex flex-col justify-start ${gapSpacing[space]} ${className}`}
-    >
-      {children}
-    </div>
-  );
+export const Stack: FC<StackProps> = ({ children, gap = "sm", className }) => {
+  const stackClass = `flex flex-col justify-start ${gapSpacing[gap]}`;
+  return <div className={classNames(stackClass, className)}>{children}</div>;
 };

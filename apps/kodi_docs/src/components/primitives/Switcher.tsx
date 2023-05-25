@@ -8,11 +8,11 @@ interface ClusterProps {
   className?: string;
 }
 
-export const Cluster: FC<ClusterProps> = ({
+export const Switcher: FC<ClusterProps> = ({
   children,
   space = "sm",
   className,
 }) => {
-  const clusterClass = `flex flex-wrap justify-start items-center ${gapSpacing[space]}`;
-  return <div className={classNames(clusterClass, className)}>{children}</div>;
+  const switcherClass = `flex flex-wrap justify-start items-center [&>*]:grow ${gapSpacing[space]}`;
+  return <div className={classNames(switcherClass, className)}>{children}</div>;
 };

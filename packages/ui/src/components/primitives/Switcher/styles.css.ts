@@ -4,7 +4,7 @@ export const SwitherStyle = style({});
 
 globalStyle(`${SwitherStyle} > *`, {
   flexGrow: 1,
-  flexBasis: " calc(( 30rem - 100%) * 999)",
+  flexBasis: "calc(( 30rem - 100%) * 999)",
 });
 
 globalStyle(

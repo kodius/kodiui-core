@@ -1,4 +1,4 @@
-import "./globals.css";
+import "@tailwind/tailwind.css";
 
 import { Inter } from "next/font/google";
 
