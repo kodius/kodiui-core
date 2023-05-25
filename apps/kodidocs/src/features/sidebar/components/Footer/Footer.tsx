@@ -40,6 +40,10 @@ export const Footer = () => {
               <CreateNewCategory />
             </DropdownMenuSubContent>
           </DropdownMenuSub>
+          <DropdownMenuSeparator />
+          <DropdownMenuLabel>Actions</DropdownMenuLabel>
+          <DropdownMenuSeparator />
+          <DropdownMenuItem>Generate figma tokens</DropdownMenuItem>
         </DropdownMenuContent>
       </DropdownMenu>
       <CateogriesDialog />
