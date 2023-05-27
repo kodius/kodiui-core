@@ -11,6 +11,8 @@ import {
   paddingSpacing,
   position,
   textColors,
+  width,
+  height
 } from "@/styles/vars"
 
 export const boxVariants = cva("", {
@@ -25,9 +27,11 @@ export const boxVariants = cva("", {
     flexWrap: flexWrap,
     justifyContent: justifyContent,
     alignItems: alignItems,
+    width: width,
+    height: height
   },
   defaultVariants: {
-    gap: "sm",
+    //
   },
 })
 

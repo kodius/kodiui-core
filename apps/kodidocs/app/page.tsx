@@ -1,6 +1,7 @@
 import React from "react"
 
 import { Box } from "@/components/primitives/box/box"
+import { Center } from "@/components/primitives/center"
 import { Cluster } from "@/components/primitives/cluster"
 import { Sidebar } from "@/components/primitives/sidebar"
 import { Stack } from "@/components/primitives/stack"
@@ -43,6 +44,16 @@ export default async function Home() {
       <Text variant="muted">Text</Text>
       <Text variant="blockQute">Text</Text>
       <Text variant="inlineCode">Text</Text>
+      <Box className="h-96 bg-blue-800">
+        <Center direction="center">
+          <div>element</div>
+          <div>element</div>
+          <div>element</div>
+        </Center>
+      </Box>
+      <Box background="green-500" color="green-900" padding="3xl" className="md:p-sm">
+        responsive
+      </Box>
     </section>
   )
 }

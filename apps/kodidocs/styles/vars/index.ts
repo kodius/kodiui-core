@@ -1,3 +1,5 @@
 export * from "./colors"
 export * from "./display"
 export * from "./spacing"
+export * from "./width"
+export * from "./height"

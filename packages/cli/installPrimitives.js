@@ -4,27 +4,41 @@ import url from "url";
 import extract from "extract-zip";
 import chalk from "chalk";
 
-export async function installPrimitives(directory) {
-  const sourcePath = path.join(
+export async function installPrimitives(directories) {
+  const primitivesDirectory = directories.primitivesDir;
+  const varsDirecotry = directories.varsDir;
+
+  const primitivePath = path.join(
     url.fileURLToPath(
-      new URL(`../cli/components/primitives.zip`, import.meta.url)
+      new URL(`../cli/primitives/primitives.zip`, import.meta.url)
     )
   );
+  const varsPath = path.join(
+    url.fileURLToPath(new URL(`../cli/primitives/vars.zip`, import.meta.url))
+  );
 
-  const targetPath = directory.replace(/^~/, os.homedir());
+  const targetPathForPrimitices = primitivesDirectory.replace(
+    /^~/,
+    os.homedir()
+  );
 
-  const extractPath = path.join(process.cwd(), targetPath, "primitives");
+  const targetPathForVars = varsDirecotry.replace(/^~/, os.homedir());
 
-  console.log(sourcePath, targetPath, extractPath);
+  const extractPathPrimitives = path.join(
+    process.cwd(),
+    targetPathForPrimitices,
+    "primitives"
+  );
+
+  const extractPathVars = path.join(process.cwd(), targetPathForVars, "vars");
+
   try {
-    await extract(sourcePath, { dir: extractPath });
+    await extract(primitivePath, { dir: extractPathPrimitives });
+    await extract(varsPath, { dir: extractPathVars });
 
     console.log(
-      chalk.bgGreen.black(
-        `Component ${componentName} has been successfully installed.`
-      )
+      chalk.bgGreen.black(`Primitive were has been successfully installed.`)
     );
-    run();
   } catch (err) {
     console.error(err);
   }

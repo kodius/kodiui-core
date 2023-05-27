@@ -44,17 +44,24 @@ export async function run() {
       },
     },
     {
-      name: "directory",
-      message: "Enter the target directory to install primitives:",
+      name: "primitivesDir",
+      message: "Where would you like to install primitives?",
       type: "input",
       default: "./components",
       when: function(answers) {
         return answers.action === "Install primitives";
       },
     },
+    {
+      name: "varsDir",
+      message: "Directory for pimitives? You will have to change imports if not as default './styles'",
+      type: "input",
+      default: "./styles",
+      when: function(answers) {
+        return answers.action === "Install primitives";
+      },
+    },
   ]);
-
-  console.log('ovooooooooo',answer.directory);
 
   if (answer.action === "Install a component") {
     // Parse the command-line arguments
@@ -71,7 +78,7 @@ export async function run() {
 
     installComponent(answer.component, projectDirectory);
   } else if (answer.action === "Install primitives") {
-    installPrimitives(answer.directory);
+    installPrimitives(answer);
   } else {
     console.log("Goodbye!");
   }

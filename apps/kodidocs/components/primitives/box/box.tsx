@@ -25,6 +25,8 @@ const Box = React.forwardRef<HTMLDivElement, BoxProps>(
       flexWrap,
       alignItems,
       justifyContent,
+      width,
+      height,
       ...props
     },
     ref
@@ -45,6 +47,8 @@ const Box = React.forwardRef<HTMLDivElement, BoxProps>(
             className,
             alignItems,
             justifyContent,
+            width,
+            height,
           })
         )}
         ref={ref}
