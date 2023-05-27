@@ -10,7 +10,7 @@
     "types": "graphql-codegen --config codegen.ts",
     "preview": "next build && next start",
     "format": "pnpm format:fix",
-    "compress-to-cli": "bash compress-to-cli.sh",
+    "compress-components": "bash compress-components.sh",
     "compress-primitives": "bash compress-primitives.sh"
   },
   "dependencies": {
