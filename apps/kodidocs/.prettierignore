@@ -1,8 +1,6 @@
-.next
-public
+dist
 node_modules
-!pnpm-lock.yaml
-package.json
-**/*.test.js
-coverage
-src/gql
+.next
+build
+.contentlayer
+gql
