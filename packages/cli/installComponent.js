@@ -21,7 +21,7 @@ export async function installComponent(componentName, directory) {
       type: "input",
       name: "target",
       message: `Enter the target directory to install the ${componentName} component:`,
-      default: directory ? directory : "./src/components/",
+      default: directory ? directory : "./components/",
     },
   ]);
 

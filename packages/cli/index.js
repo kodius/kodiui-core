@@ -6,9 +6,9 @@ import path from "path";
 import { fileURLToPath } from "url";
 import { greetings } from "./greetings.js";
 import { installComponent } from "./installComponent.js";
+import { installPrimitives } from "./installPrimitives.js";
 
 const prompt = inquirer.createPromptModule();
-
 
 export async function run() {
   await greetings();
@@ -27,18 +27,34 @@ export async function run() {
       name: "action",
       message: "What would you like to do?",
       type: "list",
-      choices: ["Install a component", "Create a new project", "Quit"],
+      choices: [
+        "Install primitives",
+        "Install a component",
+        "Create a new project",
+        "Quit",
+      ],
     },
     {
       name: "component",
       message: "Choose component to install?",
       type: "list",
       choices: choices,
-      when: function (answers) {
+      when: function(answers) {
         return answers.action === "Install a component";
       },
     },
+    {
+      name: "directory",
+      message: "Enter the target directory to install primitives:",
+      type: "input",
+      default: "./components",
+      when: function(answers) {
+        return answers.action === "Install primitives";
+      },
+    },
   ]);
+
+  console.log('ovooooooooo',answer.directory);
 
   if (answer.action === "Install a component") {
     // Parse the command-line arguments
@@ -54,6 +70,8 @@ export async function run() {
     const projectDirectory = argMap["directory"];
 
     installComponent(answer.component, projectDirectory);
+  } else if (answer.action === "Install primitives") {
+    installPrimitives(answer.directory);
   } else {
     console.log("Goodbye!");
   }

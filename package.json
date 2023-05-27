@@ -11,7 +11,7 @@
     "docsBuild": "cd ./apps/kodidocs && pnpm build",
     "dockerDocsInstall": "cd ./apps/kodidocs && pnpm i --frozen-lockfile",
     "format:fix": "cd ./apps/kodidocs && pnpm format:fix",
-    "validate": "npm-run-all --parallel docsformat"
+    "validate": "npm-run-all --parallel docsBuild"
   },
   "keywords": [],
   "author": "dinoDanic",
