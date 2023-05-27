@@ -11,7 +11,7 @@ import { Heading, Text } from "@/components/typography"
 export default async function Home() {
   return (
     <section>
-      <Box padding="2xl" background="test1" color="red-100">
+      <Box p="2xl" background="test1" color="red-100">
         box
       </Box>
       <Stack gap="5xl" background="red-700">
@@ -51,7 +51,7 @@ export default async function Home() {
           <div>element</div>
         </Center>
       </Box>
-      <Box background="green-500" color="green-900" padding="3xl" className="md:p-sm">
+      <Box background="green-500" color="green-900" p="3xl" className="md:p-sm">
         responsive
       </Box>
     </section>
