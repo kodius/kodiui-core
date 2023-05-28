@@ -12,7 +12,7 @@ export const Stack: FC<BoxProps> = ({
   return (
     <Box
       display={display || "flex"}
-      flexDirection={flexDirection || "flexCol"}
+      flexDirection={flexDirection || "col"}
       gap={gap || "sm"}
       {...props}
     >

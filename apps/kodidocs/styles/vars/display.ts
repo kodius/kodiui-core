@@ -16,33 +16,43 @@ export const display = {
 }
 
 export const flexDirection = {
-  flexRow: "flex-row",
-  flexRowReverse: "flex-row-reverse",
-  flexCol: "flex-col",
-  fleColReverse: "flex-col-reverse",
+  row: "flex-row",
+  rowReverse: "flex-row-reverse",
+  col: "flex-col",
+  colReverse: "flex-col-reverse",
 }
 
 export const flexWrap = {
-  flexWrap: "flex-wrap",
-  flexWrapReverse: "flex-wrap-reverse",
-  flexNowrap: "flex-nowrap",
+  wrap: "flex-wrap",
+  wrapReverse: "flex-wrap-reverse",
+  nowrap: "flex-nowrap",
 }
 
 export const justifyContent = {
-  justifyNormal: "justify-normal",
-  justifyStart: "justify-start",
-  justifyEnd: "justify-end",
-  justifyCenter: "justify-center",
-  justifyBetween: "justify-between",
-  justifyAround: "justify-around",
-  justifyEvenly: "justify-evenly",
-  justifyStretch: "justify-stretch",
+  normal: "justify-normal",
+  start: "justify-start",
+  end: "justify-end",
+  center: "justify-center",
+  between: "justify-between",
+  around: "justify-around",
+  evenly: "justify-evenly",
+  strech: "justify-stretch",
 }
 
 export const alignItems = {
-  itemsStart: "items-start",
-  itemsEnd: "items-end",
-  itemsCenter: "items-center",
-  itemsBaseline: "items-baseline",
-  itemsStretch: "items-stretch",
+  start: "items-start",
+  end: "items-end",
+  center: "items-center",
+  baseline: "items-baseline",
+  stretch: "items-stretch",
+}
+
+export const zIndex = {
+  "0": "z-0",
+  "10": "z-10",
+  "20": "z-20",
+  "30": "z-30",
+  "40": "z-40",
+  "50": "z-50",
+  auto: "z-auto",
 }

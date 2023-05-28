@@ -11,6 +11,11 @@ const customColors = {
 }
 
 const twBackgroundColors = {
+  inherit: "bg-inherit",
+  current: "bg-current",
+  transparent: "bg-transparent",
+  black: "bg-black",
+  white: "bg-white",
   "slate-50": "bg-slate-50",
   "slate-100": "bg-slate-100",
   "slate-200": "bg-slate-200",
@@ -256,6 +261,11 @@ const twBackgroundColors = {
 }
 
 const twTextColors = {
+  inherit: "text-inherit",
+  current: "text-current",
+  transparent: "text-transparent",
+  black: "text-black",
+  white: "text-white",
   "slate-50": "text-slate-50",
   "slate-100": "text-slate-100",
   "slate-200": "text-slate-200",
@@ -500,17 +510,17 @@ const twTextColors = {
   "rose-950": "text-rose-950",
 }
 
-const backgroundColors = {
+const background = {
   ...customBackgroundColors,
   ...twBackgroundColors,
 }
-const textColors = {
+const color = {
   ...customTextColors,
   ...twTextColors,
 }
 export {
-  textColors,
-  backgroundColors,
+  color,
+  background,
   customTextColors,
   customBackgroundColors,
   customColors,

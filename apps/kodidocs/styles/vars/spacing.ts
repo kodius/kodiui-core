@@ -26,7 +26,7 @@ export const gap: Record<SpacingKeys, string> = {
   "5xl": "gap-5xl",
 } as const
 
-export const padding: Record<SpacingKeys, string> = {
+export const p: Record<SpacingKeys, string> = {
   "0": "p-0",
   xxs: "p-xxs",
   xs: "p-xs",
@@ -39,7 +39,7 @@ export const padding: Record<SpacingKeys, string> = {
   "5xl": "p-5xl",
 } as const
 
-export const paddingY: Record<SpacingKeys, string> = {
+export const py: Record<SpacingKeys, string> = {
   "0": "py-0",
   xxs: "py-xxs",
   xs: "py-xs",
@@ -52,7 +52,7 @@ export const paddingY: Record<SpacingKeys, string> = {
   "5xl": "py-5xl",
 } as const
 
-export const paddingX: Record<SpacingKeys, string> = {
+export const px: Record<SpacingKeys, string> = {
   "0": "px-0",
   xxs: "px-xxs",
   xs: "px-xs",
@@ -65,7 +65,7 @@ export const paddingX: Record<SpacingKeys, string> = {
   "5xl": "px-5xl",
 } as const
 
-export const paddingR: Record<SpacingKeys, string> = {
+export const pr: Record<SpacingKeys, string> = {
   "0": "pr-0",
   xxs: "pr-xxs",
   xs: "pr-xs",
@@ -78,7 +78,7 @@ export const paddingR: Record<SpacingKeys, string> = {
   "5xl": "pr-5xl",
 } as const
 
-export const paddingL: Record<SpacingKeys, string> = {
+export const pl: Record<SpacingKeys, string> = {
   "0": "pl-0",
   xxs: "pl-xxs",
   xs: "pl-xs",
@@ -91,7 +91,7 @@ export const paddingL: Record<SpacingKeys, string> = {
   "5xl": "pl-5xl",
 } as const
 
-export const paddingB: Record<SpacingKeys, string> = {
+export const pb: Record<SpacingKeys, string> = {
   "0": "pb-0",
   xxs: "pb-xxs",
   xs: "pb-xs",
@@ -104,7 +104,7 @@ export const paddingB: Record<SpacingKeys, string> = {
   "5xl": "pb-5xl",
 } as const
 
-export const paddingT: Record<SpacingKeys, string> = {
+export const pt: Record<SpacingKeys, string> = {
   "0": "pt-0",
   xxs: "pt-xxs",
   xs: "pt-xs",
