@@ -1,0 +1,17 @@
+export const overflow = {
+  "auto": "overflow-auto",
+  "hidde": "overflow-hidde",
+  "clip": "overflow-clip",
+  "visibl": "overflow-visibl",
+  "scrol": "overflow-scrol",
+  "x-aut": "overflow-x-aut",
+  "y-aut": "overflow-y-aut",
+  "x-hidden": "overflow-x-hidden",
+  "y-hidden": "overflow-y-hidden",
+  "x-clip": "overflow-x-clip",
+  "y-clip": "overflow-y-clip",
+  "x-visibl": "overflow-x-visibl",
+  "y-visibl": "overflow-y-visibl",
+  "x-scrol": "overflow-x-scrol",
+  "y-scrol": "overflow-y-scrol",
+}

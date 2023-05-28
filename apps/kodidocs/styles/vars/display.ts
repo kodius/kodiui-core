@@ -56,3 +56,5 @@ export const zIndex = {
   "50": "z-50",
   auto: "z-auto",
 }
+
+export type JustifyContent = keyof typeof justifyContent

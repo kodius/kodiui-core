@@ -1,16 +1,13 @@
-const customBackgroundColors = {
-  test1: "bg-test1",
-}
-
-const customTextColors = {
-  cutom1: "bg-test1",
-}
-
-const customColors = {
-  test1: "blue",
+// for tailwind ✨
+export const customColors = {
+  brand: "red",
 }
 
 const twBackgroundColors = {
+  // register custom colors {brand = bg-brand}
+  // custom colors 👇
+  brand: "bg-brand",
+  // tailwind orginal 👇
   inherit: "bg-inherit",
   current: "bg-current",
   transparent: "bg-transparent",
@@ -261,6 +258,10 @@ const twBackgroundColors = {
 }
 
 const twTextColors = {
+  // register custom colors {brand = text-brand}
+  // custom colors 👇
+  brand: "text-brand",
+  // tw text-colors 👇
   inherit: "text-inherit",
   current: "text-current",
   transparent: "text-transparent",
@@ -510,18 +511,11 @@ const twTextColors = {
   "rose-950": "text-rose-950",
 }
 
-const background = {
-  ...customBackgroundColors,
+export const background = {
   ...twBackgroundColors,
 }
-const color = {
-  ...customTextColors,
+export const color = {
   ...twTextColors,
 }
-export {
-  color,
-  background,
-  customTextColors,
-  customBackgroundColors,
-  customColors,
-}
+
+export type Color = keyof typeof color

@@ -7,7 +7,7 @@ import { boxVariants } from "./variants"
 
 export type BoxProps = React.HTMLAttributes<HTMLDivElement> &
   VariantProps<typeof boxVariants> & {
-    as?: "div" | "h1" | "h2" | "h3" | "h4" | "p"
+    as?: "div" | "h1" | "h2" | "h3" | "h4" | "p" | "span"
   }
 
 const Box = React.forwardRef<HTMLDivElement, BoxProps>(

@@ -12,6 +12,7 @@ import {
   height,
   justifyContent,
   left,
+  overflow,
   p,
   pb,
   pl,
@@ -51,6 +52,7 @@ export const boxVariants = cva("", {
     left,
     right,
     bottom,
+    overflow,
   },
   defaultVariants: {
     //

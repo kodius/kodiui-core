@@ -1,40 +1,84 @@
 import React, { ReactNode } from "react"
 import { cva, type VariantProps } from "class-variance-authority"
+import clsx from "clsx"
 
 import { cn } from "@/lib/utils"
+import {
+  Color,
+  JustifyContent,
+  color as colors,
+  justifyContent as justify,
+} from "@/styles/vars"
 
-type TextProps = VariantProps<typeof textVariants> & {
+export type TextProps = VariantProps<typeof textVariants> & {
   className?: string
+  color?: Color
   children: ReactNode
+  icon?: ReactNode
+  iconSide?: "right" | "left"
+  justifyContent?: JustifyContent
 }
 
 const textVariants = cva("", {
   variants: {
-    variant: {
-      default: "leading-7 [&:not(:first-child)]:mt-6",
-      blockQute: "mt-6 border-l-2 pl-6 italic",
-      inlineCode:
-        "relative rounded bg-muted px-[0.3rem] py-[0.2rem] font-mono text-sm font-semibold",
-      lead: "text-xl text-muted-foreground",
-      lg: "text-lg font-semibold",
-      sm: "text-sm font-medium leading-none",
-      muted: "text-sm text-muted-foreground",
+    size: {
+      base: "text-base",
+      xs: "text-xs",
+      sm: "text-sm",
+      lg: "text-lg",
+    },
+    weight: {
+      base: "font-normal",
+      medium: "font-medium",
+      bold: "font-bold",
     },
   },
   defaultVariants: {
-    variant: "default",
+    size: "base",
+    weight: "base",
   },
 })
 
 const Text = React.forwardRef<HTMLHeadingElement, TextProps>(
-  ({ variant, className, ...props }, ref) => {
-    return (
+  (
+    {
+      size,
+      weight,
+      className,
+      color,
+      icon,
+      iconSide = "left",
+      justifyContent,
+      ...props
+    },
+    ref
+  ) => {
+    const content = (
       <p
-        className={cn(textVariants({ variant, className }))}
+        className={cn(
+          textVariants({ size, weight, className }),
+          color && colors[color]
+        )}
         ref={ref}
         {...props}
       />
     )
+
+    if (icon) {
+      return (
+        <span
+          className={clsx(
+            "flex",
+            justifyContent && justify[justifyContent]
+          )}
+        >
+          {iconSide === "left" && icon}
+          {content}
+          {iconSide === "right" && icon}
+        </span>
+      )
+    }
+    return content
   }
 )
 
