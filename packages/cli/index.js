@@ -7,6 +7,7 @@ import { fileURLToPath } from "url";
 import { greetings } from "./greetings.js";
 import { installComponent } from "./installComponent.js";
 import { installPrimitives } from "./installPrimitives.js";
+import { installTypography } from "./installTypography.js";
 
 const prompt = inquirer.createPromptModule();
 
@@ -29,8 +30,9 @@ export async function run() {
       type: "list",
       choices: [
         "Install primitives",
-        "Install a component",
-        "Create a new project",
+        "Install typography",
+        "Install a component - dep",
+        "Create a new project - dep",
         "Quit",
       ],
     },
@@ -39,7 +41,7 @@ export async function run() {
       message: "Choose component to install?",
       type: "list",
       choices: choices,
-      when: function(answers) {
+      when: function (answers) {
         return answers.action === "Install a component";
       },
     },
@@ -48,17 +50,28 @@ export async function run() {
       message: "Where would you like to install primitives?",
       type: "input",
       default: "./components",
-      when: function(answers) {
+      when: function (answers) {
         return answers.action === "Install primitives";
       },
     },
     {
       name: "varsDir",
-      message: "Directory for pimitives? You will have to change imports if not as default './styles'",
+      message:
+        "Directory for pimitives? You will have to change imports if not as default './styles'",
       type: "input",
       default: "./styles",
-      when: function(answers) {
+      when: function (answers) {
         return answers.action === "Install primitives";
+      },
+    },
+    {
+      name: "typoDir",
+      message:
+        "Directory for typography? You will have to change imports if not as default './components'",
+      type: "input",
+      default: "./components",
+      when: function (answers) {
+        return answers.action === "Install typography";
       },
     },
   ]);
@@ -79,6 +92,8 @@ export async function run() {
     installComponent(answer.component, projectDirectory);
   } else if (answer.action === "Install primitives") {
     installPrimitives(answer);
+  } else if (answer.action === "Install typography") {
+    installTypography(answer);
   } else {
     console.log("Goodbye!");
   }
