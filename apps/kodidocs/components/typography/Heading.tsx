@@ -3,8 +3,7 @@ import { cva, type VariantProps } from "class-variance-authority"
 
 import { cn } from "@/lib/utils"
 
-import { Box } from "../primitives"
-import { BoxProps } from "../primitives/box/box"
+import { Box, BoxProps } from "../primitives/box/box"
 
 type HeadingProps = VariantProps<typeof headingVariants> & BoxProps
 

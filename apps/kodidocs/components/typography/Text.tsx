@@ -3,12 +3,11 @@ import { cva, type VariantProps } from "class-variance-authority"
 import clsx from "clsx"
 
 import { cn } from "@/lib/utils"
+import { Color, color as colors } from "@/styles/vars/colors"
 import {
-  Color,
   JustifyContent,
-  color as colors,
   justifyContent as justify,
-} from "@/styles/vars"
+} from "@/styles/vars/display"
 
 export type TextProps = VariantProps<typeof textVariants> & {
   className?: string
@@ -67,10 +66,7 @@ const Text = React.forwardRef<HTMLHeadingElement, TextProps>(
     if (icon) {
       return (
         <span
-          className={clsx(
-            "flex",
-            justifyContent && justify[justifyContent]
-          )}
+          className={clsx("flex", justifyContent && justify[justifyContent])}
         >
           {iconSide === "left" && icon}
           {content}
