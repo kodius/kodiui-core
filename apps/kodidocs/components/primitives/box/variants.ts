@@ -17,6 +17,7 @@ import { minWidth } from "@/styles/vars/min-width"
 import { overflow } from "@/styles/vars/overflow"
 import { right } from "@/styles/vars/right"
 import { gap, p, pb, pl, pr, pt, px, py } from "@/styles/vars/spacing"
+import { textAlign } from "@/styles/vars/text"
 import { top } from "@/styles/vars/top"
 import { width } from "@/styles/vars/width"
 
@@ -47,6 +48,7 @@ export const boxVariants = cva("", {
     right,
     bottom,
     overflow,
+    textAlign,
   },
   defaultVariants: {
     //

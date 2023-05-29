@@ -1,24 +1,21 @@
 import React, { ReactNode } from "react"
 import { cva, type VariantProps } from "class-variance-authority"
-import clsx from "clsx"
 
 import { cn } from "@/lib/utils"
-import { Color, color as colors } from "@/styles/vars/colors"
-import {
-  JustifyContent,
-  justifyContent as justify,
-} from "@/styles/vars/display"
+import { Color, color as colorVar } from "@/styles/vars/colors"
+import { JustifyContent } from "@/styles/vars/display"
+import { TextAlign, textAlign as textAlignVar } from "@/styles/vars/text"
 
 export type TextProps = VariantProps<typeof textVariants> & {
   className?: string
   color?: Color
+  textAlign?: TextAlign
   children: ReactNode
-  icon?: ReactNode
-  iconSide?: "right" | "left"
+  withIcon?: boolean
   justifyContent?: JustifyContent
 }
 
-const textVariants = cva("", {
+const textVariants = cva("inline-block [&>svg]:inline-block [&>svg]:mr-xxs", {
   variants: {
     size: {
       base: "text-base",
@@ -38,43 +35,25 @@ const textVariants = cva("", {
   },
 })
 
-const Text = React.forwardRef<HTMLHeadingElement, TextProps>(
+const Text = React.forwardRef<HTMLParagraphElement, TextProps>(
   (
-    {
-      size,
-      weight,
-      className,
-      color,
-      icon,
-      iconSide = "left",
-      justifyContent,
-      ...props
-    },
+    { withIcon, size, weight, className, color, textAlign, children, ...props },
     ref
   ) => {
-    const content = (
-      <p
+    const Comp = withIcon ? "span" : "p"
+    return (
+      <Comp
         className={cn(
           textVariants({ size, weight, className }),
-          color && colors[color]
+          color && colorVar[color],
+          textAlign && textAlignVar[textAlign]
         )}
         ref={ref}
         {...props}
-      />
+      >
+        {children}
+      </Comp>
     )
-
-    if (icon) {
-      return (
-        <span
-          className={clsx("flex", justifyContent && justify[justifyContent])}
-        >
-          {iconSide === "left" && icon}
-          {content}
-          {iconSide === "right" && icon}
-        </span>
-      )
-    }
-    return content
   }
 )
 

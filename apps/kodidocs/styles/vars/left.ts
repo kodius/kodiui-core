@@ -60,5 +60,5 @@ export const left = {
   "9/12": "left-9/12",
   "10/12": "left-10/12",
   "11/12": "left-11/12",
-  "full": "left-full",
+  full: "left-full",
 } as const

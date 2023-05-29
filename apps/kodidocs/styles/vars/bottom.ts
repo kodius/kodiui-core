@@ -60,5 +60,5 @@ export const bottom = {
   "9/12": "bottom-9/12",
   "10/12": "bottom-10/12",
   "11/12": "bottom-11/12",
-  "full": "bottom-full",
+  full: "bottom-full",
 } as const
