@@ -15,7 +15,7 @@ export type TextProps = VariantProps<typeof textVariants> & {
   justifyContent?: JustifyContent
 }
 
-const textVariants = cva("inline-block [&>svg]:inline-block [&>svg]:mr-xxs", {
+const textVariants = cva("inline-block [&>svg]:inline-block", {
   variants: {
     size: {
       base: "text-base",
@@ -36,10 +36,7 @@ const textVariants = cva("inline-block [&>svg]:inline-block [&>svg]:mr-xxs", {
 })
 
 const Text = React.forwardRef<HTMLParagraphElement, TextProps>(
-  (
-    { withIcon, size, weight, className, color, textAlign, children, ...props },
-    ref
-  ) => {
+  ({ withIcon, size, weight, className, color, textAlign, children, ...props }, ref) => {
     const Comp = withIcon ? "span" : "p"
     return (
       <Comp
