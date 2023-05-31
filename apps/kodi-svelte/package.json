@@ -9,8 +9,7 @@
 		"check": "svelte-kit sync && svelte-check --tsconfig ./tsconfig.json",
 		"check:watch": "svelte-kit sync && svelte-check --tsconfig ./tsconfig.json --watch",
 		"lint": "eslint . --ext .js,.svelte --fix",
-		"format": "prettier --plugin-search-dir . --write .",
-		"prepare": "husky install"
+		"format": "prettier --plugin-search-dir . --write ."
 	},
 	"devDependencies": {
 		"@ianvs/prettier-plugin-sort-imports": "^3.7.2",
@@ -25,7 +24,6 @@
 		"eslint-plugin-svelte": "^2.26.0",
 		"eslint-plugin-tailwindcss": "^3.12.0",
 		"eslint-plugin-unused-imports": "^2.0.0",
-		"husky": "^8.0.3",
 		"postcss": "^8.4.23",
 		"postcss-load-config": "^4.0.1",
 		"prettier": "^2.8.8",
