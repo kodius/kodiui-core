@@ -8,18 +8,37 @@ import { Stack } from "@/components/primitives/stack"
 
 export const Component = () => {
   return (
-    <DocTemplate>
+    <DocTemplate install>
       <DocBlock
         canPlay
-        title="Master"
-        description="The Box component is useful because it helps with three common use cases: Create responsive layouts with ease. Provide a shorthand way to pass styles via props (bg instead of backgroundColor). Compose new component and allow for override using the as prop."
+        title="Piemwrewr"
+        description="asdfdsaf"
         exampleWithCode={
           <Stack>
             <Box display="flex" gap="md" flexWrap="wrap">
               <Element />
               <Element />
             </Box>
-            <Box display="flex" gap="md" >
+            <Box display="flex" gap="md">
+              <Element />
+              <Element />
+              <Element />
+              <Element />
+            </Box>
+          </Stack>
+        }
+      />
+      <DocBlock
+        canPlay
+        title="Piemwrewr"
+        description="asdfdsaf"
+        exampleWithCode={
+          <Stack>
+            <Box display="flex" gap="md" flexWrap="wrap">
+              <Element />
+              <Element />
+            </Box>
+            <Box display="flex" gap="md">
               <Element />
               <Element />
               <Element />
