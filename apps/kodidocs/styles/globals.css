@@ -3,6 +3,10 @@
 @tailwind utilities;
 
 @layer base {
+  a:hover {
+    text-decoration: underline;
+  }
+
   :root {
     --background: 0 0% 100%;
     --foreground: 222.2 47.4% 11.2%;
@@ -79,4 +83,3 @@
     font-feature-settings: "rlig" 1, "calt" 1;
   }
 }
-

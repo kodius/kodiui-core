@@ -3,7 +3,6 @@ import { cva, type VariantProps } from "class-variance-authority"
 
 import { cn } from "@/lib/utils"
 import { Color, color as colorVar } from "@/styles/vars/colors"
-import { JustifyContent } from "@/styles/vars/display"
 import { TextAlign, textAlign as textAlignVar } from "@/styles/vars/text"
 
 export type TextProps = VariantProps<typeof textVariants> & {
@@ -12,7 +11,6 @@ export type TextProps = VariantProps<typeof textVariants> & {
   textAlign?: TextAlign
   children: ReactNode
   withIcon?: boolean
-  justifyContent?: JustifyContent
 }
 
 const textVariants = cva("inline-block [&>svg]:inline-block", {
@@ -36,7 +34,10 @@ const textVariants = cva("inline-block [&>svg]:inline-block", {
 })
 
 const Text = React.forwardRef<HTMLParagraphElement, TextProps>(
-  ({ withIcon, size, weight, className, color, textAlign, children, ...props }, ref) => {
+  (
+    { withIcon, size, weight, className, color, textAlign, children, ...props },
+    ref
+  ) => {
     const Comp = withIcon ? "span" : "p"
     return (
       <Comp
