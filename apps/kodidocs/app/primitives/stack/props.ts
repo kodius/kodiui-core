@@ -1,53 +1,19 @@
 import { PropsType } from "@/features/docs/components/Prop"
 
-import {
-  alignItems,
-  display,
-  flexDirection,
-  flexWrap,
-  justifyContent,
-  position,
-} from "@/styles/vars/display"
 import { spacing } from "@/styles/vars/spacing"
-import { width } from "@/styles/vars/width"
 
 export const props: PropsType = {
+  link: {
+    href: "https://www.radix-ui.com/docs/primitives/components/context-menu#root",
+    name: "Radix",
+  },
   props: [
     {
       name: "gap",
-      values: Object.keys(spacing).map((g) => g),
-    },
-    {
-      name: "flexDirection",
-      values: Object.keys(flexDirection).map((g) => g),
-    },
-    {
-      name: "color, background",
-      values: ["All tailwind colors + cust colors", "brand"],
-    },
-    {
-      name: "position",
-      values: Object.keys(position).map((g) => g),
-    },
-    {
-      name: "display",
-      values: Object.keys(display).map((g) => g),
-    },
-    {
-      name: "flexWrap",
-      values: Object.keys(flexWrap).map((g) => g),
-    },
-    {
-      name: "alignItems",
-      values: Object.keys(alignItems).map((g) => g),
-    },
-    {
-      name: "justifyContent",
-      values: Object.keys(justifyContent).map((g) => g),
-    },
-    {
-      name: "width, height, p, px, py, pb, pl, pr, pt, top, bottom, left, right",
-      values: Object.keys(width).map((g) => g),
+      values: Object.keys(spacing).map((space) => space),
+      description:
+        "The spacing between childrens can be adjusted using the gap prop.",
+      defaultValue: "xs",
     },
   ],
 }

@@ -16,7 +16,7 @@ const Page = () => {
   return (
     <DefaultTemplate
       title="Stack"
-      description="desfksadfja"
+      description="Stack is a container component for arranging elements vertically "
     >
       <DocBuilder {...builderProps} />
     </DefaultTemplate>
