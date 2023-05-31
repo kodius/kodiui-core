@@ -26,23 +26,38 @@ const textVariants = cva("inline-block [&>svg]:inline-block", {
       medium: "font-medium",
       bold: "font-bold",
     },
+    tone: {
+      base: "text-white",
+      muted: "text-gray-500",
+    },
   },
   defaultVariants: {
     size: "base",
     weight: "base",
+    tone: "base",
   },
 })
 
 const Text = React.forwardRef<HTMLParagraphElement, TextProps>(
   (
-    { withIcon, size, weight, className, color, textAlign, children, ...props },
+    {
+      withIcon,
+      size,
+      weight,
+      className,
+      color,
+      textAlign,
+      tone,
+      children,
+      ...props
+    },
     ref
   ) => {
     const Comp = withIcon ? "span" : "p"
     return (
       <Comp
         className={cn(
-          textVariants({ size, weight, className }),
+          textVariants({ size, weight, tone, className }),
           color && colorVar[color],
           textAlign && textAlignVar[textAlign]
         )}

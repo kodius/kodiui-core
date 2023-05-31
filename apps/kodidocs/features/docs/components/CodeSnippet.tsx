@@ -65,24 +65,19 @@ export const CodeSnippet = ({
         {isSnippetOpen && (
           <Button
             onClick={() => handleCopy(codeSnippet)}
-            // icon={isCopied ? <ClipboardIcon /> : <CopyIcon />}
-            // tone={isCopied ? "success" : "brand"}
             size="sm"
             variant="outline"
-            // width="fit"
           >
             {!isCopied ? "Copy" : "Copied!"}
           </Button>
         )}
         {!initialOpen && (
-          <Button
-            // tone="neutral"
-            onClick={toggleSnippet}
-            size="sm"
-            // icon={isSnippetOpen ? <ChevronUpIcon /> : <ChevronDownIcon />}
-            variant="outline"
-            // width="fit"
-          >
+          <Button onClick={toggleSnippet} size="sm" variant="outline">
+            {isSnippetOpen ? (
+              <ChevronUpIcon className="w-4 mr-1" />
+            ) : (
+              <ChevronDownIcon className="w-4 mr-1" />
+            )}
             {!isSnippetOpen ? "Code" : "Close"}
           </Button>
         )}

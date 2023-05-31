@@ -1,7 +1,6 @@
-import { Split } from "lucide-react"
-
 import { Badge } from "@/components/ui/badge"
 import { Cluster } from "@/components/primitives/cluster"
+import { Split } from "@/components/primitives/split"
 import { Stack } from "@/components/primitives/stack"
 import { Text } from "@/components/typography/text"
 

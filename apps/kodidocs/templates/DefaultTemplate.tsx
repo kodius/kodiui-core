@@ -14,19 +14,17 @@ export const DefaultTemplate: FC<Props> = (props) => {
   return (
     <Stack gap="xl" height="screen" overflow="auto" className="pb-5xl">
       <div>
-        <Box p="5xl" className="pb-5xl">
-          <Stack gap="xs">
-            <Heading level="1" className="uppercase">
+        <Box p="5xl" py="md" pt="3xl">
+          <Stack gap="0">
+            <Heading level="2" className="uppercase">
               {props.title}
             </Heading>
-            {props.description && <Text>{props.description}</Text>}
+            {props.description && <Text tone="muted">{props.description}</Text>}
           </Stack>
         </Box>
         <hr />
       </div>
-      <Box color="white" px="5xl">
-        {props.children}
-      </Box>
+      <Box px="5xl">{props.children}</Box>
     </Stack>
   )
 }

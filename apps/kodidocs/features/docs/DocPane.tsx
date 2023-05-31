@@ -8,10 +8,9 @@ export type DocPaneProps = Partial<BoxProps>
 export const DocPane = ({ children, ...props }: DocPaneProps) => {
   return (
     <Box
-      className="border"
+      className="border rounded"
       p="sm"
       color="brand"
-      background="green-200"
       style={{ fontFamily: "monospace" }}
       {...props}
     >

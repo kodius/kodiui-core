@@ -20,7 +20,7 @@ export const DocBlock: FC<Props> = (props) => {
     <Stack>
       <Stack gap="xxs">
         <Heading level="3">{props.title}</Heading>
-        <Text>{props.description}</Text>
+        <Text tone="muted">{props.description}</Text>
       </Stack>
       {props.exampleWithCode && (
         <ExampleWithCode canPlay={props.canPlay}>

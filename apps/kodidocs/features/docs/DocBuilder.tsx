@@ -17,8 +17,8 @@ interface Props {
 
 export const DocBuilder: FC<Props> = (props) => {
   return (
-    <Stack gap="xl">
-      <Tabs defaultValue="tab1">
+    <>
+      <Tabs defaultValue="tab1" className="space-y-xl">
         <TabsList>
           <TabsTrigger value="tab1">Component</TabsTrigger>
           <TabsTrigger value="tab2">Props</TabsTrigger>
@@ -47,6 +47,6 @@ export const DocBuilder: FC<Props> = (props) => {
           </Stack>
         </TabsContent>
       </Tabs>
-    </Stack>
+    </>
   )
 }

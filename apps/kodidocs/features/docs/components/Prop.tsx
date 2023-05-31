@@ -7,7 +7,7 @@ import { Text } from "@/components/typography/text"
 interface PropItem {
   name: string
   values: string[]
-  defaultValue: string
+  defaultValue?: string
   description?: string
 }
 
@@ -28,21 +28,23 @@ export const Prop: FC<PropItem> = ({
   return (
     <Stack>
       <Stack>
-        <Cluster gap="xs">
+        <Cluster gap="xs" alignItems="center">
           <Text weight="bold">{name}:</Text>
           <Cluster>
             {values.map((v) => (
               <Text size="sm" key={v}>
-                {v}
+                {v} 
               </Text>
             ))}
           </Cluster>
         </Cluster>
-        <Cluster gap="xs">
-          <Text weight="bold">default:</Text>
-          <Text size="sm">{defaultValue}</Text>
-        </Cluster>
-        <Text size="sm">{description}</Text>
+        {defaultValue && (
+          <Cluster gap="xs">
+            <Text weight="bold">default:</Text>
+            <Text size="sm">{defaultValue}</Text>
+          </Cluster>
+        )}
+        {description && <Text size="sm">{description}</Text>}
       </Stack>
       <hr />
     </Stack>
