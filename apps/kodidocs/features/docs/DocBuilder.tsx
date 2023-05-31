@@ -1,9 +1,9 @@
 import React, { FC, ReactNode } from "react"
 import Link from "next/link"
 
+import { Button } from "@/components/ui/button"
 import { Tabs, TabsContent, TabsList, TabsTrigger } from "@/components/ui/tabs"
 import { Stack } from "@/components/primitives/stack"
-import { Text } from "@/components/typography/text"
 
 import { HistoryRelease } from "./components/HistoryRelease"
 import { Prop, PropsType } from "./components/Prop"
@@ -29,7 +29,7 @@ export const DocBuilder: FC<Props> = (props) => {
           <Stack>
             {props.props.link && (
               <Link href={props.props.link.href}>
-                <Text>{props.props.link.name}</Text>
+                <Button variant="link">{props.props.link.name}</Button>
               </Link>
             )}
             {props.props?.props?.map((prop) => (
