@@ -22,6 +22,10 @@ export const RenderExample: FC<PropsWithChildren & RenderExmapleProps> = ({
   const handlePlayClick = () => {
     setIsPlaying(!isPlaying)
   }
+
+  const bgColor = "hsl(var(--muted))"
+  const dotColor = "hsl(var(--border))"
+
   return (
     <Stack gap="xs">
       {canPlay && (
@@ -42,12 +46,11 @@ export const RenderExample: FC<PropsWithChildren & RenderExmapleProps> = ({
       <Box
         style={{
           width: `${width}%`,
-          background:
-            "linear-gradient(90deg, #14181f 10px,transparent 1%) 50%,linear-gradient(#14181f 10px,transparent 1%) 50%, #313649",
-          backgroundSize: "12px 12px",
+          background: `linear-gradient(90deg, ${bgColor} 10px,transparent 1%) 50%,linear-gradient(${bgColor} 10px,transparent 1%) 50%, ${dotColor}`,
+          backgroundSize: "13px 13px",
         }}
         p="md"
-        className="border rounded border-gray-600"
+        className="border rounded border-border"
         position="relative"
       >
         {children}

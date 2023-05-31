@@ -21,7 +21,7 @@ export const Component = () => {
       <DocBlock
         canPlay
         title="Resposive properties"
-        description="You can set responsive properties as gap={{ mobile: '5xl', desktop: 'sm' }}"
+        description="You can set responsive properties with tailwind classes"
         exampleWithCode={
           <Stack className="mb:gap-xl lg:gap-sm">
             <DocPane>Element 1</DocPane>
