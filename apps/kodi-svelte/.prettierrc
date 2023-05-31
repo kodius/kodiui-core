@@ -1,0 +1,38 @@
+{
+	"endOfLine": "lf",
+	"semi": false,
+	"singleQuote": false,
+	"tabWidth": 2,
+	"trailingComma": "es5",
+	"importOrder": [
+		"^(svelte/(.*)$)|^(svelte$)",
+		"<THIRD_PARTY_MODULES>",
+		"",
+		"^types$",
+		"^@/env(.*)$",
+		"^@/types/(.*)$",
+		"^@/config/(.*)$",
+		"^@/lib/(.*)$",
+		"^@/components/ui/(.*)$",
+		"^@/components/(.*)$",
+		"^@/styles/(.*)$",
+		"^@/app/(.*)$",
+		"",
+		"^[./]"
+	],
+	"importOrderSeparation": false,
+	"importOrderSortSpecifiers": true,
+	"importOrderBuiltinModulesToTop": true,
+	"importOrderParserPlugins": ["typescript", "jsx", "decorators-legacy"],
+	"importOrderMergeDuplicateImports": true,
+	"importOrderCombineTypeAndValueImports": true,
+	"useTabs": true,
+	"printWidth": 100,
+	"plugins": [
+		"prettier-plugin-svelte",
+		"@ianvs/prettier-plugin-sort-imports",
+		"prettier-plugin-tailwindcss"
+	],
+	"pluginSearchDirs": ["."],
+	"overrides": [{ "files": "*.svelte", "options": { "parser": "svelte" } }]
+}
