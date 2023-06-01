@@ -13,3 +13,7 @@ export const customTextColors = {
 export const customBorderColors = {
 	brand: "border-brand",
 }
+
+export const customBoxShadowColors = {
+	brand: "shadow-brand",
+}

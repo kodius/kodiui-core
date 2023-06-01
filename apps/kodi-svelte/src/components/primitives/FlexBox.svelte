@@ -19,10 +19,10 @@
 	export let right: Partial<$$Props>["right"] = undefined
 	//flex
 	export let flexDirection: Partial<$$Props>["flexDirection"] = undefined
-	export let flexWrap: Partial<$$Props>["flexWrap"] = undefined
-	export let flexBasis: Partial<$$Props>["flexBasis"] = undefined
-	export let flexGrow: Partial<$$Props>["flexGrow"] = undefined
-	export let flexShrink: Partial<$$Props>["flexShrink"] = undefined
+	export let wrap: Partial<$$Props>["wrap"] = undefined
+	export let basis: Partial<$$Props>["basis"] = undefined
+	export let grow: Partial<$$Props>["grow"] = undefined
+	export let shrink: Partial<$$Props>["shrink"] = undefined
 	export let order: Partial<$$Props>["order"] = undefined
 	export let justifyContent: Partial<$$Props>["justifyContent"] = undefined
 	export let alignContent: Partial<$$Props>["alignContent"] = undefined
@@ -55,7 +55,7 @@
 	export let minHeight: Partial<$$Props>["minHeight"] = undefined
 	export let maxHeight: Partial<$$Props>["maxHeight"] = undefined
 	//colors
-	export let backgroundColor: Partial<$$Props>["backgroundColor"] = undefined
+	export let bg: Partial<$$Props>["bg"] = undefined
 	export let borderColor: Partial<$$Props>["borderColor"] = undefined
 	export let color: Partial<$$Props>["color"] = undefined
 	//borders
@@ -76,6 +76,30 @@
 	export let borderWidthL: Partial<$$Props>["borderWidthL"] = undefined
 	export let borderWidthR: Partial<$$Props>["borderWidthR"] = undefined
 	export let borderStyle: Partial<$$Props>["borderStyle"] = undefined
+		//effects
+		export let shadow: Partial<$$Props>["shadow"] = undefined
+	export let shadowColor: Partial<$$Props>["shadowColor"] = undefined
+	export let opacity: Partial<$$Props>["opacity"] = undefined
+	export let mixBlend: Partial<$$Props>["mixBlend"] = undefined
+	export let bgBlend: Partial<$$Props>["bgBlend"] = undefined
+		//filters
+		export let blur: Partial<$$Props>["blur"] = undefined
+	export let brightness: Partial<$$Props>["brightness"] = undefined
+	export let contrast: Partial<$$Props>["contrast"] = undefined
+	export let dropShadow: Partial<$$Props>["dropShadow"] = undefined
+	export let grayscale: Partial<$$Props>["grayscale"] = undefined
+	export let hueRotate: Partial<$$Props>["hueRotate"] = undefined
+	export let invert: Partial<$$Props>["invert"] = undefined
+	export let saturate: Partial<$$Props>["saturate"] = undefined
+	export let sepia: Partial<$$Props>["sepia"] = undefined
+	export let backdropBlur: Partial<$$Props>["backdropBlur"] = undefined
+	export let backdropBrightness: Partial<$$Props>["backdropBrightness"] = undefined
+	export let backdropContrast: Partial<$$Props>["backdropContrast"] = undefined
+	export let backdropGrayscale: Partial<$$Props>["backdropGrayscale"] = undefined
+	export let backdropInvert: Partial<$$Props>["backdropInvert"] = undefined
+	export let backdropOpacity: Partial<$$Props>["backdropOpacity"] = undefined
+	export let backdropSaturate: Partial<$$Props>["backdropSaturate"] = undefined
+	export let backdropSepia: Partial<$$Props>["backdropSepia"] = undefined
 </script>
 
 <div
@@ -91,11 +115,11 @@
 		right,
 		flex,
 		flexDirection,
-		flexWrap,
+		wrap,
 		justifyContent,
-		flexBasis,
-		flexGrow,
-		flexShrink,
+		basis,
+		grow,
+		shrink,
 		order,
 		alignContent,
 		alignItems,
@@ -124,7 +148,7 @@
 		height,
 		minHeight,
 		maxHeight,
-		backgroundColor,
+		bg,
 		color,
 		borderColor,
 		rounded,
@@ -144,6 +168,28 @@
 		borderWidthL,
 		borderWidthR,
 		borderStyle,
+		shadow,
+		shadowColor,
+		opacity,
+		mixBlend,
+		bgBlend,
+		blur,
+		brightness,
+		contrast,
+		dropShadow,
+		grayscale,
+		hueRotate,
+		invert,
+		saturate,
+		sepia,
+		backdropBlur,
+		backdropBrightness,
+		backdropContrast,
+		backdropGrayscale,
+		backdropInvert,
+		backdropOpacity,
+		backdropSaturate,
+		backdropSepia,
 		class: $$props.class,
 	})}
 >

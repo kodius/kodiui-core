@@ -7,7 +7,7 @@
 </script>
 
 <Stack gap="xl">
-	<Stack backgroundColor="brand" color="white">
+	<Stack bg="brand" color="white">
 		<Box>I'm a box</Box>
 		<Box>I'm a box</Box>
 		<Box>I'm a box</Box>
@@ -63,11 +63,11 @@
 		<Box>FlexBox box</Box>
 	</FlexBox>
 	<Sidebar>
-		<Box backgroundColor="yellow-100">First child</Box>
-		<Box backgroundColor="brand" color="white">Last child</Box>
+		<Box bg="yellow-100">First child</Box>
+		<Box bg="brand" color="white">Last child</Box>
 	</Sidebar>
 	<Sidebar side="right" gap="0">
-		<Box backgroundColor="yellow-100">First child</Box>
-		<Box backgroundColor="brand" color="white">Last child</Box>
+		<Box bg="yellow-100">First child</Box>
+		<Box bg="brand" color="white">Last child</Box>
 	</Sidebar>
 </Stack>
