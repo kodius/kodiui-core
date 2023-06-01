@@ -14,8 +14,20 @@ export const Component = () => {
         description=""
         exampleWithCode={
           <Switcher>
-            <DocPane width="36">Element</DocPane>
-            <DocPane width="80">Element</DocPane>
+            <DocPane>Element</DocPane>
+            <DocPane>Element</DocPane>
+            <DocPane>Element</DocPane>
+          </Switcher>
+        }
+      />
+      <DocBlock
+        canPlay
+        title="Example with witht"
+        description=""
+        exampleWithCode={
+          <Switcher>
+            <DocPane width="64">Element</DocPane>
+            <DocPane width="64">Element</DocPane>
             <DocPane width="64">Element</DocPane>
           </Switcher>
         }

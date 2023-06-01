@@ -15,7 +15,7 @@ export const Switcher: FC<BoxProps> = ({
   return (
     <Box
       display={display || "flex"}
-      flexDirection={flexDirection || undefined}
+      flexDirection={flexDirection || "row"}
       flexWrap="wrap"
       justifyContent={justifyContent || "start"}
       gap={gap || "sm"}

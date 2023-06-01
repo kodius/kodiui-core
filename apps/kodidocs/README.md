@@ -27,3 +27,7 @@ kodiui: primitive components
 ## Icons
 
 See icons.tsx
+
+## TODO
+
+explain stack flex basis
