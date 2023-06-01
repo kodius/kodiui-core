@@ -1,6 +1,4 @@
-import { FC } from "react"
 import { DocBlock } from "@/features/docs/DocBlock"
-import { DocPane, DocPaneProps } from "@/features/docs/DocPane"
 import { DocTemplate } from "@/templates"
 
 import { Box } from "@/components/primitives/box/box"
@@ -14,21 +12,12 @@ export const Component = () => {
         description="The Box component is useful because it helps with three common use cases: Create responsive layouts with ease. Provide a shorthand way to pass styles via props (bg instead of backgroundColor). Compose new component and allow for override using the as prop."
         exampleWithCode={
           <Stack>
-            <Box background="brand">Element</Box>
+            <Box background="gray-800" p="lg">
+              Element
+            </Box>
           </Stack>
         }
       />
     </DocTemplate>
-  )
-}
-
-const Element: FC<DocPaneProps> = (props) => {
-  return (
-    <DocPane
-      className="bg-secondary border-gray-600 rounded border w-2/5"
-      {...props}
-    >
-      Element
-    </DocPane>
   )
 }
