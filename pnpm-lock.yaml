@@ -277,8 +277,6 @@ importers:
         specifier: ^4.3.0
         version: 4.3.2(@types/node@20.2.4)
 
-  apps/kodi_straga/deps/phoenix: {}
-
   apps/kodidocs:
     dependencies:
       '@hookform/resolvers':

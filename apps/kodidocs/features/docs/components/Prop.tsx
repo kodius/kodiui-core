@@ -33,7 +33,7 @@ export const Prop: FC<PropItem> = ({
           <Cluster>
             {values.map((v) => (
               <Text size="sm" key={v}>
-                {v} 
+                {v}
               </Text>
             ))}
           </Cluster>
