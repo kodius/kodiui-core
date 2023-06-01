@@ -5,23 +5,24 @@ export const flexDirection = {
 	colReverse: "flex-col-reverse",
 }
 
-export const flexWrap = {
+export const wrap = {
+	true: "flex-wrap",
 	wrap: "flex-wrap",
 	wrapReverse: "flex-wrap-reverse",
 	nowrap: "flex-nowrap",
 }
 
-export const flexGrow = {
+export const grow = {
 	"0": "grow-0",
 	grow: "grow-1",
 }
 
-export const flexShrink = {
+export const shrink = {
 	"0": "shrink-0",
 	shrink: "shrink-1",
 }
 
-export const flexBasis = {
+export const basis = {
 	"0": "basis-0",
 	px: "basis-px",
 	"0.5": "basis-0.5",

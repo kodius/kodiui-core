@@ -250,7 +250,7 @@ const twBackgroundColors = {
 	"rose-950": "bg-rose-950",
 }
 
-export const backgroundColor = {
+export const bg = {
 	...twBackgroundColors,
 	...customBackgroundColors,
 }
