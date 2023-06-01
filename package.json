@@ -8,10 +8,11 @@
     "prepare": "husky install",
     "docslint": "cd ./apps/kodidocs && pnpm lint",
     "docsformat": "cd ./apps/kodidocs && pnpm format",
-    "docsBuild": "cd ./apps/kodidocs && pnpm build",
+    "docsPrettyQuick": "cd ./apps/kodidocs && pnpm pretty-quick",
+    "docsLint": "cd ./apps/kodidocs && pnpm lint",
     "dockerDocsInstall": "cd ./apps/kodidocs && pnpm i --frozen-lockfile",
     "format:fix": "cd ./apps/kodidocs && pnpm format:fix",
-    "validate": "npm-run-all --parallel docsBuild"
+    "validate": "npm-run-all --parallel docsPrettyQuick"
   },
   "keywords": [],
   "author": "dinoDanic",
