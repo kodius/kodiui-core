@@ -12,7 +12,8 @@
     "format": "pnpm format:fix",
     "compress-components": "bash compress-components.sh",
     "compress-primitives": "bash compress-primitives.sh",
-    "compress-typography": "bash compress-typography.sh"
+    "compress-typography": "bash compress-typography.sh",
+    "pretty-quick": "pretty-quick --staged"
   },
   "dependencies": {
     "@hookform/resolvers": "^3.1.0",
