@@ -29,7 +29,7 @@ export const Component = () => {
 const Element: FC<DocPaneProps> = (props) => {
   return (
     <DocPane
-      className="bg-secondary border-gray-600 rounded border w-2/5"
+      className="bg-secondary border-gray-600 rounded border w-80"
       {...props}
     >
       Element

@@ -10,21 +10,11 @@ export const Component = () => {
   return (
     <DocTemplate>
       <DocBlock
-        canPlay
         title="Master"
         description="The Box component is useful because it helps with three common use cases: Create responsive layouts with ease. Provide a shorthand way to pass styles via props (bg instead of backgroundColor). Compose new component and allow for override using the as prop."
         exampleWithCode={
           <Stack>
-            <Box display="flex" gap="md" flexWrap="wrap">
-              <Element />
-              <Element />
-            </Box>
-            <Box display="flex" gap="md" >
-              <Element />
-              <Element />
-              <Element />
-              <Element />
-            </Box>
+            <Box background="brand">Element</Box>
           </Stack>
         }
       />
