@@ -12,7 +12,7 @@
     "docsLint": "cd ./apps/kodidocs && pnpm lint",
     "dockerDocsInstall": "cd ./apps/kodidocs && pnpm i --frozen-lockfile",
     "format:fix": "cd ./apps/kodidocs && pnpm format:fix",
-    "validate": "npm-run-all --parallel docsPrettyQuick"
+    "validate": "npm-run-all --parallel docsPrettyQuick docsLint"
   },
   "keywords": [],
   "author": "dinoDanic",
