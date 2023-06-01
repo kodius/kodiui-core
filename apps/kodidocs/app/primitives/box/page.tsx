@@ -15,7 +15,7 @@ const Page = () => {
 
   return (
     <DefaultTemplate
-      title="Box"
+      title="Boxtttt"
       description="Box is the most abstract component on top of which all other components are built. By default, it renders a `div` element"
     >
       <DocBuilder {...builderProps} />
