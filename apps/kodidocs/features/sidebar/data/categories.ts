@@ -6,12 +6,12 @@ export const categories: Category[] = [
     elements: [
       { name: "Stack", progress: "new" },
       { name: "Center", progress: "new" },
-      { name: "Cluster", progress: "dev" },
-      { name: "Split", progress: "dev" },
-      { name: "Sidebar", progress: "dev" },
-      { name: "Switcher", progress: "dev" },
-      { name: "FlexBox", progress: "dev" },
-      { name: "Box", progress: "dev" },
+      { name: "Cluster", progress: "new" },
+      { name: "Split", progress: "new" },
+      { name: "Sidebar", progress: "new" },
+      { name: "Switcher", progress: "new" },
+      { name: "FlexBox", progress: "new" },
+      { name: "Box", progress: "new" },
     ],
   },
   {

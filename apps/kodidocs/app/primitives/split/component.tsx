@@ -3,10 +3,7 @@ import { DocBlock } from "@/features/docs/DocBlock"
 import { DocPane, DocPaneProps } from "@/features/docs/DocPane"
 import { DocTemplate } from "@/templates"
 
-import { Box } from "@/components/primitives/box/box"
-import { Center } from "@/components/primitives/center"
 import { Split } from "@/components/primitives/split"
-import { Stack } from "@/components/primitives/stack"
 
 export const Component = () => {
   return (
