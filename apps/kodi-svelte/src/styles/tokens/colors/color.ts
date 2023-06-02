@@ -250,7 +250,7 @@ const twTextColors = {
 	"rose-950": "text-rose-950",
 }
 
-export const color = {
+export const text = {
 	...twTextColors,
 	...customColors,
 }
