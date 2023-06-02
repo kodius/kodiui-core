@@ -17,3 +17,7 @@ export const customBorderColors = {
 export const customBoxShadowColors = {
 	brand: "shadow-brand",
 }
+
+export const customDecorationColors = {
+	brand: "shadow-brand",
+}
