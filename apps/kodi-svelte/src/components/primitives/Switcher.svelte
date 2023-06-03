@@ -33,6 +33,7 @@
 	export let gapX: Partial<$$Props>["gapX"] = undefined
 	export let gapY: Partial<$$Props>["gapY"] = undefined
 	//spacing
+	export let m: Partial<$$Props>["m"] = undefined
 	export let p: Partial<$$Props>["p"] = undefined
 	export let px: Partial<$$Props>["px"] = undefined
 	export let py: Partial<$$Props>["py"] = undefined
@@ -188,6 +189,7 @@
 			gap,
 			gapX,
 			gapY,
+			m,
 			p,
 			px,
 			py,

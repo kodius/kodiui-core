@@ -86,6 +86,7 @@ import {
 	listStylePosition,
 	listStyleType,
 	lowercase,
+	m,
 	maxHeight,
 	maxWidth,
 	minHeight,
@@ -330,13 +331,13 @@ export const boxVariants = cva("", {
 		placeContent,
 		placeItems,
 		placeSelf,
-		//table
 		borderCollapse,
 		borderSpacing,
 		borderSpacingX,
 		borderSpacingY,
 		table,
 		caption,
+		m,
 	},
 	defaultVariants: {
 		//

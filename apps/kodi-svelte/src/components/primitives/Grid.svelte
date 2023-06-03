@@ -43,6 +43,7 @@
 	export let placeItems: Partial<$$Props>["placeItems"] = undefined
 	export let placeSelf: Partial<$$Props>["placeSelf"] = undefined
 	//spacing
+	export let m: Partial<$$Props>["m"] = undefined
 	export let p: Partial<$$Props>["p"] = undefined
 	export let px: Partial<$$Props>["px"] = undefined
 	export let py: Partial<$$Props>["py"] = undefined
@@ -200,6 +201,7 @@
 		pb,
 		pl,
 		pr,
+        m,
 		overflow,
 		overflowX,
 		overflowY,
