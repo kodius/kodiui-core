@@ -3,11 +3,8 @@ import {
 	customGradientFromColors,
 	customGradientToColors,
 	customGradientViaColors,
-	twBackgroundColors,
-	twFromStops,
-	twToStops,
-	twViaStops,
-} from "./colors"
+} from "."
+import { twBackgroundColors, twFromStops, twToStops, twViaStops } from "./colors"
 
 export const bgAttachment = {
 	fixed: "bg-fixed",

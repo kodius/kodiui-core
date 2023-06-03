@@ -32,18 +32,32 @@
 	export let basis: Partial<$$Props>["basis"] = undefined
 	export let grow: Partial<$$Props>["grow"] = undefined
 	export let shrink: Partial<$$Props>["shrink"] = undefined
+	//flex and grid
 	export let order: Partial<$$Props>["order"] = undefined
-	export let justifySelf: Partial<$$Props>["justifySelf"] = undefined
-	export let justifyContent: Partial<$$Props>["justifyContent"] = undefined
-	export let alignContent: Partial<$$Props>["alignContent"] = undefined
-	export let alignItems: Partial<$$Props>["alignItems"] = undefined
-	export let alignSelf: Partial<$$Props>["alignSelf"] = undefined
-	export let placeContent: Partial<$$Props>["placeContent"] = undefined
-	export let placeItems: Partial<$$Props>["placeItems"] = undefined
-	export let placeSelf: Partial<$$Props>["placeSelf"] = undefined
+	export let justify: Partial<$$Props>["justify"] = undefined
+	export let content: Partial<$$Props>["content"] = undefined
+	export let items: Partial<$$Props>["items"] = undefined
+	export let self: Partial<$$Props>["self"] = undefined
 	export let gap: Partial<$$Props>["gap"] = undefined
 	export let gapX: Partial<$$Props>["gapX"] = undefined
 	export let gapY: Partial<$$Props>["gapY"] = undefined
+	//grid
+	export let gridCols: Partial<$$Props>["gridCols"] = undefined
+	export let colSpan: Partial<$$Props>["colSpan"] = undefined
+	export let colStart: Partial<$$Props>["colStart"] = undefined
+	export let colEnd: Partial<$$Props>["colEnd"] = undefined
+	export let gridRows: Partial<$$Props>["gridRows"] = undefined
+	export let rowSpan: Partial<$$Props>["rowSpan"] = undefined
+	export let rowStart: Partial<$$Props>["rowStart"] = undefined
+	export let rowEnd: Partial<$$Props>["rowEnd"] = undefined
+	export let gridFlow: Partial<$$Props>["gridFlow"] = undefined
+	export let autoCols: Partial<$$Props>["autoCols"] = undefined
+	export let autoRows: Partial<$$Props>["autoRows"] = undefined
+	export let justifyItems: Partial<$$Props>["justifyItems"] = undefined
+	export let justifySelf: Partial<$$Props>["justifySelf"] = undefined
+	export let placeContent: Partial<$$Props>["placeContent"] = undefined
+	export let placeItems: Partial<$$Props>["placeItems"] = undefined
+	export let placeSelf: Partial<$$Props>["placeSelf"] = undefined
 	//spacing
 	export let p: Partial<$$Props>["p"] = undefined
 	export let px: Partial<$$Props>["px"] = undefined
@@ -144,7 +158,6 @@
 	export let whitespace: Partial<$$Props>["whitespace"] = undefined
 	export let wordBreak: Partial<$$Props>["wordBreak"] = undefined
 	export let hyphens: Partial<$$Props>["hyphens"] = undefined
-	export let content: Partial<$$Props>["content"] = undefined
 	export let indent: Partial<$$Props>["indent"] = undefined
 	export let decorationColor: Partial<$$Props>["decorationColor"] = undefined
 	export let text: Partial<$$Props>["text"] = undefined
@@ -199,18 +212,14 @@
 		flex,
 		flexDirection,
 		wrap,
-		justifyContent,
+		justify,
 		basis,
 		grow,
 		shrink,
-		justifySelf,
 		order,
-		alignContent,
-		alignItems,
-		alignSelf,
-		placeContent,
-		placeItems,
-		placeSelf,
+		content,
+		items,
+		self,
 		gap,
 		gapX,
 		gapY,
@@ -309,7 +318,6 @@
 		whitespace,
 		wordBreak,
 		hyphens,
-		content,
 		decorationColor,
 		bg,
 		bgAttachment,
@@ -333,6 +341,22 @@
 		skewX,
 		skewY,
 		origin,
+		gridCols,
+		colSpan,
+		colStart,
+		colEnd,
+		gridRows,
+		rowSpan,
+		rowStart,
+		rowEnd,
+		gridFlow,
+		autoCols,
+		autoRows,
+		justifyItems,
+		justifySelf,
+		placeContent,
+		placeItems,
+		placeSelf,
 		class: $$props.class,
 	})}
 >

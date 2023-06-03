@@ -36,13 +36,10 @@
 	export let grow: Partial<$$Props>["grow"] = undefined
 	export let shrink: Partial<$$Props>["shrink"] = undefined
 	export let order: Partial<$$Props>["order"] = undefined
-	export let justifyContent: Partial<$$Props>["justifyContent"] = undefined
-	export let alignContent: Partial<$$Props>["alignContent"] = undefined
-	export let alignItems: Partial<$$Props>["alignItems"] = undefined
-	export let alignSelf: Partial<$$Props>["alignSelf"] = undefined
-	export let placeContent: Partial<$$Props>["placeContent"] = undefined
-	export let placeItems: Partial<$$Props>["placeItems"] = undefined
-	export let placeSelf: Partial<$$Props>["placeSelf"] = undefined
+	export let justify: Partial<$$Props>["justify"] = undefined
+	export let content: Partial<$$Props>["content"] = undefined
+	export let items: Partial<$$Props>["items"] = undefined
+	export let self: Partial<$$Props>["self"] = undefined
 	export let gapX: Partial<$$Props>["gapX"] = undefined
 	export let gapY: Partial<$$Props>["gapY"] = undefined
 	//spacing
@@ -146,7 +143,6 @@
 	export let whitespace: Partial<$$Props>["whitespace"] = undefined
 	export let wordBreak: Partial<$$Props>["wordBreak"] = undefined
 	export let hyphens: Partial<$$Props>["hyphens"] = undefined
-	export let content: Partial<$$Props>["content"] = undefined
 	export let indent: Partial<$$Props>["indent"] = undefined
 	export let decorationColor: Partial<$$Props>["decorationColor"] = undefined
 	//backgrounds
@@ -189,17 +185,14 @@
 		left,
 		right,
 		flexDirection,
-		justifyContent,
+		justify,
 		basis,
 		grow,
 		shrink,
 		order,
-		alignContent,
-		alignItems,
-		alignSelf,
-		placeContent,
-		placeItems,
-		placeSelf,
+		content,
+		items,
+		self,
 		gap,
 		gapX,
 		gapY,
@@ -299,9 +292,7 @@
 		whitespace,
 		wordBreak,
 		hyphens,
-		content,
 		decorationColor,
-		class: $$props.class,
 		bgAttachment,
 		bgClip,
 		bgOrigin,
@@ -323,6 +314,7 @@
 		skewX,
 		skewY,
 		origin,
+		class: $$props.class,
 		})
 	)}
 >

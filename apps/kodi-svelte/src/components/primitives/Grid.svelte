@@ -2,12 +2,10 @@
 	import type { BoxProps } from "./types"
 	import { boxVariants } from "./variants"
 
-	type $$Props = BoxProps
+	type $$Props = BoxProps & { as?: "div" | "h1" | "h2" | "h3" | "h4" | "p" | "span" }
 
-	//default
-	let flex: $$Props["flex"] = true
-	let flexDirection: Partial<$$Props>["flexDirection"] = "col"
-	export let gap: Partial<$$Props>["gap"] = "sm"
+	export let grid: Partial<$$Props>["grid"] = true
+	export let as: "div" | "h1" | "h2" | "h3" | "h4" | "p" | "span" = "div"
 	//position
 	export let position: Partial<$$Props>["position"] = undefined
 	export let fixed: Partial<$$Props>["fixed"] = undefined
@@ -18,18 +16,32 @@
 	export let bottom: Partial<$$Props>["bottom"] = undefined
 	export let left: Partial<$$Props>["left"] = undefined
 	export let right: Partial<$$Props>["right"] = undefined
-	//flex
-	export let wrap: Partial<$$Props>["wrap"] = undefined
-	export let basis: Partial<$$Props>["basis"] = undefined
-	export let grow: Partial<$$Props>["grow"] = undefined
-	export let shrink: Partial<$$Props>["shrink"] = undefined
+	//flex and grid
 	export let order: Partial<$$Props>["order"] = undefined
 	export let justify: Partial<$$Props>["justify"] = undefined
 	export let content: Partial<$$Props>["content"] = undefined
 	export let items: Partial<$$Props>["items"] = undefined
 	export let self: Partial<$$Props>["self"] = undefined
+	export let gap: Partial<$$Props>["gap"] = undefined
 	export let gapX: Partial<$$Props>["gapX"] = undefined
 	export let gapY: Partial<$$Props>["gapY"] = undefined
+	//grid
+	export let gridCols: Partial<$$Props>["gridCols"] = undefined
+	export let colSpan: Partial<$$Props>["colSpan"] = undefined
+	export let colStart: Partial<$$Props>["colStart"] = undefined
+	export let colEnd: Partial<$$Props>["colEnd"] = undefined
+	export let gridRows: Partial<$$Props>["gridRows"] = undefined
+	export let rowSpan: Partial<$$Props>["rowSpan"] = undefined
+	export let rowStart: Partial<$$Props>["rowStart"] = undefined
+	export let rowEnd: Partial<$$Props>["rowEnd"] = undefined
+	export let gridFlow: Partial<$$Props>["gridFlow"] = undefined
+	export let autoCols: Partial<$$Props>["autoCols"] = undefined
+	export let autoRows: Partial<$$Props>["autoRows"] = undefined
+	export let justifyItems: Partial<$$Props>["justifyItems"] = undefined
+	export let justifySelf: Partial<$$Props>["justifySelf"] = undefined
+	export let placeContent: Partial<$$Props>["placeContent"] = undefined
+	export let placeItems: Partial<$$Props>["placeItems"] = undefined
+	export let placeSelf: Partial<$$Props>["placeSelf"] = undefined
 	//spacing
 	export let p: Partial<$$Props>["p"] = undefined
 	export let px: Partial<$$Props>["px"] = undefined
@@ -94,8 +106,7 @@
 	export let backdropOpacity: Partial<$$Props>["backdropOpacity"] = undefined
 	export let backdropSaturate: Partial<$$Props>["backdropSaturate"] = undefined
 	export let backdropSepia: Partial<$$Props>["backdropSepia"] = undefined
-	//typography
-	export let text: Partial<$$Props>["text"] = undefined
+	// typography
 	export let fontFamily: Partial<$$Props>["fontFamily"] = undefined
 	export let fontSize: Partial<$$Props>["fontSize"] = undefined
 	export let fontSmoothing: Partial<$$Props>["fontSmoothing"] = undefined
@@ -133,6 +144,7 @@
 	export let hyphens: Partial<$$Props>["hyphens"] = undefined
 	export let indent: Partial<$$Props>["indent"] = undefined
 	export let decorationColor: Partial<$$Props>["decorationColor"] = undefined
+	export let text: Partial<$$Props>["text"] = undefined
 	//backgrounds
 	export let bg: Partial<$$Props>["bg"] = undefined
 	export let bgAttachment: Partial<$$Props>["bgAttachment"] = undefined
@@ -157,9 +169,11 @@
 	export let skewX: Partial<$$Props>["skewX"] = undefined
 	export let skewY: Partial<$$Props>["skewY"] = undefined
 	export let origin: Partial<$$Props>["origin"] = undefined
+
 </script>
 
-<div
+<svelte:element
+	this={as}
 	class={boxVariants({
 		position,
 		fixed,
@@ -170,13 +184,8 @@
 		bottom,
 		left,
 		right,
-		flex,
-		flexDirection,
-		wrap,
+		grid,
 		justify,
-		basis,
-		grow,
-		shrink,
 		order,
 		content,
 		items,
@@ -202,7 +211,6 @@
 		height,
 		minHeight,
 		maxHeight,
-		bg,
 		text,
 		borderColor,
 		rounded,
@@ -281,6 +289,7 @@
 		wordBreak,
 		hyphens,
 		decorationColor,
+		bg,
 		bgAttachment,
 		bgClip,
 		bgOrigin,
@@ -302,8 +311,24 @@
 		skewX,
 		skewY,
 		origin,
+		gridCols,
+		colSpan,
+		colStart,
+		colEnd,
+		gridRows,
+		rowSpan,
+		rowStart,
+		rowEnd,
+		gridFlow,
+		autoCols,
+		autoRows,
+		justifyItems,
+		justifySelf,
+		placeContent,
+		placeItems,
+		placeSelf,
 		class: $$props.class,
 	})}
 >
 	<slot />
-</div>
+</svelte:element>
