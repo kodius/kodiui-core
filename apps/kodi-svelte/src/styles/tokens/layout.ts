@@ -4,7 +4,29 @@ export const display = {
 	inline: "inline",
 	flex: "flex",
 	grid: "grid",
+	contents: "contents",
+	flowRoot: "flow-root",
 }
+
+export const block = { true: "block" }
+
+export const inlineBlock = { true: "inline-block" }
+
+export const flex = { true: "flex" }
+
+export const inlineFlex = { true: "inline-flex" }
+
+export const contents = { true: "contents" }
+
+export const inline = { true: "inline" }
+
+export const grid = { true: "grid" }
+
+export const inlineGrid = { true: "inline-grid" }
+
+export const listItem = { true: "list-item" }
+
+export const hidden = { hidden: "hidden" }
 
 export const overflow = {
 	auto: "overflow-auto",

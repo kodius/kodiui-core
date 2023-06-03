@@ -16,6 +16,7 @@
 	export let left: Partial<$$Props>["left"] = undefined
 	export let right: Partial<$$Props>["right"] = undefined
 	//display
+	export let display: Partial<$$Props>["display"] = undefined
 	export let flex: Partial<$$Props>["flex"] = undefined
 	export let block: Partial<$$Props>["block"] = undefined
 	export let inlineBlock: Partial<$$Props>["inlineBlock"] = undefined
@@ -243,6 +244,7 @@
 		bottom,
 		left,
 		right,
+		display,
 		block,
 		inlineBlock,
 		inlineFlex,
