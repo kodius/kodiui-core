@@ -1,5 +1,5 @@
 const { fontFamily } = require("tailwindcss/defaultTheme")
-const { spacing, screenStyles, customColors } = require("./src/styles/tokens")
+const { spacing, customColors, customScale, customScreens } = require("./src/styles/tokens")
 
 /** @type {import('tailwindcss').Config}*/
 const config = {
@@ -14,8 +14,9 @@ const config = {
 				sans: ["Nunito", ...fontFamily.sans],
 				title: ["Inter", ...fontFamily.sans],
 			},
+			screens: customScreens,
+			scale: customScale,
 			spacing: spacing,
-			screens: screenStyles,
 		},
 	},
 

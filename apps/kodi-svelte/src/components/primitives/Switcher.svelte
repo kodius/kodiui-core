@@ -151,6 +151,18 @@
 	export let gradientFromStop: Partial<$$Props>["gradientFromStop"] = undefined
 	export let gradientToStop: Partial<$$Props>["gradientToStop"] = undefined
 	export let gradientViaStop: Partial<$$Props>["gradientViaStop"] = undefined
+	//transitions, transforms and animations
+	export let transition: Partial<$$Props>["transition"] = undefined
+	export let duration: Partial<$$Props>["duration"] = undefined
+	export let transitionTimingFunction: Partial<$$Props>["transitionTimingFunction"] = undefined
+	export let delay: Partial<$$Props>["delay"] = undefined
+	export let scale: Partial<$$Props>["scale"] = undefined
+	export let rotate: Partial<$$Props>["rotate"] = undefined
+	export let translateX: Partial<$$Props>["translateX"] = undefined
+	export let translateY: Partial<$$Props>["translateY"] = undefined
+	export let skewX: Partial<$$Props>["skewX"] = undefined
+	export let skewY: Partial<$$Props>["skewY"] = undefined
+	export let origin: Partial<$$Props>["origin"] = undefined
 </script>
 
 <div
@@ -291,6 +303,17 @@
 			gradientFromStop,
 			gradientViaStop,
 			gradientToStop,
+			transition,
+			duration,
+			transitionTimingFunction,
+			delay,
+			scale,
+			rotate,
+			translateX,
+			translateY,
+			skewX,
+			skewY,
+			origin,
 			class: $$props.class,
 		})
 	)}

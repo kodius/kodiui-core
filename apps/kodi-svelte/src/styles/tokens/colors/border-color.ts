@@ -1,4 +1,4 @@
-import { customBorderColors } from "./customColors"
+import { customBorderColors } from "../custom-values/colors"
 
 const twBorderColors = {
 	inherit: "border-inherit",

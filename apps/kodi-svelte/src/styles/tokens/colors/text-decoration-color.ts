@@ -1,4 +1,4 @@
-import { customDecorationColors } from "./customColors"
+import { customDecorationColors } from "../custom-values/colors"
 
 const twDecorationColors = {
 	inherit: "decoration-inherit",
