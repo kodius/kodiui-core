@@ -51,12 +51,17 @@
 	export let pb: Partial<$$Props>["pb"] = undefined
 	export let pl: Partial<$$Props>["pl"] = undefined
 	export let pr: Partial<$$Props>["pr"] = undefined
-	//overflow, visibility & z-index
+	//overflow, object, overscroll visibility & z-index
 	export let overflow: Partial<$$Props>["overflow"] = undefined
 	export let overflowX: Partial<$$Props>["overflowX"] = undefined
 	export let overflowY: Partial<$$Props>["overflowY"] = undefined
 	export let visibility: Partial<$$Props>["visibility"] = undefined
-	export let zIndex: Partial<$$Props>["zIndex"] = undefined
+	export let objectPosition: Partial<$$Props>["objectPosition"] = undefined
+	export let object: Partial<$$Props>["object"] = undefined
+	export let overscroll: Partial<$$Props>["overscroll"] = undefined
+	export let overscrollX: Partial<$$Props>["overscrollX"] = undefined
+	export let overscrollY: Partial<$$Props>["overscrollY"] = undefined
+	export let z: Partial<$$Props>["z"] = undefined
 	//sizes
 	export let width: Partial<$$Props>["width"] = undefined
 	export let minWidth: Partial<$$Props>["minWidth"] = undefined
@@ -170,6 +175,34 @@
 	export let skewX: Partial<$$Props>["skewX"] = undefined
 	export let skewY: Partial<$$Props>["skewY"] = undefined
 	export let origin: Partial<$$Props>["origin"] = undefined
+	//interactivity
+	export let cursor: Partial<$$Props>["cursor"] = undefined
+	export let pointerEvents: Partial<$$Props>["pointerEvents"] = undefined
+	export let scrollBehavior: Partial<$$Props>["scrollBehavior"] = undefined
+	export let snapAlign: Partial<$$Props>["snapAlign"] = undefined
+	export let snapStop: Partial<$$Props>["snapStop"] = undefined
+	export let snapType: Partial<$$Props>["snapType"] = undefined
+	export let touch: Partial<$$Props>["touch"] = undefined
+	export let select: Partial<$$Props>["select"] = undefined
+	export let willChange: Partial<$$Props>["willChange"] = undefined
+	export let scrollM: Partial<$$Props>["scrollM"] = undefined
+	export let scrollMX: Partial<$$Props>["scrollMX"] = undefined
+	export let scrollMY: Partial<$$Props>["scrollMY"] = undefined
+	export let scrollMS: Partial<$$Props>["scrollMS"] = undefined
+	export let scrollME: Partial<$$Props>["scrollME"] = undefined
+	export let scrollMT: Partial<$$Props>["scrollMT"] = undefined
+	export let scrollMB: Partial<$$Props>["scrollMB"] = undefined
+	export let scrollML: Partial<$$Props>["scrollML"] = undefined
+	export let scrollMR: Partial<$$Props>["scrollMR"] = undefined
+	export let scrollP: Partial<$$Props>["scrollP"] = undefined
+	export let scrollPX: Partial<$$Props>["scrollPX"] = undefined
+	export let scrollPY: Partial<$$Props>["scrollPY"] = undefined
+	export let scrollPS: Partial<$$Props>["scrollPS"] = undefined
+	export let scrollPE: Partial<$$Props>["scrollPE"] = undefined
+	export let scrollPT: Partial<$$Props>["scrollPT"] = undefined
+	export let scrollPB: Partial<$$Props>["scrollPB"] = undefined
+	export let scrollPL: Partial<$$Props>["scrollPL"] = undefined
+	export let scrollPR: Partial<$$Props>["scrollPR"] = undefined
 </script>
 
 <div
@@ -209,7 +242,12 @@
 		overflowX,
 		overflowY,
 		visibility,
-		zIndex,
+		z,
+		object,
+		objectPosition,
+		overscroll,
+		overscrollX,
+		overscrollY,
 		width,
 		minWidth,
 		maxWidth,
@@ -316,6 +354,33 @@
 		skewX,
 		skewY,
 		origin,
+		cursor,
+		pointerEvents,
+		scrollBehavior,
+		snapAlign,
+		snapStop,
+		snapType,
+		touch,
+		select,
+		willChange,
+		scrollM,
+		scrollMX,
+		scrollMY,
+		scrollMS,
+		scrollME,
+		scrollMT,
+		scrollMB,
+		scrollML,
+		scrollMR,
+		scrollP,
+		scrollPX,
+		scrollPY,
+		scrollPS,
+		scrollPE,
+		scrollPT,
+		scrollPB,
+		scrollPL,
+		scrollPR,
 		class: $$props.class,
 		})
 	)}

@@ -16,6 +16,7 @@
 	export let left: Partial<$$Props>["left"] = undefined
 	export let right: Partial<$$Props>["right"] = undefined
 	//display
+	export let flex: Partial<$$Props>["flex"] = undefined
 	export let block: Partial<$$Props>["block"] = undefined
 	export let inlineBlock: Partial<$$Props>["inlineBlock"] = undefined
 	export let inline: Partial<$$Props>["inline"] = undefined
@@ -24,7 +25,6 @@
 	export let listItem: Partial<$$Props>["listItem"] = undefined
 	export let hidden: Partial<$$Props>["hidden"] = undefined
 	//flex
-	export let flex: Partial<$$Props>["flex"] = undefined
 	export let inlineFlex: Partial<$$Props>["inlineFlex"] = undefined
 	export let contents: Partial<$$Props>["contents"] = undefined
 	export let flexDirection: Partial<$$Props>["flexDirection"] = undefined
@@ -67,12 +67,20 @@
 	export let pb: Partial<$$Props>["pb"] = undefined
 	export let pl: Partial<$$Props>["pl"] = undefined
 	export let pr: Partial<$$Props>["pr"] = undefined
-	//overflow, visibility & z-index
+	//layout
+	export let aspect: Partial<$$Props>["aspect"] = undefined
+	export let columns: Partial<$$Props>["columns"] = undefined
+	export let floats: Partial<$$Props>["floats"] = undefined
 	export let overflow: Partial<$$Props>["overflow"] = undefined
 	export let overflowX: Partial<$$Props>["overflowX"] = undefined
 	export let overflowY: Partial<$$Props>["overflowY"] = undefined
 	export let visibility: Partial<$$Props>["visibility"] = undefined
-	export let zIndex: Partial<$$Props>["zIndex"] = undefined
+	export let objectPosition: Partial<$$Props>["objectPosition"] = undefined
+	export let object: Partial<$$Props>["object"] = undefined
+	export let overscroll: Partial<$$Props>["overscroll"] = undefined
+	export let overscrollX: Partial<$$Props>["overscrollX"] = undefined
+	export let overscrollY: Partial<$$Props>["overscrollY"] = undefined
+	export let z: Partial<$$Props>["z"] = undefined
 	//sizes
 	export let width: Partial<$$Props>["width"] = undefined
 	export let minWidth: Partial<$$Props>["minWidth"] = undefined
@@ -193,6 +201,34 @@
 	export let borderSpacingY: Partial<$$Props>["borderSpacingY"] = undefined
 	export let table: Partial<$$Props>["table"] = undefined
 	export let caption: Partial<$$Props>["caption"] = undefined
+	//interactivity
+	export let cursor: Partial<$$Props>["cursor"] = undefined
+	export let pointerEvents: Partial<$$Props>["pointerEvents"] = undefined
+	export let scrollBehavior: Partial<$$Props>["scrollBehavior"] = undefined
+	export let snapAlign: Partial<$$Props>["snapAlign"] = undefined
+	export let snapStop: Partial<$$Props>["snapStop"] = undefined
+	export let snapType: Partial<$$Props>["snapType"] = undefined
+	export let touch: Partial<$$Props>["touch"] = undefined
+	export let select: Partial<$$Props>["select"] = undefined
+	export let willChange: Partial<$$Props>["willChange"] = undefined
+	export let scrollM: Partial<$$Props>["scrollM"] = undefined
+	export let scrollMX: Partial<$$Props>["scrollMX"] = undefined
+	export let scrollMY: Partial<$$Props>["scrollMY"] = undefined
+	export let scrollMS: Partial<$$Props>["scrollMS"] = undefined
+	export let scrollME: Partial<$$Props>["scrollME"] = undefined
+	export let scrollMT: Partial<$$Props>["scrollMT"] = undefined
+	export let scrollMB: Partial<$$Props>["scrollMB"] = undefined
+	export let scrollML: Partial<$$Props>["scrollML"] = undefined
+	export let scrollMR: Partial<$$Props>["scrollMR"] = undefined
+	export let scrollP: Partial<$$Props>["scrollP"] = undefined
+	export let scrollPX: Partial<$$Props>["scrollPX"] = undefined
+	export let scrollPY: Partial<$$Props>["scrollPY"] = undefined
+	export let scrollPS: Partial<$$Props>["scrollPS"] = undefined
+	export let scrollPE: Partial<$$Props>["scrollPE"] = undefined
+	export let scrollPT: Partial<$$Props>["scrollPT"] = undefined
+	export let scrollPB: Partial<$$Props>["scrollPB"] = undefined
+	export let scrollPL: Partial<$$Props>["scrollPL"] = undefined
+	export let scrollPR: Partial<$$Props>["scrollPR"] = undefined
 </script>
 
 <svelte:element
@@ -242,7 +278,12 @@
 		overflowX,
 		overflowY,
 		visibility,
-		zIndex,
+		z,
+		object,
+		objectPosition,
+		overscroll,
+		overscrollX,
+		overscrollY,
 		width,
 		minWidth,
 		maxWidth,
@@ -371,6 +412,36 @@
 		borderSpacingY,
 		table,
 		caption,
+		aspect,
+		columns,
+		floats,
+		cursor,
+		pointerEvents,
+		scrollBehavior,
+		snapAlign,
+		snapStop,
+		snapType,
+		touch,
+		select,
+		willChange,
+		scrollM,
+		scrollMX,
+		scrollMY,
+		scrollMS,
+		scrollME,
+		scrollMT,
+		scrollMB,
+		scrollML,
+		scrollMR,
+		scrollP,
+		scrollPX,
+		scrollPY,
+		scrollPS,
+		scrollPE,
+		scrollPT,
+		scrollPB,
+		scrollPL,
+		scrollPR,
 		class: $$props.class,
 	})}
 >

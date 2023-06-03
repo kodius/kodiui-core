@@ -39,12 +39,17 @@
 	export let pb: Partial<$$Props>["pb"] = undefined
 	export let pl: Partial<$$Props>["pl"] = undefined
 	export let pr: Partial<$$Props>["pr"] = undefined
-	//overflow, visibility & z-index
+	//overflow, object, overscroll visibility & z-index
 	export let overflow: Partial<$$Props>["overflow"] = undefined
 	export let overflowX: Partial<$$Props>["overflowX"] = undefined
 	export let overflowY: Partial<$$Props>["overflowY"] = undefined
 	export let visibility: Partial<$$Props>["visibility"] = undefined
-	export let zIndex: Partial<$$Props>["zIndex"] = undefined
+	export let objectPosition: Partial<$$Props>["objectPosition"] = undefined
+	export let object: Partial<$$Props>["object"] = undefined
+	export let overscroll: Partial<$$Props>["overscroll"] = undefined
+	export let overscrollX: Partial<$$Props>["overscrollX"] = undefined
+	export let overscrollY: Partial<$$Props>["overscrollY"] = undefined
+	export let z: Partial<$$Props>["z"] = undefined
 	//sizes
 	export let width: Partial<$$Props>["width"] = undefined
 	export let minWidth: Partial<$$Props>["minWidth"] = undefined
@@ -197,7 +202,12 @@
 		overflowX,
 		overflowY,
 		visibility,
-		zIndex,
+		z,
+		object,
+		objectPosition,
+		overscroll,
+		overscrollX,
+		overscrollY,
 		width,
 		minWidth,
 		maxWidth,
