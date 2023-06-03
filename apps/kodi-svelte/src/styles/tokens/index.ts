@@ -1,3 +1,4 @@
+export * from "./backgrounds"
 export * from "./borders"
 export * from "./boxShadow"
 export * from "./colors"

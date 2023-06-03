@@ -66,11 +66,8 @@
 	export let height: Partial<$$Props>["height"] = undefined
 	export let minHeight: Partial<$$Props>["minHeight"] = undefined
 	export let maxHeight: Partial<$$Props>["maxHeight"] = undefined
-	//colors
-	export let bg: Partial<$$Props>["bg"] = undefined
-	export let borderColor: Partial<$$Props>["borderColor"] = undefined
-	export let text: Partial<$$Props>["text"] = undefined
 	//borders
+	export let borderColor: Partial<$$Props>["borderColor"] = undefined
 	export let rounded: Partial<$$Props>["rounded"] = undefined
 	export let roundedT: Partial<$$Props>["roundedT"] = undefined
 	export let roundedB: Partial<$$Props>["roundedB"] = undefined
@@ -88,14 +85,14 @@
 	export let borderWidthL: Partial<$$Props>["borderWidthL"] = undefined
 	export let borderWidthR: Partial<$$Props>["borderWidthR"] = undefined
 	export let borderStyle: Partial<$$Props>["borderStyle"] = undefined
-		//effects
-		export let shadow: Partial<$$Props>["shadow"] = undefined
+	//effects
+	export let shadow: Partial<$$Props>["shadow"] = undefined
 	export let shadowColor: Partial<$$Props>["shadowColor"] = undefined
 	export let opacity: Partial<$$Props>["opacity"] = undefined
 	export let mixBlend: Partial<$$Props>["mixBlend"] = undefined
 	export let bgBlend: Partial<$$Props>["bgBlend"] = undefined
-		//filters
-		export let blur: Partial<$$Props>["blur"] = undefined
+	//filters
+	export let blur: Partial<$$Props>["blur"] = undefined
 	export let brightness: Partial<$$Props>["brightness"] = undefined
 	export let contrast: Partial<$$Props>["contrast"] = undefined
 	export let dropShadow: Partial<$$Props>["dropShadow"] = undefined
@@ -113,6 +110,7 @@
 	export let backdropSaturate: Partial<$$Props>["backdropSaturate"] = undefined
 	export let backdropSepia: Partial<$$Props>["backdropSepia"] = undefined
 	// typography
+	export let text: Partial<$$Props>["text"] = undefined
 	export let fontFamily: Partial<$$Props>["fontFamily"] = undefined
 	export let fontSize: Partial<$$Props>["fontSize"] = undefined
 	export let fontSmoothing: Partial<$$Props>["fontSmoothing"] = undefined
@@ -151,75 +149,87 @@
 	export let content: Partial<$$Props>["content"] = undefined
 	export let indent: Partial<$$Props>["indent"] = undefined
 	export let decorationColor: Partial<$$Props>["decorationColor"] = undefined
+	//backgrounds
+	export let bg: Partial<$$Props>["bg"] = undefined
+	export let bgAttachment: Partial<$$Props>["bgAttachment"] = undefined
+	export let bgClip: Partial<$$Props>["bgClip"] = undefined
+	export let bgOrigin: Partial<$$Props>["bgOrigin"] = undefined
+	export let bgPosition: Partial<$$Props>["bgPosition"] = undefined
+	export let bgRepeat: Partial<$$Props>["bgRepeat"] = undefined
+	export let bgSize: Partial<$$Props>["bgSize"] = undefined
+	export let bgImage: Partial<$$Props>["bgImage"] = undefined
+	export let gradientFromStop: Partial<$$Props>["gradientFromStop"] = undefined
+	export let gradientToStop: Partial<$$Props>["gradientToStop"] = undefined
+	export let gradientViaStop: Partial<$$Props>["gradientViaStop"] = undefined
 </script>
 
 <div
 	class={clsx(
 		sidebar({ side }),
 		boxVariants({
-			position,
-			fixed,
-			absolute,
-			relative,
-			sticky,
-			top,
-			bottom,
-			left,
-			right,
-			flexDirection,
-			justifyContent,
-			basis,
-			grow,
-			shrink,
-			order,
-			alignContent,
-			alignItems,
-			alignSelf,
-			placeContent,
-			placeItems,
-			placeSelf,
-			gap,
-			gapX,
-			gapY,
-			p,
-			px,
-			py,
-			pt,
-			pb,
-			pl,
-			pr,
-			overflow,
-			overflowX,
-			overflowY,
-			visibility,
-			zIndex,
-			width,
-			minWidth,
-			maxWidth,
-			height,
-			minHeight,
-			maxHeight,
-			bg,
-			text,
-			borderColor,
-			rounded,
-			roundedT,
-			roundedB,
-			roundedL,
-			roundedR,
-			roundedTl,
-			roundedTr,
-			roundedBl,
-			roundedBr,
-			borderWidth,
-			borderWidthX,
-			borderWidthY,
-			borderWidthT,
-			borderWidthB,
-			borderWidthL,
-			borderWidthR,
-			borderStyle,
-			shadow,
+		position,
+		fixed,
+		absolute,
+		relative,
+		sticky,
+		top,
+		bottom,
+		left,
+		right,
+		flexDirection,
+		justifyContent,
+		basis,
+		grow,
+		shrink,
+		order,
+		alignContent,
+		alignItems,
+		alignSelf,
+		placeContent,
+		placeItems,
+		placeSelf,
+		gap,
+		gapX,
+		gapY,
+		p,
+		px,
+		py,
+		pt,
+		pb,
+		pl,
+		pr,
+		overflow,
+		overflowX,
+		overflowY,
+		visibility,
+		zIndex,
+		width,
+		minWidth,
+		maxWidth,
+		height,
+		minHeight,
+		maxHeight,
+		bg,
+		text,
+		borderColor,
+		rounded,
+		roundedT,
+		roundedB,
+		roundedL,
+		roundedR,
+		roundedTl,
+		roundedTr,
+		roundedBl,
+		roundedBr,
+		borderWidth,
+		borderWidthX,
+		borderWidthY,
+		borderWidthT,
+		borderWidthB,
+		borderWidthL,
+		borderWidthR,
+		borderStyle,
+		shadow,
 		shadowColor,
 		opacity,
 		mixBlend,
@@ -279,7 +289,17 @@
 		hyphens,
 		content,
 		decorationColor,
-			class: $$props.class,
+		class: $$props.class,
+		bgAttachment,
+		bgClip,
+		bgOrigin,
+		bgPosition,
+		bgRepeat,
+		bgSize,
+		bgImage,
+		gradientFromStop,
+		gradientViaStop,
+		gradientToStop,
 		})
 	)}
 >

@@ -21,3 +21,15 @@ export const customBoxShadowColors = {
 export const customDecorationColors = {
 	brand: "shadow-brand",
 }
+
+export const customGradientFromColors = {
+	brand: "from-brand",
+}
+
+export const customGradientViaColors = {
+	brand: "via-brand",
+}
+
+export const customGradientToColors = {
+	brand: "to-brand",
+}

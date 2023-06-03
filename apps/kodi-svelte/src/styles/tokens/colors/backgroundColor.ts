@@ -1,6 +1,4 @@
-import { customBackgroundColors } from "./customColors"
-
-const twBackgroundColors = {
+export const twBackgroundColors = {
 	inherit: "bg-inherit",
 	current: "bg-current",
 	transparent: "bg-transparent",
@@ -248,9 +246,4 @@ const twBackgroundColors = {
 	"rose-800": "bg-rose-800",
 	"rose-900": "bg-rose-900",
 	"rose-950": "bg-rose-950",
-}
-
-export const bg = {
-	...twBackgroundColors,
-	...customBackgroundColors,
 }
