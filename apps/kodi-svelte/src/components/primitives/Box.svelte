@@ -185,7 +185,13 @@
 	export let skewX: Partial<$$Props>["skewX"] = undefined
 	export let skewY: Partial<$$Props>["skewY"] = undefined
 	export let origin: Partial<$$Props>["origin"] = undefined
-
+	//table
+	export let borderCollapse: Partial<$$Props>["borderCollapse"] = undefined
+	export let borderSpacing: Partial<$$Props>["borderSpacing"] = undefined
+	export let borderSpacingX: Partial<$$Props>["borderSpacingX"] = undefined
+	export let borderSpacingY: Partial<$$Props>["borderSpacingY"] = undefined
+	export let table: Partial<$$Props>["table"] = undefined
+	export let caption: Partial<$$Props>["caption"] = undefined
 </script>
 
 <svelte:element
@@ -357,6 +363,12 @@
 		placeContent,
 		placeItems,
 		placeSelf,
+		borderCollapse,
+		borderSpacing,
+		borderSpacingX,
+		borderSpacingY,
+		table,
+		caption,
 		class: $$props.class,
 	})}
 >
