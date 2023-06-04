@@ -83,12 +83,12 @@
 	export let overscrollY: Partial<$$Props>["overscrollY"] = undefined
 	export let z: Partial<$$Props>["z"] = undefined
 	//sizes
-	export let width: Partial<$$Props>["width"] = undefined
-	export let minWidth: Partial<$$Props>["minWidth"] = undefined
-	export let maxWidth: Partial<$$Props>["maxWidth"] = undefined
-	export let height: Partial<$$Props>["height"] = undefined
-	export let minHeight: Partial<$$Props>["minHeight"] = undefined
-	export let maxHeight: Partial<$$Props>["maxHeight"] = undefined
+	export let w: Partial<$$Props>["w"] = undefined
+	export let minW: Partial<$$Props>["minW"] = undefined
+	export let maxW: Partial<$$Props>["maxW"] = undefined
+	export let h: Partial<$$Props>["h"] = undefined
+	export let minH: Partial<$$Props>["minH"] = undefined
+	export let maxH: Partial<$$Props>["maxH"] = undefined
 	//borders
 	export let borderColor: Partial<$$Props>["borderColor"] = undefined
 	export let rounded: Partial<$$Props>["rounded"] = undefined
@@ -286,12 +286,12 @@
 		overscroll,
 		overscrollX,
 		overscrollY,
-		width,
-		minWidth,
-		maxWidth,
-		height,
-		minHeight,
-		maxHeight,
+		w,
+		minW,
+		maxW,
+		h,
+		minH,
+		maxH,
 		text,
 		borderColor,
 		rounded,
