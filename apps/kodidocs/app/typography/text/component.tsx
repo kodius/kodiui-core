@@ -1,4 +1,3 @@
-import { FC } from "react"
 import { DocBlock } from "@/features/docs/DocBlock"
 import { DocTemplate } from "@/templates"
 

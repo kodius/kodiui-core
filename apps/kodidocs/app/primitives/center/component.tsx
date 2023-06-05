@@ -5,7 +5,6 @@ import { DocTemplate } from "@/templates"
 
 import { Box } from "@/components/primitives/box/box"
 import { Center } from "@/components/primitives/center"
-import { Stack } from "@/components/primitives/stack"
 
 export const Component = () => {
   return (

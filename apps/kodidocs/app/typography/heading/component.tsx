@@ -1,6 +1,4 @@
-import { FC } from "react"
 import { DocBlock } from "@/features/docs/DocBlock"
-import { DocPane, DocPaneProps } from "@/features/docs/DocPane"
 import { DocTemplate } from "@/templates"
 
 import { Heading } from "@/components/typography/heading"

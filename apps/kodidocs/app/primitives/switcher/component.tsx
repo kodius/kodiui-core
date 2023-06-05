@@ -2,7 +2,6 @@ import { DocBlock } from "@/features/docs/DocBlock"
 import { DocPane } from "@/features/docs/DocPane"
 import { DocTemplate } from "@/templates"
 
-import { Box } from "@/components/primitives/box/box"
 import { Switcher } from "@/components/primitives/switcher"
 
 export const Component = () => {
