@@ -2,12 +2,9 @@
 	import type { BoxProps } from "./types"
 	import { boxVariants } from "./variants"
 
-	type $$Props = BoxProps
+	type $$Props = BoxProps & { as?: "div" | "h1" | "h2" | "h3" | "h4" | "p" | "span" }
 
-	//default
-	let flex: $$Props["flex"] = true
-	let wrap: $$Props["wrap"] = "wrap"
-	export let gap: Partial<$$Props>["gap"] = "sm"
+	export let grid: Partial<$$Props>["grid"] = true
 	//position
 	export let position: Partial<$$Props>["position"] = undefined
 	export let fixed: Partial<$$Props>["fixed"] = undefined
@@ -18,18 +15,32 @@
 	export let bottom: Partial<$$Props>["bottom"] = undefined
 	export let left: Partial<$$Props>["left"] = undefined
 	export let right: Partial<$$Props>["right"] = undefined
-	//flex
-	export let flexDirection: Partial<$$Props>["flexDirection"] = undefined
-	export let basis: Partial<$$Props>["basis"] = undefined
-	export let grow: Partial<$$Props>["grow"] = undefined
-	export let shrink: Partial<$$Props>["shrink"] = undefined
+	//flex and grid
 	export let order: Partial<$$Props>["order"] = undefined
 	export let justify: Partial<$$Props>["justify"] = undefined
 	export let content: Partial<$$Props>["content"] = undefined
 	export let items: Partial<$$Props>["items"] = undefined
 	export let self: Partial<$$Props>["self"] = undefined
+	export let gap: Partial<$$Props>["gap"] = undefined
 	export let gapX: Partial<$$Props>["gapX"] = undefined
 	export let gapY: Partial<$$Props>["gapY"] = undefined
+	//grid
+	export let gridCols: Partial<$$Props>["gridCols"] = undefined
+	export let colSpan: Partial<$$Props>["colSpan"] = undefined
+	export let colStart: Partial<$$Props>["colStart"] = undefined
+	export let colEnd: Partial<$$Props>["colEnd"] = undefined
+	export let gridRows: Partial<$$Props>["gridRows"] = undefined
+	export let rowSpan: Partial<$$Props>["rowSpan"] = undefined
+	export let rowStart: Partial<$$Props>["rowStart"] = undefined
+	export let rowEnd: Partial<$$Props>["rowEnd"] = undefined
+	export let gridFlow: Partial<$$Props>["gridFlow"] = undefined
+	export let autoCols: Partial<$$Props>["autoCols"] = undefined
+	export let autoRows: Partial<$$Props>["autoRows"] = undefined
+	export let justifyItems: Partial<$$Props>["justifyItems"] = undefined
+	export let justifySelf: Partial<$$Props>["justifySelf"] = undefined
+	export let placeContent: Partial<$$Props>["placeContent"] = undefined
+	export let placeItems: Partial<$$Props>["placeItems"] = undefined
+	export let placeSelf: Partial<$$Props>["placeSelf"] = undefined
 	//spacing
 	export let m: Partial<$$Props>["m"] = undefined
 	export let p: Partial<$$Props>["p"] = undefined
@@ -101,7 +112,6 @@
 	export let backdropSaturate: Partial<$$Props>["backdropSaturate"] = undefined
 	export let backdropSepia: Partial<$$Props>["backdropSepia"] = undefined
 	// typography
-	export let text: Partial<$$Props>["text"] = undefined
 	export let fontFamily: Partial<$$Props>["fontFamily"] = undefined
 	export let fontSize: Partial<$$Props>["fontSize"] = undefined
 	export let fontSmoothing: Partial<$$Props>["fontSmoothing"] = undefined
@@ -139,6 +149,7 @@
 	export let hyphens: Partial<$$Props>["hyphens"] = undefined
 	export let indent: Partial<$$Props>["indent"] = undefined
 	export let decorationColor: Partial<$$Props>["decorationColor"] = undefined
+	export let text: Partial<$$Props>["text"] = undefined
 	//backgrounds
 	export let bg: Partial<$$Props>["bg"] = undefined
 	export let bgAttachment: Partial<$$Props>["bgAttachment"] = undefined
@@ -163,6 +174,34 @@
 	export let skewX: Partial<$$Props>["skewX"] = undefined
 	export let skewY: Partial<$$Props>["skewY"] = undefined
 	export let origin: Partial<$$Props>["origin"] = undefined
+	//interactivity
+	export let cursor: Partial<$$Props>["cursor"] = undefined
+	export let pointerEvents: Partial<$$Props>["pointerEvents"] = undefined
+	export let scrollBehavior: Partial<$$Props>["scrollBehavior"] = undefined
+	export let snapAlign: Partial<$$Props>["snapAlign"] = undefined
+	export let snapStop: Partial<$$Props>["snapStop"] = undefined
+	export let snapType: Partial<$$Props>["snapType"] = undefined
+	export let touch: Partial<$$Props>["touch"] = undefined
+	export let select: Partial<$$Props>["select"] = undefined
+	export let willChange: Partial<$$Props>["willChange"] = undefined
+	export let scrollM: Partial<$$Props>["scrollM"] = undefined
+	export let scrollMX: Partial<$$Props>["scrollMX"] = undefined
+	export let scrollMY: Partial<$$Props>["scrollMY"] = undefined
+	export let scrollMS: Partial<$$Props>["scrollMS"] = undefined
+	export let scrollME: Partial<$$Props>["scrollME"] = undefined
+	export let scrollMT: Partial<$$Props>["scrollMT"] = undefined
+	export let scrollMB: Partial<$$Props>["scrollMB"] = undefined
+	export let scrollML: Partial<$$Props>["scrollML"] = undefined
+	export let scrollMR: Partial<$$Props>["scrollMR"] = undefined
+	export let scrollP: Partial<$$Props>["scrollP"] = undefined
+	export let scrollPX: Partial<$$Props>["scrollPX"] = undefined
+	export let scrollPY: Partial<$$Props>["scrollPY"] = undefined
+	export let scrollPS: Partial<$$Props>["scrollPS"] = undefined
+	export let scrollPE: Partial<$$Props>["scrollPE"] = undefined
+	export let scrollPT: Partial<$$Props>["scrollPT"] = undefined
+	export let scrollPB: Partial<$$Props>["scrollPB"] = undefined
+	export let scrollPL: Partial<$$Props>["scrollPL"] = undefined
+	export let scrollPR: Partial<$$Props>["scrollPR"] = undefined
 </script>
 
 <div
@@ -176,13 +215,8 @@
 		bottom,
 		left,
 		right,
-		flex,
-		flexDirection,
-		wrap,
+		grid,
 		justify,
-		basis,
-		grow,
-		shrink,
 		order,
 		content,
 		items,
@@ -190,7 +224,6 @@
 		gap,
 		gapX,
 		gapY,
-		m,
 		p,
 		px,
 		py,
@@ -198,12 +231,13 @@
 		pb,
 		pl,
 		pr,
+        m,
 		overflow,
 		overflowX,
 		overflowY,
 		visibility,
 		z,
-		object,
+        object,
 		objectPosition,
 		overscroll,
 		overscrollX,
@@ -314,6 +348,49 @@
 		skewX,
 		skewY,
 		origin,
+		gridCols,
+		colSpan,
+		colStart,
+		colEnd,
+		gridRows,
+		rowSpan,
+		rowStart,
+		rowEnd,
+		gridFlow,
+		autoCols,
+		autoRows,
+		justifyItems,
+		justifySelf,
+		placeContent,
+		placeItems,
+		placeSelf,
+        cursor,
+		pointerEvents,
+		scrollBehavior,
+		snapAlign,
+		snapStop,
+		snapType,
+		touch,
+		select,
+		willChange,
+		scrollM,
+		scrollMX,
+		scrollMY,
+		scrollMS,
+		scrollME,
+		scrollMT,
+		scrollMB,
+		scrollML,
+		scrollMR,
+		scrollP,
+		scrollPX,
+		scrollPY,
+		scrollPS,
+		scrollPE,
+		scrollPT,
+		scrollPB,
+		scrollPL,
+		scrollPR,
 		class: $$props.class,
 	})}
 >

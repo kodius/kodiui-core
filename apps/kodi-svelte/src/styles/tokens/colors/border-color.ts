@@ -1,6 +1,4 @@
-import { customBorderColors } from "./customColors"
-
-const twBorderColors = {
+export const twBorderColors = {
 	inherit: "border-inherit",
 	current: "border-current",
 	transparent: "border-transparent",
@@ -248,9 +246,4 @@ const twBorderColors = {
 	"rose-800": "border-rose-800",
 	"rose-900": "border-rose-900",
 	"rose-950": "border-rose-950",
-}
-
-export const borderColor = {
-	...twBorderColors,
-	...customBorderColors,
 }

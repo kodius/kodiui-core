@@ -1,4 +1,4 @@
-import { customBoxShadowColors } from "./customColors"
+import { customBoxShadowColors } from "../custom-values/colors"
 
 const twBoxShadowColors = {
 	inherit: "shadow-inherit",

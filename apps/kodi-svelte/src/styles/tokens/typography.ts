@@ -291,6 +291,6 @@ export const hyphens = {
 	auto: "hyphens-auto",
 }
 
-export const content = {
+export const typographyContent = {
 	none: "content-none",
 }

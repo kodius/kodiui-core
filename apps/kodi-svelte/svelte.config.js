@@ -15,6 +15,7 @@ const config = {
 		adapter: adapter(),
 		alias: {
 			$primitives: "src/components/primitives",
+			$typography: "src/components/typography",
 			$components: "src/components",
 			$styles: "src/styles/*",
 			$stores: "src/lib/stores",

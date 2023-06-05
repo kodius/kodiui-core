@@ -1,4 +1,4 @@
-import { customColors } from "./customColors"
+import { customColors } from "../custom-values/colors"
 
 const twTextColors = {
 	inherit: "text-inherit",
