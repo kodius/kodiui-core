@@ -5,5 +5,7 @@
 </script>
 
 <Grid placeItems="center" w="screen" minH="screen">
-	<Text />
+	<Text>
+		Text goes here
+	</Text>
 </Grid>
