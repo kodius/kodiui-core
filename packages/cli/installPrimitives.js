@@ -14,7 +14,7 @@ export async function installPrimitives(directories) {
     )
   );
   const varsPath = path.join(
-    url.fileURLToPath(new URL(`../cli/primitives/vars.zip`, import.meta.url))
+    url.fileURLToPath(new URL(`../cli/primitives/tokens.zip`, import.meta.url))
   );
 
   const targetPathForPrimitices = primitivesDirectory.replace(
@@ -30,7 +30,7 @@ export async function installPrimitives(directories) {
     "primitives"
   );
 
-  const extractPathVars = path.join(process.cwd(), targetPathForVars, "vars");
+  const extractPathVars = path.join(process.cwd(), targetPathForVars, "tokens");
 
   try {
     await extract(primitivePath, { dir: extractPathPrimitives });
