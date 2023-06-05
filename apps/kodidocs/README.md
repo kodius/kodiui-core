@@ -18,12 +18,11 @@ best practices = 100
 
 has to be error / warning free
 
-## Stack
+#### TODO
 
-shadcn/ui: https://ui.shadcn.com/
-tailwind: https://tailwindcss.com/
-kodiui: primitive components
-
-## Icons
-
-See icons.tsx
+Links in components
+tpography text and heading
+overflow
+delete textlink
+/ => landing
+/docs => docs

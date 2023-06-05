@@ -34,6 +34,9 @@ export const Header = () => {
             >
               <AccordionTrigger>{category?.name}</AccordionTrigger>
               {category?.elements?.map((Element) => {
+                const href =
+                  Element.href ||
+                  `${category.name.toLowerCase()}/${Element?.name.toLowerCase()}`
                 const isBlock = Element.progress === "block"
                 return (
                   <AccordionContent key={Element?.name}>
@@ -45,9 +48,7 @@ export const Header = () => {
                     )}
                     {!isBlock && (
                       <div>
-                        <Link
-                          href={`${category.name.toLowerCase()}/${Element?.name.toLowerCase()}`}
-                        >
+                        <Link href={href}>
                           <Split>
                             {Element?.name}
                             <Badge>{Element.progress}</Badge>
@@ -62,6 +63,13 @@ export const Header = () => {
           )
         })}
       </Accordion>
+      <Link
+        className="px-4"
+        href="https://ui.shadcn.com/docs/components/accordion"
+        target="_blank"
+      >
+        Components
+      </Link>
     </Stack>
   )
 }

@@ -13,7 +13,8 @@
     "compress-components": "bash compress-components.sh",
     "compress-primitives": "bash compress-primitives.sh",
     "compress-typography": "bash compress-typography.sh",
-    "pretty-quick": "pretty-quick --staged"
+    "pretty-quick": "pretty-quick --staged",
+    "preview": "next build && next start"
   },
   "dependencies": {
     "@hookform/resolvers": "^3.1.0",

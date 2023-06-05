@@ -6,6 +6,7 @@ export interface Category {
 export interface Element {
   name: string
   progress: Progress
+  href?: string
 }
 
 export type Progress = "dev" | "new" | "block"
