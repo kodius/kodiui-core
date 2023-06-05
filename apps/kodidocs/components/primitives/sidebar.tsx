@@ -22,8 +22,8 @@ export const Sidebar: FC<BoxProps & SidebarProps> = ({
 
   return (
     <Box
-      display={display || "flex"}
-      flexWrap="wrap"
+      flex
+      wrap
       gap={gap || "sm"}
       className={clsx(sideStyle[side], className)}
       {...props}

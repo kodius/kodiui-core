@@ -7,15 +7,15 @@ export const Cluster: FC<BoxProps> = ({
   display,
   flexDirection,
   gap,
-  justifyContent,
+  justify,
   ...props
 }) => {
   return (
     <Box
       display={display || "flex"}
       flexDirection={flexDirection || undefined}
-      flexWrap="wrap"
-      justifyContent={justifyContent || "start"}
+      wrap="wrap"
+      justify={justify || "start"}
       gap={gap || "sm"}
       {...props}
     >

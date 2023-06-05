@@ -2,18 +2,11 @@ import React, { ReactNode } from "react"
 import { cva, type VariantProps } from "class-variance-authority"
 
 import { cn } from "@/lib/utils"
-import { Color, color as colorVar } from "@/styles/vars/colors"
-import { JustifyContent } from "@/styles/vars/display"
-import { TextAlign, textAlign as textAlignVar } from "@/styles/vars/text"
+import { text, textAlign as textAlignToken } from "@/styles/tokens"
 
-type HeadingProps = VariantProps<typeof headingVariants> & {
-  className?: string
-  color?: Color
-  textAlign?: TextAlign
-  children: ReactNode
-  withIcon?: boolean
-  justifyContent?: JustifyContent
-}
+import { TypographyProps } from "./types"
+
+type HeadingProps = VariantProps<typeof headingVariants> & TypographyProps
 
 const headingVariants = cva("", {
   variants: {
@@ -41,8 +34,8 @@ const Heading = React.forwardRef<HTMLHeadingElement, HeadingProps>(
       <Comp
         className={cn(
           headingVariants({ level, className }),
-          color && colorVar[color],
-          textAlign && textAlignVar[textAlign]
+          color && text[color],
+          textAlign && textAlignToken[textAlign]
         )}
         ref={ref}
         {...props}

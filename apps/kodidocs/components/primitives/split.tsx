@@ -6,15 +6,15 @@ export const Split: FC<BoxProps> = ({
   children,
   display,
   gap,
-  justifyContent,
-  flexWrap,
+  justify,
+  wrap,
   ...props
 }) => {
   return (
     <Box
       display={display || "flex"}
-      flexWrap={flexWrap || "wrap"}
-      justifyContent={justifyContent || "between"}
+      wrap={wrap || "wrap"}
+      justify={justify || "between"}
       gap={gap || "sm"}
       {...props}
     >

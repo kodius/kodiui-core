@@ -1,7 +1,8 @@
 import { PropsType } from "@/features/docs/components/Prop"
 
 import { routes } from "@/config/site"
-import { spacing } from "@/styles/vars/spacing"
+
+// import { spacing } from "@/styles/vars/spacing"
 
 export const props: PropsType = {
   link: {
@@ -11,7 +12,8 @@ export const props: PropsType = {
   props: [
     {
       name: "gap",
-      values: Object.keys(spacing).map((space) => space),
+      // values: Object.keys(spacing).map((space) => space),
+      values: [],
       defaultValue: "xs",
     },
   ],

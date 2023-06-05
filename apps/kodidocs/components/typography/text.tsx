@@ -1,17 +1,12 @@
-import React, { ReactNode } from "react"
+import React from "react"
 import { cva, type VariantProps } from "class-variance-authority"
 
 import { cn } from "@/lib/utils"
-import { Color, color as colorVar } from "@/styles/vars/colors"
-import { TextAlign, textAlign as textAlignVar } from "@/styles/vars/text"
+import { text, textAlign as textAlignToken } from "@/styles/tokens"
 
-export type TextProps = VariantProps<typeof textVariants> & {
-  className?: string
-  color?: Color
-  textAlign?: TextAlign
-  children: ReactNode
-  withIcon?: boolean
-}
+import { TypographyProps } from "./types"
+
+export type TextProps = VariantProps<typeof textVariants> & TypographyProps
 
 const textVariants = cva("inline-block [&>svg]:inline-block", {
   variants: {
@@ -58,8 +53,8 @@ const Text = React.forwardRef<HTMLParagraphElement, TextProps>(
       <Comp
         className={cn(
           textVariants({ size, weight, tone, className }),
-          color && colorVar[color],
-          textAlign && textAlignVar[textAlign]
+          color && text[color],
+          textAlign && textAlignToken[textAlign]
         )}
         ref={ref}
         {...props}

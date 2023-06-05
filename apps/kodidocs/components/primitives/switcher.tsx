@@ -8,7 +8,7 @@ export const Switcher: FC<BoxProps> = ({
   display,
   flexDirection,
   gap,
-  justifyContent,
+  justify,
   className,
   ...props
 }) => {
@@ -16,8 +16,8 @@ export const Switcher: FC<BoxProps> = ({
     <Box
       display={display || "flex"}
       flexDirection={flexDirection || "row"}
-      flexWrap="wrap"
-      justifyContent={justifyContent || "start"}
+      wrap="wrap"
+      justify={justify || "start"}
       gap={gap || "sm"}
       className={clsx("[&>*]:grow", className)}
       {...props}

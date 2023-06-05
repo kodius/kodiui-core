@@ -1,6 +1,10 @@
 const { fontFamily } = require("tailwindcss/defaultTheme")
-const { spacing } = require("./styles/vars/spacing")
-const { customColors } = require("./styles/vars/colors")
+const {
+  spacing,
+  customColors,
+  customScale,
+  customScreens,
+} = require("./styles/tokens")
 
 /** @type {import('tailwindcss').Config} */
 module.exports = {
@@ -9,6 +13,7 @@ module.exports = {
     "app/**/*.{ts,tsx}",
     "components/**/*.{ts,tsx}",
     "features/**/*.{ts,tsx}",
+    "styles/**/*.{ts,tsx}",
     "styles/**/*.{ts,tsx}",
   ],
   theme: {
@@ -22,6 +27,8 @@ module.exports = {
     extend: {
       // custom 👇
       spacing: spacing,
+      screens: customScreens,
+      scale: customScale,
 
       colors: {
         // custom 👇
