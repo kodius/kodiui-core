@@ -1,4 +1,5 @@
 import {
+	absolute,
 	align,
 	aspect,
 	autoCols,
@@ -56,6 +57,7 @@ import {
 	display,
 	dropShadow,
 	duration,
+	fixed,
 	flex,
 	flexDirection,
 	floats,
@@ -133,6 +135,7 @@ import {
 	pt,
 	px,
 	py,
+	relative,
 	right,
 	rotate,
 	rounded,
@@ -179,6 +182,7 @@ import {
 	snapAlign,
 	snapStop,
 	snapType,
+	sticky,
 	table,
 	text,
 	textAlign,
@@ -209,12 +213,11 @@ import { cva } from "class-variance-authority"
 
 export const boxVariants = cva("", {
 	variants: {
-		// position properties
 		position,
-		fixed: { true: "fixed" },
-		absolute: { true: "absolute" },
-		relative: { true: "relative" },
-		sticky: { true: "sticky" },
+		fixed,
+		absolute,
+		relative,
+		sticky,
 		top,
 		bottom,
 		left,

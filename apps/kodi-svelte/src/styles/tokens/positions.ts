@@ -6,6 +6,14 @@ export const position = {
 	sticky: "sticky",
 }
 
+export const fixed = { true: "fixed" }
+
+export const absolute = { true: "absolute" }
+
+export const relative = { true: "relative" }
+
+export const sticky = { true: "sticky" }
+
 export const top = {
 	"-0": "-top-0",
 	"-px": "-top-px",

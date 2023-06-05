@@ -1,6 +1,4 @@
-import { customDecorationColors } from "../custom-values/colors"
-
-const twDecorationColors = {
+export const twDecorationColors = {
 	inherit: "decoration-inherit",
 	current: "decoration-current",
 	transparent: "decoration-transparent",
@@ -248,9 +246,4 @@ const twDecorationColors = {
 	"rose-800": "decoration-rose-800",
 	"rose-900": "decoration-rose-900",
 	"rose-950": "decoration-rose-950",
-}
-
-export const decorationColor = {
-	...twDecorationColors,
-	...customDecorationColors,
 }

@@ -1,3 +1,6 @@
+import { twDecorationColors } from "./colors"
+import { customDecorationColors } from "./custom-values"
+
 export const fontFamily = {
 	sans: "font-sans",
 	serif: "font-serif",
@@ -150,6 +153,11 @@ export const decoration = {
 	overline: "overline",
 	lineThrough: "line-through",
 	noUnderline: "no-underline",
+}
+
+export const decorationColor = {
+	...twDecorationColors,
+	...customDecorationColors,
 }
 
 export const decorationStyle = {

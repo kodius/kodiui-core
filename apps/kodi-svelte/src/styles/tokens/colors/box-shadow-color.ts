@@ -1,6 +1,4 @@
-import { customBoxShadowColors } from "../custom-values/colors"
-
-const twBoxShadowColors = {
+export const twBoxShadowColors = {
 	inherit: "shadow-inherit",
 	current: "shadow-current",
 	transparent: "shadow-transparent",
@@ -248,9 +246,4 @@ const twBoxShadowColors = {
 	"rose-800": "shadow-rose-800",
 	"rose-900": "shadow-rose-900",
 	"rose-950": "shadow-rose-950",
-}
-
-export const shadowColor = {
-	...twBoxShadowColors,
-	...customBoxShadowColors,
 }
