@@ -1,16 +1,11 @@
 import React from "react"
-import Link from "next/link"
-import { copyText } from "@/features/docs/helpers/copyText"
-import { Copy } from "lucide-react"
 
-import { Button } from "@/components/ui/button"
-import { Center } from "@/components/primitives/center"
 import { Stack } from "@/components/primitives/stack"
 import { Heading } from "@/components/typography/heading"
 import { Text } from "@/components/typography/text"
 import { Actions } from "@/app/welcome/(components)/header/actions"
 
-export default async function Home() {
+export default function Home() {
   return (
     <section>
       <Stack gap="5xl">
@@ -34,7 +29,7 @@ export default async function Home() {
             and accessible component library. Build remarkable web applications
             with ease using KODIUI&apos;s versatile building blocks.
           </Text>
-          <Actions></Actions>
+          <Actions />
         </Stack>
 
         {/* footer */}
