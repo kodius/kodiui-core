@@ -1,6 +1,7 @@
 import React from "react"
 import Link from "next/link"
 
+import { routes } from "@/config/site"
 import {
   Accordion,
   AccordionContent,
@@ -21,7 +22,9 @@ export const Header = () => {
     <Stack>
       <Box py="5xl">
         <Center>
-          <Heading level="4">kodidocs</Heading>
+          <Link href={routes.welcome}>
+            <Heading level="4">kodidocs</Heading>
+          </Link>
         </Center>
       </Box>
       <Accordion type="single">
@@ -36,7 +39,9 @@ export const Header = () => {
               {category?.elements?.map((Element) => {
                 const href =
                   Element.href ||
-                  `${category.name.toLowerCase()}/${Element?.name.toLowerCase()}`
+                  `${
+                    routes.docs
+                  }/${category.name.toLowerCase()}/${Element?.name.toLowerCase()}`
                 const isBlock = Element.progress === "block"
                 return (
                   <AccordionContent key={Element?.name}>

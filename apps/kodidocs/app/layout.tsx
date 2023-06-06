@@ -43,10 +43,7 @@ export default function RootLayout({ children }: RootLayoutProps) {
           )}
         >
           <ThemeProvider attribute="class" defaultTheme="dark" enableSystem>
-            <KodiSidebar gap="0">
-              <Sidebar />
-              {children}
-            </KodiSidebar>
+            {children}
             <TailwindIndicator />
           </ThemeProvider>
         </body>
