@@ -14,24 +14,24 @@ export default function Home() {
       <Stack gap="5xl">
         {/* header */}
 
-        <Stack
-          gap="5xl"
-          justify="center"
-          items="center"
-          className="bg-black text-center py-20"
-        >
+        <Stack gap="5xl" className="bg-black text-center py-20">
           <Heading level="1" className="font-extrabold">
             {/* The React Framework for the Web */}
             Unleash Web Creativity with
             <span className="text-[#493dcc]"> KODIUI</span>
           </Heading>
-          <Text size="lg" className="w-[80%] text-[#888888]">
-            The ultimate toolkit for{" "}
-            <strong className="text-white"> React and Svelte </strong>{" "}
-            developers. Streamline your UI development with a simple, modular,
-            and accessible component library. Build remarkable web applications
-            with ease using KODIUI&apos;s versatile building blocks.
-          </Text>
+
+          <Center>
+            <Text size="lg" className="w-[80%] text-[#888888]">
+              The ultimate toolkit for{" "}
+              <strong className="text-white"> React and Svelte </strong>{" "}
+              developers. Streamline your UI development with a simple, modular,
+              and accessible component library. Build remarkable web
+              applications with ease using KODIUI&apos;s versatile building
+              blocks.
+            </Text>
+          </Center>
+
           <Actions />
         </Stack>
 
