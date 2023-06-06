@@ -6,7 +6,6 @@ import { ChevronDownIcon, ChevronUpIcon } from "lucide-react"
 import { SyntaxHighlighterProps } from "react-syntax-highlighter"
 
 import { Button } from "@/components/ui/button"
-import { BoxProps } from "@/components/primitives/box/box"
 import { Cluster } from "@/components/primitives/cluster"
 import { Stack } from "@/components/primitives/stack"
 
@@ -49,10 +48,6 @@ export const CodeSnippet = ({
     setIsCopied(true)
   }
 
-  const position: BoxProps = isSnippetOpen
-    ? ({ bottom: "0" } as const)
-    : ({ top: "0" } as const)
-
   return (
     <Stack gap="sm">
       {isSnippetOpen && (
@@ -61,7 +56,11 @@ export const CodeSnippet = ({
           <Syntax showLineNumber={showLineNumbers} code={codeSnippet} />
         </Suspense>
       )}
-      <Cluster content="end" gap="xs" {...position}>
+      <Cluster
+        content="end"
+        gap="xs"
+        className={isSnippetOpen ? "bottom-0" : "top-0"}
+      >
         {isSnippetOpen && (
           <Button
             onClick={() => handleCopy(codeSnippet)}

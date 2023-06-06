@@ -3,7 +3,6 @@ import { DocBlock } from "@/features/docs/DocBlock"
 import { DocPane, DocPaneProps } from "@/features/docs/DocPane"
 import { DocTemplate } from "@/templates"
 
-import { Box } from "@/components/primitives/box/box"
 import { Center } from "@/components/primitives/center"
 
 export const Component = () => {
@@ -14,11 +13,11 @@ export const Component = () => {
         title="Horizontal"
         description="Efficiently aligns child elements horizontally within a container"
         exampleWithCode={
-          <Box h="44">
+          <div className="h-44">
             <Center>
               <Element />
             </Center>
-          </Box>
+          </div>
         }
       />
 
@@ -27,11 +26,11 @@ export const Component = () => {
         title="Vertical"
         description="Efficiently aligns child elements vertically within a container"
         exampleWithCode={
-          <Box h="44">
+          <div className="h-44">
             <Center direction="vertical">
               <Element />
             </Center>
-          </Box>
+          </div>
         }
       />
 
@@ -40,11 +39,11 @@ export const Component = () => {
         title="Center"
         description="Efficiently aligns child elements horizontally and vertically within a container"
         exampleWithCode={
-          <Box h="44">
+          <div className="h-44">
             <Center direction="center">
               <Element />
             </Center>
-          </Box>
+          </div>
         }
       />
     </DocTemplate>

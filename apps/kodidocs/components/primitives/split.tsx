@@ -1,24 +1,25 @@
-import React, { FC } from "react"
+import React from "react"
 
-import { Box, BoxProps } from "./box/box"
+import { cn } from "@/lib/utils"
 
-export const Split: FC<BoxProps> = ({
-  children,
-  display,
-  gap,
-  justify,
-  wrap,
-  ...props
-}) => {
-  return (
-    <Box
-      display={display || "flex"}
-      wrap={wrap || "wrap"}
-      justify={justify || "between"}
-      gap={gap || "sm"}
-      {...props}
-    >
-      {children}
-    </Box>
-  )
-}
+import { GapVariants, gapVariants } from "./variants/spacing"
+
+export type SplitProps = React.HTMLAttributes<HTMLDivElement> & GapVariants
+
+export const Split = React.forwardRef<HTMLDivElement, SplitProps>(
+  ({ gap, className, ...props }, ref) => {
+    return (
+      <div
+        className={cn(
+          "flex flex-wrap justify-between",
+          gapVariants({ gap }),
+          className
+        )}
+        ref={ref}
+        {...props}
+      />
+    )
+  }
+)
+
+Split.displayName = "Split"

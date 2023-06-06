@@ -1,27 +1,36 @@
-import React, { FC } from "react"
+import React, { FC, ReactNode } from "react"
+import { VariantProps, cva } from "class-variance-authority"
 import clsx from "clsx"
 
-import { Box, BoxProps } from "./box/box"
+type PaddingVariants = VariantProps<typeof centerVarints>
 
-interface CenterProps {
-  direction?: "horizontal" | "vertical" | "center"
-}
+type CenterProps = {
+  children: ReactNode
+  className?: string
+} & PaddingVariants
 
-export const Center: FC<BoxProps & CenterProps> = ({
+const centerVarints = cva("flex", {
+  variants: {
+    direction: {
+      horizontal: `flex-col items-center`,
+      vertical: `flex-col justify-center h-full`,
+      center: `justify-center items-center h-full`,
+    },
+  },
+  defaultVariants: {
+    direction: "horizontal",
+  },
+})
+
+export const Center: FC<CenterProps> = ({
   children,
   direction = "horizontal",
   className,
   ...props
 }) => {
-  const centerVariants = {
-    horizontal: `flex flex-col items-center`,
-    vertical: `flex flex-col justify-center h-full`,
-    center: `flex justify-center items-center h-full`,
-  } as const
-
   return (
-    <Box {...props} className={clsx(centerVariants[direction], className)}>
+    <div {...props} className={clsx(centerVarints({ direction }), className)}>
       {children}
-    </Box>
+    </div>
   )
 }

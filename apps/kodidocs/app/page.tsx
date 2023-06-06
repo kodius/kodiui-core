@@ -1,6 +1,9 @@
 import React from "react"
 
+import { Button } from "@/components/ui/button"
+import { Center } from "@/components/primitives/center"
 import { Stack } from "@/components/primitives/stack"
+import { Switcher } from "@/components/primitives/switcher"
 import { Heading } from "@/components/typography/heading"
 import { Text } from "@/components/typography/text"
 import { Actions } from "@/app/welcome/(components)/header/actions"
