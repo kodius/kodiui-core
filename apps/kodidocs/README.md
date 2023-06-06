@@ -20,9 +20,6 @@ has to be error / warning free
 
 #### TODO
 
-Links in components
-tpography text and heading
 overflow
-delete textlink
 / => landing
 /docs => docs

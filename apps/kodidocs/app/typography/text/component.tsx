@@ -13,10 +13,10 @@ export const Component = () => {
         Adjust the font size of text using predefined sizes: xs, sm, base, and lg, providing flexibility and consistency for typography."
         exampleWithCode={
           <Stack>
-            <Text size="xs">Example</Text>
-            <Text size="sm">Example</Text>
-            <Text size="base">Example</Text>
-            <Text size="lg">Example</Text>
+            <Text size="lg">Size lg</Text>
+            <Text size="base">Size base</Text>
+            <Text size="sm">Size sm</Text>
+            <Text size="xs">Size xs</Text>
           </Stack>
         }
       />
@@ -26,12 +26,12 @@ export const Component = () => {
         canPlay
         exampleWithCode={
           <Stack>
-            <Text textAlign="center">Example</Text>
-            <Text textAlign="end">Example</Text>
-            <Text textAlign="right">Example</Text>
-            <Text textAlign="start">Example</Text>
-            <Text textAlign="left">Example</Text>
-            <Text textAlign="justify">Example</Text>
+            <Text textAlign="center">Center</Text>
+            <Text textAlign="end">End</Text>
+            <Text textAlign="right">Right</Text>
+            <Text textAlign="start">Start</Text>
+            <Text textAlign="left">Left</Text>
+            <Text textAlign="justify">Jutify</Text>
           </Stack>
         }
       />
@@ -41,10 +41,10 @@ export const Component = () => {
         description="The color example illustrates the ability to change the color of text."
         exampleWithCode={
           <Stack>
-            <Text color="amber-100">Example</Text>
-            <Text color="red-500">Example</Text>
-            <Text color="white">Example</Text>
-            <Text color="black">Example</Text>
+            <Text color="amber-100">Amber-100</Text>
+            <Text color="red-500">Red-500</Text>
+            <Text color="white">White</Text>
+            <Text color="black">Black</Text>
           </Stack>
         }
       />
@@ -53,8 +53,8 @@ export const Component = () => {
         title="Custom"
         description="Custom example of how to style a text using a Tailwind CSS class"
         exampleWithCode={
-          <Text className="leading-9 font-extrabold text-xl text-center text-red-500 ">
-            Example
+          <Text className="leading-9 font-extrabold text-xl text-center text-amber-100 ">
+            Custom Text
           </Text>
         }
       />

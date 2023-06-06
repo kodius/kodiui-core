@@ -12,10 +12,10 @@ export const Component = () => {
         The heading with levels example demonstrates the use of different heading levels to structure and organize content hierarchically, improving readability and accessibility."
         exampleWithCode={
           <>
-            <Heading level="1">Example</Heading>
-            <Heading level="2">Example</Heading>
-            <Heading level="3">Example</Heading>
-            <Heading level="4">Example</Heading>
+            <Heading level="1">Level 1</Heading>
+            <Heading level="2">Level 2</Heading>
+            <Heading level="3">Level 3</Heading>
+            <Heading level="4">Level 4</Heading>
           </>
         }
       />
@@ -25,12 +25,12 @@ export const Component = () => {
         canPlay
         exampleWithCode={
           <>
-            <Heading textAlign="center">Example</Heading>
-            <Heading textAlign="end">Example</Heading>
-            <Heading textAlign="right">Example</Heading>
-            <Heading textAlign="start">Example</Heading>
-            <Heading textAlign="left">Example</Heading>
-            <Heading textAlign="justify">Example</Heading>
+            <Heading textAlign="center">Center</Heading>
+            <Heading textAlign="end">End</Heading>
+            <Heading textAlign="right">Right</Heading>
+            <Heading textAlign="start">Start</Heading>
+            <Heading textAlign="left">Left</Heading>
+            <Heading textAlign="justify">Jutify</Heading>
           </>
         }
       />
@@ -40,10 +40,10 @@ export const Component = () => {
         description="The color example illustrates the ability to change the color of headings."
         exampleWithCode={
           <>
-            <Heading color="amber-100">Example</Heading>
-            <Heading color="red-500">Example</Heading>
-            <Heading color="white">Example</Heading>
-            <Heading color="black">Example</Heading>
+            <Heading color="amber-100">Amber-100</Heading>
+            <Heading color="red-500">Red-500</Heading>
+            <Heading color="white">White</Heading>
+            <Heading color="black">Black</Heading>
           </>
         }
       />
@@ -53,7 +53,7 @@ export const Component = () => {
         description="Custom example of how to style a heading using a Tailwind CSS class"
         exampleWithCode={
           <Heading className="leading-9 font-extrabold text-center text-red-500 ">
-            Example
+            Custom Text
           </Heading>
         }
       />
