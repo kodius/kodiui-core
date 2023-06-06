@@ -24,7 +24,7 @@ export const DefaultTemplate: FC<Props> = (props) => {
         </Box>
         <hr />
       </div>
-      <div className="px-5xl">{props.children}</div>
+      <div className="p-xl">{props.children}</div>
     </Stack>
   )
 }
