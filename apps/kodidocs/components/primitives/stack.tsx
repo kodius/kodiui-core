@@ -1,22 +1,21 @@
-import React, { FC } from "react"
+import React from "react"
 
-import { Box, BoxProps } from "./box/box"
+import { cn } from "@/lib/utils"
 
-export const Stack: FC<BoxProps> = ({
-  children,
-  display,
-  flexDirection,
-  gap,
-  ...props
-}) => {
-  return (
-    <Box
-      display={display || "flex"}
-      flexDirection={flexDirection || "col"}
-      gap={gap || "sm"}
-      {...props}
-    >
-      {children}
-    </Box>
-  )
-}
+import { GapVariants, gapVariants } from "./variants/spacing"
+
+export type BoxProps = React.HTMLAttributes<HTMLDivElement> & GapVariants
+
+export const Stack = React.forwardRef<HTMLDivElement, BoxProps>(
+  ({ gap, className, ...props }, ref) => {
+    return (
+      <div
+        className={cn("flex flex-col", gapVariants({ gap }), className)}
+        ref={ref}
+        {...props}
+      />
+    )
+  }
+)
+
+Stack.displayName = "Stack"

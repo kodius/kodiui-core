@@ -5,7 +5,7 @@ import { Sidebar as KodiSidebar } from "@/components/primitives/sidebar"
 
 const Layout: FC<{ children: ReactNode }> = ({ children }) => {
   return (
-    <KodiSidebar gap="0">
+    <KodiSidebar className="h-screen" gap="0">
       <Sidebar />
       {children}
     </KodiSidebar>

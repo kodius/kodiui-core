@@ -12,7 +12,7 @@ export const Component = () => {
         description="The Box component is useful because it helps with three common use cases: Create responsive layouts with ease. Provide a shorthand way to pass styles via props (bg instead of backgroundColor). Compose new component and allow for override using the as prop."
         exampleWithCode={
           <Stack>
-            <Box bg="gray-800" p="lg">
+            <Box className="bg-gray-800" p="lg">
               Element
             </Box>
           </Stack>

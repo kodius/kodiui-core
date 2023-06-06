@@ -1,6 +1,0 @@
-export * from "./background-color"
-export * from "./border-color"
-export * from "./box-shadow-color"
-export * from "./color"
-export * from "./gradient-color-stops"
-export * from "./text-decoration-color"

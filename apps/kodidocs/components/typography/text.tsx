@@ -1,14 +1,18 @@
-import React from "react"
+import React, { PropsWithChildren } from "react"
 import { cva, type VariantProps } from "class-variance-authority"
 
 import { cn } from "@/lib/utils"
-import { text, textAlign as textAlignToken } from "@/styles/tokens"
 
-import { TypographyProps } from "./types"
+import { TextVariants, textVariants } from "../primitives/variants/text"
 
-export type TextProps = VariantProps<typeof textVariants> & TypographyProps
+type TextProps = VariantProps<typeof textCustomVariants> &
+  TextVariants &
+  PropsWithChildren & {
+    className?: string
+    withIcon?: boolean
+  }
 
-const textVariants = cva("inline-block [&>svg]:inline-block", {
+const textCustomVariants = cva("inline-block [&>svg]:inline-block", {
   variants: {
     size: {
       base: "text-base",
@@ -35,26 +39,15 @@ const textVariants = cva("inline-block [&>svg]:inline-block", {
 
 const Text = React.forwardRef<HTMLParagraphElement, TextProps>(
   (
-    {
-      withIcon,
-      size,
-      weight,
-      className,
-      color,
-      textAlign,
-      tone,
-      children,
-      ...props
-    },
+    { withIcon, size, weight, className, tone, children, textAlign, ...props },
     ref
   ) => {
     const Comp = withIcon ? "span" : "p"
     return (
       <Comp
         className={cn(
-          textVariants({ size, weight, tone, className }),
-          color && text[color],
-          textAlign && textAlignToken[textAlign]
+          textCustomVariants({ size, weight, tone, className }),
+          textVariants({ textAlign })
         )}
         ref={ref}
         {...props}

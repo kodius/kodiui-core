@@ -1,11 +1,39 @@
-import React, { FC } from "react"
+import React from "react"
 
-import { Box, BoxProps } from "./box/box"
+import { cn } from "@/lib/utils"
 
-export const FlexBox: FC<BoxProps> = ({ children, display, gap, ...props }) => {
-  return (
-    <Box flex gap={gap || "sm"} {...props}>
-      {children}
-    </Box>
-  )
-}
+import { FlexVariants, flexVariants } from "./variants/flex"
+import {
+  GapVariants,
+  PaddingVariants,
+  gapVariants,
+  paddingVariants,
+} from "./variants/spacing"
+
+export type FlexBoxProps = React.HTMLAttributes<HTMLDivElement> &
+  PaddingVariants &
+  GapVariants &
+  FlexVariants
+
+export const FlexBox = React.forwardRef<HTMLDivElement, FlexBoxProps>(
+  (
+    { p, gap, className, flexDirection, wrap, justify, items, ...props },
+    ref
+  ) => {
+    return (
+      <div
+        className={cn(
+          "flex flex-wrap",
+          paddingVariants({ p }),
+          gapVariants({ gap }),
+          flexVariants({ flexDirection, justify, items, wrap }),
+          className
+        )}
+        ref={ref}
+        {...props}
+      />
+    )
+  }
+)
+
+FlexBox.displayName = "FlexBox"

@@ -49,8 +49,7 @@ export const RenderExample: FC<PropsWithChildren & RenderExmapleProps> = ({
           backgroundSize: "13px 13px",
         }}
         p="md"
-        className="border rounded border-border"
-        position="relative"
+        className="border rounded border-border relative"
       >
         {children}
       </Box>
