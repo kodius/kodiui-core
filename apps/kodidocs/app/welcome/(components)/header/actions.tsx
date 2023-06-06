@@ -39,7 +39,7 @@ export const Actions = () => {
       <Stack gap="lg">
         <FlexBox flexDirection="row" items="center" gap="md">
           <Button asChild>
-            <Link href="/docs">Get Started</Link>
+            <Link href="/docs/primitives/stack">Get Started</Link>
           </Button>
           <Button variant="outline" onClick={scrollToAbout}>
             About KodiUI
