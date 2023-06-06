@@ -1,5 +1,7 @@
 import { PropsType } from "@/features/docs/components/Prop"
 
+import { routes } from "@/config/site"
+
 // import { spacing } from "@/styles/vars/spacing"
 
 export const props: PropsType = {

@@ -28,7 +28,7 @@ export const Prop: FC<PropItem> = ({
   return (
     <Stack>
       <Stack>
-        <Cluster gap="xs" alignItems="center">
+        <Cluster gap="xs" items="center">
           <Text weight="bold">{name}:</Text>
           <Cluster>
             {values.map((v) => (

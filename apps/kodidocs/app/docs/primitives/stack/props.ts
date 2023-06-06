@@ -1,5 +1,7 @@
 import { PropsType } from "@/features/docs/components/Prop"
 
+// import { spacing } from "@/styles/vars/spacing"
+
 export const props: PropsType = {
   link: {
     href: "https://www.radix-ui.com/docs/primitives/components/context-menu#root",

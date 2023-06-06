@@ -1,7 +1,5 @@
 import { PropsType } from "@/features/docs/components/Prop"
 
-// import { spacing } from "@/styles/vars/spacing"
-
 export const props: PropsType = {
   link: {
     href: `/primitives/box`,
@@ -9,10 +7,9 @@ export const props: PropsType = {
   },
   props: [
     {
-      name: "gap",
-      // values: Object.keys(spacing).map((space) => space),
-      values: [],
-      defaultValue: "xs",
+      name: "direction",
+      values: ["vertical", "hotizontal", "center"],
+      defaultValue: "hotizontal",
     },
   ],
 }

@@ -1,5 +1,5 @@
 import { DocBlock } from "@/features/docs/DocBlock"
-import { DocPane } from "@/features/docs/DocPane"
+import { DocPane, DocPaneProps } from "@/features/docs/DocPane"
 import { DocTemplate } from "@/templates"
 
 import { Sidebar } from "@/components/primitives/sidebar"

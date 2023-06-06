@@ -2,7 +2,7 @@
 
 import React, { Suspense, useEffect } from "react"
 import dynamic from "next/dynamic"
-import { ChevronDownIcon, ChevronUpIcon, ClipboardIcon } from "lucide-react"
+import { ChevronDownIcon, ChevronUpIcon } from "lucide-react"
 import { SyntaxHighlighterProps } from "react-syntax-highlighter"
 
 import { Button } from "@/components/ui/button"
@@ -61,7 +61,7 @@ export const CodeSnippet = ({
           <Syntax showLineNumber={showLineNumbers} code={codeSnippet} />
         </Suspense>
       )}
-      <Cluster justifyContent="end" gap="xs" {...position}>
+      <Cluster content="end" gap="xs" {...position}>
         {isSnippetOpen && (
           <Button
             onClick={() => handleCopy(codeSnippet)}

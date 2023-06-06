@@ -8,11 +8,14 @@ export const props: PropsType = {
     name: "Has everything box has",
   },
   props: [
-    {
-      name: "gap",
-      // values: Object.keys(spacing).map((space) => space),
-      values: [],
-      defaultValue: "xs",
-    },
+    // {
+    //   name: "gap",
+    //   values: Object.keys(spacing).map((g) => g),
+    // },
+    // {
+    //   name: "side",
+    //   values: ["left", "right"],
+    //   defaultValue: "left",
+    // },
   ],
 }

@@ -1,6 +1,9 @@
 import React from "react"
 import { DocBuilder } from "@/features/docs/DocBuilder"
+import { DocPane } from "@/features/docs/DocPane"
 import { DefaultTemplate } from "@/templates"
+
+import { Box } from "@/components/primitives/box/box"
 
 import { Component } from "./component"
 import { props } from "./props"

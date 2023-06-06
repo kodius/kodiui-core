@@ -6,7 +6,6 @@ import { PauseIcon, PlayIcon } from "lucide-react"
 import { Button } from "@/components/ui/button"
 import { Box } from "@/components/primitives/box/box"
 import { Stack } from "@/components/primitives/stack"
-import { background } from "@/styles/vars/colors"
 
 export interface RenderExmapleProps {
   canPlay?: boolean

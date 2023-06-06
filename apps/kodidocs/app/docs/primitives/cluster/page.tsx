@@ -1,6 +1,9 @@
 import React from "react"
 import { DocBuilder } from "@/features/docs/DocBuilder"
+import { DocPane } from "@/features/docs/DocPane"
 import { DefaultTemplate } from "@/templates"
+
+import { Box } from "@/components/primitives/box/box"
 
 import { Component } from "./component"
 import { props } from "./props"
@@ -15,8 +18,8 @@ const Page = () => {
 
   return (
     <DefaultTemplate
-      title="Switcher"
-      description="The Switcher element adapts its layout to a vertical configuration when the parent element's width is insufficient, ensuring optimal usability and visual presentation across different screen sizes."
+      title="Cluster"
+      description="The Cluster component is a versatile UI element that intelligently organizes and presents a group of related items within a user interface. It inherits all props from the Box component, allowing for seamless customization and integration with existing design systems."
     >
       <DocBuilder {...builderProps} />
     </DefaultTemplate>

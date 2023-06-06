@@ -15,8 +15,8 @@ const Page = () => {
 
   return (
     <DefaultTemplate
-      title="Switcher"
-      description="The Switcher element adapts its layout to a vertical configuration when the parent element's width is insufficient, ensuring optimal usability and visual presentation across different screen sizes."
+      title="Flexbox"
+      description="Flex is Box with display set to flex and comes with helpful style shorthand. It renders a `div` element."
     >
       <DocBuilder {...builderProps} />
     </DefaultTemplate>

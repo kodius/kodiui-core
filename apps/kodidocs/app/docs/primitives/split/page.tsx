@@ -15,8 +15,8 @@ const Page = () => {
 
   return (
     <DefaultTemplate
-      title="Switcher"
-      description="The Switcher element adapts its layout to a vertical configuration when the parent element's width is insufficient, ensuring optimal usability and visual presentation across different screen sizes."
+      title="Split"
+      description="The Split component is a flexible UI element that effectively separates and displays content into two distinct sections within a user interface. It inherits all props from the Box component, enabling easy customization and seamless integration with your design system."
     >
       <DocBuilder {...builderProps} />
     </DefaultTemplate>

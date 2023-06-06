@@ -2,15 +2,15 @@ import { PropsType } from "@/features/docs/components/Prop"
 
 export const props: PropsType = {
   props: [
-    // {
-    //   name: "size",
-    //   values: ["xs", "sm", "base", "lg"],
-    // },
-    // {
-    //   name: "color",
-    //   values: ["All tailwind colors + cust colors", "brand"],
-    // },
-    //
+    {
+      name: "size",
+      values: ["xs", "sm", "base", "lg"],
+    },
+    {
+      name: "color",
+      values: ["All tailwind colors + cust colors", "brand"],
+    },
+
     // {
     //   name: "textAlign",
     //   values: Object.keys(textAlign).map((g) => g),

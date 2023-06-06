@@ -15,8 +15,8 @@ const Page = () => {
 
   return (
     <DefaultTemplate
-      title="Switcher"
-      description="The Switcher element adapts its layout to a vertical configuration when the parent element's width is insufficient, ensuring optimal usability and visual presentation across different screen sizes."
+      title="Center"
+      description="Layout component that centers its child within itself."
     >
       <DocBuilder {...builderProps} />
     </DefaultTemplate>

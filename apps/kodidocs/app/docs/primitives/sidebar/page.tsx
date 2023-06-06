@@ -15,8 +15,8 @@ const Page = () => {
 
   return (
     <DefaultTemplate
-      title="Switcher"
-      description="The Switcher element adapts its layout to a vertical configuration when the parent element's width is insufficient, ensuring optimal usability and visual presentation across different screen sizes."
+      title="Sidebar"
+      description="The Sidebar layout allows for a responsive design where two adjacent elements can appear side-by-side or stacked vertically, with the sidebar element maintaining a fixed width and the other element taking up the remaining space. It provides a seamless and flexible layout for various content arrangements within a parent container."
     >
       <DocBuilder {...builderProps} />
     </DefaultTemplate>
