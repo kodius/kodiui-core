@@ -1,6 +1,5 @@
 import { FC, PropsWithChildren } from "react"
 
-import { Box } from "@/components/primitives/box/box"
 import { Stack } from "@/components/primitives/stack"
 import { Heading } from "@/components/typography/heading"
 import { Text } from "@/components/typography/text"
@@ -12,16 +11,16 @@ interface Props extends PropsWithChildren {
 
 export const DefaultTemplate: FC<Props> = (props) => {
   return (
-    <Stack gap="xl" className="pb-5xl h-screen overflow-auto">
+    <Stack gap="xl" className="h-screen overflow-auto">
       <div>
-        <Box p="5xl" className="py-md pt-3xl">
+        <div className="p-2xl">
           <Stack gap="0">
             <Heading level="2" className="uppercase">
               {props.title}
             </Heading>
             {props.description && <Text tone="muted">{props.description}</Text>}
           </Stack>
-        </Box>
+        </div>
         <hr />
       </div>
       <div className="p-xl">{props.children}</div>
