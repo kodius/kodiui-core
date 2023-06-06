@@ -1,25 +1,29 @@
-import React, { FC } from "react"
+import React from "react"
 
-import { Box, BoxProps } from "./box/box"
+import { cn } from "@/lib/utils"
 
-export const Cluster: FC<BoxProps> = ({
-  children,
-  display,
-  flexDirection,
-  gap,
-  justify,
-  ...props
-}) => {
-  return (
-    <Box
-      display={display || "flex"}
-      flexDirection={flexDirection || undefined}
-      wrap="wrap"
-      justify={justify || "start"}
-      gap={gap || "sm"}
-      {...props}
-    >
-      {children}
-    </Box>
-  )
-}
+import { FlexVariants, flexVariants } from "./variants/flex"
+import { GapVariants, gapVariants } from "./variants/spacing"
+
+export type BoxProps = React.HTMLAttributes<HTMLDivElement> &
+  GapVariants &
+  FlexVariants
+
+export const Cluster = React.forwardRef<HTMLDivElement, BoxProps>(
+  ({ gap, className, flexDirection, justify, items, ...props }, ref) => {
+    return (
+      <div
+        className={cn(
+          "flex flex-wrap",
+          gapVariants({ gap }),
+          flexVariants({ flexDirection, justify, items }),
+          className
+        )}
+        ref={ref}
+        {...props}
+      />
+    )
+  }
+)
+
+Cluster.displayName = "Cluster"

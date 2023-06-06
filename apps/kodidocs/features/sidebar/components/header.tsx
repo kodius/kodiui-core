@@ -9,7 +9,6 @@ import {
   AccordionTrigger,
 } from "@/components/ui/accordion"
 import { Badge } from "@/components/ui/badge"
-import { Box } from "@/components/primitives/box/box"
 import { Center } from "@/components/primitives/center"
 import { Split } from "@/components/primitives/split"
 import { Stack } from "@/components/primitives/stack"
@@ -20,13 +19,13 @@ import { categories } from "../data/categories"
 export const Header = () => {
   return (
     <Stack>
-      <Box py="5xl">
+      <div className="py-5xl">
         <Center>
           <Link href={routes.welcome}>
             <Heading level="4">kodidocs</Heading>
           </Link>
         </Center>
-      </Box>
+      </div>
       <Accordion type="single">
         {categories?.map((category) => {
           return (

@@ -12,9 +12,9 @@ interface Props extends PropsWithChildren {
 
 export const DefaultTemplate: FC<Props> = (props) => {
   return (
-    <Stack gap="xl" h="screen" overflow="auto" className="pb-5xl">
+    <Stack gap="xl" className="pb-5xl h-screen overflow-auto">
       <div>
-        <Box p="5xl" py="md" pt="3xl">
+        <Box p="5xl" className="py-md pt-3xl">
           <Stack gap="0">
             <Heading level="2" className="uppercase">
               {props.title}
@@ -24,7 +24,7 @@ export const DefaultTemplate: FC<Props> = (props) => {
         </Box>
         <hr />
       </div>
-      <Box px="5xl">{props.children}</Box>
+      <div className="px-5xl">{props.children}</div>
     </Stack>
   )
 }
