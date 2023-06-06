@@ -8,31 +8,34 @@ import { Center } from "@/components/primitives/center"
 import { Stack } from "@/components/primitives/stack"
 import { Heading } from "@/components/typography/heading"
 import { Text } from "@/components/typography/text"
+import { Actions } from "@/app/welcome/(components)/header/actions"
 
 export default async function Home() {
   return (
     <section>
-      {/* <Center direction="center" className="h-screen">
-        <Stack gap="xl">
-          <Heading textAlign="center" level="1">
-            KodiUI
-          </Heading>
-          <Button>
-            <Link href="primitives/stack">Get started</Link>
-          </Button>
-
-          <Text className="group cursor-copy ">
-            ~ npx create-next-app@latest
-            <Copy 
-              className="ml-2 opacity-0 group-hover:opacity-100 transition-opacity duratipn-300 "
-              size={16}
-            ></Copy>
-          </Text>
-        </Stack>
-      </Center> */}
-
       <Stack gap="5xl">
         {/* header */}
+
+        <Stack
+          gap="5xl"
+          justify="center"
+          items="center"
+          className="bg-black text-center py-20"
+        >
+          <Heading level="1" className="font-extrabold">
+            {/* The React Framework for the Web */}
+            Unleash Web Creativity with
+            <span className="text-[#493dcc]"> KODIUI</span>
+          </Heading>
+          <Text size="lg" className="w-[80%] text-[#888888]">
+            The ultimate toolkit for{" "}
+            <strong className="text-white"> React and Svelte </strong>{" "}
+            developers. Streamline your UI development with a simple, modular,
+            and accessible component library. Build remarkable web applications
+            with ease using KODIUI&apos;s versatile building blocks.
+          </Text>
+          <Actions></Actions>
+        </Stack>
 
         {/* footer */}
       </Stack>
