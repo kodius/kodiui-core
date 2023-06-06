@@ -37,43 +37,33 @@ export const Actions = () => {
   return (
     <Center direction="horizontal">
       <Stack gap="lg">
-        <FlexBox flexDirection="row" justifyItems="center" gap="md">
-          <Button
-            asChild
-            className="hover:bg-[#493dcc] py-2 hover:text-white  hover:no-underline transition-all duration-300"
-          >
+        <FlexBox flexDirection="row" items="center" gap="md">
+          <Button asChild>
             <Link href="/docs">Get Started</Link>
           </Button>
-          <Button
-            variant="outline"
-            onClick={scrollToAbout}
-            className="text-[#888888] hover:bg-transparent hover:border-[#493dcc] hover:border-solid hover:border-2 transition-all duration-300"
-          >
+          <Button variant="outline" onClick={scrollToAbout}>
             About KodiUI
           </Button>
         </FlexBox>
 
         <FlexBox
           flexDirection="row"
-          placeItems="center"
+          items="center"
           gap="sm"
           className="group"
           justify="center"
           onClick={() => handleCopy("npx @kodiui/cli@latest")}
         >
-          <Text size="sm" className="cursor-copy tracking-wide text-[#888888]">
+          <Text
+            size="sm"
+            className="cursor-copy tracking-wide text-muted-foreground"
+          >
             ~ npx @kodiui/cli@latest
           </Text>
           {isCopied ? (
-            <CheckIcon
-              className=" transition-all duration-200"
-              size={12}
-            ></CheckIcon>
+            <CheckIcon className=" transition-all duration-200 w-3" />
           ) : (
-            <Copy
-              className="opacity-0 group-hover:opacity-100 transition-all duration-200"
-              size={12}
-            ></Copy>
+            <Copy className="opacity-0 group-hover:opacity-100 transition-all duration-200 w-3" />
           )}
         </FlexBox>
       </Stack>

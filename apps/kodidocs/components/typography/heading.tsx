@@ -31,13 +31,17 @@ const headingVariants = cva("", {
 })
 
 const Heading = React.forwardRef<HTMLHeadingElement, HeadingProps>(
-  ({ level = "1", children, className, textAlign, ...props }, ref) => {
+  (
+    { level = "1", children, className, textAlign, weight, color, ...props },
+    ref
+  ) => {
     const Comp = `h${level}` as "h1" | "h2" | "h3" | "h4"
     return (
       <Comp
         className={cn(
-          headingVariants({ level, className }),
-          textVariants({ textAlign })
+          headingVariants({ level, weight }),
+          textVariants({ textAlign, color }),
+          className
         )}
         ref={ref}
         {...props}

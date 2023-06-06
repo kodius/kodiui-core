@@ -55,7 +55,9 @@ export const Header = () => {
                         <Link href={href}>
                           <Split>
                             {Element?.name}
-                            <Badge>{Element.progress}</Badge>
+                            {Element.progress && (
+                              <Badge>{Element.progress}</Badge>
+                            )}
                           </Split>
                         </Link>
                       </div>
