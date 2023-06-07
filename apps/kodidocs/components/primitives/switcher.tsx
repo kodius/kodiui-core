@@ -1,28 +1,25 @@
-import React, { FC } from "react"
-import clsx from "clsx"
+import React from "react"
 
-import { Box, BoxProps } from "./box/box"
+import { cn } from "@/lib/utils"
 
-export const Switcher: FC<BoxProps> = ({
-  children,
-  display,
-  flexDirection,
-  gap,
-  justify,
-  className,
-  ...props
-}) => {
-  return (
-    <Box
-      display={display || "flex"}
-      flexDirection={flexDirection || "row"}
-      wrap="wrap"
-      justify={justify || "start"}
-      gap={gap || "sm"}
-      className={clsx("[&>*]:grow", className)}
-      {...props}
-    >
-      {children}
-    </Box>
-  )
-}
+import { GapVariants, gapVariants } from "./variants/spacing"
+
+export type SwitcherProps = React.HTMLAttributes<HTMLDivElement> & GapVariants
+
+export const Switcher = React.forwardRef<HTMLDivElement, SwitcherProps>(
+  ({ gap, className, ...props }, ref) => {
+    return (
+      <div
+        className={cn(
+          "flex flex-row flex-wrap justify-start [&>*]:grow",
+          gapVariants({ gap }),
+          className
+        )}
+        ref={ref}
+        {...props}
+      />
+    )
+  }
+)
+
+Switcher.displayName = "Switcher"

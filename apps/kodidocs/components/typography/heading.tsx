@@ -1,12 +1,15 @@
-import React, { ReactNode } from "react"
+import React, { PropsWithChildren } from "react"
 import { cva, type VariantProps } from "class-variance-authority"
 
 import { cn } from "@/lib/utils"
-import { text, textAlign as textAlignToken } from "@/styles/tokens"
 
-import { TypographyProps } from "./types"
+import { TextVariants, textVariants } from "../primitives/variants/text"
 
-type HeadingProps = VariantProps<typeof headingVariants> & TypographyProps
+type HeadingProps = VariantProps<typeof headingVariants> &
+  TextVariants &
+  PropsWithChildren & {
+    className?: string
+  }
 
 const headingVariants = cva("", {
   variants: {
@@ -28,14 +31,17 @@ const headingVariants = cva("", {
 })
 
 const Heading = React.forwardRef<HTMLHeadingElement, HeadingProps>(
-  ({ level = "1", children, className, color, textAlign, ...props }, ref) => {
+  (
+    { level = "1", children, className, textAlign, weight, color, ...props },
+    ref
+  ) => {
     const Comp = `h${level}` as "h1" | "h2" | "h3" | "h4"
     return (
       <Comp
         className={cn(
-          headingVariants({ level, className }),
-          color && text[color],
-          textAlign && textAlignToken[textAlign]
+          headingVariants({ level, weight }),
+          textVariants({ textAlign, color }),
+          className
         )}
         ref={ref}
         {...props}

@@ -25,9 +25,9 @@ export const Component = () => {
         description=""
         exampleWithCode={
           <Switcher>
-            <DocPane w="64">Element</DocPane>
-            <DocPane w="64">Element</DocPane>
-            <DocPane w="64">Element</DocPane>
+            <DocPane className="w-64">Element</DocPane>
+            <DocPane className="w-64">Element</DocPane>
+            <DocPane className="w-64">Element</DocPane>
           </Switcher>
         }
       />

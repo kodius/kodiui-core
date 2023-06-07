@@ -1,10 +1,5 @@
 const { fontFamily } = require("tailwindcss/defaultTheme")
-const {
-  spacing,
-  customColors,
-  customScale,
-  customScreens,
-} = require("./styles/tokens")
+const { spacing } = require("./styles/tokens/spacing")
 
 /** @type {import('tailwindcss').Config} */
 module.exports = {
@@ -13,7 +8,6 @@ module.exports = {
     "app/**/*.{ts,tsx}",
     "components/**/*.{ts,tsx}",
     "features/**/*.{ts,tsx}",
-    "styles/**/*.{ts,tsx}",
     "styles/**/*.{ts,tsx}",
   ],
   theme: {
@@ -26,22 +20,19 @@ module.exports = {
     },
     extend: {
       // custom 👇
-      spacing: spacing,
-      screens: customScreens,
-      scale: customScale,
-
+      spacing,
       colors: {
+        brand: "#493DCC",
+        background: "#03080F",
         // custom 👇
-        ...customColors,
         // shadcn 👇
         border: "hsl(var(--border))",
         input: "hsl(var(--input))",
         ring: "hsl(var(--ring))",
-        background: "hsl(var(--background))",
         foreground: "hsl(var(--foreground))",
         primary: {
           DEFAULT: "hsl(var(--primary))",
-          foreground: "hsl(var(--primary-foreground))",
+          foreground: "#03080F",
         },
         secondary: {
           DEFAULT: "hsl(var(--secondary))",
@@ -57,7 +48,7 @@ module.exports = {
         },
         accent: {
           DEFAULT: "hsl(var(--accent))",
-          foreground: "hsl(var(--accent-foreground))",
+          foreground: "white",
         },
         popover: {
           DEFAULT: "hsl(var(--popover))",
