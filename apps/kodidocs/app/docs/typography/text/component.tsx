@@ -13,10 +13,10 @@ export const Component = () => {
         Adjust the font size of text using predefined sizes: xs, sm, base, and lg, providing flexibility and consistency for typography."
         exampleWithCode={
           <Stack>
-            <Text size="xs">Example</Text>
-            <Text size="sm">Example</Text>
-            <Text size="base">Example</Text>
-            <Text size="lg">Example</Text>
+            <Text size="lg">Size lg</Text>
+            <Text size="base">Size base</Text>
+            <Text size="sm">Sixe sm</Text>
+            <Text size="xs">Size xs</Text>
           </Stack>
         }
       />
@@ -26,12 +26,12 @@ export const Component = () => {
         canPlay
         exampleWithCode={
           <Stack>
-            <Text textAlign="center">Example</Text>
-            <Text textAlign="end">Example</Text>
-            <Text textAlign="right">Example</Text>
-            <Text textAlign="start">Example</Text>
-            <Text textAlign="left">Example</Text>
-            <Text textAlign="justify">Example</Text>
+            <Text textAlign="center">Center</Text>
+            <Text textAlign="end">End</Text>
+            <Text textAlign="right">Right</Text>
+            <Text textAlign="start">Start</Text>
+            <Text textAlign="left">Left</Text>
+            <Text textAlign="justify">Jusitfy</Text>
           </Stack>
         }
       />
@@ -53,7 +53,7 @@ export const Component = () => {
         title="Custom"
         description="Custom example of how to style a text using a Tailwind CSS class"
         exampleWithCode={
-          <Text className="leading-9 font-extrabold text-xl text-center text-red-500 ">
+          <Text className="leading-9 font-extrabold text-xl text-center text-amber-100 ">
             Example
           </Text>
         }
