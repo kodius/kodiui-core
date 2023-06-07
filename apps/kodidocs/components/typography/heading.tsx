@@ -2,8 +2,7 @@ import React, { PropsWithChildren } from "react"
 import { cva, type VariantProps } from "class-variance-authority"
 
 import { cn } from "@/lib/utils"
-
-import { TextVariants, textVariants } from "../primitives/variants/text"
+import { TextVariants, textVariants } from "@/styles/tokens/text"
 
 type HeadingProps = VariantProps<typeof headingVariants> &
   TextVariants &
@@ -14,10 +13,10 @@ type HeadingProps = VariantProps<typeof headingVariants> &
 const headingVariants = cva("", {
   variants: {
     level: {
-      "1": "scroll-m-20 text-4xl tracking-tight lg:text-5xl",
-      "2": "scroll-m-20 pb-2 text-3xl tracking-tight transition-colors first:mt-0",
-      "3": "scroll-m-20 text-2xl  tracking-tight",
-      "4": "scroll-m-20 text-xl tracking-tight",
+      "1": "text-4xl lg:text-5xl leading-none",
+      "2": "text-3xl transition-colors first:mt-0 leading-none",
+      "3": "text-2xl leading-none",
+      "4": "text-xl leading-none",
     },
     weight: {
       base: "font-semibold",

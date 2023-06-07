@@ -12,6 +12,7 @@ export const textVariants = cva("", {
     },
     color: {
       brand: "text-brand",
+      muted: "text-muted-foreground",
     },
   },
 })

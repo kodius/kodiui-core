@@ -41,10 +41,10 @@ export const Component = () => {
         description="The color example illustrates the ability to change the color of text."
         exampleWithCode={
           <Stack>
-            <Text color="amber-100">Amber-100</Text>
-            <Text color="red-500">Red-500</Text>
-            <Text color="white">White</Text>
-            <Text color="black">Black</Text>
+            {/* <Text color="amber-100">Amber-100</Text> */}
+            {/* <Text color="red-500">Red-500</Text> */}
+            {/* <Text color="white">White</Text> */}
+            {/* <Text color="black">Black</Text> */}
           </Stack>
         }
       />

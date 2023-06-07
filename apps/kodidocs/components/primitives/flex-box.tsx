@@ -1,14 +1,13 @@
 import React from "react"
 
 import { cn } from "@/lib/utils"
-
-import { FlexVariants, flexVariants } from "./variants/flex"
+import { FlexVariants, flexVariants } from "@/styles/tokens/flex"
 import {
   GapVariants,
   PaddingVariants,
   gapVariants,
   paddingVariants,
-} from "./variants/spacing"
+} from "@/styles/tokens/spacing"
 
 export type FlexBoxProps = React.HTMLAttributes<HTMLDivElement> &
   PaddingVariants &

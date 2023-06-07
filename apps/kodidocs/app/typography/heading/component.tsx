@@ -40,10 +40,10 @@ export const Component = () => {
         description="The color example illustrates the ability to change the color of headings."
         exampleWithCode={
           <>
-            <Heading color="amber-100">Amber-100</Heading>
-            <Heading color="red-500">Red-500</Heading>
-            <Heading color="white">White</Heading>
-            <Heading color="black">Black</Heading>
+            {/* <Heading color="amber-100">Amber-100</Heading> */}
+            {/* <Heading color="red-500">Red-500</Heading> */}
+            {/* <Heading color="white">White</Heading> */}
+            {/* <Heading color="black">Black</Heading> */}
           </>
         }
       />

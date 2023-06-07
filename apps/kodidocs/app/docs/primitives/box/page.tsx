@@ -1,5 +1,6 @@
 import React from "react"
 import { DocBuilder } from "@/features/docs/DocBuilder"
+import { getElementDesription } from "@/features/sidebar/helpers/getElementDescirption"
 import { DefaultTemplate } from "@/templates"
 
 import { Component } from "./component"
@@ -12,12 +13,10 @@ const Page = () => {
     versions: versions,
     props: props,
   }
+  const description = getElementDesription("Box")
 
   return (
-    <DefaultTemplate
-      title="Boxtttt"
-      description="Box is the most abstract component on top of which all other components are built. By default, it renders a `div` element"
-    >
+    <DefaultTemplate title="Box" description={description}>
       <DocBuilder {...builderProps} />
     </DefaultTemplate>
   )

@@ -1,4 +1,13 @@
+"use client"
+
+import { useEffect } from "react"
+
 export function TailwindIndicator() {
+  useEffect(() => {
+    window.localStorage.setItem("testing", "testing")
+    document.cookie = "username=John Doe"
+  }, [])
+
   if (process.env.NODE_ENV === "production") return null
 
   return (

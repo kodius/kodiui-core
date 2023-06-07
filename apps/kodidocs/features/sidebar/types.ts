@@ -5,6 +5,7 @@ export interface Category {
 
 export interface Element {
   name: string
+  description: string
   progress?: Progress
   href?: string
 }

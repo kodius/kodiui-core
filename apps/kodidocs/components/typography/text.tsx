@@ -2,8 +2,7 @@ import React, { PropsWithChildren } from "react"
 import { cva, type VariantProps } from "class-variance-authority"
 
 import { cn } from "@/lib/utils"
-
-import { TextVariants, textVariants } from "../primitives/variants/text"
+import { TextVariants, textVariants } from "@/styles/tokens/text"
 
 type TextProps = VariantProps<typeof textCustomVariants> &
   TextVariants &
@@ -15,10 +14,10 @@ type TextProps = VariantProps<typeof textCustomVariants> &
 const textCustomVariants = cva("inline-block [&>svg]:inline-block", {
   variants: {
     size: {
-      base: "text-base",
-      xs: "text-xs",
-      sm: "text-sm",
-      lg: "text-lg",
+      base: "text-base leading-none",
+      xs: "text-xs leading-none",
+      sm: "text-sm leading-none",
+      lg: "text-lg leading-none",
     },
     weight: {
       base: "font-normal",

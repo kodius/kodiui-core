@@ -1,8 +1,7 @@
 import React from "react"
 
 import { cn } from "@/lib/utils"
-
-import { PaddingVariants, paddingVariants } from "../variants/spacing"
+import { PaddingVariants, paddingVariants } from "@/styles/tokens/spacing"
 
 export type BoxProps = React.HTMLAttributes<HTMLDivElement> & PaddingVariants
 
