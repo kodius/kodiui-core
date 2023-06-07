@@ -1,10 +1,13 @@
 import React from "react"
 
+
 import { Badge } from "@/components/ui/badge"
 import { Center } from "@/components/primitives/center"
 import { Stack } from "@/components/primitives/stack"
 import { Heading } from "@/components/typography/heading"
 import { Text } from "@/components/typography/text"
+
+import PrimitivesList from "@/app/welcome/(components)/footer/PrimitivesList"
 import { Actions } from "@/app/welcome/(components)/header/actions"
 
 export default function Home() {
@@ -33,6 +36,7 @@ export default function Home() {
           <Actions />
         </Stack>
       </Stack>
+      <PrimitivesList />
     </section>
   )
 }
