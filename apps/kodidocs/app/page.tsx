@@ -1,41 +1,39 @@
 import React from "react"
-import Link from "next/link"
-import { copyText } from "@/features/docs/helpers/copyText"
-import { Copy } from "lucide-react"
 
-import { Button } from "@/components/ui/button"
 import { Center } from "@/components/primitives/center"
 import { Stack } from "@/components/primitives/stack"
 import { Heading } from "@/components/typography/heading"
 import { Text } from "@/components/typography/text"
+import PrimitivesList from "@/app/welcome/(components)/footer/PrimitivesList"
+import { Actions } from "@/app/welcome/(components)/header/actions"
 
-export default async function Home() {
+export default function Home() {
   return (
     <section>
-      {/* <Center direction="center" className="h-screen">
-        <Stack gap="xl">
-          <Heading textAlign="center" level="1">
-            KodiUI
-          </Heading>
-          <Button>
-            <Link href="primitives/stack">Get started</Link>
-          </Button>
-
-          <Text className="group cursor-copy ">
-            ~ npx create-next-app@latest
-            <Copy 
-              className="ml-2 opacity-0 group-hover:opacity-100 transition-opacity duratipn-300 "
-              size={16}
-            ></Copy>
-          </Text>
-        </Stack>
-      </Center> */}
-
       <Stack gap="5xl">
-        {/* header */}
-
-        {/* footer */}
+        <Stack gap="5xl" className="text-center py-20">
+          <Stack>
+            <Heading level="1" weight="bold">
+              Unleash Web Creativity with
+            </Heading>
+            <Heading weight="bold" level="1">
+              KODIUI
+            </Heading>
+          </Stack>
+          <Center>
+            <Text size="lg" className="max-w-4xl text-muted-foreground">
+              The ultimate toolkit for{" "}
+              <strong className="text-white"> React and Svelte </strong>{" "}
+              developers. Streamline your UI development with a simple, modular,
+              and accessible component library. Build remarkable web
+              applications with ease using KODIUI&apos;s versatile building
+              blocks.
+            </Text>
+          </Center>
+          <Actions />
+        </Stack>
       </Stack>
+      <PrimitivesList />
     </section>
   )
 }
