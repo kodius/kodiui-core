@@ -13,7 +13,7 @@ import { Text } from "@/components/typography/text"
 export default function PrimitivesList() {
   return (
     <Box id="quickView">
-      <Center direction="center" className="h-screen container">
+      <Center direction="center" className="h-screen">
         <Stack gap="5xl">
           {categories.map((category) => {
             return (

@@ -11,7 +11,7 @@ import { Actions } from "./(components)/header/actions"
 export default function Home() {
   return (
     <section>
-      <Stack gap="5xl">
+      <Stack gap="5xl" className="container">
         <Stack gap="5xl" className="text-center py-20">
           <Stack>
             <Heading level="1" weight="bold">
@@ -33,8 +33,8 @@ export default function Home() {
           </Center>
           <Actions />
         </Stack>
+        <PrimitivesList />
       </Stack>
-      <PrimitivesList />
     </section>
   )
 }
