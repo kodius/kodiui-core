@@ -1,6 +1,5 @@
 import React from "react"
 
-import { Box } from "@/components/primitives/box/box"
 import { Center } from "@/components/primitives/center"
 import { Stack } from "@/components/primitives/stack"
 import { Heading } from "@/components/typography/heading"
@@ -12,8 +11,6 @@ import { Actions } from "./(components)/header/actions"
 export default function Home() {
   return (
     <section>
-      <div className="text-red-800">test</div>
-      <Box p="5xl">test</Box>
       <Stack gap="5xl">
         <Stack gap="5xl" className="text-center py-20">
           <Stack>
