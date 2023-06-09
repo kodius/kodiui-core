@@ -13,7 +13,7 @@ import { Text } from "@/components/typography/text"
 
 export const Actions = () => {
   const scrollToAbout = () => {
-    const aboutSection = document.getElementById("about")
+    const aboutSection = document.getElementById("quickView")
     if (aboutSection) {
       aboutSection.scrollIntoView({ behavior: "smooth" })
     }
@@ -36,13 +36,13 @@ export const Actions = () => {
 
   return (
     <Center direction="horizontal">
-      <Stack gap="lg">
+      <Stack gap="sm">
         <FlexBox flexDirection="row" items="center" gap="md">
           <Button asChild>
             <Link href="/docs/primitives/stack">Get Started</Link>
           </Button>
           <Button variant="outline" onClick={scrollToAbout}>
-            About KodiUI
+            Quick view
           </Button>
         </FlexBox>
 
