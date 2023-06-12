@@ -15,8 +15,8 @@ const Page = () => {
 
   return (
     <DefaultTemplate
-      title="Split"
-      description="The Split component is a flexible UI element that effectively separates and displays content into two distinct sections within a user interface. It inherits all props from the Box component, enabling easy customization and seamless integration with your design system."
+      title="Text"
+      description="The Text component is a versatile UI element that allows for displaying and styling text within a user interface. It offers various options for customizing the font size, alignment, and color, providing flexibility and consistency for typography."
     >
       <DocBuilder {...builderProps} />
     </DefaultTemplate>

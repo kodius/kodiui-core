@@ -15,7 +15,7 @@ export const DefaultTemplate: FC<Props> = (props) => {
     <Stack gap="xl" className="h-screen overflow-scroll">
       <div>
         <div className="p-2xl">
-          <Stack gap="0">
+          <Stack gap="md">
             <Heading level="2" className="uppercase">
               {props.title}
             </Heading>

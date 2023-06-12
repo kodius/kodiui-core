@@ -16,7 +16,8 @@ const Page = () => {
   return (
     <DefaultTemplate
       title="Heading"
-      description="The Split component is a flexible UI element that effectively separates and displays content into two distinct sections within a user interface. It inherits all props from the Box component, enabling easy customization and seamless integration with your design system."
+      description="
+      The Heading component is a powerful UI element that allows for displaying and styling headings within a user interface. It offers options for organizing content hierarchically, adjusting text alignment, changing heading colors, and applying custom styles."
     >
       <DocBuilder {...builderProps} />
     </DefaultTemplate>

@@ -25,12 +25,24 @@ export const Component = () => {
         canPlay
         exampleWithCode={
           <>
-            <Heading textAlign="center">Center</Heading>
-            <Heading textAlign="end">End</Heading>
-            <Heading textAlign="right">Right</Heading>
-            <Heading textAlign="start">Start</Heading>
-            <Heading textAlign="left">Left</Heading>
-            <Heading textAlign="justify">Jusitfy</Heading>
+            <Heading level="4" textAlign="center">
+              Center
+            </Heading>
+            <Heading level="4" textAlign="end">
+              End
+            </Heading>
+            <Heading level="4" textAlign="right">
+              Right
+            </Heading>
+            <Heading level="4" textAlign="start">
+              Start
+            </Heading>
+            <Heading level="4" textAlign="left">
+              Left
+            </Heading>
+            <Heading level="4" textAlign="justify">
+              Jusitfy
+            </Heading>
           </>
         }
       />
@@ -40,10 +52,18 @@ export const Component = () => {
         description="The color example illustrates the ability to change the color of headings."
         exampleWithCode={
           <>
-            <Heading className="text-amber-100">amber-100</Heading>
-            <Heading className="text-amber-200">amber-200</Heading>
-            <Heading className="text-amber-300">amber-300</Heading>
-            <Heading className="text-amber-400">amber-400</Heading>
+            <Heading level="4" className="text-amber-100">
+              amber-100
+            </Heading>
+            <Heading level="4" className="text-amber-200">
+              amber-200
+            </Heading>
+            <Heading level="4" className="text-amber-300">
+              amber-300
+            </Heading>
+            <Heading level="4" className="text-amber-400">
+              amber-400
+            </Heading>
           </>
         }
       />
@@ -52,7 +72,10 @@ export const Component = () => {
         title="Custom"
         description="Custom example of how to style a heading using a Tailwind CSS class"
         exampleWithCode={
-          <Heading className="leading-9 font-extrabold text-center text-amber-100 ">
+          <Heading
+            level="4"
+            className="leading-9 font-extrabold text-center text-amber-100 "
+          >
             Example
           </Heading>
         }
