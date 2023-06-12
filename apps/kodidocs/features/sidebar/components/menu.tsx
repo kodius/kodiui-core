@@ -10,7 +10,7 @@ export const Menu = () => {
     <FlexBox
       justify="between"
       flexDirection="col"
-      className="w-screen md:w-72 border-r h-screen"
+      className="w-screen md:w-72 border-r h-screen fixed bg-black z-10 "
     >
       <Header />
       <Footer />

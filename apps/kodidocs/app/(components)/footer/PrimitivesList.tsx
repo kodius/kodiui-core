@@ -22,13 +22,10 @@ export default function PrimitivesList() {
                 <Heading level="3">{category.name}</Heading>
                 <FlexBox>
                   {category.elements?.map((element) => {
-                    let href = ""
-                    category.name === "Components"
-                      ? (href = "https://ui.shadcn.com/docs/components")
-                      : (href =
-                          `${routes.docs}/${category.name}/${element.name}`.toLowerCase())
+                    const href =
+                      `${routes.docs}/${category.name}/${element.name}`.toLowerCase()
                     return (
-                      <Link href={href} className="md:w-[49%]">
+                      <Link href={href} className="md:w-[49%] ">
                         <Card key={category.name}>
                           <Stack gap="xs">
                             <Heading level="4">{element.name}</Heading>
@@ -44,6 +41,23 @@ export default function PrimitivesList() {
               </Stack>
             )
           })}
+          <Stack>
+            <Heading level="3">Components</Heading>
+            <Link
+              href={"https://ui.shadcn.com/docs/components"}
+              className="md:w-[49%]"
+            >
+              <Card key={"Components"}>
+                <Stack gap="xs">
+                  <Heading level="4">Components</Heading>
+                  <Text size="sm" color="muted">
+                    Explore our versatile UI elements for enhanced interfaces.
+                    Click for more on other components.
+                  </Text>
+                </Stack>
+              </Card>
+            </Link>{" "}
+          </Stack>
         </Stack>
       </Center>
     </Box>

@@ -1,11 +1,22 @@
 "use client"
 
-import React, { FC, ReactNode, useState } from "react"
+import React, { FC, ReactNode, useEffect, useState } from "react"
+import { usePathname } from "next/navigation"
 
 import { Box } from "@/components/primitives/box/box"
 import { Stack } from "@/components/primitives/stack"
 
 export const ToggleButton: FC<{ children: ReactNode }> = ({ children }) => {
+  const router = usePathname()
+
+  console.log(router)
+
+  useEffect(() => {
+    if (isMenuOpen) {
+      setIsMenuOpen(!isMenuOpen)
+    }
+  }, [router])
+
   const [isMenuOpen, setIsMenuOpen] = useState(false)
 
   const handleToggle = () => {
@@ -16,7 +27,7 @@ export const ToggleButton: FC<{ children: ReactNode }> = ({ children }) => {
     <>
       <Stack
         gap="xs"
-        className="absolute top-4 right-4 md:hidden"
+        className="fixed top-4 right-4 md:hidden z-20 overflow-hidden"
         onClick={handleToggle}
       >
         <Box

@@ -67,15 +67,4 @@ export const categories: Category[] = [
       },
     ],
   },
-  {
-    name: "Components",
-    elements: [
-      {
-        name: "Components",
-        progress: "dev",
-        description:
-          "Explore our versatile UI elements for enhanced interfaces. Click for more on other components.",
-      },
-    ],
-  },
 ]
