@@ -56,6 +56,17 @@ export const categories: Category[] = [
     ],
   },
   {
+    name: "UI",
+    elements: [
+      {
+        name: "Hidden",
+        progress: "dev",
+        description:
+          "You can hide content responsively via the above and below props which accept a breakpoint name, i.e. `sm`, `md`, `lg`, `xl`, `2xl`.",
+      },
+    ],
+  },
+  {
     name: "Typography",
     elements: [
       {
