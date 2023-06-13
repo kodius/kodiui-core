@@ -6,11 +6,6 @@ import { spacing } from "@/styles/tokens/spacing"
 export const props: PropsType = {
   props: [
     {
-      name: "direction",
-      values: ["vertical", "hotizontal", "center"],
-      defaultValue: "hotizontal",
-    },
-    {
       name: "gap",
       defaultValue: "sm",
       values: Object.keys(spacing).map((g) => g),

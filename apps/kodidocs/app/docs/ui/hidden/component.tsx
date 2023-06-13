@@ -31,6 +31,7 @@ export const Component = () => {
         }
       />
       <DocBlock
+        canPlay
         title="Above & Below"
         description="Also, you can make element visible from md to lg screens"
         exampleWithCode={
