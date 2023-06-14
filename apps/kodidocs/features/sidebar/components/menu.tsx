@@ -1,4 +1,5 @@
 import React from "react"
+import { CommandDialogDemo } from "@/features/search/components"
 
 import { FlexBox } from "@/components/primitives/flex-box"
 
@@ -13,6 +14,7 @@ export const Menu = () => {
       className="w-screen md:w-72 border-r h-screen"
     >
       <Header />
+
       <Footer />
     </FlexBox>
   )

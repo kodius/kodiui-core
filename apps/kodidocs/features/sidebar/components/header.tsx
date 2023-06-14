@@ -1,5 +1,6 @@
 import React from "react"
 import Link from "next/link"
+import { SearchDocumentation } from "@/features/search/components"
 
 import { routes } from "@/config/site"
 import {
@@ -69,6 +70,7 @@ export const Header = () => {
           )
         })}
       </Accordion>
+
       <Link
         className="px-4"
         href="https://ui.shadcn.com/docs/components/accordion"
@@ -76,6 +78,9 @@ export const Header = () => {
       >
         Components
       </Link>
+      <div className="p-2">
+        <SearchDocumentation />
+      </div>
     </Stack>
   )
 }

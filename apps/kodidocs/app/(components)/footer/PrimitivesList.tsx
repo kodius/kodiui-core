@@ -7,7 +7,6 @@ import { Box } from "@/components/primitives/box/box"
 import { Center } from "@/components/primitives/center"
 import { FlexBox } from "@/components/primitives/flex-box"
 import { Stack } from "@/components/primitives/stack"
-import { Switcher } from "@/components/primitives/switcher"
 import { Heading } from "@/components/typography/heading"
 import { Text } from "@/components/typography/text"
 

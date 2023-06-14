@@ -9,8 +9,6 @@ import { Stack } from "@/components/primitives/stack"
 export const ToggleButton: FC<{ children: ReactNode }> = ({ children }) => {
   const router = usePathname()
 
-  console.log(router)
-
   useEffect(() => {
     if (isMenuOpen) {
       setIsMenuOpen(!isMenuOpen)
