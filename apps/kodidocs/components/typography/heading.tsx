@@ -10,7 +10,7 @@ type HeadingProps = VariantProps<typeof headingVariants> &
     className?: string
   }
 
-const headingVariants = cva("", {
+const headingVariants = cva("m-0 p-0", {
   variants: {
     level: {
       "1": "text-4xl lg:text-5xl leading-none",

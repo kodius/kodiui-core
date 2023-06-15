@@ -16,7 +16,7 @@ export const paddingVariants = cva("", {
     },
   },
   defaultVariants: {
-    p: "0",
+    p: "sm",
   },
 })
 
