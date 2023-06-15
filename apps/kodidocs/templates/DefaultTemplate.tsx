@@ -11,19 +11,18 @@ interface Props extends PropsWithChildren {
 
 export const DefaultTemplate: FC<Props> = (props) => {
   return (
-    <Stack gap="xl" className="h-screen overflow-scroll">
+    <Stack gap="xl" className="h-screen ">
       <div className="border-b">
         <div className="p-2xl">
-          <Stack gap="md">
+          <Stack gap="md" className="sticky top-0">
             <Heading level="2" className="uppercase">
               {props.title}
             </Heading>
             {props.description && <Text tone="muted">{props.description}</Text>}
           </Stack>
         </div>
-        {/* <hr /> */}
       </div>
-      <div className="p-xl">{props.children}</div>
+      <div className="p-xl overflow-scroll pb-[5rem]">{props.children}</div>
     </Stack>
   )
 }

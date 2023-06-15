@@ -9,6 +9,7 @@ module.exports = {
     "components/**/*.{ts,tsx}",
     "features/**/*.{ts,tsx}",
     "styles/**/*.{ts,tsx}",
+    "templates/**/*.{ts,tsx}",
   ],
   theme: {
     container: {

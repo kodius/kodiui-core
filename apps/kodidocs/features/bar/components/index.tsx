@@ -1,4 +1,5 @@
 import React from "react"
+import Link from "next/link"
 import { SearchDocumentation } from "@/features/search/components"
 
 import { Box } from "@/components/primitives/box/box"
@@ -17,5 +18,9 @@ export const Bar = () => {
 }
 
 const Logo = () => {
-  return <Text weight="bold">kodidocs</Text>
+  return (
+    <Link href={"/"}>
+      <Text weight="bold">kodidocs</Text>
+    </Link>
+  )
 }

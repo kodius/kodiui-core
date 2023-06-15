@@ -45,7 +45,8 @@ export const categories: Category[] = [
       {
         name: "Reel",
 
-        description: "REEL DESC",
+        description:
+          "The Reel component is a dynamic and customizable UI element that allows for horizontal scrolling. Enhance your application or website with engaging content displays",
       },
       {
         name: "Box",

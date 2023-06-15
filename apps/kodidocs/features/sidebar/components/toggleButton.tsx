@@ -29,12 +29,14 @@ export const ToggleButton: FC<{ children: ReactNode }> = ({ children }) => {
         onClick={handleToggle}
       >
         <Box
+          p="0"
           className={`h-px w-6 bg-white transition-transform duration-300 ${
             isMenuOpen ? "translate-y-2" : "translate-y-0"
           } `}
         />
-        <Box className="h-px w-6 bg-white" />
+        <Box p="0" className="h-px w-6 bg-white" />
         <Box
+          p="0"
           className={`h-px w-6 bg-white transition-transform duration-300 ${
             isMenuOpen ? "-translate-y-2" : "translate-y-0"
           } `}
