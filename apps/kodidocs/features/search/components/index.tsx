@@ -46,7 +46,7 @@ export function SearchDocumentation() {
         variant={"outline"}
         onClick={openDialog}
         size="sm"
-        className="flex justify-between relative text-muted-foreground gap-xs"
+        className="flex justify-between relative text-muted-foreground gap-xs mr-10 md:mr-0"
       >
         <span>Search documentation ...</span>
         <kbd className="pointer-events-none h-5 select-none items-center gap-1 rounded border bg-muted px-1.5 font-mono text-[10px] font-medium opacity-100">
