@@ -5,7 +5,7 @@ import { routes } from "@/config/site"
 import { Card } from "@/components/ui/card"
 import { Box } from "@/components/primitives/box/box"
 import { Center } from "@/components/primitives/center"
-import { FlexBox } from "@/components/primitives/flex-box"
+import { Grid } from "@/components/primitives/grid"
 import { Stack } from "@/components/primitives/stack"
 import { Heading } from "@/components/typography/heading"
 import { Text } from "@/components/typography/text"
@@ -19,12 +19,17 @@ export default function PrimitivesList() {
             return (
               <Stack>
                 <Heading level="3">{category.name}</Heading>
-                <FlexBox>
+                <Grid
+                  columns={{ xs: 1, sm: 2, lg: 3 }}
+                  alignContent="end"
+                  gap="sm"
+                  className="items-stretch"
+                >
                   {category.elements?.map((element) => {
                     const href =
                       `${routes.docs}/${category.name}/${element.name}`.toLowerCase()
                     return (
-                      <Link href={href} className="md:w-[49%] ">
+                      <Link href={href}>
                         <Card key={category.name}>
                           <Stack gap="xs">
                             <Heading level="4">{element.name}</Heading>
@@ -36,7 +41,7 @@ export default function PrimitivesList() {
                       </Link>
                     )
                   })}
-                </FlexBox>
+                </Grid>
               </Stack>
             )
           })}
