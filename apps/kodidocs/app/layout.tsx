@@ -1,11 +1,16 @@
 import "@/styles/globals.css"
 import { ReactNode } from "react"
 import { Metadata } from "next"
+import { Inter as FontSans } from "next/font/google"
 
 import { siteConfig } from "@/config/site"
-import { fontSans } from "@/lib/fonts"
 import { cn } from "@/lib/utils"
 import { ThemeProvider } from "@/components/theme-provider"
+
+const fontSans = FontSans({
+  subsets: ["latin"],
+  variable: "--font-sans",
+})
 
 export const metadata: Metadata = {
   title: {
@@ -35,7 +40,7 @@ export default function RootLayout({ children }: RootLayoutProps) {
         <head />
         <body
           className={cn(
-            "min-h-screen bg-background font-sans antialiased 2xl:mx-auto max-w-screen-2xl",
+            "min-h-screen bg-background font-sans antialiased",
             fontSans.variable
           )}
         >
