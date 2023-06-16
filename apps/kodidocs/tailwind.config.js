@@ -22,6 +22,9 @@ module.exports = {
     extend: {
       // custom 👇
       spacing,
+      gridTemplateColumns: {
+        autofit: "repeat(auto-fit, minmax(min(var(--percentage), 100%), 1fr))",
+      },
       colors: {
         brand: "#493DCC",
         background: "#03080F",
