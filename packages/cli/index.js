@@ -8,6 +8,7 @@ import { greetings } from "./greetings.js";
 import { installComponent } from "./installComponent.js";
 import { installPrimitives } from "./installPrimitives.js";
 import { installTypography } from "./installTypography.js";
+import { installUI } from "./installUI.js";
 
 const prompt = inquirer.createPromptModule();
 
@@ -31,6 +32,7 @@ export async function run() {
       choices: [
         "Install primitives",
         "Install typography",
+        "Install UI",
         "Install a component - dep",
         "Create a new project - dep",
         "Quit",
@@ -43,6 +45,15 @@ export async function run() {
       choices: choices,
       when: function (answers) {
         return answers.action === "Install a component";
+      },
+    },
+    {
+      name: "uiDir",
+      message: "Where would you like to install UI?",
+      type: "input",
+      default: "./components",
+      when: function (answers) {
+        return answers.action === "Install UI";
       },
     },
     {
@@ -86,7 +97,6 @@ export async function run() {
       return acc;
     }, {});
 
-    // Get the value of the projectDirectory argument
     const projectDirectory = argMap["directory"];
 
     installComponent(answer.component, projectDirectory);
@@ -94,6 +104,8 @@ export async function run() {
     installPrimitives(answer);
   } else if (answer.action === "Install typography") {
     installTypography(answer);
+  } else if (answer.action === "Install UI") {
+    installUI(answer);
   } else {
     console.log("Goodbye!");
   }
