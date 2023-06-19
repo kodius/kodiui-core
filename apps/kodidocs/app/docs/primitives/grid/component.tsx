@@ -3,7 +3,7 @@ import { DocPane } from "@/features/docs/DocPane"
 import { CodeSnippet } from "@/features/docs/components/CodeSnippet"
 import { DocTemplate } from "@/templates"
 
-import { Grid } from "@/components/primitives/grid"
+import { Grid } from "@/components/localUI/grid"
 import { Text } from "@/components/typography/text"
 
 export const Component = () => {

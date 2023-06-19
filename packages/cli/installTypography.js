@@ -3,6 +3,7 @@ import os from "os";
 import url from "url";
 import extract from "extract-zip";
 import chalk from "chalk";
+import { goodbye } from "./goodbay.js";
 
 export async function installTypography(directories) {
   const typoDir = directories.typoDir;
@@ -23,9 +24,8 @@ export async function installTypography(directories) {
 
   try {
     await extract(typoPath, { dir: extractPathTypography });
-    console.log(
-      chalk.bgGreen.black(`Typography are successfully installed.`)
-    );
+    console.log(chalk.bgGreen.black(`Typography are successfully installed.`));
+    goodbye();
   } catch (err) {
     console.error(err);
   }

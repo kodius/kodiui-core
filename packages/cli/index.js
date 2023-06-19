@@ -24,6 +24,10 @@ export async function run() {
     return path.parse(filename).name;
   });
 
+  const uiComponents = fs.readdirSync(componentsDir).map((filename) => {
+    return path.parse(filename).name;
+  });
+
   const answer = await prompt([
     {
       name: "action",
@@ -33,8 +37,6 @@ export async function run() {
         "Install primitives",
         "Install typography",
         "Install UI",
-        "Install a component - dep",
-        "Create a new project - dep",
         "Quit",
       ],
     },
