@@ -61,7 +61,6 @@ export const categories: Category[] = [
     elements: [
       {
         name: "Hidden",
-        progress: "dev",
         description:
           "You can hide content responsively via the above and below props which accept a breakpoint name, i.e. `sm`, `md`, `lg`, `xl`, `2xl`.",
       },
@@ -77,13 +76,11 @@ export const categories: Category[] = [
     elements: [
       {
         name: "Heading",
-        progress: "dev",
         description:
           "The Heading component is a powerful UI element that allows for displaying and styling headings within a user interface. It offers options for organizing content hierarchically, adjusting text alignment, changing heading colors, and applying custom styles.",
       },
       {
         name: "Text",
-        progress: "dev",
         description:
           "The Text component is a versatile UI element that allows for displaying and styling text within a user interface. It offers various options for customizing the font size, alignment, and color, providing flexibility and consistency for typography.",
       },

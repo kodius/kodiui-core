@@ -37,7 +37,7 @@ export const Actions = () => {
   return (
     <Center direction="horizontal">
       <Stack gap="sm">
-        <FlexBox flexDirection="row" items="center" gap="md">
+        <FlexBox flexDirection="row" items="center" gap="md" p="0">
           <Button asChild>
             <Link href="/docs/primitives/stack">Get Started</Link>
           </Button>
@@ -50,6 +50,7 @@ export const Actions = () => {
           flexDirection="row"
           items="center"
           gap="sm"
+          p="0"
           className="group"
           justify="center"
           onClick={() => handleCopy("npx @kodiui/cli@latest")}

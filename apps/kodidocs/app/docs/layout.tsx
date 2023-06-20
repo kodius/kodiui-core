@@ -7,7 +7,7 @@ import { TailwindIndicator } from "@/components/tailwind-indicator"
 
 const Layout: FC<{ children: ReactNode }> = ({ children }) => {
   return (
-    <div className="overflow-hidden h-screen">
+    <div className="overflow-hidden h-screen 2xl:max-w-screen-2xl 2xl:m-auto">
       <Bar />
       <KodiSidebar className="h-screen" gap="0">
         <Sidebar />
