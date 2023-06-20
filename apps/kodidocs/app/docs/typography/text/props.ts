@@ -10,18 +10,14 @@ export const props: PropsType = {
       name: "color",
       values: ["All tailwind colors + cust colors", "brand"],
     },
+    {
+      name: "weight",
+      values: ["base", "bold"],
+    },
 
-    // {
-    //   name: "textAlign",
-    //   values: Object.keys(textAlign).map((g) => g),
-    // },
-    // {
-    //   name: "justifyContent",
-    //   values: Object.keys(justifyContent).map((g) => g),
-    // },
-    // {
-    //   name: "width, height, p, px, py, pb, pl, pr, pt, top, bottom, left, right",
-    //   values: Object.keys(width).map((g) => g),
-    // },
+    {
+      name: "textAlign",
+      values: ["center", "end", "right", "start", "left", "justify"],
+    },
   ],
 }

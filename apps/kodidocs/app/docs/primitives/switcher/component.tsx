@@ -21,13 +21,26 @@ export const Component = () => {
       />
       <DocBlock
         canPlay
-        title="Example with witht"
+        title="Example with width"
         description=""
         exampleWithCode={
           <Switcher>
             <DocPane className="w-64">Element</DocPane>
             <DocPane className="w-64">Element</DocPane>
             <DocPane className="w-64">Element</DocPane>
+          </Switcher>
+        }
+      />
+
+      <DocBlock
+        canPlay
+        title="Example with gap"
+        description=""
+        exampleWithCode={
+          <Switcher gap="xl">
+            <DocPane>Element</DocPane>
+            <DocPane>Element</DocPane>
+            <DocPane>Element</DocPane>
           </Switcher>
         }
       />

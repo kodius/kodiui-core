@@ -1,11 +1,11 @@
 export type SiteConfig = typeof siteConfig
 
 export const siteConfig = {
-  name: "Next.js",
-  description: "Beautifully Music",
+  name: "KODIUI",
+  description: "KODIUI documentation",
   mainNav: [
     {
-      title: "Home",
+      title: "KODIUI | Home",
       href: "/",
     },
   ],

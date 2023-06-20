@@ -2,9 +2,16 @@ import { DocBlock } from "@/features/docs/DocBlock"
 import { DocPane } from "@/features/docs/DocPane"
 import { DocTemplate } from "@/templates"
 
+import { Box } from "@/components/primitives/box/box"
 import { FlexBox } from "@/components/primitives/flex-box"
+import { flexVariants } from "@/styles/tokens/flex"
 
 export const Component = () => {
+  const test = flexVariants()
+  console.log("sdfsdfsf")
+
+  console.log(test, "asdfsdfsdaff")
+
   return (
     <DocTemplate install>
       <DocBlock

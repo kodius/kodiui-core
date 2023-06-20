@@ -56,8 +56,8 @@ export function SearchDocumentation() {
       <CommandDialog open={open} onOpenChange={setOpen}>
         <CommandInput placeholder="Type a command or search..." />
         <CommandList>
-          <CommandEmpty>No results found.</CommandEmpty>
-          <CommandGroup heading="Suggestions">
+          <CommandEmpty key="empty">No results found.</CommandEmpty>
+          <CommandGroup key="Suggestions" heading="Suggestions">
             {categories.map((category) => {
               return (
                 <>
@@ -66,6 +66,7 @@ export function SearchDocumentation() {
                       `${routes.docs}/${category.name}/${element.name}`.toLowerCase()
                     return (
                       <CommandItem
+                        key={element.name}
                         onSelect={() => {
                           runCommand(() => router.push(href))
                         }}
