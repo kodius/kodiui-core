@@ -19,12 +19,7 @@ export default function PrimitivesList() {
             return (
               <Stack>
                 <Heading level="3">{category.name}</Heading>
-                <Grid
-                  columns={{ xs: 1, sm: 2, lg: 3 }}
-                  alignContent="end"
-                  gap="sm"
-                  className="items-stretch"
-                >
+                <Grid columns={{ xs: 1, sm: 2, lg: 3 }} gap="sm">
                   {category.elements?.map((element) => {
                     const href =
                       `${routes.docs}/${category.name}/${element.name}`.toLowerCase()
@@ -47,20 +42,19 @@ export default function PrimitivesList() {
           })}
           <Stack>
             <Heading level="3">Components</Heading>
-            <Link
-              href={"https://ui.shadcn.com/docs/components"}
-              className="md:w-[49%]"
-            >
-              <Card key={"Components"}>
-                <Stack gap="xs">
-                  <Heading level="4">Components</Heading>
-                  <Text size="sm" color="muted">
-                    Explore our versatile UI elements for enhanced interfaces.
-                    Click for more on other components.
-                  </Text>
-                </Stack>
-              </Card>
-            </Link>{" "}
+            <Grid columns={{ xs: 1, sm: 2, lg: 3 }} gap="sm">
+              <Link href={"https://ui.shadcn.com/docs/components"}>
+                <Card key={"Components"}>
+                  <Stack gap="xs">
+                    <Heading level="4">Components</Heading>
+                    <Text size="sm" color="muted">
+                      Explore our versatile UI elements for enhanced interfaces.
+                      Click for more on other components.
+                    </Text>
+                  </Stack>
+                </Card>
+              </Link>
+            </Grid>
           </Stack>
         </Stack>
       </Center>

@@ -43,11 +43,6 @@ export const categories: Category[] = [
           "Flex is Box with display set to flex and comes with helpful style shorthand. It renders a `div` element.",
       },
       {
-        name: "Grid",
-        description:
-          "Grid layout offers a grid-based layout system, with rows and columns, making it easier to design web pages without having to use floats and positioning.",
-      },
-      {
         name: "Reel",
 
         description:
@@ -69,6 +64,11 @@ export const categories: Category[] = [
         progress: "dev",
         description:
           "You can hide content responsively via the above and below props which accept a breakpoint name, i.e. `sm`, `md`, `lg`, `xl`, `2xl`.",
+      },
+      {
+        name: "Grid",
+        description:
+          "Grid layout offers a grid-based layout system, with rows and columns, making it easier to design web pages without having to use floats and positioning.",
       },
     ],
   },

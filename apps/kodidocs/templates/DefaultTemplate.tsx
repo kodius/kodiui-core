@@ -14,7 +14,7 @@ export const DefaultTemplate: FC<Props> = (props) => {
     <Stack gap="xl" className="h-screen ">
       <div className="border-b">
         <div className="p-2xl">
-          <Stack gap="md" className="sticky top-0">
+          <Stack gap="xs" className="sticky top-0">
             <Heading level="2" className="uppercase">
               {props.title}
             </Heading>
