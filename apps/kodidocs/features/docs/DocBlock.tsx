@@ -18,7 +18,7 @@ interface Props extends RenderExmapleProps {
 export const DocBlock: FC<Props> = (props) => {
   return (
     <Stack gap="md">
-      <Stack gap="md">
+      <Stack gap="xs">
         <Heading level="3">{props.title}</Heading>
         <Text tone="muted">{props.description}</Text>
       </Stack>

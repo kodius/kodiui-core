@@ -13,7 +13,7 @@ export const DocTemplate: FC<PropsWithChildren & Props> = ({
   install,
 }) => {
   return (
-    <Stack gap="xl">
+    <Stack gap="2xl">
       {children}
       {install && (
         <DocBlock
