@@ -1,28 +1,27 @@
 {
   "name": "@kodiui/cli",
-  "version": "0.0.43",
+  "version": "0.1.0",
   "description": "",
-  "main": "index.js",
+  "main": "dist/index.js",
+  "bin": {
+    "@kodiui/cli": "./dist/index.js"
+  },
   "scripts": {
+    "build": "npx tsc",
     "test": "echo \"Error: no test specified\" && exit 1"
   },
-  "type": "module",
-  "bin": {
-    "my-cli": "index.js"
-  },
   "keywords": [],
-  "author": "dinoDanic",
+  "author": "",
   "license": "ISC",
   "dependencies": {
-    "@types/inquirer": "^9.0.3",
-    "chalk": "^5.2.0",
-    "download": "^8.0.0",
-    "extract-zip": "^2.0.1",
-    "inquirer": "^9.1.5",
-    "yargs": "^17.7.1",
-    "chalk-animation": "^2.0.3"
+    "commander": "^11.1.0",
+    "figlet": "^1.6.0",
+    "typescript": "^5.2.2"
   },
   "devDependencies": {
-    "@types/play-sound": "^1.1.0"
+    "@types/node": "^20.8.7",
+    "@typescript-eslint/eslint-plugin": "^6.8.0",
+    "@typescript-eslint/parser": "^6.8.0",
+    "eslint": "^8.51.0"
   }
 }

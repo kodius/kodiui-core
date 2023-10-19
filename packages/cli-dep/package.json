@@ -1,0 +1,28 @@
+{
+  "name": "@kodiui/cli-dep",
+  "version": "0.0.43",
+  "description": "",
+  "main": "index.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "type": "module",
+  "bin": {
+    "my-cli": "index.js"
+  },
+  "keywords": [],
+  "author": "dinoDanic",
+  "license": "ISC",
+  "dependencies": {
+    "@types/inquirer": "^9.0.3",
+    "chalk": "^5.2.0",
+    "download": "^8.0.0",
+    "extract-zip": "^2.0.1",
+    "inquirer": "^9.1.5",
+    "yargs": "^17.7.1",
+    "chalk-animation": "^2.0.3"
+  },
+  "devDependencies": {
+    "@types/play-sound": "^1.1.0"
+  }
+}
