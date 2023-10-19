@@ -3,6 +3,7 @@ import { Command } from "commander";
 import figlet from "figlet";
 import inquirer from "inquirer";
 import { addPrimitives } from "./workers/add-primitives.js";
+import { addTypography } from "./workers/add-typography.js";
 const program = new Command();
 console.log(figlet.textSync("kodiui"));
 program
@@ -19,13 +20,16 @@ async function main() {
             type: "list",
             name: "questions",
             message: "What would you like to do?",
-            choices: [{ name: "add primitives", value: "primitives" }],
+            choices: [
+                { name: "add primitives", value: "primitives" },
+                { name: "add typography", value: "typography" },
+            ],
         },
     ]);
-    console.log(answers);
-    if (answers.questions === "primitives") {
+    if (answers.questions === "primitives")
         addPrimitives();
-    }
+    if (answers.questions === "typography")
+        addTypography();
 }
 main();
 //# sourceMappingURL=index.js.map

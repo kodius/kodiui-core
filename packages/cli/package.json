@@ -1,6 +1,6 @@
 {
   "name": "@kodiui/cli",
-  "version": "0.1.0",
+  "version": "0.1.1",
   "description": "",
   "main": "dist/index.js",
   "type": "module",
@@ -11,7 +11,8 @@
     "build": "npx tsc",
     "dev": "npx tsc --watch",
     "test": "echo \"Error: no test specified\" && exit 1",
-    "c-primitives": "bash scripts/c-primitives.sh"
+    "c-primitives": "bash scripts/c-primitives.sh",
+    "c-typography": "bash scripts/c-typography.sh"
   },
   "repository": "https://github.com/kodius/kodiui-core",
   "keywords": [

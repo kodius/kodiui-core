@@ -4,7 +4,7 @@ import fs from "fs";
 import unzipper from "unzipper";
 import inquirer from "inquirer";
 
-export function addPrimitives() {
+export function addTypography() {
   const __filename = fileURLToPath(import.meta.url);
   const __dirname = path.dirname(__filename);
 
@@ -13,16 +13,16 @@ export function addPrimitives() {
     "..",
     "..",
     "out-components",
-    "primitives.zip"
+    "typography.zip"
   );
 
-  async function extractPrimitive() {
+  async function extract() {
     const answer = await inquirer.prompt([
       {
         type: "input",
         name: "extractPath",
-        message: "Enter the path where you want to extract the primitives:",
-        default: "components/primitives/",
+        message: "Enter the path where you want to extract typography:",
+        default: "components/typography/",
       },
     ]);
 
@@ -30,9 +30,9 @@ export function addPrimitives() {
     fs.createReadStream(zipPath)
       .pipe(unzipper.Extract({ path: extractPath }))
       .on("close", () => {
-        console.log("Primitives have been successfully added to your project!");
+        console.log("Typography have been successfully added to your project!");
       });
   }
 
-  extractPrimitive();
+  extract();
 }

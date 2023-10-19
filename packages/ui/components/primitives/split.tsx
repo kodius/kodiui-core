@@ -1,8 +1,7 @@
 import React from "react";
 
 import { cn } from "@/lib/utils";
-import { FlexVariants, flexVariants } from "@/styles/tokens/flex";
-import { GapVariants, gapVariants } from "@/styles/tokens/spacing";
+import { FlexVariants, GapVariants, flexVariants, gapVariants } from "./tokens";
 
 export type SplitProps = React.HTMLAttributes<HTMLDivElement> &
   GapVariants &

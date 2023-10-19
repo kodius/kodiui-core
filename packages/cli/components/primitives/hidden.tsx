@@ -1,7 +1,7 @@
 import React from "react";
 
 import { cn } from "@/lib/utils";
-import { HiddenVariants, hiddenVariants } from "@/styles/tokens/hidden";
+import { HiddenVariants, hiddenVariants } from "./tokens";
 
 export type BoxProps = React.HTMLAttributes<HTMLDivElement> & HiddenVariants;
 

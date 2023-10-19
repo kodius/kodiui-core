@@ -6,7 +6,7 @@ import {
   PaddingVariants,
   gapVariants,
   paddingVariants,
-} from "@/styles/tokens/spacing";
+} from "./tokens";
 
 export type BoxProps = React.HTMLAttributes<HTMLDivElement> &
   PaddingVariants &
