@@ -4,24 +4,28 @@
   "description": "",
   "main": "dist/index.js",
   "bin": {
-    "@kodiui/cli": "./dist/index.js"
+    "cli": "./dist/index.js"
   },
   "scripts": {
     "build": "npx tsc",
     "test": "echo \"Error: no test specified\" && exit 1"
   },
-  "keywords": [],
-  "author": "",
+  "repository": "https://github.com/kodius/kodiui-core",
+  "keywords": [
+    "kodiui, cli, shadcn, tailwind",
+    "primitives"
+  ],
+  "author": "dinoDanic",
   "license": "ISC",
   "dependencies": {
     "commander": "^11.1.0",
-    "figlet": "^1.6.0",
-    "typescript": "^5.2.2"
+    "figlet": "^1.6.0"
   },
   "devDependencies": {
     "@types/node": "^20.8.7",
     "@typescript-eslint/eslint-plugin": "^6.8.0",
     "@typescript-eslint/parser": "^6.8.0",
-    "eslint": "^8.51.0"
+    "eslint": "^8.51.0",
+    "typescript": "^5.2.2"
   }
 }
