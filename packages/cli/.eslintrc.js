@@ -8,9 +8,10 @@ module.exports = {
       env: {
         node: true,
       },
-      files: [".eslintrc.{js,cjs}"],
+      files: ["*.js"], // Include all JavaScript files
       parserOptions: {
-        sourceType: "script",
+        ecmaVersion: "latest",
+        sourceType: "script", // Set sourceType to script to allow require statements
       },
     },
   ],
