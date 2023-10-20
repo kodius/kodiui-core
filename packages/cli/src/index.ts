@@ -5,6 +5,7 @@ import figlet from "figlet";
 import inquirer from "inquirer";
 import { addPrimitives } from "./workers/add-primitives.js";
 import { addTypography } from "./workers/add-typography.js";
+import { addLib } from "./workers/add-lib.js";
 
 const program = new Command();
 
@@ -37,8 +38,10 @@ async function main() {
     },
   ]);
 
-  if (answers.questions === "primitives") addPrimitives();
+  if (answers.questions === "primitives") await addPrimitives();
   if (answers.questions === "typography") addTypography();
+
+  addLib();
 }
 
 main();
