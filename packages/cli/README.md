@@ -1,5 +1,3 @@
-# @kodiui/cli 😎
-
 `@kodiui/cli` is a command-line interface (CLI) tool designed to facilitate the seamless integration of Kodi UI's primitive components into your projects. Drawing inspiration from the "Every Layout CSS" book, Kodi UI is meticulously crafted with Tailwind CSS, offering you a robust collection of versatile and aesthetically pleasing components that adapt effortlessly to your design needs.
 
 ## Available Components 🛠
