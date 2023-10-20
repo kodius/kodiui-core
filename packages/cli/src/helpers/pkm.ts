@@ -20,8 +20,10 @@ export const choosePkm = async (): Promise<PkmKeys> => {
   return answer.selected;
 };
 
-export const pkmCommands: Record<PkmKeys, string> = {
+type AvaliableCommands = "install" | "add";
+
+export const pkmCommands: Record<PkmKeys, AvaliableCommands> = {
   npm: "install",
   yarn: "add",
   pnpm: "add",
-};
+} as const;

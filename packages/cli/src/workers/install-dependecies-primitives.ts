@@ -33,7 +33,7 @@ export async function installDependenciesPrimitives() {
     try {
       const promises = dependenciesToInstall.map((dependency) => {
         return new Promise((resolve, reject) => {
-          const child = spawn(selectedPkm, [pkmCommand, dependency]);
+          const child = spawn(`${selectedPkm} ${pkmCommand} ${dependency}`);
 
           child.on("close", (code) => {
             if (code === 0) {
@@ -41,7 +41,7 @@ export async function installDependenciesPrimitives() {
             } else {
               reject(
                 new Error(
-                  `${selectedPkm} install for ${dependency} failed with code ${code}`
+                  `${selectedPkm} install for ${dependency} failed with code ${code} `
                 )
               );
             }

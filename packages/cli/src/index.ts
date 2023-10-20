@@ -8,7 +8,7 @@ import { addTypography } from "./workers/add-typography.js";
 
 const program = new Command();
 
-console.log(figlet.textSync("kodiui"));
+console.log(figlet.textSync("Kemanl Važin"));
 
 program
   .version("1.0.0")
