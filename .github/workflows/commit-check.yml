@@ -1,0 +1,20 @@
+name: Check commit message
+
+on:
+  push:
+    branches:
+      - master
+
+jobs:
+  check_commit_message:
+    runs-on: ubuntu-latest
+    steps:
+      - name: Check commit message for [publish npm]
+        run: |
+          message=$(git log --format=%B -n 1 $GITHUB_SHA)
+          if [[ "$message" == *"[publish npm]"* ]]; then
+            echo "Publishing is required"
+            echo "PUBLISH_NPM=true" >> $GITHUB_ENV
+          else
+            echo "Publishing is not required"
+            echo "PUBLISH_NPM=false" >> $GITHUB_ENV
