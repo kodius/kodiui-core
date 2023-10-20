@@ -563,6 +563,12 @@ importers:
 
   packages/cli:
     dependencies:
+      class-variance-authority:
+        specifier: ^0.6.0
+        version: 0.6.0(typescript@5.2.2)
+      clsx:
+        specifier: ^1.2.1
+        version: 1.2.1
       commander:
         specifier: ^11.1.0
         version: 11.1.0
@@ -572,9 +578,15 @@ importers:
       inquirer:
         specifier: ^9.1.5
         version: 9.1.5
+      ora:
+        specifier: ^7.0.1
+        version: 7.0.1
       react:
         specifier: ^18.2.0
         version: 18.2.0
+      tailwind-merge:
+        specifier: ^1.12.0
+        version: 1.12.0
       unzipper:
         specifier: ^0.10.14
         version: 0.10.14
@@ -7830,6 +7842,14 @@ packages:
       }
     engines: { node: ^12.17.0 || ^14.13 || >=16.0.0 }
 
+  /chalk@5.3.0:
+    resolution:
+      {
+        integrity: sha512-dLitG79d+GV1Nb/VYcCDFivJeK1hiukt9QjRNVOsUtTy1rR1YJsmpGGTZ3qJos+uw7WmWF4wUwBd9jxjocFC2w==,
+      }
+    engines: { node: ^12.17.0 || ^14.13 || >=16.0.0 }
+    dev: false
+
   /change-case-all@1.0.15:
     resolution:
       {
@@ -8003,6 +8023,14 @@ packages:
         integrity: sha512-/eG5sJcvEIwxcdYM86k5tPwn0MUzkX5YY3eImTGpJOZgVe4SdTMY14vQpcxgBzJ0wXwAYrS8E+c3uHeK4JNyzQ==,
       }
     engines: { node: ">=6" }
+
+  /cli-spinners@2.9.1:
+    resolution:
+      {
+        integrity: sha512-jHgecW0pxkonBJdrKsqxgRX9AcG+u/5k0Q7WPDfi8AogLAdwxEkyYYNWwZ5GvVFoFx2uiY1eNcSK00fh+1+FyQ==,
+      }
+    engines: { node: ">=6" }
+    dev: false
 
   /cli-truncate@2.1.0:
     resolution:
@@ -8937,6 +8965,13 @@ packages:
       {
         integrity: sha512-U7DTiKe4h+irqBG6h4EZ0XXaZuJj4md3xIXXaGSYhwiumPZ4BSc6rgf9UD0hVUMaeP/jB0q5pKWCPxvhO8fvZA==,
       }
+
+  /emoji-regex@10.3.0:
+    resolution:
+      {
+        integrity: sha512-QpLs9D9v9kArv4lfDEgg1X/gN5XLnf/A6l9cs8SPZLRZR3ZkY9+kwIQTxm+fsSej5UMYGE8fdoaZVIBlqG0XTw==,
+      }
+    dev: false
 
   /emoji-regex@8.0.0:
     resolution:
@@ -13048,7 +13083,7 @@ packages:
       }
     engines: { node: ">=12" }
     dependencies:
-      chalk: 5.2.0
+      chalk: 5.3.0
       is-unicode-supported: 1.3.0
     dev: false
 
@@ -14147,6 +14182,24 @@ packages:
       stdin-discarder: 0.1.0
       strip-ansi: 7.0.1
       wcwidth: 1.0.1
+    dev: false
+
+  /ora@7.0.1:
+    resolution:
+      {
+        integrity: sha512-0TUxTiFJWv+JnjWm4o9yvuskpEJLXTcng8MJuKd+SzAzp2o+OP3HWqNhB4OdJRt1Vsd9/mR0oyaEYlOnL7XIRw==,
+      }
+    engines: { node: ">=16" }
+    dependencies:
+      chalk: 5.3.0
+      cli-cursor: 4.0.0
+      cli-spinners: 2.9.1
+      is-interactive: 2.0.0
+      is-unicode-supported: 1.3.0
+      log-symbols: 5.1.0
+      stdin-discarder: 0.1.0
+      string-width: 6.1.0
+      strip-ansi: 7.1.0
     dev: false
 
   /os-tmpdir@1.0.2:
@@ -16266,6 +16319,18 @@ packages:
       emoji-regex: 9.2.2
       strip-ansi: 7.0.1
 
+  /string-width@6.1.0:
+    resolution:
+      {
+        integrity: sha512-k01swCJAgQmuADB0YIc+7TuatfNvTBVOoaUWJjTB9R4VJzR5vNWzf5t42ESVZFPS8xTySF7CAdV4t/aaIm3UnQ==,
+      }
+    engines: { node: ">=16" }
+    dependencies:
+      eastasianwidth: 0.2.0
+      emoji-regex: 10.3.0
+      strip-ansi: 7.1.0
+    dev: false
+
   /string.prototype.matchall@4.0.8:
     resolution:
       {
@@ -16383,6 +16448,16 @@ packages:
     engines: { node: ">=12" }
     dependencies:
       ansi-regex: 6.0.1
+
+  /strip-ansi@7.1.0:
+    resolution:
+      {
+        integrity: sha512-iq6eVVI64nQQTRYq2KtEg2d2uU7LElhTJwsH4YzIHZshxlgZms/wIc4VoDQTlG/IvVIrBKG06CrZnp0qv7hkcQ==,
+      }
+    engines: { node: ">=12" }
+    dependencies:
+      ansi-regex: 6.0.1
+    dev: false
 
   /strip-bom@3.0.0:
     resolution:
