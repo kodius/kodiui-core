@@ -3,6 +3,7 @@ import path from "path";
 import fs from "fs";
 import unzipper from "unzipper";
 import inquirer from "inquirer";
+import { installDependenciesPrimitives } from "./install-dependecies-primitives.js";
 export function addPrimitives() {
     const __filename = fileURLToPath(import.meta.url);
     const __dirname = path.dirname(__filename);
@@ -17,11 +18,8 @@ export function addPrimitives() {
             },
         ]);
         const extractPath = path.join(process.cwd(), answer.extractPath);
-        fs.createReadStream(zipPath)
-            .pipe(unzipper.Extract({ path: extractPath }))
-            .on("close", () => {
-            console.log("Primitives have been successfully added to your project!");
-        });
+        fs.createReadStream(zipPath).pipe(unzipper.Extract({ path: extractPath }));
+        installDependenciesPrimitives();
     }
     extractPrimitive();
 }
