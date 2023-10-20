@@ -15,11 +15,7 @@ async function askForPermission(): Promise<boolean> {
   return answer.permission;
 }
 
-const dependenciesToInstall = [
-  "class-variance-authority",
-  "clsx",
-  "tailwind-merge",
-];
+const dependencies = ["class-variance-authority", "clsx", "tailwind-merge"];
 
 export async function installDependenciesPrimitives() {
   const permission = await askForPermission();
@@ -31,27 +27,18 @@ export async function installDependenciesPrimitives() {
     const spinner = ora("Installing dependencies...").start();
 
     try {
-      const promises = dependenciesToInstall.map((dependency) => {
-        return new Promise((resolve, reject) => {
-          const child = spawn(`${selectedPkm} ${pkmCommand} ${dependency}`);
+      const child = spawn(selectedPkm, [pkmCommand, ...dependencies]);
 
-          child.on("close", (code) => {
-            if (code === 0) {
-              resolve(null);
-            } else {
-              reject(
-                new Error(
-                  `${selectedPkm} install for ${dependency} failed with code ${code} `
-                )
-              );
-            }
-          });
-        });
+      child.on("close", (code) => {
+        if (code === 0) {
+          spinner.succeed("Dependencies installed successfully!");
+        } else {
+          spinner.fail("Failed to install dependencies");
+        }
       });
-
-      await Promise.all(promises);
-      spinner.succeed("Dependencies installed successfully!");
     } catch (error) {
+      console.log(error);
+
       spinner.fail("Failed to install dependencies");
       console.error(error);
     }
