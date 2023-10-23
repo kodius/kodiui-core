@@ -6,7 +6,7 @@ import { addPrimitives } from "./workers/add-primitives.js";
 import { addTypography } from "./workers/add-typography.js";
 import { addLib } from "./workers/add-lib.js";
 const program = new Command();
-console.log(figlet.textSync("Kemanl Važin"));
+console.log(figlet.textSync("kodiui"));
 program
     .version("1.0.0")
     .description("An example CLI for managing a directory")
