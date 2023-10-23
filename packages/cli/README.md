@@ -37,4 +37,11 @@
 9. **switcher.tsx** 🔀
    - A flexible component that enables seamless switching between different views or content.
 
+run script
+
+```
+
+npx @kodiui/cli@latest
+```
+
 By leveraging `@kodiui/cli`, you can effortlessly incorporate these primitive components into your project, ultimately saving you time and effort, and allowing you to focus more on crafting stunning, responsive user interfaces that make a lasting impression. 😊
