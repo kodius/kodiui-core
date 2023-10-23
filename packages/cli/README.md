@@ -1,4 +1,4 @@
-@kodiui/cli is a command-line interface (CLI) tool designed to effortlessly integrate Kodi UI's primitive components into your React projects. Drawing inspiration from the "Every Layout CSS" book, Kodi UI is meticulously crafted with Tailwind CSS, providing you with a robust collection of versatile and aesthetically pleasing components that adapt seamlessly to your design needs. With the @kodiui/cli, you can easily install desired components into your project, and have the flexibility to edit and customize them according to your specific requirements, ensuring a perfect fit for your application's design and functionality.
+@kodiui/cli helps you easily drop Kodi UI's responsive layout components into your React project. Crafted with Tailwind CSS and inspired by "Every Layout CSS," these components are super versatile, and they'll adapt to your design needs in no time. Install, tweak, and watch your layout game level up!
 
 ## Available Components 🛠
 
