@@ -1,9 +1,0 @@
-#!/usr/bin/env sh
-
-docker build \
-        -t $docker_hub_repo_name \
-        --build-arg database_url=$database_url \
-        --build-arg port=$port \
-        --build-arg secret_key_base=$secret_key_base \
-        --build-arg mix_env=$mix_env \
-        --build-arg release_level=$release_level .

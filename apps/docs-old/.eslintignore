@@ -1,7 +1,0 @@
-.next
-public
-node_modules
-!pnpm-lock.yaml
-package.json
-**/*.test.js
-coverage

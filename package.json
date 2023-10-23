@@ -6,13 +6,8 @@
   "scripts": {
     "test": "echo \"Error: no test specified\" && exit 1",
     "prepare": "husky install",
-    "docslint": "cd ./apps/kodidocs && pnpm lint",
-    "docsformat": "cd ./apps/kodidocs && pnpm format",
-    "docsPrettyQuick": "cd ./apps/kodidocs && pnpm pretty-quick",
-    "docsLint": "cd ./apps/kodidocs && pnpm lint",
-    "dockerDocsInstall": "cd ./apps/kodidocs && pnpm i --frozen-lockfile",
-    "format:fix": "cd ./apps/kodidocs && pnpm format:fix",
-    "validate": "npm-run-all --parallel docsPrettyQuick docsLint"
+    "build:cli": "cd ./packages/cli && pnpm build",
+    "validate": "npm-run-all --parallel build:cli"
   },
   "keywords": [],
   "author": "dinoDanic",
