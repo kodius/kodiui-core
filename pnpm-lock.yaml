@@ -84,6 +84,9 @@ importers:
       typescript:
         specifier: ^5
         version: 5.2.2
+      ui:
+        specifier: workspace:*
+        version: link:../../packages/ui
 
   packages/cli:
     dependencies:

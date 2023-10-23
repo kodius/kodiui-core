@@ -1,8 +1,8 @@
 import React from "react";
 
-import { cn } from "@/lib/utils";
-import { GapVariants } from "./tokens/spacing";
-import { FlexVariants } from "./tokens/flex";
+import { GapVariants, gapVariants } from "./tokens/spacing";
+import { FlexVariants, flexVariants } from "./tokens/flex";
+import { cn } from "./lib/utils";
 
 export type BoxProps = React.HTMLAttributes<HTMLDivElement> &
   GapVariants &
