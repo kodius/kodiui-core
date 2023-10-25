@@ -1,6 +1,6 @@
 {
   "name": "@kodiui/cli",
-  "version": "0.1.20",
+  "version": "0.1.26",
   "description": "",
   "main": "dist/index.js",
   "type": "module",

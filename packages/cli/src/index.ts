@@ -9,7 +9,7 @@ import { addLib } from "./workers/add-lib.js";
 
 const program = new Command();
 
-console.log(figlet.textSync("kodiui"));
+console.log(figlet.textSync("kodi-ui"));
 
 program
   .version("1.0.0")
@@ -39,7 +39,7 @@ async function main() {
   ]);
 
   if (answers.questions === "primitives") await addPrimitives();
-  if (answers.questions === "typography") addTypography();
+  if (answers.questions === "typography") await addTypography();
 
   addLib();
 }

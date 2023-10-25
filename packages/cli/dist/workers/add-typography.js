@@ -3,7 +3,7 @@ import path from "path";
 import fs from "fs";
 import unzipper from "unzipper";
 import inquirer from "inquirer";
-export function addTypography() {
+export async function addTypography() {
     const __filename = fileURLToPath(import.meta.url);
     const __dirname = path.dirname(__filename);
     const zipPath = path.join(__dirname, "..", "..", "out-components", "typography.zip");
@@ -17,12 +17,8 @@ export function addTypography() {
             },
         ]);
         const extractPath = path.join(process.cwd(), answer.extractPath);
-        fs.createReadStream(zipPath)
-            .pipe(unzipper.Extract({ path: extractPath }))
-            .on("close", () => {
-            console.log("Typography have been successfully added to your project!");
-        });
+        fs.createReadStream(zipPath).pipe(unzipper.Extract({ path: extractPath }));
     }
-    extract();
+    await extract();
 }
 //# sourceMappingURL=add-typography.js.map

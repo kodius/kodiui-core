@@ -2,7 +2,7 @@ import React from "react";
 
 import { GapVariants, gapVariants } from "./tokens/spacing";
 import { FlexVariants, flexVariants } from "./tokens/flex";
-import { cn } from "./lib/utils";
+import { cn } from "@/lib/utils";
 
 export type BoxProps = React.HTMLAttributes<HTMLDivElement> &
   GapVariants &
