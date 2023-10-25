@@ -1,6 +1,5 @@
 {
   "compilerOptions": {
-    "rootDir": "src",
     "outDir": "dist",
     "jsx": "react-jsx",
     "strict": true,
@@ -8,7 +7,9 @@
     "esModuleInterop": true,
     "moduleResolution": "node",
     "target": "ES2017",
-    "module": "ESNext"
+    "module": "ESNext",
+    "paths": {
+      "@/*": ["./*"]
+    }
   },
-  "exclude": ["components", "lib"]
 }
