@@ -10,11 +10,11 @@ type HeadingProps = VariantProps<typeof headingVariants> &
     className?: string;
   };
 
-const headingVariants = cva("m-0 p-0", {
+const headingVariants = cva("", {
   variants: {
     level: {
       "1": "text-4xl lg:text-5xl leading-none",
-      "2": "text-3xl transition-colors first:mt-0 leading-none",
+      "2": "text-3xl leading-none",
       "3": "text-2xl leading-none",
       "4": "text-xl leading-none",
     },
@@ -31,7 +31,7 @@ const headingVariants = cva("m-0 p-0", {
 
 const Heading = React.forwardRef<HTMLHeadingElement, HeadingProps>(
   (
-    { level = "1", children, className, textAlign, weight, color, ...props },
+    { level = "1", children, className, textAlign, weight, tone, ...props },
     ref
   ) => {
     const Comp = `h${level}` as "h1" | "h2" | "h3" | "h4";
@@ -39,7 +39,7 @@ const Heading = React.forwardRef<HTMLHeadingElement, HeadingProps>(
       <Comp
         className={cn(
           headingVariants({ level, weight }),
-          textVariants({ textAlign, color }),
+          textVariants({ textAlign, tone }),
           className
         )}
         ref={ref}

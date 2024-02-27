@@ -10,7 +10,7 @@ export const textVariants = cva("", {
       start: "text-start",
       end: "text-end",
     },
-    color: {
+    tone: {
       brand: "text-brand",
       muted: "text-muted-foreground",
     },
