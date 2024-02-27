@@ -10,23 +10,27 @@ import { FC } from "react";
 
 export default function Home() {
   return (
-    <div className="p-4">
+    <Stack gap="2xl" className="p-4">
       {bibleContents.map((bibleContent) => (
         <BibleContent key={bibleContent.title} {...bibleContent} />
       ))}
-    </div>
+    </Stack>
   );
 }
 
 const BibleContent: FC<BibleContent> = (content) => {
-  const bibleChilds = content.children.map((bibleChild) => (
-    <BibleChild key={bibleChild.title} {...bibleChild} />
-  ));
+  const bibleChilds = (
+    <Stack gap="xxs">
+      {content.children.map((bibleChild) => (
+        <BibleChild key={bibleChild.title} {...bibleChild} />
+      ))}
+    </Stack>
+  );
 
-  const title = <Text>{content.title}</Text>;
+  const title = <Text tone="muted">{content.title}</Text>;
 
   return (
-    <Stack>
+    <Stack gap="xs">
       {title}
       {bibleChilds}
     </Stack>
