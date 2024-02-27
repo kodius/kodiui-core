@@ -24,24 +24,39 @@ const textCustomVariants = cva("inline-block [&>svg]:inline-block", {
       medium: "font-medium",
       bold: "font-bold",
     },
+    tone: {
+      base: "text-white",
+      muted: "text-gray-500",
+    },
   },
   defaultVariants: {
     size: "base",
     weight: "base",
+    tone: "base",
   },
 });
 
 const Text = React.forwardRef<HTMLParagraphElement, TextProps>(
   (
-    { withIcon, size, weight, className, tone, children, textAlign, ...props },
+    {
+      withIcon,
+      size,
+      weight,
+      className,
+      tone,
+      color,
+      children,
+      textAlign,
+      ...props
+    },
     ref
   ) => {
     const Comp = withIcon ? "span" : "p";
     return (
       <Comp
         className={cn(
-          textCustomVariants({ size, weight, className }),
-          textVariants({ textAlign, tone })
+          textCustomVariants({ size, weight, tone, className }),
+          textVariants({ textAlign, color })
         )}
         ref={ref}
         {...props}
