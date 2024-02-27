@@ -1,23 +1,38 @@
-import { bibleContents } from "@/site/bible-contents";
+import { Stack } from "@/components/primitives/stack";
+import { Text } from "@/components/typography/text";
+import {
+  BibleContent,
+  BibleContentChild,
+  bibleContents,
+} from "@/site/bible-contents";
 import Link from "next/link";
+import { FC } from "react";
 
 export default function Home() {
   return (
     <div className="p-4">
-      {bibleContents.map((bibleContent) => {
-        return (
-          <ul key={bibleContent.title}>
-            <h1>{bibleContent.title}</h1>
-            {bibleContent.children.map((childBible) => {
-              return (
-                <li key={childBible.title}>
-                  <Link href={childBible.href}>{childBible.title}</Link>
-                </li>
-              );
-            })}
-          </ul>
-        );
-      })}
+      {bibleContents.map((bibleContent) => (
+        <BibleContent key={bibleContent.title} {...bibleContent} />
+      ))}
     </div>
   );
 }
+
+const BibleContent: FC<BibleContent> = (content) => {
+  const bibleChilds = content.children.map((bibleChild) => (
+    <BibleChild key={bibleChild.title} {...bibleChild} />
+  ));
+
+  const title = <Text>{content.title}</Text>;
+
+  return (
+    <Stack>
+      {title}
+      {bibleChilds}
+    </Stack>
+  );
+};
+
+const BibleChild: FC<BibleContentChild> = (child) => (
+  <Link href={child.href}>{child.title}</Link>
+);

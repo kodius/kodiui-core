@@ -79,4 +79,7 @@
   a:hover {
     text-decoration: underline;
   }
+  a {
+    @apply text-sm;
+  }
 }

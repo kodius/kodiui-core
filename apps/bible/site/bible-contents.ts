@@ -1,9 +1,9 @@
-type BibleContent = {
+export type BibleContent = {
   title: string;
   children: BibleContentChild[];
 };
 
-type BibleContentChild = Omit<BibleContent, "children"> & {
+export type BibleContentChild = Omit<BibleContent, "children"> & {
   href: string;
 };
 
