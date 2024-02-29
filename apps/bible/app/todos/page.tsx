@@ -1,6 +1,6 @@
 import { Stack } from "@/components/primitives/stack";
 import { getTodos } from "../api/todo";
-import { Todo } from "../todo/components/task";
+import { Todo } from "../todo/components/todo";
 
 const TodosPage = async () => {
   const { todos } = await getTodos();

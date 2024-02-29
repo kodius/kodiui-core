@@ -39,9 +39,7 @@ const BibleContent: FC<BibleContent> = (content) => {
 
 const BibleChild: FC<BibleContentChild> = (child) => {
   const title = child.href ? (
-    <Link href={child.href}>
-      <Text>{child.title}</Text>
-    </Link>
+    <Link href={child.href}> {child.title}</Link>
   ) : (
     <Text>{child.title}</Text>
   );
