@@ -20,7 +20,7 @@ export default function Home() {
 
 const BibleContent: FC<BibleContent> = (content) => {
   const bibleChilds = (
-    <Stack gap="xxs">
+    <Stack gap="xs" className="pl-xs border-l-2">
       {content.children.map((bibleChild) => (
         <BibleChild key={bibleChild.title} {...bibleChild} />
       ))}
@@ -37,6 +37,29 @@ const BibleContent: FC<BibleContent> = (content) => {
   );
 };
 
-const BibleChild: FC<BibleContentChild> = (child) => (
-  <Link href={child.href}>{child.title}</Link>
-);
+const BibleChild: FC<BibleContentChild> = (child) => {
+  const title = child.href ? (
+    <Link href={child.href}>
+      <Text>{child.title}</Text>
+    </Link>
+  ) : (
+    <Text>{child.title}</Text>
+  );
+
+  const notes = child.notes && (
+    <Stack className="border-l-2 py-xxs" gap="xs">
+      {child.notes.map((note) => (
+        <Text key={note} tone="muted" className="pl-xs">
+          {note}
+        </Text>
+      ))}
+    </Stack>
+  );
+
+  return (
+    <Stack gap="xxs">
+      {title}
+      {notes}
+    </Stack>
+  );
+};

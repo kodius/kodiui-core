@@ -11,7 +11,7 @@ type TextProps = VariantProps<typeof textCustomVariants> &
     withIcon?: boolean;
   };
 
-const textCustomVariants = cva("inline-block [&>svg]:inline-block", {
+const textCustomVariants = cva("inline-block [&>svg]:inline-block ", {
   variants: {
     size: {
       base: "text-base leading-none",
