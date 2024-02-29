@@ -7,9 +7,7 @@ export type BibleContent = {
 };
 
 export type BibleContentChild = Omit<BibleContent, "children"> & {
-  href: Route | null;
-  status: "done" | "todo" | "re-opened";
-  notes?: string[];
+  href: Route;
 };
 
 export const bibleContents: BibleContent[] = [
@@ -19,7 +17,6 @@ export const bibleContents: BibleContent[] = [
       {
         title: "Parrallel and Sequential data fetching",
         href: routes.bible.dataFetching.parrallelAndSequential.index,
-        status: "todo",
       },
     ],
   },

@@ -3,6 +3,8 @@ import { Inter } from "next/font/google";
 import "./globals.css";
 import { ThemeProvider } from "@/components/theme-provider";
 import { cn } from "@/lib/utils";
+import { Sidebar } from "@/components/primitives/sidebar";
+import { BibleSide } from "./bible/components/bible-side";
 
 const inter = Inter({ subsets: ["latin"] });
 
@@ -25,7 +27,10 @@ export default function RootLayout({
           enableSystem
           disableTransitionOnChange
         >
-          {children}
+          <Sidebar>
+            <BibleSide />
+            {children}
+          </Sidebar>
         </ThemeProvider>
       </body>
     </html>
