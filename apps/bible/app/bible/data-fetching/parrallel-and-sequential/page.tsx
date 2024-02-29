@@ -1,18 +1,18 @@
 import { Suspense } from "react";
-import { BadExample } from "./components/bad-example";
-import { GoodExample } from "./components/good-example";
+import { ParrallelFetching } from "./components/parallel-fetching";
+import { SequentialFetching } from "./components/sequential-fetching";
 
 const ParrallelAndSequentialPage = () => {
   return (
-    <div className="grid grid-cols-2 gap-lg">
+    <div className="grid grid-cols-2  gap-xl">
       <div>
-        <Suspense fallback="bad example loading..">
-          <BadExample />
+        <Suspense fallback="sequential example loading..">
+          <SequentialFetching />
         </Suspense>
       </div>
       <div>
-        <Suspense fallback="good example loading..">
-          <GoodExample />
+        <Suspense fallback="parrallel example loading..">
+          <ParrallelFetching />
         </Suspense>
       </div>
     </div>
