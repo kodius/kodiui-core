@@ -12,7 +12,7 @@ const ProjectStructureModulePage = () => {
     <Stack>
       <todo.components.TodoCard {...todoProps} />
       <todo.components.FetchTodos />
-      <todo.components.LargeImage />
+      {/* <todo.components.LargeImage /> */}
     </Stack>
   );
 };
