@@ -8,5 +8,10 @@ export const routes = {
         index: "/bible/data-fetching/parrallel-and-sequential",
       },
     },
+    routing: {
+      interceptingRoutes: {
+        index: "/bible/routing/intercepting-routes",
+      },
+    },
   },
 } as const;

@@ -20,4 +20,22 @@ export const bibleContents: BibleContent[] = [
       },
     ],
   },
+  {
+    title: "Routing",
+    children: [
+      {
+        title: "Intercepting Routes",
+        href: routes.bible.routing.interceptingRoutes.index,
+      },
+    ],
+  },
+  {
+    title: "Routing",
+    children: [
+      {
+        title: "Intercepting Routes",
+        href: routes.bible.routing.interceptingRoutes.index,
+      },
+    ],
+  },
 ];

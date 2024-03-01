@@ -11,7 +11,7 @@ const ParrallelAndSequentialPage = () => {
         </Suspense>
       </div>
       <div>
-        <Suspense fallback="parrallel example loading..">
+        <Suspense fallback="parrallel rxample loading..">
           <ParrallelFetching />
         </Suspense>
       </div>

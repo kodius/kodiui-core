@@ -9,7 +9,7 @@ export const ParrallelFetching = async () => {
   const usersPromise = getUsers("parrallel example");
   const [todos, users] = await Promise.all([todosPromise, usersPromise]);
 
-  // One more bad example
+  // One more sequential example
   // const todos = await getTodos("good example");
   // const users = await getUsers("good example");
 
