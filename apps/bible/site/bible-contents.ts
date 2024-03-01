@@ -30,11 +30,11 @@ export const bibleContents: BibleContent[] = [
     ],
   },
   {
-    title: "Routing",
+    title: "Project Structure",
     children: [
       {
-        title: "Intercepting Routes",
-        href: routes.bible.routing.interceptingRoutes.index,
+        title: "Module Based",
+        href: routes.bible.projectStructure.module.index,
       },
     ],
   },

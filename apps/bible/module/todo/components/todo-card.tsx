@@ -1,6 +1,6 @@
 import { FC } from "react";
 import { Text } from "@/components/typography/text";
-import type { Todo } from "../todo";
+import { Todo } from "..";
 
 export const TodoCard: FC<Todo> = (todo) => {
   return (

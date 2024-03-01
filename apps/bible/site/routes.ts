@@ -13,5 +13,10 @@ export const routes = {
         index: "/bible/routing/intercepting-routes",
       },
     },
+    projectStructure: {
+      module: {
+        index: "/bible/project-structure/module",
+      },
+    },
   },
 } as const;
