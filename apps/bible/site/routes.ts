@@ -1,5 +1,16 @@
 import { Route } from "next";
 
+export const resloveTodoIdRoute = (todoId: string) =>
+  `/bible/routing/nested-dynamic-routes/todo/${todoId}` as Route;
+
+export const resolveUserIdRoute = (todoId: string, userId: string) =>
+  resloveTodoIdRoute(todoId) + `/user/${userId}` as Route;
+
+export const routesResolvers = {
+  resolveUserIdRoute,
+  resloveTodoIdRoute,
+};
+
 export const routes = {
   todos: {
     index: "/todos",
@@ -27,9 +38,13 @@ export const routes = {
           },
         },
         todo: {
-          ":id": (id: string): Record<string, Route> => ({
-            // @ts-ignore
-            index: `/bible/routing/nested-dynamic-routes/todo/${id}`,
+          ":todo-id": (todoId: string) => ({
+            index: resloveTodoIdRoute(todoId),
+            user: {
+              ":user-id": (userId: string) => ({
+                index: resolveUserIdRoute(todoId, userId),
+              }),
+            },
           }),
         },
       },
