@@ -1,7 +1,7 @@
-import { GetUserResponse } from "@/app/api/users";
-import { User } from "./user";
-import { FC } from "react";
-import { BasicList } from "@/app/_templates/basic-list";
+import { GetUserResponse } from '@/app/api/users'
+import { User } from './user'
+import { FC } from 'react'
+import { BasicList } from '@/app/_templates/basic-list'
 
 export const DisplayUsers: FC<GetUserResponse> = ({ users }) => {
   return (
@@ -10,5 +10,5 @@ export const DisplayUsers: FC<GetUserResponse> = ({ users }) => {
         <User key={user.id} {...user} />
       ))}
     </BasicList>
-  );
-};
+  )
+}

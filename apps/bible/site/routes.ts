@@ -1,4 +1,4 @@
-import { Route } from "next"
+import { Route } from 'next'
 
 export const resloveTodoIdRoute = (todoId: string) => `/bible/routing/nested-dynamic-routes/todo/${todoId}` as Route
 
@@ -12,35 +12,40 @@ export const routesResolvers = {
 
 export const routes = {
   todos: {
-    index: "/todos",
+    index: '/todos',
   },
   bible: {
     dataFetching: {
       parrallelAndSequential: {
-        index: "/bible/data-fetching/parrallel-and-sequential",
+        index: '/bible/data-fetching/parrallel-and-sequential',
       },
     },
     projectStructure: {
       module: {
-        index: "/bible/project-structure/module",
+        index: '/bible/project-structure/module',
       },
     },
     routing: {
       interceptingRoutes: {
-        index: "/bible/routing/intercepting-routes",
+        index: '/bible/routing/intercepting-routes',
       },
       nestedDynamicRoutes: {
-        index: "/bible/routing/nested-dynamic-routes",
+        index: '/bible/routing/nested-dynamic-routes',
         todo: {
-          ":todo-id": (todoId: string) => ({
+          ':todo-id': (todoId: string) => ({
             index: resloveTodoIdRoute(todoId),
             user: {
-              ":user-id": (userId: string) => ({
+              ':user-id': (userId: string) => ({
                 index: resolveUserIdRoute(todoId, userId),
               }),
             },
           }),
         },
+      },
+    },
+    system: {
+      errorBoundary: {
+        index: '/bible/system/error-boundary',
       },
     },
   },

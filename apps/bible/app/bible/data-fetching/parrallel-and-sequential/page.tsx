@@ -1,6 +1,6 @@
-import { Suspense } from "react";
-import { ParrallelFetching } from "./components/parallel-fetching";
-import { SequentialFetching } from "./components/sequential-fetching";
+import { Suspense } from 'react'
+import { ParrallelFetching } from './components/parallel-fetching'
+import { SequentialFetching } from './components/sequential-fetching'
 
 const ParrallelAndSequentialPage = () => {
   return (
@@ -16,7 +16,7 @@ const ParrallelAndSequentialPage = () => {
         </Suspense>
       </div>
     </div>
-  );
-};
+  )
+}
 
-export default ParrallelAndSequentialPage;
+export default ParrallelAndSequentialPage

@@ -1,5 +1,5 @@
-import { ShowTodosWithUsers } from "@/app/todos/components/show-todos-with-users";
+import { ShowTodosWithUsers } from '@/app/todos/components/show-todos-with-users'
 
 export const SequentialFetching = () => {
-  return <ShowTodosWithUsers />;
-};
+  return <ShowTodosWithUsers />
+}

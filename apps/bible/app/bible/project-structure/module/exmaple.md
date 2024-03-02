@@ -16,6 +16,7 @@
 - everything should be exported from index.tsx
 
 # bad
+
 <todo. ... /> no cmp
 
 # module/todo/index.tsx

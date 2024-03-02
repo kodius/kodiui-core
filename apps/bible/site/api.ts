@@ -1,3 +1,3 @@
 export const api = {
-  route: "https://dummyjson.com"
+  route: 'https://dummyjson.com',
 }

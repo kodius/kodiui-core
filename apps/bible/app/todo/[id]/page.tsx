@@ -1,5 +1,5 @@
 const TaskByIdPage = () => {
-  <div>task by id page</div>;
-};
+  ;<div>task by id page</div>
+}
 
-export default TaskByIdPage;
+export default TaskByIdPage

@@ -1,18 +1,13 @@
-import React from "react";
+import React from 'react'
 
-import { cn } from "@/lib/utils";
-import {
-  GapVariants,
-  PaddingVariants,
-  gapVariants,
-  paddingVariants,
-} from "./tokens";
+import { cn } from '@/lib/utils'
+import { GapVariants, PaddingVariants, gapVariants, paddingVariants } from './tokens'
 
 export type BoxProps = React.HTMLAttributes<HTMLDivElement> &
   PaddingVariants &
   GapVariants & {
-    noBar?: boolean;
-  };
+    noBar?: boolean
+  }
 
 export const Reel = React.forwardRef<HTMLDivElement, BoxProps>(
   ({ gap, className, noBar, p, children, ...props }, ref) => {
@@ -20,18 +15,18 @@ export const Reel = React.forwardRef<HTMLDivElement, BoxProps>(
       <div
         ref={ref}
         className={cn(
-          "flex overflow-x-auto overflow-y-hidden",
+          'flex overflow-x-auto overflow-y-hidden',
           gapVariants({ gap }),
           paddingVariants({ p }),
-          noBar && "no-scrollbar",
+          noBar && 'no-scrollbar',
           className
         )}
         {...props}
       >
         {children}
       </div>
-    );
+    )
   }
-);
+)
 
-Reel.displayName = "Reel";
+Reel.displayName = 'Reel'

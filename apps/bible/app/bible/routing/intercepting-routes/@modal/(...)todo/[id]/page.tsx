@@ -1,5 +1,5 @@
 const TodoModalPage = () => {
-  <div>task by id page modal</div>;
-};
+  ;<div>task by id page modal</div>
+}
 
-export default TodoModalPage;
+export default TodoModalPage

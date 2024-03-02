@@ -1,8 +1,8 @@
-import { Stack } from "@/components/primitives/stack";
-import { Text } from "@/components/typography/text";
-import { BibleContent, bibleContents } from "@/site/bible-contents";
-import { FC } from "react";
-import { BibleChild } from "./bible-child";
+import { Stack } from '@/components/primitives/stack'
+import { Text } from '@/components/typography/text'
+import { BibleContent, bibleContents } from '@/site/bible-contents'
+import { FC } from 'react'
+import { BibleChild } from './bible-child'
 
 export const BibleSide = () => {
   return (
@@ -11,8 +11,8 @@ export const BibleSide = () => {
         <BibleContent key={bibleContent.title} {...bibleContent} />
       ))}
     </Stack>
-  );
-};
+  )
+}
 
 const BibleContent: FC<BibleContent> = (content) => {
   const bibleChilds = (
@@ -21,14 +21,14 @@ const BibleContent: FC<BibleContent> = (content) => {
         <BibleChild key={bibleChild.title} {...bibleChild} />
       ))}
     </Stack>
-  );
+  )
 
-  const title = <Text>{content.title}</Text>;
+  const title = <Text>{content.title}</Text>
 
   return (
     <Stack gap="xs">
       {title}
       {bibleChilds}
     </Stack>
-  );
-};
+  )
+}

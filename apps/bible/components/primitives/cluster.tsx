@@ -1,19 +1,17 @@
-import React from "react";
+import React from 'react'
 
-import { GapVariants, gapVariants } from "./tokens/spacing";
-import { FlexVariants, flexVariants } from "./tokens/flex";
-import { cn } from "@/lib/utils";
+import { GapVariants, gapVariants } from './tokens/spacing'
+import { FlexVariants, flexVariants } from './tokens/flex'
+import { cn } from '@/lib/utils'
 
-export type BoxProps = React.HTMLAttributes<HTMLDivElement> &
-  GapVariants &
-  FlexVariants;
+export type BoxProps = React.HTMLAttributes<HTMLDivElement> & GapVariants & FlexVariants
 
 export const Cluster = React.forwardRef<HTMLDivElement, BoxProps>(
   ({ gap, className, flexDirection, justify, items, ...props }, ref) => {
     return (
       <div
         className={cn(
-          "flex flex-wrap",
+          'flex flex-wrap',
           gapVariants({ gap }),
           flexVariants({ flexDirection, justify, items }),
           className
@@ -21,8 +19,8 @@ export const Cluster = React.forwardRef<HTMLDivElement, BoxProps>(
         ref={ref}
         {...props}
       />
-    );
+    )
   }
-);
+)
 
-Cluster.displayName = "Cluster";
+Cluster.displayName = 'Cluster'

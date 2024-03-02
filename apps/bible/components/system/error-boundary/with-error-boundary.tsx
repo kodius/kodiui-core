@@ -1,9 +1,12 @@
+'use client'
 
-import { ComponentType, } from "react"
-import { withErrorBoundary as withErrorBoundaryPlugin, } from "react-error-boundary"
-import { ErrorFallback } from "./error-fallback"
+import { ComponentType } from 'react'
+import { withErrorBoundary as withErrorBoundaryPlugin } from 'react-error-boundary'
+import { ErrorFallback } from './error-fallback'
 
-export const withErrorBoundary = (Component: ComponentType<any>) => {
-  return withErrorBoundaryPlugin(Component, { FallbackComponent: ErrorFallback })
-}
+/**
+ ! Only works with "use client"  in parent component
+*/
 
+export const withErrorBoundary = (Component: ComponentType<any>) =>
+  withErrorBoundaryPlugin(Component, { FallbackComponent: ErrorFallback })

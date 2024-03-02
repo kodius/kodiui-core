@@ -1,5 +1,5 @@
 const InterceptingRoutes = () => {
-  return <div>hi</div>;
-};
+  return <div>hi</div>
+}
 
-export default InterceptingRoutes;
+export default InterceptingRoutes
