@@ -42,6 +42,9 @@ export const routes = {
           }),
         },
       },
+      parallelRoutes: {
+        index: '/bible/routing/parallel-routes',
+      },
     },
     system: {
       errorBoundary: {

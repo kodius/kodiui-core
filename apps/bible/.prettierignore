@@ -3,11 +3,5 @@ node_modules
 .next
 build
 .contentlayer
-gql
-storybook-static
-storybook-static2
 pnpm-lock.yaml
-.storybook
-.unlighthouse
-.turbo
-gql
+.github

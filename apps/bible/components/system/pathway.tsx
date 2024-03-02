@@ -5,7 +5,7 @@ import Link from 'next/link'
 import { usePathname } from 'next/navigation'
 import { FC, PropsWithChildren } from 'react'
 
-export type PathwayRoutes = `/user/${string}` | `/todo/${string}`
+export type PathwayRoutes = `/user/${string}` | `/todo/${string}` | '/settings'
 
 export type PathwayProps = {
   path: PathwayRoutes

@@ -31,6 +31,10 @@ export const bibleContents: BibleContent[] = [
         title: 'Nested dynamic routes',
         href: routes.bible.routing.nestedDynamicRoutes.index,
       },
+      {
+        title: 'Parallel routes',
+        href: routes.bible.routing.parallelRoutes.index,
+      },
     ],
   },
   {
