@@ -1,15 +1,14 @@
-import { Route } from "next";
+import { Route } from "next"
 
-export const resloveTodoIdRoute = (todoId: string) =>
-  `/bible/routing/nested-dynamic-routes/todo/${todoId}` as Route;
+export const resloveTodoIdRoute = (todoId: string) => `/bible/routing/nested-dynamic-routes/todo/${todoId}` as Route
 
 export const resolveUserIdRoute = (todoId: string, userId: string) =>
-  resloveTodoIdRoute(todoId) + `/user/${userId}` as Route;
+  (resloveTodoIdRoute(todoId) + `/user/${userId}`) as Route
 
 export const routesResolvers = {
   resolveUserIdRoute,
   resloveTodoIdRoute,
-};
+}
 
 export const routes = {
   todos: {
@@ -32,11 +31,6 @@ export const routes = {
       },
       nestedDynamicRoutes: {
         index: "/bible/routing/nested-dynamic-routes",
-        todo2: {
-          ":id": {
-            index: "/bible/routing/nested-dynamic-routes/todo/:id",
-          },
-        },
         todo: {
           ":todo-id": (todoId: string) => ({
             index: resloveTodoIdRoute(todoId),
@@ -50,14 +44,4 @@ export const routes = {
       },
     },
   },
-} as const;
-
-type GoToArgs = {
-  where: "";
-};
-
-type GoTo = (args: GoToArgs) => Route;
-
-export const goTo: GoTo = (args) => {
-  return "/bible/data-fetching/parrallel-and-sequential";
-};
+} as const

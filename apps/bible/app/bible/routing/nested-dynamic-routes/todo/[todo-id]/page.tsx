@@ -1,62 +1,45 @@
-import { Stack } from "@/components/primitives/stack";
-import { GoLink } from "@/components/system/go-link/go-link";
-import { Text } from "@/components/typography/text";
-import { resolveUserIdRoute, routes, routesResolvers } from "@/site/routes";
-import Link from "next/link";
-import { FC, PropsWithChildren } from "react";
+import { BasicLayout } from "@/app/bible/layouts/basic-layout"
+import { Stack } from "@/components/primitives/stack"
+import { Pathway } from "@/components/system/pathway"
+import { resolveUserIdRoute, routes, routesResolvers } from "@/site/routes"
+import Link from "next/link"
 
 type Props = {
   params: {
-    "todo-id": string;
-  };
-};
+    "todo-id": string
+  }
+}
 
 const UserPageById = ({ params }: Props) => {
   return (
     <Stack>
-      <Layout title="Autocomplete / typesefe">
-        <Link href="/bible/routing/nested-dynamic-routes/todo/1/user/2">
-          User #1
-        </Link>
-      </Layout>
-      <Layout title="Continue route - works, bug">
-        {/*@ts-ignore*/}
+      <BasicLayout title="Autocomplete / typesefe">
+        <Link href="/bible/routing/nested-dynamic-routes/todo/1/user/2">User #1</Link>
+      </BasicLayout>
+      <BasicLayout title="Continue route - works, bug">
+        {/* @ts-ignore */}
         <Link href={`${params["todo-id"]}/user/1`}>User #1</Link>
-      </Layout>
-      <Layout title="function / typesafe">
+      </BasicLayout>
+      <BasicLayout title="function / typesafe">
         <Link
           href={
-            routes.bible.routing.nestedDynamicRoutes.todo[":todo-id"](
-              params["todo-id"],
-            ).user[":user-id"]("2").index
+            routes.bible.routing.nestedDynamicRoutes.todo[":todo-id"](params["todo-id"]).user[":user-id"]("2").index
           }
         >
           User #1
         </Link>
-      </Layout>
-
-      <Layout title="resolver fn">
+      </BasicLayout>
+      <BasicLayout title="resolver fn">
         <Link href={resolveUserIdRoute(params["todo-id"], "1")}>User #1</Link>
-      </Layout>
-      <Layout title="resolver object fn">
-        <Link href={routesResolvers.resolveUserIdRoute(params["todo-id"], "1")}>
-          User #1
-        </Link>
-      </Layout>
-      <Layout title="Go Link / typesefe">
-        <GoLink embeded="/user/2">User #2</GoLink>
-      </Layout>
+      </BasicLayout>
+      <BasicLayout title="resolver object fn">
+        <Link href={routesResolvers.resolveUserIdRoute(params["todo-id"], "1")}>User #1</Link>
+      </BasicLayout>
+      <BasicLayout title="pathway">
+        <Pathway path="/user/2">User #2</Pathway>
+      </BasicLayout>
     </Stack>
-  );
-};
+  )
+}
 
-const Layout: FC<{ title: string } & PropsWithChildren> = ({
-  title,
-  children,
-}) => (
-  <Stack gap="xs">
-    <Text>{title}</Text>
-    {children}
-  </Stack>
-);
-export default UserPageById;
+export default UserPageById

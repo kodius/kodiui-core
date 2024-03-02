@@ -11,11 +11,10 @@
 - [ ] Routing
 - [ ] Barrel exports
 - [ ] Auth
-- [ ] Eslint, Prettier
-  - airbnb?
+- [ ] Eslint, Prettier - airbnb?
 - [ ] Card, Layout How to find reusable components
 - [ ] Types, Naming Types. component Task type = Task?
-- [ ] Spreding props, when to and when not to   <Task key={task.id} {...task} />
-- [ ] How to load _templates, _layouts? 
-- [ ] Components and Types have the same name 
-- [ ] PageParams types 
+- [ ] Spreding props, when to and when not to <Task key={task.id} {...task} />
+- [ ] How to load \_templates, \_layouts?
+- [ ] Components and Types have the same name
+- [ ] PageParams types
