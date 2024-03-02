@@ -18,7 +18,6 @@ export default function RootLayout(
     children: React.ReactNode;
   }>,
 ) {
-  console.log(props);
   return (
     <html lang="en">
       <body className={cn(inter.className, "p-sm")}>

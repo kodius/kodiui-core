@@ -27,6 +27,10 @@ export const bibleContents: BibleContent[] = [
         title: "Intercepting Routes",
         href: routes.bible.routing.interceptingRoutes.index,
       },
+      {
+        title: "Nested dynamic routes",
+        href: routes.bible.routing.nestedDynamicRoutes.index,
+      },
     ],
   },
   {
