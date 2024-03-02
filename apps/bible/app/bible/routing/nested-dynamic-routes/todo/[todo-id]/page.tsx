@@ -1,4 +1,5 @@
 import { Stack } from "@/components/primitives/stack";
+import { GoLink } from "@/components/system/go-link/go-link";
 import { Text } from "@/components/typography/text";
 import { resolveUserIdRoute, routes, routesResolvers } from "@/site/routes";
 import Link from "next/link";
@@ -14,7 +15,9 @@ const UserPageById = ({ params }: Props) => {
   return (
     <Stack>
       <Layout title="Autocomplete / typesefe">
-        <Link href="/bible/routing/nested-dynamic-routes/todo/1/user/2">User #1</Link>
+        <Link href="/bible/routing/nested-dynamic-routes/todo/1/user/2">
+          User #1
+        </Link>
       </Layout>
       <Layout title="Continue route - works, bug">
         {/*@ts-ignore*/}
@@ -39,6 +42,9 @@ const UserPageById = ({ params }: Props) => {
         <Link href={routesResolvers.resolveUserIdRoute(params["todo-id"], "1")}>
           User #1
         </Link>
+      </Layout>
+      <Layout title="Go Link / typesefe">
+        <GoLink embeded="/user/2">User #2</GoLink>
       </Layout>
     </Stack>
   );
