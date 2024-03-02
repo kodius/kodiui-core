@@ -5,6 +5,7 @@ import { routesResolvers } from "@/site/routes"
 import { Route } from "next"
 import Link from "next/link"
 import { PropsWithChildren } from "react"
+import { withErrorBoundary } from "./error-boundary/with-error-boundary"
 
 type RouteParams = {
   todoById?: Pick<Params, "todo-id">
@@ -18,7 +19,9 @@ type BridgeProps<T extends RouteParamsKeys> = {
   params?: RouteParams[T]
 } & PropsWithChildren
 
-export const Bridge = <T extends keyof RouteParams>({ params, children, href }: BridgeProps<T>) => {
+
+
+const Component = <T extends keyof RouteParams>({ params, children, href }: BridgeProps<T>) => {
   const liveParams = useParams()
 
   const getParam = (key: ParamKeys): string => {
@@ -41,4 +44,7 @@ export const Bridge = <T extends keyof RouteParams>({ params, children, href }: 
   }
 
   return <Link href={resolveRoutes[href]()}>{children}</Link>
+
 }
+
+export const Bridge = withErrorBoundary(Component)

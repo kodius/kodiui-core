@@ -18,3 +18,4 @@
 - [ ] How to load \_templates, \_layouts?
 - [ ] Components and Types have the same name
 - [ ] PageParams types
+- [ ] Error boundaryes 
