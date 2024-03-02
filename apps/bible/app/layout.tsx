@@ -24,7 +24,7 @@ export default function RootLayout(
         <ThemeProvider attribute="class" defaultTheme="dark" enableSystem disableTransitionOnChange>
           <Sidebar>
             <BibleSide />
-            {props.children}
+            <div className='py-xs'>{props.children}</div>
           </Sidebar>
         </ThemeProvider>
       </body>

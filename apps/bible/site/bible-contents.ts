@@ -53,6 +53,10 @@ export const bibleContents: BibleContent[] = [
         title: 'Error Boundarys',
         href: routes.bible.system.errorBoundary.index,
       },
+      {
+        title: 'Authorization',
+        href: routes.bible.system.auth.index,
+      },
     ],
   },
 ]

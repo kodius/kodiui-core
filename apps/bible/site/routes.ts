@@ -50,6 +50,9 @@ export const routes = {
       errorBoundary: {
         index: '/bible/system/error-boundary',
       },
+      auth: {
+        index: '/bible/system/auth',
+      }
     },
   },
 } as const
