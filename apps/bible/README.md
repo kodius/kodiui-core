@@ -7,26 +7,29 @@
 ### TODO
 
 - [ ] Good progress guys TS
-- [ ] Project Structure
-- [ ] Routing
+- [ ] Intercepting Routes 
 - [ ] Barrel exports
 - [ ] Eslint, Prettier - airbnb?
 - [ ] Card, Layout How to find reusable components
 - [ ] Types, Naming Types. component Task type = Task?
 - [ ] Spreding props, when to and when not to <Task key={task.id} {...task} />
-- [ ] How to load \_templates, \_layouts?
-- [ ] Components and Types have the same name
 - [ ] PageParams types
-- [ ] Error boundaryes
 - [ ] KODIUI not shipping new components in zip
 - [ ] Grid component
 - [ ] Nameing components, <LoadTodos /> <- with suspense <- <FetchTodos />, <Load... /> <Fetch... /> <...Card />
 
 ### IN PROGRESS
 
+- [ ] Project Structure
+- [ ] Routing
+- [ ] Revalidate 
+
 ### DONE
 
 - [x] Auth
+- [x] Error boundaryes
+- [x] Suspense 
+- [x] Parrallel and Sequential data fetching
+- [x] Parrallel Routes 
 
 ### Notes
-user id 101

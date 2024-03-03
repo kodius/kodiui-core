@@ -2,6 +2,7 @@ import { Stack } from '@/components/primitives/stack'
 import { Todo, todo } from '@/module/todo'
 
 const ProjectStructureModulePage = () => {
+  // const { FetchTodos } = todo.components
   const todoProps: Todo = {
     todo: 'todo 1',
     id: 0,
