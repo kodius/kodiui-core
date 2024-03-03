@@ -6,7 +6,7 @@ export const ShowTodos = async () => {
   const { todos } = await getTodos('sequential example')
   return (
     <BasicList title="Todos:">
-      {todos.map((todo) => (
+      {todos?.map((todo) => (
         <Todo key={todo.id} {...todo} />
       ))}
     </BasicList>

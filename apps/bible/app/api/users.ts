@@ -12,3 +12,18 @@ export const getUsers = async (consoleMessage?: string, init?: RequestInit): Pro
   const data = (await resJSON.json()) as GetUserResponse
   return data
 }
+
+export const createUser = async () => {
+  const resJSON = await fetch('https://dummyjson.com/users/add', {
+    method: 'POST',
+    headers: { 'Content-Type': 'application/json' },
+    body: JSON.stringify({
+      firstName: 'Amazing',
+      lastName: 'Progress',
+      age: 250,
+    }),
+  })
+  const data = await resJSON.json()
+  console.log(data)
+  return data
+}

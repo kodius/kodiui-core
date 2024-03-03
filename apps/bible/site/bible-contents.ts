@@ -22,6 +22,10 @@ export const bibleContents: BibleContent[] = [
         title: 'Suspense',
         href: routes.bible.dataFetching.suspense.index,
       },
+      {
+        title: 'Revalidate',
+        href: routes.bible.dataFetching.revalidate.index,
+      },
     ],
   },
   {

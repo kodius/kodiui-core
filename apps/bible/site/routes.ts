@@ -22,6 +22,9 @@ export const routes = {
       suspense: {
         index: '/bible/data-fetching/suspense',
       },
+      revalidate: {
+        index: '/bible/data-fetching/revalidate',
+      },
     },
     projectStructure: {
       module: {

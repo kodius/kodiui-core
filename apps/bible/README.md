@@ -20,9 +20,13 @@
 - [ ] Error boundaryes
 - [ ] KODIUI not shipping new components in zip
 - [ ] Grid component
+- [ ] Nameing components, <LoadTodos /> <- with suspense <- <FetchTodos />, <Load... /> <Fetch... /> <...Card />
 
 ### IN PROGRESS
 
 ### DONE
 
 - [x] Auth
+
+### Notes
+user id 101
