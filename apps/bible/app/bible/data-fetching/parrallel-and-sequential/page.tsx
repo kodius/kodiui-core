@@ -26,22 +26,6 @@ const ParrallelAndSequentialPage = () => {
       </div>
     </Stack>
   )
-  return (
-    <div className="grid grid-cols-2  gap-xl">
-      <Link href="/bible/data-fetching/parrallel-and-sequential/parrallel">Parrallel</Link>
-      <Link href="/bible/data-fetching/parrallel-and-sequential/sequential">Sequential</Link>
-      {/* <div> */}
-      {/*   <Suspense fallback="parrallel rxample loading.."> */}
-      {/*     <ParrallelFetching /> */}
-      {/*   </Suspense> */}
-      {/* </div> */}
-      {/* <div> */}
-      {/*   <Suspense fallback="sequential example loading.."> */}
-      {/*     <SequentialFetching /> */}
-      {/*   </Suspense> */}
-      {/* </div> */}
-    </div>
-  )
 }
 
 export default ParrallelAndSequentialPage
