@@ -17,7 +17,7 @@
 
 # bad
 
-<todo. ... /> no cmp
+Developer experiance 
 
 # module/todo/index.tsx
 
