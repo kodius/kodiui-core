@@ -27,21 +27,16 @@ const textCustomVariants = cva("inline-block [&>svg]:inline-block", {
             medium: "font-medium",
             bold: "font-bold",
         },
-        tone: {
-            base: "text-white",
-            muted: "text-gray-500",
-        },
     },
     defaultVariants: {
         size: "base",
         weight: "base",
-        tone: "base",
     },
 });
 const Text = React.forwardRef((_a, ref) => {
-    var { withIcon, size, weight, className, tone, color, children, textAlign } = _a, props = __rest(_a, ["withIcon", "size", "weight", "className", "tone", "color", "children", "textAlign"]);
+    var { withIcon, size, weight, className, tone, children, textAlign } = _a, props = __rest(_a, ["withIcon", "size", "weight", "className", "tone", "children", "textAlign"]);
     const Comp = withIcon ? "span" : "p";
-    return (_jsx(Comp, Object.assign({ className: cn(textCustomVariants({ size, weight, tone, className }), textVariants({ textAlign, color })), ref: ref }, props, { children: children })));
+    return (_jsx(Comp, Object.assign({ className: cn(textCustomVariants({ size, weight, className }), textVariants({ textAlign, tone })), ref: ref }, props, { children: children })));
 });
 Text.displayName = "Text";
 export { Text };

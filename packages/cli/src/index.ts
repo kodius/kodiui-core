@@ -19,8 +19,6 @@ program
   .option("-t, --touch <value>", "Create a file")
   .parse(process.argv);
 
-const options = program.opts();
-
 type Answer = {
   questions: "primitives" | "typography";
 };

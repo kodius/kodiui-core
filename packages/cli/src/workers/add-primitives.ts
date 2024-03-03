@@ -17,9 +17,6 @@ export async function addPrimitives() {
     "primitives.zip"
   );
 
-  console.log('this is the zip path', zipPath);
-  
-
   async function extractPrimitive() {
     const answer = await inquirer.prompt([
       {
