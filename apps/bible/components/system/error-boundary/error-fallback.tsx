@@ -10,7 +10,7 @@ export function ErrorFallback({ error }: { error: { message: string } }) {
 
   return (
     <Stack gap="xs">
-      <Text tone="muted">Something went wrong:</Text>
+      <Text tone="destructive">Something went wrong</Text>
       <Button size="sm" className="w-fit" variant="destructive" onClick={resetBoundary}>
         {error.message}, try again ?
       </Button>

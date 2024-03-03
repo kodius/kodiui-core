@@ -19,6 +19,9 @@ export const routes = {
       parrallelAndSequential: {
         index: '/bible/data-fetching/parrallel-and-sequential',
       },
+      suspense: {
+        index: '/bible/data-fetching/suspense',
+      },
     },
     projectStructure: {
       module: {

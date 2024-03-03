@@ -1,18 +1,18 @@
-import React, { FC, ReactNode } from 'react'
-import { VariantProps, cva } from 'class-variance-authority'
+import React, { FC, ReactNode } from "react";
+import { VariantProps, cva } from "class-variance-authority";
 
-import { cn } from '@/lib/utils'
-import { GapVariants, gapVariants } from './tokens'
+import { cn } from "@/lib/utils";
+import { GapVariants, gapVariants } from "./tokens";
 
-type SidebarVariants = VariantProps<typeof sidebarVariants>
+type SidebarVariants = VariantProps<typeof sidebarVariants>;
 
 type SidebarProps = SidebarVariants &
   GapVariants & {
-    children: ReactNode
-    className?: string
-  }
+    children: ReactNode;
+    className?: string;
+  };
 
-const sidebarVariants = cva('flex flex-wrap', {
+const sidebarVariants = cva("flex flex-wrap", {
   variants: {
     side: {
       left: `[&>*:first-child]:grow [&>*:last-child]:grow-[999] [&>*:last-child]:basis-0 [&>*:last-child]:min-w-[50%]`,
@@ -20,13 +20,22 @@ const sidebarVariants = cva('flex flex-wrap', {
     },
   },
   defaultVariants: {
-    side: 'left',
+    side: "left",
   },
-})
-export const Sidebar: FC<SidebarProps> = ({ children, gap, side = 'left', className, ...props }) => {
+});
+export const Sidebar: FC<SidebarProps> = ({
+  children,
+  gap,
+  side = "left",
+  className,
+  ...props
+}) => {
   return (
-    <div className={cn(gapVariants({ gap }), sidebarVariants({ side }))} {...props}>
+    <div
+      className={cn(gapVariants({ gap }), sidebarVariants({ side }))}
+      {...props}
+    >
       {children}
     </div>
-  )
-}
+  );
+};

@@ -19,3 +19,4 @@
 - [ ] Components and Types have the same name
 - [ ] PageParams types
 - [ ] Error boundaryes
+- [ ] KODIUI not shipping new components in zip 

@@ -1,3 +1,3 @@
-export * from './flex'
-export * from './hidden'
-export * from './spacing'
+export * from "./flex";
+export * from "./hidden";
+export * from "./spacing";

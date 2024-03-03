@@ -18,6 +18,10 @@ export const bibleContents: BibleContent[] = [
         title: 'Parrallel and Sequential data fetching',
         href: routes.bible.dataFetching.parrallelAndSequential.index,
       },
+      {
+        title: 'Suspense',
+        href: routes.bible.dataFetching.suspense.index,
+      },
     ],
   },
   {
