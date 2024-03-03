@@ -10,7 +10,6 @@
 - [ ] Project Structure
 - [ ] Routing
 - [ ] Barrel exports
-- [ ] Auth
 - [ ] Eslint, Prettier - airbnb?
 - [ ] Card, Layout How to find reusable components
 - [ ] Types, Naming Types. component Task type = Task?
@@ -19,4 +18,11 @@
 - [ ] Components and Types have the same name
 - [ ] PageParams types
 - [ ] Error boundaryes
-- [ ] KODIUI not shipping new components in zip 
+- [ ] KODIUI not shipping new components in zip
+- [ ] Grid component
+
+### IN PROGRESS
+
+### DONE
+
+- [x] Auth

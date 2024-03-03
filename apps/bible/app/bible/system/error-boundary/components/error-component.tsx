@@ -1,5 +1,5 @@
 export const ErrorComponent = () => {
   // @ts-ignore
-  randomFunctionAmazing()
+  // randomFunctionAmazing()
   return null 
 }

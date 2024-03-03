@@ -1,5 +1,5 @@
+import { Todo } from '@/app/todo/types'
 import { api } from '@/site/api'
-import { Todo } from '../todo'
 
 export type GetTodosResponse = {
   todos: Todo[]
