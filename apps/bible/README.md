@@ -10,6 +10,7 @@
 - [ ] Intercepting Routes 
 - [ ] Barrel exports
 - [ ] Eslint, Prettier - airbnb?
+- [ ] husky 
 - [ ] Card, Layout How to find reusable components
 - [ ] Types, Naming Types. component Task type = Task?
 - [ ] Spreding props, when to and when not to <Task key={task.id} {...task} />
